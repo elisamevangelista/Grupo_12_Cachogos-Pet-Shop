@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2. Definir la temática del Market Place
 ¿Qué productos o servicios brindará nuestro sitio? ¿Quién será nuestra audiencia
 objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
@@ -10,3 +11,6 @@ ________________________________________________________________________________
 Pablo Picasso dijo alguna vez: “Los grandes artistas copian, los genios roban”. Sea cual
 sea la idea que tengan para su sitio, es muy posible que haya en Internet muy buenos
 referentes de donde inspirarse y tomar ideas.
+=======
+
+>>>>>>> b9dfe8547655dd548c7454b0583a80bd9bb98c27
