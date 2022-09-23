@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  </title>
+    <link href="/css/style.css" rel="stylesheet">   <!--vinculo .html con .css  , en ruta asigno carpeta 'madre' = 'css', a la que pertence el archivo '.css' -->
+    
+    <link rel="icon" type="image/png" href="/images/icono.png" >  <!--imagen de nombre 'icono', formato '.png', en carpeta local 'images' -->
+    
+    <!--siguientes 3 link copiados de google fonts para importar el tipo de letra ROBOTO, aplicado en el archivo .css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+     <!--link copiados fontawsome cdn, ultima version para importar iconos -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+
+</head>
+
+<body>
+</body>
+
+
+</html>
