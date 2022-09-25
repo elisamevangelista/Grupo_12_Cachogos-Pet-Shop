@@ -404,3 +404,129 @@ a{
 
 
 /* FOOTER */
+
+
+.newsLetter{
+
+    background-color: #456A99;
+    height: 130px;
+    justify-content: center;
+    
+}
+
+.desktop{
+    display: none;
+   
+}
+
+
+.mobile{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.registrarseNewsletter-mobile{
+
+    width:90%;
+    outline: none;  /*para sacar el borde negro del input al darle un click */
+    border:  solid 0px white ;
+    border-color:white;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.BotonSuscribite{
+
+    
+    width:91%;
+    outline: none;  /*para sacar el borde negro del input al darle un click */
+    border:  solid 0px white ;
+    border-color:white;
+    border-radius: 8px;
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: grey;
+}
+
+h3{
+    color: white;
+}
+
+
+
+@media (min-width:750px){
+
+
+.newsLetter{
+
+        background-color: #456A99;
+        display: flex;
+        width: 100%;
+        height: 60px;
+        align-items: center;
+    }
+    
+
+.mobile{
+
+    display: none;
+
+    
+}   
+
+.desktop{
+
+    display: flex;
+    justify-content: space-between;
+    width:80%;
+    border-radius: 8px;
+    height: 30px;
+    align-items: center;
+}
+
+.envolope-Frase{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.barraSuscribirse-BotonRegistrarse{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width:80%;
+    height: 30px;
+    align-items: center;
+    border: white 1px solid;
+    border-radius: 8px;
+}
+
+.registrarseNewsletter{
+    border:  solid 0px white ;
+    border-color:white;
+    outline: none;   /*para sacar el borde negro del input al darle un click */
+    margin-left: 5px;
+}
+
+.botonSuscribirse{
+
+    padding-right: 5px;
+    border-radius: 8px;
+    border:1px;
+    margin-right: 5px;
+    color:black;
+    background-color: grey;
+  
+   
+}
+
+}
