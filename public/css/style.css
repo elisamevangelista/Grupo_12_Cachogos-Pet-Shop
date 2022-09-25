@@ -347,23 +347,27 @@ h3 {
     .desktop {
         display: flex;
         justify-content: space-between;
-        width: 80%;
+        width: 90%;
         border-radius: 8px;
         height: 30px;
         align-items: center;
     }
 
     .envolope-Frase {
+        width: 50%;
         display: flex;
-        justify-content: space-around;
         align-items: center;
+    }
+
+    .iconoMensaje {
+        padding-right: 10%;
     }
 
     .barraSuscribirse-BotonRegistrarse {
         display: flex;
         justify-content: space-between;
         background-color: white;
-        width: 80%;
+        width: 50%;
         height: 30px;
         align-items: center;
         border: white 1px solid;
