@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cachogos Pet Shop</title>
 
-    <link rel="stylesheet" href="/css/style_Product.css">
+    <!-- referencio a las hojas de estilo ppal (header y footer) y secundaria para esta pag (main)-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_Product.css">   
     
     
     <!-- <link rel="shortcut icon" href="favicon.ico"> todavia no se coloco ningun icono pero dejo la estructura-->
     
-    <link rel="icon" type="image/png" href="/images/.png" >  <!--imagen de nombre 'icono', formato '.png', en carpeta local 'images' -->
+    <link rel="icon" type="image/png" href="/img/LOGO-PETSHOP.png" >  <!--imagen de nombre 'icono', formato '.png', en carpeta local 'imag' -->
     
     <!--siguientes 3 link copiados de google fonts para importar el tipo de letra ROBOTO, aplicado en el archivo .css -->
     
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-     <!--link copiados fontawsome cdn, ultima version para importar iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+   
+    
+    <!--link copiados fontawsome cdn, ultima version para importar iconos -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
@@ -28,75 +32,92 @@
 
 
 
-<body>
+<body>   
 
+    <header class="mainHeader">  <!--es el header completo, que tendra tres lineas grandes, primera con logo llamada + nro + logo wapp, 
+        segunda con logoPetShop + barra buscadora + iconos de register y carrito y tercera con nav bar. -->
 
-    
-
-    <header class="mainHeader">  <!--es el header completo, que tendra dos lineas grandes, primera con logo + barra buscadora + iconos de register y carrito y segunda con nav bar. -->
-
-        
-        <div class="logoLlamada-Wapp-Mobile">
-
-            <i class="fa-solid fa-phone"></i>
-            <p>0800-999-2345 |</p>
-            <i class="fa-brands fa-whatsapp"></i>
-
-        </div>
+       <div class="contenedorSuperior">
         
         
-        
-        <div class = "topHeader">   <!--linea superior del header que sera contenedor padre flex de logo, barra buscadora y 3 iconos -->
+                <ul class ="listaLogo-Llamada-Numero-wapp">
 
-            <div class ="logo-barraBuscadora">  <!--contenedor padre flex de logo, barra buscadora -->
+                    <li><a class ="phone" href="aaaaa.html"><i class="fa-solid fa-phone" ></i></a></li>
+                    <li><a class="numero" href="bbbbb.html">0800-999-2345</a></li>                
+                    <li class="separador">|</li>                                
+                    <li><a class="logoWapp" href="bbbbb.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>                 
+           
+       </div>
+         
+     
+        <div class = "contenedorIntermedio">   <!--linea superior del header que sera contenedor padre flex de logo, barra buscadora y 3 iconos -->
+
                     
-                <img class="logoCachogoPetShop" src = "/images/.svg" alt="Logotipo Cachgos Pet Shop">
-       
-                <div class = "barraBuscadora-Icon-Buscar">  <!--contenedor padre flex de barra buscadora, icono y palabra buscar -->              
-                            
-                    <div class="searchIcon">
-                        <i class="fa-solid fa-magnifying-glass"></i>  <!--barra buscadora con icono. Pongo el icono dentro del titulo si no me hace el salto de linea -->
-                    </div>
+            <div class="burger-logoPet">
+                <div class="burger-menu">
 
-                    <p class="TextoBuscarEnBarra">Buscar</h2>
-                </div>
+                    <i class="fas fa-bars fa-lg"></i> 
+        
+                </div>      
+                
+                <img class="logoCachogoPetShop" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop">
             </div>
+       
+            <!-- <div class = "barraBuscadora-Icon-Buscar">  contenedor padre flex de barra buscadora, icono y palabra buscar               -->
+                            
+                
 
-            <i class="fa-brands fa-whatsapp"></i>
+            <div class="input-searchIcon">
 
-            <i class="fa-solid fa-user"></i>
+               <input type="text" class="textoBuscarEnBarra" placeholder="Buscar...">            
+               <i class="fa-solid fa-magnifying-glass searchIcon"></i>  <!--searchIcon es la segunda clase del icono search-->
+                
+            </div>
+          
+                               
+            <ul class = "logosMargenDerecho">
 
-            <i class="fa-solid fa-cart-shopping"></i>
+                <li><a class="logo-wapp-desktop" href="aaaaa.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                
+                <ul class="iconoUserRegistrarse">
+                    <li><a class="iconoUserMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a class="IniciarSesion" href="aaaaa.html">Iniciar Sesión/</a></li>
+                    <li><a class="Registrarse" href="aaaaa.html">Registrarse</a></li>
+                    
+                </ul>
 
+                <ul class="iconoMisCompras">
+                <li><a class="iconoCarritoMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a class="misCompras" href="aaaaa.html">Mis Compras</a></li>
+                </ul>
+
+            </ul>
 
         </div>
 
-        <nav class="bottomHeader"> <!--linea inferior del header que contendra dos gruopos de listas desordenadas para el nav bar -->
+        <nav class="contenedorInferior"> <!--linea inferior del header que contendra dos gruopos de listas desordenadas para el nav bar -->
         
             <ul class="leftBottomHeader">
 
-                <li><a href="Productos.html">Productos</a></li>
+                <li><a class="productos" href="Productos.html">Productos</a></li>
                 
             </ul>
 
             <ul class="rigthBottomHeader">
 
-                <li ><a href="Inicio.html">Inicio</a></li>
-                <li ><a href="Ofertas.html">Ofertas</a></li>
-                <li ><a href="Blog.html">Blog</a></li>
-                <li ><a href="Sucursales.html">Sucursales</a></li>
-                <li ><a href="Contacto.html">Contacto</a></li>
+                <li ><a class="Inicio" href="Inicio.html">Inicio</a></li>
+                <li ><a class="Ofertas" href="Ofertas.html">Ofertas</a></li>
+                <li ><a class="Blog" href="Blog.html">Blog</a></li>
+                <li ><a class="Sucursales" href="Sucursales.html">Sucursales</a></li>
+                <li ><a class="Contacto" href="Contacto.html">Contacto</a></li>
             
             </ul>                                    
 
         </nav>
 
-        <div class="burger-menu">
-
-            <i class="fas fa-bars fa-lg"></i> 
-
-        </div>
-
+       
 
     </header>
 

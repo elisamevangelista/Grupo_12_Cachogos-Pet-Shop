@@ -1,30 +1,406 @@
-<!DOCTYPE html>
-<html lang="es">
+*{
 
-<head>
+    font-family:nunito
+  
+}
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  </title>
-    <link href="/css/style.css" rel="stylesheet">   <!--vinculo .html con .css  , en ruta asigno carpeta 'madre' = 'css', a la que pertence el archivo '.css' -->
+/* ---------------------------------- */
+/* HEADER */
+
+
+
+.contenedorSuperior{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #456A99;
+    height:24px;
+    display: block;
     
-    <link rel="icon" type="image/png" href="/images/icono.png" >  <!--imagen de nombre 'icono', formato '.png', en carpeta local 'images' -->
     
-    <!--siguientes 3 link copiados de google fonts para importar el tipo de letra ROBOTO, aplicado en el archivo .css -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+}
 
-     <!--link copiados fontawsome cdn, ultima version para importar iconos -->
+.listaLogo-Llamada-Numero-wapp{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-right: 10px;
+    padding-left: 15px;
+    font-size: 13px;
+    padding-top: 3px;
+    
+}
+   
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+li{
+
+    list-style: none;
+    text-decoration: none;
+    color: white;
+  
+}
+
+a{
+
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+
+.phone{
+
+    padding-right: 15px;
+    
+}
+
+.numero{
+
+    padding-right: 15px;
+    color: white;
+    
+    
+}
+
+.separador{
+
+    font-weight: bold;
+    padding-right: 15px;
+  
+}
+
+
+
+.contenedorIntermedio{
+
+    display:flex;
+    background-color: #3694F5;
+    height: 90px;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-top: 1px white solid;
+   
+
+   
+
+
+}
+
+.burger-logoPet{
+
+    display:flex;
+    align-items: center;
+    width: 195px;
+  
+}
+
+.burger-menu{
+    background-color: white;
+    color:black;
+    margin-left:10px;
+    padding:3px;
+    border: white solid 1px;
+    border-radius: 3px;
+    margin-top: 5px;
+    display: block;
+}
+
+.logoCachogoPetShop{
+
+    width: 100%;
+    height: 60px;
+    padding-right: 20px;
+    padding-left: 40px;
+}
+
+.textoBuscarEnBarra{
+
+   color: grey;
+   font-size: 10px;
+   padding-left: 8px;
+   height: 20px;
+   border:  solid 0px white ;
+   border-radius: 8px;
+   display: none;
+   width: 60%;
+   border-color:white;
+   outline: none   /*para sacar el borde negro del input al darle un click */
+}
+
+
+.searchIcon{
+
+    color: black;
+    padding-right: 10px;
+    display:none
+}
+
+
+.input-searchIcon{
+
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    border:solid 1px white;
+    align-items: center;
+    justify-content: space-between;
+    width:40vw
+    
+}
+
+.logo-wapp-desktop{
+
+    color:white;
+    display: none;
+    
+}
+
+.logosMargenDerecho{
+
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    align-items:center;
+    justify-content: flex-end;
+   
+}
+
+
+.iconoUserRegistrarse{
+
+    justify-content: center;
+    padding-left: 20px; 
+    
+    
+}
+
+.iconoMisCompras{
+
+
+    justify-content:  center;
+    padding-left: 25px;
+}
+
+.IniciarSesion{
+
+    display: none;
+    
+ }
+ 
+ .Registrarse{
+     display: none;
+     font-size: 11px;
+ 
+ }
+ 
+ 
+ .misCompras{
+     display: none;
+     font-size: 11px;
+ 
+ }
+
+
+
+.iconoBuscarMargenDerecho{
+
+    padding-right: 10px;
+    display:block;
+    
+    
+}
+
+
+.iconoUserMargenDerecho{
+
+    padding-right: 20px;
+    padding-left: 20px;
+    
+}
+
+.iconoCarritoMargenDerecho{
+
+    padding-right: 10px;
+}
+
+.logo-wapp-desktop{
+
+    padding-right: 10px;
+}
+
+
+
+.contenedorInferior{
+
+    
+    background-color: #3694F5;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    border-top: 1px solid white;
+    font-size: 13px;
+}
+
+
+.rigthBottomHeader{
+
+    display:flex;
+    align-items: center;
+    margin-right: 12px;
     
 
-</head>
+}
 
-<body>
-</body>
+.Inicio{
+
+    padding-right:  20px;
+}
+
+.Ofertas{
+
+    padding-right:  20px;
+}
+
+.Blog{
+
+    padding-right:  20px;
+}
+
+.Sucursales{
+
+    padding-right:  20px;
+}
+
+.Contacto{
+
+    padding-right: 20px;
+}
 
 
-</html>
+
+
+@media (min-width:525px){
+
+    
+
+.contenedorSuperior{
+    
+    display: none;
+
+}
+
+.contenedorIntermedio{
+
+    border-top: none;
+    border-bottom: none;
+    height: 100px;
+}
+
+
+.burger-logoPet{
+
+    height: 90px;
+}
+.burger-menu{
+    display: none;
+} 
+
+.logoCachogoPetShop{
+
+    width: 100%;
+    height: 75px;
+    padding-right: 20px;
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+
+/* .logosMargenDerecho{
+
+    justify-content: space-between;
+    
+   
+} */
+
+
+.logo-wapp-desktop{
+
+    display: block
+}
+
+.input-searchIcon{
+
+    display: flex;
+    
+}
+
+ .contenedorInferior{
+       display:flex
+        
+   }
+     
+   .textoBuscarEnBarra{
+
+    
+    display: block;
+ }
+ 
+ .searchIcon{
+
+      display:block
+}
+
+.iconoBuscarMargenDerecho{
+
+    display:none
+    
+}
+
+
+}
+
+
+@media (min-width:750px){
+
+    .iconoUserRegistrarse{
+
+       margin-top:30px
+      
+    }
+
+    .iconoMisCompras{
+
+        margin-top:15px
+    }
+    
+
+
+
+    .IniciarSesion{
+
+       display: block;
+    }
+    
+    .Registrarse{
+        display: block;
+      
+    
+    }
+    
+    
+    .misCompras{
+        display: block;
+        
+    
+    }
+
+}
+/* ---------------------------------- */
+
+
+/* FOOTER */
