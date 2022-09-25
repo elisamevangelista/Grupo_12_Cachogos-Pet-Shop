@@ -1,20 +1,98 @@
-header{
+header {
     text-align: center;
 }
-main{
+
+main {
     text-align: center;
+    height: 80%;
 }
-main section{
+
+main section {
     display: flex;
     background-color: orange;
     justify-content: space-around
 }
-main section a{
+
+main section a {
     background-color: grey;
     justify-content: space-around
 }
-main section div a{
+
+main section div a {
     background-color: grey;
     justify-content: space-around;
     margin: 10px;
+}
+
+form {
+    margin-bottom: 5%;
+    display: inline-block;
+    background-color: darkgrey;
+    height: 80%;
+    width: 70%;
+}
+
+main form p {
+    display: none;
+}
+
+.nombre {
+    margin-top: 5%;
+}
+
+.boton-registro {
+    margin-bottom: 5%;
+}
+
+main input {
+    border-radius: 8px;
+}
+
+/* section {
+    display: inline-block;
+    margin-top: 5%;
+    margin-bottom: 5%;
+} */
+
+@media (min-width:525px) {
+
+    form {
+            display: flex;
+            background-color: darkgrey;
+            height: 80%;
+            width: 70%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-around;
+            align-items: flex-end;
+            margin-inline: auto
+        }
+
+    .boton-registro{
+        margin-inline: auto;
+    }
+
+    .nombre {
+        display: flex;
+    }
+
+    .apellido {
+        display: flex;
+    }
+
+    .email {
+        display: flex;
+    }
+
+    .contraseña {
+        display: flex;
+    }
+
+    .terminos {
+        display: flex;
+    }
+}
+
+@media (min-width:750px) {
+
 }

@@ -1,26 +1,20 @@
-*{
-
-    font-family:nunito
-  
+* {
+    font-family: nunito
 }
 
 /* ---------------------------------- */
 /* HEADER */
 
-
-
-.contenedorSuperior{
+.contenedorSuperior {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: #456A99;
-    height:24px;
+    height: 24px;
     display: block;
-    
-    
 }
 
-.listaLogo-Llamada-Numero-wapp{
+.listaLogo-Llamada-Numero-wapp {
     display: flex;
     justify-content: center;
     color: white;
@@ -28,215 +22,155 @@
     padding-left: 15px;
     font-size: 13px;
     padding-top: 3px;
-    
 }
-   
 
-li{
-
+li {
     list-style: none;
     text-decoration: none;
     color: white;
-  
 }
 
-a{
-
+a {
     list-style: none;
     color: white;
     text-decoration: none;
-    
 }
 
-
-
-.phone{
-
+.phone {
     padding-right: 15px;
-    
 }
 
-.numero{
-
+.numero {
     padding-right: 15px;
     color: white;
-    
-    
 }
 
-.separador{
-
+.separador {
     font-weight: bold;
     padding-right: 15px;
-  
 }
 
-
-
-.contenedorIntermedio{
-
-    display:flex;
+.contenedorIntermedio {
+    display: flex;
     background-color: #3694F5;
     height: 90px;
     align-items: center;
     justify-content: space-around;
     width: 100%;
     border-top: 1px white solid;
-   
-
-   
-
-
 }
 
-.burger-logoPet{
-
-    display:flex;
+.burger-logoPet {
+    display: flex;
     align-items: center;
     width: 195px;
-  
 }
 
-.burger-menu{
+.burger-menu {
     background-color: white;
-    color:black;
-    margin-left:10px;
-    padding:3px;
+    color: black;
+    margin-left: 10px;
+    padding: 3px;
     border: white solid 1px;
     border-radius: 3px;
     margin-top: 5px;
     display: block;
 }
 
-.logoCachogoPetShop{
-
+.logoCachogoPetShop {
     width: 100%;
     height: 60px;
     padding-right: 20px;
     padding-left: 40px;
 }
 
-.textoBuscarEnBarra{
-
-   color: grey;
-   font-size: 10px;
-   padding-left: 8px;
-   height: 20px;
-   border:  solid 0px white ;
-   border-radius: 8px;
-   display: none;
-   width: 60%;
-   border-color:white;
-   outline: none   /*para sacar el borde negro del input al darle un click */
+.textoBuscarEnBarra {
+    color: grey;
+    font-size: 10px;
+    padding-left: 8px;
+    height: 20px;
+    border: solid 0px white;
+    border-radius: 8px;
+    display: none;
+    width: 60%;
+    border-color: white;
+    outline: none
+        /*para sacar el borde negro del input al darle un click */
 }
 
-
-.searchIcon{
-
+.searchIcon {
     color: black;
     padding-right: 10px;
-    display:none
+    display: none
 }
 
-
-.input-searchIcon{
-
+.input-searchIcon {
     display: none;
     background-color: white;
     border-radius: 8px;
-    border:solid 1px white;
+    border: solid 1px white;
     align-items: center;
     justify-content: space-between;
-    width:40vw
-    
+    width: 40vw
 }
 
-.logo-wapp-desktop{
-
-    color:white;
+.logo-wapp-desktop {
+    color: white;
     display: none;
-    
 }
 
-.logosMargenDerecho{
-
+.logosMargenDerecho {
     display: flex;
     padding-right: 10px;
     padding-left: 10px;
     font-size: 12px;
-    align-items:center;
+    align-items: center;
     justify-content: flex-end;
-   
 }
 
-
-.iconoUserRegistrarse{
-
+.iconoUserRegistrarse {
     justify-content: center;
-    padding-left: 20px; 
-    
-    
+    padding-left: 20px;
 }
 
-.iconoMisCompras{
-
-
-    justify-content:  center;
+.iconoMisCompras {
+    justify-content: center;
     padding-left: 25px;
 }
 
-.IniciarSesion{
-
+.IniciarSesion {
     display: none;
-    
- }
- 
- .Registrarse{
-     display: none;
-     font-size: 11px;
- 
- }
- 
- 
- .misCompras{
-     display: none;
-     font-size: 11px;
- 
- }
-
-
-
-.iconoBuscarMargenDerecho{
-
-    padding-right: 10px;
-    display:block;
-    
-    
 }
 
+.Registrarse {
+    display: none;
+    font-size: 11px;
+}
 
-.iconoUserMargenDerecho{
+.misCompras {
+    display: none;
+    font-size: 11px;
+}
 
+.iconoBuscarMargenDerecho {
+    padding-right: 10px;
+    display: block;
+}
+
+.iconoUserMargenDerecho {
     padding-right: 20px;
     padding-left: 20px;
-    
 }
 
-.iconoCarritoMargenDerecho{
-
+.iconoCarritoMargenDerecho {
     padding-right: 10px;
 }
 
-.logo-wapp-desktop{
-
+.logo-wapp-desktop {
     padding-right: 10px;
 }
 
-
-
-.contenedorInferior{
-
-    
+.contenedorInferior {
     background-color: #3694F5;
     height: 50px;
     align-items: center;
@@ -246,206 +180,145 @@ a{
     font-size: 13px;
 }
 
-
-.rigthBottomHeader{
-
-    display:flex;
+.rigthBottomHeader {
+    display: flex;
     align-items: center;
     margin-right: 12px;
-    
-
 }
 
-.Inicio{
-
-    padding-right:  20px;
-}
-
-.Ofertas{
-
-    padding-right:  20px;
-}
-
-.Blog{
-
-    padding-right:  20px;
-}
-
-.Sucursales{
-
-    padding-right:  20px;
-}
-
-.Contacto{
-
+.Inicio {
     padding-right: 20px;
 }
 
-
-
-
-@media (min-width:525px){
-
-    
-
-.contenedorSuperior{
-    
-    display: none;
-
-}
-
-.contenedorIntermedio{
-
-    border-top: none;
-    border-bottom: none;
-    height: 100px;
-}
-
-
-.burger-logoPet{
-
-    height: 90px;
-}
-.burger-menu{
-    display: none;
-} 
-
-.logoCachogoPetShop{
-
-    width: 100%;
-    height: 75px;
+.Ofertas {
     padding-right: 20px;
-    padding-left: 40px;
-    margin-top: 10px;
 }
 
-
-/* .logosMargenDerecho{
-
-    justify-content: space-between;
-    
-   
-} */
-
-
-.logo-wapp-desktop{
-
-    display: block
+.Blog {
+    padding-right: 20px;
 }
 
-.input-searchIcon{
-
-    display: flex;
-    
+.Sucursales {
+    padding-right: 20px;
 }
 
- .contenedorInferior{
-       display:flex
-        
-   }
-     
-   .textoBuscarEnBarra{
-
-    
-    display: block;
- }
- 
- .searchIcon{
-
-      display:block
+.Contacto {
+    padding-right: 20px;
 }
 
-.iconoBuscarMargenDerecho{
+@media (min-width:525px) {
 
-    display:none
-    
-}
-
-
-}
-
-
-@media (min-width:750px){
-
-    .iconoUserRegistrarse{
-
-       margin-top:30px
-      
+    .contenedorSuperior {
+        display: none;
     }
 
-    .iconoMisCompras{
-
-        margin-top:15px
+    .contenedorIntermedio {
+        border-top: none;
+        border-bottom: none;
+        height: 100px;
     }
-    
 
-
-
-    .IniciarSesion{
-
-       display: block;
+    .burger-logoPet {
+        height: 90px;
     }
-    
-    .Registrarse{
+
+    .burger-menu {
+        display: none;
+    }
+
+    .logoCachogoPetShop {
+        width: 100%;
+        height: 75px;
+        padding-right: 20px;
+        padding-left: 40px;
+        margin-top: 10px;
+    }
+
+    .logo-wapp-desktop {
+        display: block
+    }
+
+    .input-searchIcon {
+        display: flex;
+    }
+
+    .contenedorInferior {
+        display: flex
+    }
+
+    .textoBuscarEnBarra {
         display: block;
-      
-    
-    }
-    
-    
-    .misCompras{
-        display: block;
-        
-    
     }
 
+    .searchIcon {
+        display: block
+    }
+
+    .iconoBuscarMargenDerecho {
+        display: none
+    }
 }
+
+
+@media (min-width:750px) {
+
+    .iconoUserRegistrarse {
+        margin-top: 30px
+    }
+
+    .iconoMisCompras {
+        margin-top: 15px
+    }
+
+    .IniciarSesion {
+        display: block;
+    }
+
+    .Registrarse {
+        display: block;
+    }
+
+    .misCompras {
+        display: block;
+    }
+}
+
 /* ---------------------------------- */
-
 
 /* FOOTER */
 
-
-.newsLetter{
-
+.newsLetter {
     background-color: #456A99;
     height: 130px;
     justify-content: center;
-    
 }
 
-.desktop{
+.desktop {
     display: none;
-   
 }
 
-
-.mobile{
-
+.mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-
-.registrarseNewsletter-mobile{
-
-    width:90%;
-    outline: none;  /*para sacar el borde negro del input al darle un click */
-    border:  solid 0px white ;
-    border-color:white;
+.registrarseNewsletter-mobile {
+    width: 90%;
+    outline: none;
+    /*para sacar el borde negro del input al darle un click */
+    border: solid 0px white;
+    border-color: white;
     border-radius: 8px;
     font-size: 12px;
 }
 
-.BotonSuscribite{
-
-    
-    width:91%;
-    outline: none;  /*para sacar el borde negro del input al darle un click */
-    border:  solid 0px white ;
-    border-color:white;
+.BotonSuscribite {
+    width: 91%;
+    outline: none;
+    /*para sacar el borde negro del input al darle un click */
+    border: solid 0px white;
+    border-color: white;
     border-radius: 8px;
     margin-top: 8px;
     font-size: 15px;
@@ -453,80 +326,64 @@ a{
     background-color: grey;
 }
 
-h3{
+h3 {
     color: white;
 }
 
+@media (min-width:750px) {
 
-
-@media (min-width:750px){
-
-
-.newsLetter{
-
+    .newsLetter {
         background-color: #456A99;
         display: flex;
         width: 100%;
         height: 60px;
         align-items: center;
     }
-    
 
-.mobile{
+    .mobile {
+        display: none;
+    }
 
-    display: none;
+    .desktop {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        border-radius: 8px;
+        height: 30px;
+        align-items: center;
+    }
 
-    
-}   
+    .envolope-Frase {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-.desktop{
+    .barraSuscribirse-BotonRegistrarse {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        width: 80%;
+        height: 30px;
+        align-items: center;
+        border: white 1px solid;
+        border-radius: 8px;
+    }
 
-    display: flex;
-    justify-content: space-between;
-    width:80%;
-    border-radius: 8px;
-    height: 30px;
-    align-items: center;
-}
+    .registrarseNewsletter {
+        border: solid 0px white;
+        border-color: white;
+        outline: none;
+        /*para sacar el borde negro del input al darle un click */
+        margin-left: 5px;
+    }
 
-.envolope-Frase{
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-
-}
-
-.barraSuscribirse-BotonRegistrarse{
-
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    width:80%;
-    height: 30px;
-    align-items: center;
-    border: white 1px solid;
-    border-radius: 8px;
-}
-
-.registrarseNewsletter{
-    border:  solid 0px white ;
-    border-color:white;
-    outline: none;   /*para sacar el borde negro del input al darle un click */
-    margin-left: 5px;
-}
-
-.botonSuscribirse{
-
-    padding-right: 5px;
-    border-radius: 8px;
-    border:1px;
-    margin-right: 5px;
-    color:black;
-    background-color: grey;
-  
-   
-}
-
+    .botonSuscribirse {
+        padding-right: 5px;
+        border-radius: 8px;
+        border: 1px;
+        margin-right: 5px;
+        color: black;
+        background-color: grey;
+    }
 }
