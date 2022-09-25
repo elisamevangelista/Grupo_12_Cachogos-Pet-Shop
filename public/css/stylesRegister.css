@@ -1,0 +1,20 @@
+header{
+    text-align: center;
+}
+main{
+    text-align: center;
+}
+main section{
+    display: flex;
+    background-color: orange;
+    justify-content: space-around
+}
+main section a{
+    background-color: grey;
+    justify-content: space-around
+}
+main section div a{
+    background-color: grey;
+    justify-content: space-around;
+    margin: 10px;
+}
