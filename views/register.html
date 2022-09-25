@@ -5,47 +5,105 @@
     <title>Cachogos Pet Shop</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/stylesRegister.css">
+    <link rel="icon" type="image/png" href="/img/LOGO-PETSHOP.png" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700display=swap">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <!-- <link rel="shortcut icon" href="favicon.ico"> todavia no se coloco ningun icono pero dejo la estructura-->
 </head>
 <body>
-    <header>
-        <div class="top-header">
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
+    <header class="mainHeader">  <!--es el header completo, que tendra tres lineas grandes, primera con logo llamada + nro + logo wapp, 
+        segunda con logoPetShop + barra buscadora + iconos de register y carrito y tercera con nav bar. -->
+
+       <div class="contenedorSuperior">
+        
+        
+                <ul class ="listaLogo-Llamada-Numero-wapp">
+
+                    <li><a class ="phone" href="aaaaa.html"><i class="fa-solid fa-phone" ></i></a></li>
+                    <li><a class="numero" href="bbbbb.html">0800-999-2345</a></li>                
+                    <li class="separador">|</li>                                
+                    <li><a class="logoWapp" href="bbbbb.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>                 
+           
+       </div>
+         
+     
+        <div class = "contenedorIntermedio">   <!--linea superior del header que sera contenedor padre flex de logo, barra buscadora y 3 iconos -->
+
+                    
+            <div class="burger-logoPet">
+                <div class="burger-menu">
+
+                    <i class="fas fa-bars fa-lg"></i> 
+        
+                </div>      
+                
+                <img class="logoCachogoPetShop" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop">
             </div>
-            <div class="logo"> 
-                <img src="images/logo-mercado-liebre.svg" alt="Logo">
+       
+            <!-- <div class = "barraBuscadora-Icon-Buscar">  contenedor padre flex de barra buscadora, icono y palabra buscar               -->
+                            
+                
+
+            <div class="input-searchIcon">
+
+               <input type="text" class="textoBuscarEnBarra" placeholder="Buscar...">            
+               <i class="fa-solid fa-magnifying-glass searchIcon"></i>  <!--searchIcon es la segunda clase del icono search-->
+                
             </div>
-            <div class="form" action="#" method="GET">
-                <div class="input">
-                    <input type="text" class="" name="" id="" placeholder="Busca tu producto">
-                    <i class="fa fa-search"></i>
-                </div>
-                <div class="submit"></div>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/register">Registrate <i class="far fa-id-card"></i></a></li>
-                <li><a href="/login">Iniciar sesión <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="#compras">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+          
+                               
+            <ul class = "logosMargenDerecho">
+
+                <li><a class="logo-wapp-desktop" href="aaaaa.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                
+                <ul class="iconoUserRegistrarse">
+                    <li><a class="iconoUserMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a class="IniciarSesion" href="aaaaa.html">Iniciar Sesión/</a></li>
+                    <li><a class="Registrarse" href="aaaaa.html">Registrarse</a></li>
+                    
+                </ul>
+
+                <ul class="iconoMisCompras">
+                <li><a class="iconoCarritoMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a class="misCompras" href="aaaaa.html">Mis Compras</a></li>
+                </ul>
+
             </ul>
+
+        </div>
+
+        <nav class="contenedorInferior"> <!--linea inferior del header que contendra dos gruopos de listas desordenadas para el nav bar -->
+        
+            <ul class="leftBottomHeader">
+
+                <li><a class="productos" href="Productos.html">Productos</a></li>
+                
+            </ul>
+
+            <ul class="rigthBottomHeader">
+
+                <li ><a class="Inicio" href="Inicio.html">Inicio</a></li>
+                <li ><a class="Ofertas" href="Ofertas.html">Ofertas</a></li>
+                <li ><a class="Blog" href="Blog.html">Blog</a></li>
+                <li ><a class="Sucursales" href="Sucursales.html">Sucursales</a></li>
+                <li ><a class="Contacto" href="Contacto.html">Contacto</a></li>
+            
+            </ul>                                    
+
         </nav>
+
+       
+
     </header>
     <main>
-        <section>
-            <a href="">Productos</a>
-            <div>
-                <a href="">Inicio</a>
-                <a href="">Ofertas</a>
-                <a href="">Blogs</a>
-                <a href="">Sucursales</a>
-                <a href="">Contacto</a>
-            </div>
-        </section>
        <form action="" class="" id="">
         <!-- Grupo: Nombre -->
         <div class="" id="">
@@ -104,6 +162,6 @@
     <aside>
 
     </aside>
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script> -->
 </body>
 </html>
