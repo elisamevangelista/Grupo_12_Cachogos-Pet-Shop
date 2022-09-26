@@ -25,6 +25,7 @@ main section div a {
 }
 
 form {
+    border-radius: 10px;
     margin-bottom: 5%;
     display: inline-block;
     background-color: darkgrey;
