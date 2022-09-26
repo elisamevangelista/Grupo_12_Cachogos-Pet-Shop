@@ -105,44 +105,44 @@
        <form action="" class="" id="" method="post">
         <!-- Grupo: Nombre -->
         <div class="nombre" id="">
-            <label for="nombre" class="">Nombre</label>
-            <div class="">
-                <input type="text" class="" name="nombre" id="nombre" placeholder="example John">
-                <i class="fa-solid fa-circle-xmark"></i>
+            <label for="nombre" class="nameLabel">Nombre</label>
+            <div class="nameInput-i">
+                <input type="text" class="nameInput" name="nombre" id="nombre" placeholder="example John">
+                <i class="fa-solid fa-circle-xmark nameIcon"></i>
             </div>
             <p class="error-name">El nombre tiene que ser de 2 a 16 carácteres, no debe incluir numeros ni simbolos.</p>
         </div>
         <!-- Grupo: Apellido -->
         <div class="apellido" id="">
-            <label for="apellido" class="">Apellido</label>
-            <div class="">
-                <input type="text" class="" name="apellido" id="apellido" placeholder="example Travolta">
-                <i class="fa-solid fa-circle-xmark"></i>
+            <label for="apellido" class="lastnameLabel">Apellido</label>
+            <div class="lastnameInput-i">
+                <input type="text" class="lastnameInput" name="apellido" id="apellido" placeholder="example Travolta">
+                <i class="fa-solid fa-circle-xmark lastnameIcon"></i>
             </div>
             <p class="error-lastname">El apellido tiene que ser de 2 a 16 carácteres, no debe incluir numeros ni simbolos.</p>
         </div>
         <!-- Grupo: Email -->
         <div class="email" id="">
-            <label for="email" class="">E-mail</label>
-            <div class="">
-                <input type="email" class="" name="email" id="email" placeholder="correo@correo.com">
-                <i class="fa-solid fa-circle-xmark"></i>
+            <label for="email" class="mailLabel">E-mail</label>
+            <div class="mailInput-i">
+                <input type="email" class="mailInput" name="email" id="email" placeholder="correo@correo.com">
+                <i class="fa-solid fa-circle-xmark mailIcon"></i>
             </div>
             <p class="error-email">El email tiene que ser un formato de mail valido.</p>
         </div>
         <!-- Grupo: Contraseña -->
         <div class="contraseña" id="">
-            <label for="password" class="">Contraseña</label>
-            <div class="">
-                <input type="password" class="" name="password" id="password" placeholder="********">
-                <i class="fa-solid fa-circle-xmark"></i>
+            <label for="password" class="contraLabel">Contraseña</label>
+            <div class="contraInput-i">
+                <input type="password" class="contraInput" name="password" id="password" placeholder="********">
+                <i class="fa-solid fa-circle-xmark contraIcon"></i>
             </div>
             <p class="error-password">La contraseña tiene que ser de 8 a 16 carácteres, debe incluir minimamente mayúscula, minúscula y número.</p>
         </div>
         <!-- Grupo: Terminos y Condiciones -->
         <div class="terminos" id="">
-            <label for="terminos" class=""></label>
-                <input type="checkbox" class="" name="terminos" id="terminos">
+            <label for="terminos" class="terminosLabel"></label>
+                <input type="checkbox" class="checkInput" name="terminos" id="terminos">
                 Acepto los Terminos y Condiciones
             </div>
         <div class="error-formulario" id="">
@@ -206,7 +206,13 @@
                     <li ><a class="CATERGORÍAS" href="Ofertas.html">CATERGORÍAS</a></li>
                     <li ><a class="INFORMACIÓN" href="Blog.html">INFORMACIÓN</a></li>
                     <li ><a class="FORMAS DE PAGO" href="Sucursales.html">FORMAS DE PAGO</a></li>
-                    
+
+                    <div class="redesSociales-mobile">
+                        <li ><a href="Inicio.html"><img class="Instagram" src = "/img/INSTA.png" alt="Instagram"></a></li>
+                        <li ><a href="Ofertas.html"><img class="Facebook" src = "/img/FB.png" alt="Facebook"></a></li>
+                        <li ><a href="Blog.html"><img class="Youtube" src = "/img/YTUBE.png" alt="Youtube"></a></li>
+                    </div> 
+                                        
                 </ul>                                    
     
                 
@@ -266,6 +272,7 @@
                             <li ><a href="Blog.html"><img class="mercadoPago" src = "/img/MP.png" alt="MERCADO PAGO"></a></li>
                         </div>       
                     </ul> 
+                </div>
                 
             </div>
             
@@ -280,21 +287,18 @@
 
         <div class = "socalo-mobile">
 
-            <ul>
-                <img class="QR" src = "/img/VISA.png" alt="codigo QR">
-                
-                <div class="infoSocalo">
-                    <li > © </li>
-                    <li >2022 - Cachogos Pet Shop - Todos los derechos reservados</li>
+            <img class="dataFiscal-mobile" src = "/img/dataFiscal.png" alt="Data Fiscal">       
+            <div class="infoSocalo">
+                <li >© 2022 - Cachogos Pet Shop - Todos los derechos reservados</li>
                     
-                </div>       
-            </ul> 
+            </div>       
+            
 
         </div>
 
         <div class = "socalo-desktop">
             
-            <img class="dataFiscal" src = "/img/dataFiscal.png" alt="Data Fiscal">       
+            <img class="dataFiscal-desktop" src = "/img/dataFiscal.png" alt="Data Fiscal">       
             <div class="infoSocalo">
                 <li >© 2022 - Cachogos Pet Shop - Todos los derechos reservados</li>
                     

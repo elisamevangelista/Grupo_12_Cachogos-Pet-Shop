@@ -75,22 +75,126 @@ main input {
 
     .nombre {
         display: flex;
+        margin-right: 1%;
+        margin-bottom: 1%;
     }
 
     .apellido {
         display: flex;
+        margin-right: 1%;
+        margin-bottom: 1%;
     }
 
     .email {
         display: flex;
+        margin-right: 1%;
+        margin-bottom: 1%;
     }
 
     .contraseña {
         display: flex;
+        margin-right: 1%;
+        margin-bottom: 1%;
     }
 
     .terminos {
         display: flex;
+        margin-inline: auto;
+        margin-bottom: 1%;
+        width: 45%;
+        justify-content: space-around;
+    }
+
+    .nameLabel {
+        padding-top: 1.5%;
+        margin-right: 5px;
+    }
+
+    .lastnameLabel {
+        padding-top: 1.5%;
+        margin-right: 5px;
+    }
+
+    .mailLabel {
+        padding-top: 1.5%;
+        margin-right: 5px;;
+    }
+
+    .contraLabel {
+        padding-top: 1.5%;
+        margin-right: 5px;
+    }
+
+    .terminosLabel {
+        margin-right: 5px;
+    }
+
+    .nameInput-i {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+    
+    .lastnameInput-i {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+    
+    .mailInput-i {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+    
+    .contraInput-i {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+
+    .nameInput {
+        border: 0px;
+        outline: none;
+    }
+    
+    .lastnameInput {
+        border: 0px;
+        outline: none;
+    }
+    
+    .mailInput {
+        border: 0px;
+        outline: none;
+    }
+    
+    .contraInput {
+        border: 0px;
+        outline: none;
+    }
+
+    .checkInput {
+        margin-right: 1%;
+    }
+
+    .nameIcon {
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    
+    .lastnameIcon {
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    
+    .mailIcon {
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    
+    .contraIcon {
+        margin-top: 4px;
+        padding-right: 5px;
     }
 }
 

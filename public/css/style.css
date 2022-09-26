@@ -538,7 +538,7 @@ height: 40px;
     .links{
 
         display: flex;
-       margin-left: 150px;
+       margin-inline: auto;
       
     }
 
