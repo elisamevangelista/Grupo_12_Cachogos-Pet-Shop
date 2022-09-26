@@ -330,6 +330,77 @@ h3 {
     color: white;
 }
 
+
+.footerIntermedio-mobile{
+
+    background-color:#3694F5 ;
+    border-bottom: dotted 1px white;
+    
+}
+
+.logoCachogoPetShop-footer{
+
+    width: 30%;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+}
+
+
+.footerInferior-mobile{
+
+    background-color:#3694F5 ;
+    height: 100px;
+
+}
+
+.footerInferior-links{
+
+    margin: 0;
+    padding-left: 15px;
+}
+
+
+.footerInferior-desktop{
+
+    display: none;
+}
+
+.socalo-mobile{
+
+    background-color: antiquewhite;
+    align-items: center;
+    display: flex;
+    border: 1px solid black;
+}
+
+.dataFiscal-mobile{
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+
+}
+
+.infoSocalo li{
+
+    font-size: 10px;
+    color:black
+}
+
+.socalo-desktop{
+    display: none;
+}
+
+.dataFiscal-desktop{
+    display: none;
+}
+
+
 @media (min-width:750px) {
 
     .newsLetter {
@@ -390,4 +461,128 @@ h3 {
         color: black;
         background-color: grey;
     }
+
+
+
+
+    .footerIntermedio-mobile{
+
+        display: none;
+    }
+
+    .footerInferior-mobile{
+
+        display: none;
+    }
+
+    .footerInferior-desktop{
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#3694F5 ;
+    height: 200px;
+    font-size: 14px;
+}
+    .logoCachogoPetShop-footer{
+        width: 20%;
+        height: 160px;
+    }
+
+    .links{
+
+        display: flex;
+        justify-content: center;
+    }
+    
+    .redesSociales{
+
+        display: flex;
+        padding-top: 5px;
+        align-items: center;
+    }
+
+    .tarjetas{
+
+        display: flex;
+        padding-top: 5px;
+
+    }
+
+    .visa{
+
+        width: 40px;
+        height: 40px;
+
+
+    }
+
+    .AmericanExpress{
+    width: 40px;
+    height: 40px;
+
+
+}
+
+    .mercadoPago{
+    width: 40px;
+    height: 40px;
+
+}
+
+    .Instagram{
+        width: 40px;
+        height: 40px;
+    
+}
+.Facebook{
+    width: 35px;
+    height: 33px;
+
+}
+.Youtube{
+    width: 40px;
+    height: 40px;
+
+}
+
+.Nosotros , .Categorías ,.informacion , .redes , .formasDePago{
+
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+.socalo-mobile{
+
+    display: none;
+}
+
+.socalo-desktop{
+    
+    background-color: antiquewhite;
+    align-items: center;
+    display: flex;
+    border: 1px solid black;
+}
+.infoSocalo li {
+
+    display: flex;
+    color: black;
+    font-size: 10px;
+}
+
+.dataFiscal-desktop{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+
+}
+
+
 }
