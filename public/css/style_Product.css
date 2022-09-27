@@ -1,0 +1,62 @@
+
+/* -----------------DESKTOP----------------- */
+
+#superior-Desktop{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.fotosIzq{
+    width: 100%;
+
+}
+
+.fotoGrande1{
+    width: 100%;
+    height: 70px;
+
+
+}
+
+.fotoPeq1{
+
+    width: 50px;
+    height: 70px;
+}
+
+
+.Enlace-Marca{
+
+    list-style:circle;
+    color: black;
+    text-decoration:dotted;
+    display: inline-block;
+}
+
+.enlaceMarca{
+    
+    color: black;
+    text-decoration:double
+   
+
+}
+
+.SKU{
+    display: inline-block;
+
+}
+.descripcionCompra li {
+
+    color: black;
+}
+
+.descripcionCompra a{
+
+    color: black;
+}
+
+
+
+
+/* -----------------DESKTOP----------------- */
