@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+.compra-segura {
+    font-size: 12px;
+    text-align: right;
+    padding: 5px;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    border-bottom: solid 1px black; 
+}
+
+.productos{
+    padding-inline-start:0;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px gray;
+    margin: 5px;
+    border-radius: 10px;
+    }
+.productos li{
+    color: black;
+    padding: 3px;
+}
+
+.marca{
+    font-size: 14px;
+}
+.brevedescripción{
+    font-size: 10px;
+    max-width: 200px;
+}
+.precio{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cantidad{
+    font-size: 12px;
+    border: solid 1px gray;
+    max-width: 60px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.eliminar{
+    font-size: 10px;
+}
+
+.cupon {
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    border: solid 1px gray;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+h3{
+    color: black;
+    padding: 10px;
+    border-bottom: dashed 1px black; 
+}
+
+.envio {
+    border-bottom: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+}
+.total {
+    border-bottom: none; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.finalizarcompra {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    border: solid 1px gray;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
