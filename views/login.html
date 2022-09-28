@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cachogos Pet Shop</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/stylesRegister.css">
+    <link rel="stylesheet" href="/css/styleLogin.css">
     <link rel="icon" type="image/png" href="/img/LOGO-PETSHOP.png" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,38 +100,42 @@
     </header>
 
     <main>
+        <h2>Ingresar a mi cuenta</h2>
         <form action="" class="" id="">
          <!-- Grupo: Email -->
-         <div class="" id="">
-             <label for="" class="">E-mail</label>
-             <div class="">
-                 <input type="email" class="" name="" id="" placeholder="correo@correo.com">
-                 <i class="fa-solid fa-circle-xmark"></i>
-             </div>
-             <p class="">El email tiene que ser un formato de mail valido.</p>
-         </div>
-         <!-- Grupo: Contraseña -->
-         <div class="" id="">
-             <label for="" class="">Contraseña</label>
-             <div class="">
-                 <input type="password" class="" name="" id="" placeholder="********">
-                 <i class="fa-solid fa-circle-xmark"></i>
-             </div>
-             <p class="">La contraseña tiene que ser de 8 a 16 carácteres, debe incluir minimamente mayúscula, minúscula y número.</p>
-         </div>
-         <!-- Grupo: Terminos y Condiciones -->
-         <div class="" id="">
-             <label for="" class=""></label>
-                 <input type="checkbox" class="" name="" id="">
-                 Acepto los Terminos y Condiciones
-             </div>
-         <div class="" id="">
-             <p class=""><b>Error:</b> Por favor rellena el formulario correctamente.</p>
-             </div>
-         <div>
-             <button type="submit" class="">Registrarse</button>
-         </div>
-        </form>
+        <div class="email" id="">
+            <label for="email" class="mailLabel">E-mail</label>
+            <div class="mailInput-i">
+                <input type="email" class="mailInput" name="email" id="email" placeholder="correo@correo.com">
+                <div class="mailIcon">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+            </div>
+            <p class="error-email">El email tiene que ser un formato de mail valido.</p>
+        </div>
+        <!-- Grupo: Contraseña -->
+        <div class="contraseña" id="">
+            <label for="password" class="contraLabel">Contraseña</label>
+            <div class="contraInput-i">
+                <input type="password" class="contraInput" name="password" id="password" placeholder="********">
+                <div class="contraIcon">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+            </div>
+            <p class="error-password">La contraseña tiene que ser de 8 a 16 carácteres, debe incluir minimamente mayúscula, minúscula y número.</p>
+        </div>
+        
+        <div class="boton-inicio-sesión">
+            <button type="submit" class="boton">Iniciar Sesión</button>
+        </div>
+
+        <div class="error-formulario" id="">
+            <p class=""><b>Error:</b> Por favor rellena los campos correctamente.</p>
+            </div>
+        <div class="boton-registro">
+            <button type="submit" class="boton">Registrarme</button>
+        </div>
+       </form>
         
      </main>
      <footer>
@@ -163,6 +167,123 @@
                     </div>
                 </section>
         </div>
+
+
+        <div class = "footerIntermedio-mobile">
+
+            <img class="logoCachogoPetShop-footer" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop">
+    
+        </div>
+
+
+        <div class = "footerInferior-mobile">
+     
+               
+                <ul class="footerInferior-links">
+    
+                    <li ><a class="NOSOTROS" href="Inicio.html">NOSOTROS</a></li>
+                    <li ><a class="CATERGORÍAS" href="Ofertas.html">CATERGORÍAS</a></li>
+                    <li ><a class="INFORMACIÓN" href="Blog.html">INFORMACIÓN</a></li>
+                    <li ><a class="FORMAS DE PAGO" href="Sucursales.html">FORMAS DE PAGO</a></li>
+
+                    <div class="redesSociales-mobile">
+                        <li ><a href="Inicio.html"><img class="Instagram" src = "/img/INSTA.png" alt="Instagram"></a></li>
+                        <li ><a href="Ofertas.html"><img class="Facebook" src = "/img/FB.png" alt="Facebook"></a></li>
+                        <li ><a href="Blog.html"><img class="Youtube" src = "/img/YTUBE.png" alt="Youtube"></a></li>
+                    </div> 
+                                        
+                </ul>                                    
+    
+                
+        </div>
+
+        <div class = "footerInferior-desktop">
+     
+               
+            <img class="logoCachogoPetShop-footer" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop">
+
+            <div class="links">
+
+                <ul class="listadoLinksNosotros">
+
+                    <li><a class="Nosotros" href="Inicio.html">NOSOTROS</a></li>
+                    <li><a class="QuienesSomos" href="Ofertas.html">Quienes somos</a></li>
+                    <li><a class="Contacto" href="Blog.html">Contacto</a></li>
+                    <li><a class="TrabajaConNosotros" href="Sucursales.html">Trabajá con nosotros</a></li>
+                    
+                </ul>  
+                
+                <ul class="listadoLinksCategorias">
+
+                    <li ><a class="Categorías" href="Inicio.html">CATERGORÍAS</a></li>
+                    <li ><a class="perros" href="Ofertas.html">Perros</a></li>
+                    <li ><a class="gatos" href="Blog.html">Gatos</a></li>
+                    <li ><a class="peces" href="Blog.html">Peces</a></li>
+                    <li ><a class="aves" href="Blog.html">Aves</a></li>
+                    
+                </ul>      
+                
+                <ul class="listadoLinksInformacion">
+
+                    <li ><a class="informacion" href="Inicio.html">INFORMACIÓN</a></li>
+                    <li ><a class="delivery" href="Ofertas.html">Delivery</a></li>
+                    <li ><a class="promocionesBancarias" href="Blog.html">Promociones bancarias</a></li>
+                    <li ><a class="terminosYCondiciones" href="Blog.html">Términos y condiciones</a></li>
+                                    
+                </ul>    
+
+                <div class="listadoLinksSeguinos-FormasdePago">
+                
+                    <ul>
+                        <li ><a class="redes" href="Inicio.html">SEGUINOS</a></li>
+                        <div class="redesSociales">
+                            <li ><a href="Inicio.html"><img class="Instagram" src = "/img/INSTA.png" alt="Instagram"></a></li>
+                            <li ><a href="Ofertas.html"><img class="Facebook" src = "/img/FB.png" alt="Facebook"></a></li>
+                            <li ><a href="Blog.html"><img class="Youtube" src = "/img/YTUBE.png" alt="Youtube"></a></li>
+                        </div>        
+                    </ul> 
+                    
+                    <ul>
+                        <li ><a class="formasDePago" href="Inicio.html">FORMAS DE PAGO</a></li>
+                        <div class="tarjetas">
+                            <li ><a href="Inicio.html"><img class="visa" src = "/img/VISA.png" alt="Tarjeta VISA"></a></li>
+                            <li ><a href="Blog.html"><img class="AmericanExpress" src = "/img/AMEX (1).png" alt="Tarjeta AMEX"></a></li>
+                            <li ><a href="Blog.html"><img class="mercadoPago" src = "/img/MP.png" alt="MERCADO PAGO"></a></li>
+                        </div>       
+                    </ul> 
+                </div>
+                
+            </div>
+            
+        </div>  
+
+                
+    
     </footer>
+
+    <aside>
+
+
+        <div class = "socalo-mobile">
+
+            <img class="dataFiscal-mobile" src = "/img/dataFiscal.png" alt="Data Fiscal">       
+            <div class="infoSocalo">
+                <li >© 2022 - Cachogos Pet Shop - Todos los derechos reservados</li>
+                    
+            </div>       
+            
+
+        </div>
+
+        <div class = "socalo-desktop">
+            
+            <img class="dataFiscal-desktop" src = "/img/dataFiscal.png" alt="Data Fiscal">       
+            <div class="infoSocalo">
+                <li >© 2022 - Cachogos Pet Shop - Todos los derechos reservados</li>
+                    
+            </div>       
+        </div> 
+
+    </aside>
 </body>
 </html>

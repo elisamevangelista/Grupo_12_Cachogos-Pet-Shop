@@ -35,21 +35,8 @@ main {
         width: 70%;
     }
     
-    .nombre {
-        display: flex;
-        flex-direction: column;
-        margin-right: 1%;
-        margin-bottom: 1%;
-    }
-    
-    .apellido {
-        display: flex;
-        flex-direction: column;
-        margin-right: 1%;
-        margin-bottom: 1%;
-    }
-    
     .email {
+        margin-top: 5%;
         display: flex;
         flex-direction: column;
         margin-right: 1%;
@@ -72,30 +59,8 @@ main {
         display: none;
     }
     
-    .nombre {
-        margin-top: 5%;
-    }
-    
     .boton-registro {
         margin-bottom: 5%;
-    }
-    
-    .nameInput-i {
-        background-color: white;
-        border-radius: 8px;
-        border: 1px solid black;
-        width: 90%;
-        display: flex;
-        margin-inline: auto;
-    }
-    
-    .lastnameInput-i {
-        background-color: white;
-        border-radius: 8px;
-        border: 1px solid black;
-        width: 90%;
-        display: flex;
-        margin-inline: auto;
     }
     
     .mailInput-i {
@@ -115,20 +80,6 @@ main {
         display: flex;
         margin-inline: auto;
     }
-
-    .nameInput {
-        border-radius: 8px;
-        border: 0px;
-        outline: none;
-        width: 90%;
-    }
-    
-    .lastnameInput {
-        border-radius: 8px;
-        border: 0px;
-        outline: none;
-        width: 90%;
-    }
     
     .mailInput {
         border-radius: 8px;
@@ -146,18 +97,6 @@ main {
 
     .checkInput {
         margin-right: 1%;
-    }
-    
-    .nameIcon {
-        display: none;
-        margin-top: 4px;
-        padding-right: 5px;
-    }
-    
-    .lastnameIcon {
-        display: none;
-        margin-top: 4px;
-        padding-right: 5px;
     }
     
     .mailIcon {
@@ -209,9 +148,6 @@ main {
         display: none;
     }
     
-    .nombre {
-        margin-top: 5%;
-    }
     
     .boton-registro {
         margin-bottom: 4%;
@@ -235,26 +171,16 @@ main {
         margin-inline: auto;
     }
 
-    .nombre {
-        font-size: 130%;
-        display: flex;
-        flex-direction: row;
-        margin-left: 0.6%;
-        margin-bottom: 2%;
-    }
-
-    .apellido {
-        font-size: 130%;
-        display: flex;
-        flex-direction: row;
+    .boton-inicio-sesión{
         margin-bottom: 2%;
     }
 
     .email {
+        margin-top: 5%;
         font-size: 130%;
         display: flex;
         flex-direction: row;
-        margin-left: 1.5%;
+        margin-left: 1%;
         margin-bottom: 2%;
     }
 
@@ -262,7 +188,7 @@ main {
         font-size: 130%;
         display: flex;
         flex-direction: row;
-        margin-right: 2.7%;
+        margin-right: 4.9%;
         margin-bottom: 2%;
     }
 
