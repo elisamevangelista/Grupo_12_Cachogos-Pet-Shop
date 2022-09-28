@@ -79,6 +79,11 @@ main {
     .boton-registro {
         margin-bottom: 5%;
     }
+
+    .boton {
+        border-radius: 8px;
+        border-color: grey;
+    }
     
     .nameInput-i {
         background-color: white;
@@ -217,6 +222,11 @@ main {
         margin-bottom: 4%;
     }
     
+    .boton {
+        background-color: beige;
+        border-radius: 8px;
+        border-color: grey;
+    }
 
     form {
         border-radius: 10px;
@@ -235,8 +245,13 @@ main {
         margin-inline: auto;
     }
 
+    .boton {
+        border-radius: 8px;
+        border-color: grey;
+    }
+
     .nombre {
-        font-size: 130%;
+        font-size: 125%;
         display: flex;
         flex-direction: row;
         margin-left: 0.6%;
@@ -244,14 +259,14 @@ main {
     }
 
     .apellido {
-        font-size: 130%;
+        font-size: 125%;
         display: flex;
         flex-direction: row;
         margin-bottom: 2%;
     }
 
     .email {
-        font-size: 130%;
+        font-size: 125%;
         display: flex;
         flex-direction: row;
         margin-left: 1.5%;
@@ -259,7 +274,7 @@ main {
     }
 
     .contraseña {
-        font-size: 130%;
+        font-size: 125%;
         display: flex;
         flex-direction: row;
         margin-right: 2.7%;
@@ -285,7 +300,7 @@ main {
 
     .mailLabel {
         padding-top: 1.5%;
-        margin-right: 5px;;
+        margin-right: 10px;
     }
 
     .contraLabel {

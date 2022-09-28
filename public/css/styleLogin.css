@@ -55,12 +55,33 @@ main {
         justify-content: center;
     }
     
-    main form p {
+    .error-email {
         display: none;
+    }
+
+    .error-password {
+        display: none;
+    }
+
+    .error-formulario {
+        display: none;
+    }
+
+    form a {
+        margin-bottom: 3%;
+        text-decoration: none;
+        list-style: none;
+        color: blue;
+        font-style: italic;
     }
     
     .boton-registro {
         margin-bottom: 5%;
+    }
+
+    .boton {
+        border-radius: 8px;
+        border-color: grey;
     }
     
     .mailInput-i {
@@ -144,15 +165,21 @@ main {
         display: flex;
     }
     
-    main form p {
-        display: none;
-    }
-    
-    
     .boton-registro {
         margin-bottom: 4%;
     }
     
+    .error-email {
+        display: none;
+    }
+
+    .error-password {
+        display: none;
+    }
+
+    .error-formulario {
+        display: none;
+    }
 
     form {
         border-radius: 10px;
@@ -167,12 +194,25 @@ main {
         margin-inline: auto
     }
 
+    form a {
+        margin-bottom: 1%;
+        text-decoration: none;
+        list-style: none;
+        color: blue;
+        font-style: italic;
+    }
+
     .boton-registro{
         margin-inline: auto;
     }
 
+    .boton {
+        border-radius: 8px;
+        border-color: grey;
+    }
+
     .boton-inicio-sesión{
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
 
     .email {
