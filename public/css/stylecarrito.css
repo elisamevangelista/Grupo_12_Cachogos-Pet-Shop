@@ -60,7 +60,9 @@ h2 {
     margin-right: 40px;
 }
 
-h3{
+/* cambiamos de h3 a main h3 para sus valores de props no afecten a los h3 del footer y solo afecten a los h3 del main */
+
+main h3{   
     color: black;
     padding: 10px;
     border-bottom: dashed 1px black; 

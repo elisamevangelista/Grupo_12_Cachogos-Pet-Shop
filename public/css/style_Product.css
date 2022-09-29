@@ -1,32 +1,290 @@
 
-/* -----------------DESKTOP----------------- */
+
+.fotoProductoCarrouuselMobile{
+width: 90%;
+height: 400px;
+margin-top: 55px;
+margin-left: 15px;
+border: solid 1px;
+border-radius: 8px;
+
+}
+
+.Producto-descripcion{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Producto-descripcion a,  .Producto-descripcion li{ 
+
+    color:black;
+    
+}
+
+.marca-SKU-mobile{
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.enlaceMarca-li-mobile{
+
+        padding-right: 8px;
+       
+}
+
+.enlaceMarca-a-mobile{
+    text-decoration: underline;
+}
+
+
+.SKU-mobile{
+
+    padding-left: 8px;
+}
+
+
+.precioProducto-moblie{
+
+    font-size: 25px;
+    font-weight: bold;
+    padding: 12px 0px 12px 0px;
+}
+
+.cuotas-mobile{
+
+    text-align: center;
+    font-size: 12px;
+}
+
+
+
+.separadorBarra{
+    color: black;
+}
+
+
+.seleccionPeso-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pesoAlimento-Mobile{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.botonPeso-Mobile{
+
+    margin-left: 5 px;
+    margin-right: 5px;
+    margin-left: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.divCantidadDisponible-mobile{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+}
+
+
+
+.cantidadDisponible-mobile{
+    font-size: 12px;
+}
+
+.botonera-cantidad-carrito-comprar-mobile{
+
+    margin-bottom: 15px;
+}
+
+.Div-botones-cantidad-agregarCarrito-mobile{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.botonSeleccionCantidad-Mobile{
+
+    margin-left: 5 px;
+    margin-right: 5px;
+    margin-left: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+   
+}
+.botonAgregarAlCarrito-Mobile{
+    margin-left: 10 px;
+    margin-right: 5px;
+    margin-left: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 60%;
+
+}
+
+.Divbotones-comprarAhora-mobile{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+
+}
+
+.botoncomprarAhora-Mobile{
+
+    margin-left: 10 px;
+    margin-right: 5px;
+    margin-left: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 80%;
+    font-size: 20px;
+}
+
+
+.compartir-mobile{
+    padding-left: 10px;
+}
+
+.lista-enlacesRedes-mobile{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    margin-top: 10px;
+
+
+}
+
+.divEnlacesSeccion2-mobile{
+
+    margin-left:10px;
+    margin-right:15px;
+    border-top: solid 3px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+}
+
+.enlacesSeccion2-mobile{
+
+        display: flex;
+        justify-content: space-between;
+        color: black
+
+}
+
+
+
+.enlacesSeccion2-mobile li{
+
+    display: flex;
+    justify-content: space-between;
+    color: black
+
+}
+
+.menuDesplegable-mobile{
+
+    padding-top: 7px;
+    font-size: 20px ;
+    font-weight: bold;
+}
+
+.botonAmpliar-mobile{
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.divRecomendados{
+    display: flex;
+    flex-direction:column ;
+    background-color: grey;
+    text-align: center;
+
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+
+/* ---------------------------------------DESKTOP------------------------------------- */
+
+@media (min-width:640px) {
+    
+
+.fotoProdcuto-Mobile{
+    display: none;
+}
+
+
 
 #superior-Desktop{
 
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
-.fotosIzq{
-    width: 100%;
+.divFotosIzq{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
 
 }
 
 .fotoGrande1{
-    width: 100%;
-    height: 70px;
+    width: 90%;
+    height: 450px;
+    margin-top: 15px;
+    margin-left: 15px;
+    border: solid 1px;
+    border-radius: 8px;
 
+} 
 
+.DivfotosPeq{
+    display: flex;
+    margin-top: 17px;
+
+      
 }
 
-.fotoPeq1{
 
-    width: 50px;
-    height: 70px;
+.fotosPeq{
+
+    height: 120px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px black dotted;
+    border-radius: 8px;
+    padding:5px 1px 5px 1px   
 }
 
 
-.Enlace-Marca{
+.enlaceMarca-li{
 
     list-style:circle;
     color: black;
@@ -34,10 +292,9 @@
     display: inline-block;
 }
 
-.enlaceMarca{
+.enlaceMarca-a{
     
     color: black;
-    text-decoration:double
    
 
 }
@@ -45,6 +302,13 @@
 .SKU{
     display: inline-block;
 
+}
+
+.descripcionCompra{
+
+    margin-left: 5px;
+    margin-right: 10px;
+    flex-grow: 0.5;
 }
 .descripcionCompra li {
 
@@ -56,7 +320,177 @@
     color: black;
 }
 
+.precio{
+
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.cuotas{
+    padding-bottom: 15px;
+    font-size: 12px;
+}
+
+
+                   
+.peso1{
+    display:inline-block;
+    border-radius: 8px;
+}
+
+.peso2{
+    display:inline-block;
+    margin-left: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.botonesCantidad-Compra{
+
+    display: flex;
+    margin-bottom: 15px;
+   
+    
+}
+
+.seleccionCantidad{
+    width: 20%;
+    border-radius: 8px;
+    padding: 5px 5px
+}
+.agregarCarrito{
+    width: 80%;
+    margin-left: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 5px 5px
+}
+
+.comprarAhora{
+
+    width: 100%;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: grey;
+    padding: 5px 5px;
+    margin-bottom: 15px;
+}
+
+.redesSociales-Producto{
+
+    display: flex;
+}
+
+.comparti{
+    margin-bottom: 10px;
+}
+
+/* -----------------RECOMENDADOS--------------- */
+
+.divRecomendados{
+    background-color: #3694F5;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-recomendados{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.recomendados{
+    font-size: 22px;
+    color: white;
+    margin: 10px 10px;
+}
 
 
 
-/* -----------------DESKTOP----------------- */
+.carousel-recomendados{
+
+    display: flex;
+    justify-content: space-around;
+  
+    
+}
+
+article{
+
+    display: flex;
+    flex-direction: column;
+   
+    background-color: burlywood;
+    margin-top: 25px;
+    margin-bottom:25px;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+   
+    
+}
+
+article li{
+
+    color: black;
+}
+
+.divFotoRec{
+    display: flex;
+    justify-content: center;
+    margin-left: 21px;  /* -----------------COMO CENTRO LA FOT!!!???????????????????????--------------- */
+    
+}
+
+.fotosPeq-recomendados{
+ 
+   
+    width: 90%;
+    margin-top: 8px;
+    border: solid 1px;
+    border-radius: 8px;
+    
+    
+}
+
+.cartaProducto{
+
+    margin-right: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.precio-recomendados{
+
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px 
+}
+
+.cuotas-recomendados{
+
+    font-size: 12px;
+    padding-top: 5px 
+ 
+}
+
+.agregarCarrito-recomendados{
+
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: cadetblue;
+    align-items: center;
+}
+
+}
+/* -------------------------------------------DESKTOP-------------------------------------------- */
