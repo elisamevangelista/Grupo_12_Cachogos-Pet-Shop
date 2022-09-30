@@ -25,12 +25,13 @@ border-radius: 8px;
     
 }
 
-.marca-SKU-mobile{
+.div-enlaceMarca-SKU-mobile{
 
     display: flex;
     justify-content: center;
-    
 }
+
+
 
 .enlaceMarca-li-mobile{
 
@@ -158,6 +159,7 @@ border-radius: 8px;
     margin-bottom: 15px;
     width: 80%;
     font-size: 20px;
+    background-color: lightslategrey;
 }
 
 
@@ -216,21 +218,181 @@ border-radius: 8px;
 }
 
 
-.divRecomendados{
-    display: flex;
-    flex-direction:column ;
-    background-color: grey;
-    text-align: center;
 
-    align-items: center;
-    margin-bottom: 25px;
+.divRecomendados{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
 }
+
+
+.div-Articulo-Recomendados-Mobile{
+
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+.div-tarjetaRecomendados{
+
+    background-color:antiquewhite;
+    width: 80%;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.fotoProductoRecomendado-Carrouusel-Mobile{
+
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+
+.div-Producto-recomendado-descripcion{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.div-Producto-recomendado-descripcion li{
+    color: black;
+
+}
+
+.div-Producto-recomendado-descripcion p{
+    font-size: 16px ;
+    font-weight: bold;
+}
+
+.div-recomendado-enlaceMarca-SKU{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.div-recomendado-enlaceMarca-SKU li, .div-recomendado-enlaceMarca-SKU a{
+   
+    color: black;
+}
+
+
+.div-fotoRecomendados-Mobile{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+    background-color: bisque;
+}
+
+.enlaceFotoRec-mobile{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.precioProducto-recomendado-moblie{
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.cuotas-recomendado-mobile{
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+/* ---------------------------------------1era query 500px-> ocultos----------------------------- */
+
+
+.div-tarjetaRecomendados2{
+    display: none;
+    background-color:antiquewhite;
+    width: 80%;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* ---------------------------------------cambio 2do query----------------------------- */
+
+
+
+
+
+
+
+
+/* ---------------------------------------1era query 500px-> en recomendados: pasa a 2 articulos, el resto se mantiene igual----------------------------- */
+
+
+@media (min-width: 500px){
+
+
+    .div-Articulo-Recomendados-Mobile{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      
+    }
+
+    .div-tarjetaRecomendados2{
+        display: inline-block;
+    }
+    
+
+}   
+
+/* ---------------------------------------2da query 640px-> en seccion 1: pasa a vista desktop. Es decir, foto produto ppal a la izq y descrip a la derecha. El resto se mantiene----------------------------- */
+
+@media (min-width: 640px){
+
+    .MAIN-FOTO-DESCRIPCION-MOBILE-DESKTOP{
+
+        display: flex;
+    }
+
+}
+
+
+
+
+
+/* ---------------------------------------3ra query 750px-> en recomendados: 3 articulos, el resto se mantiene igual----------------------------- */
+
+
+/* ---------------------------------------4ta query 1024px-> footer pasa a desktop y en recomendados: 4 articulos, el resto se mantiene igual----------------------------- */
+
+/* ---------------------------------------5ta query 1240px-> se aplica marge % al main en ambos costados. ----------------------------- */
+
+
 
 
 
 /* ---------------------------------------DESKTOP------------------------------------- */
 
-@media (min-width:640px) {
+/* @media (min-width:640px) {
     
 
 .fotoProdcuto-Mobile{
@@ -388,7 +550,7 @@ border-radius: 8px;
     margin-bottom: 10px;
 }
 
-/* -----------------RECOMENDADOS--------------- */
+-----------------RECOMENDADOS---------------
 
 .divRecomendados{
     background-color: #3694F5;
@@ -443,8 +605,8 @@ article li{
     justify-content: center;
     margin-left: 21px;  /* -----------------COMO CENTRO LA FOT!!!???????????????????????--------------- */
     
-}
 
+/* 
 .fotosPeq-recomendados{
  
    
@@ -490,7 +652,7 @@ article li{
     border-radius: 8px;
     background-color: cadetblue;
     align-items: center;
-}
+} */
 
-}
+
 /* -------------------------------------------DESKTOP-------------------------------------------- */
