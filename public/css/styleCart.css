@@ -133,8 +133,7 @@
 }
 
 .flechasCarrusel a i {
-  background-color: red;
-  border-radius: 100%;
+  color: grey;
 }
 
 .imagenCarrusel img {
