@@ -108,44 +108,78 @@
                 <i class="fa-solid fa-cart-shopping"></i> Mi Carrito de Compras
             </h2>
         </section>  
-         
-        <div>
-            <ul class="productos">
-                <li><img width=70px heigth= 70px src="/img/EUKANUBA-grande1.jpg" alt="producto1"></li>
-                    <ul>
-                        <li class="marca">EUKANUBA</li>
-                        <li class="brevedescripción">RAZAS PEQUEÑAS, PERROS MAYORES A 1 AÑO, BOLSA 3KG</li>
-                        <li class="precio">$4.200</li>
-                        <li class="cantidad">- Num +</li>
-                        <li class="eliminar"><i class="fa-solid fa-trash-can"></i>Eliminar</li>
+        <div class="contenedorPadre">    
+            <div class="contcol1">
+                <div class="encabezadoCarrito"> <!-- se desplega lista al pasar a desktop-->
+                    <ul class="haciaIzquierda">
+                    <li>PRODUCTO</li>            
                     </ul>
-                    
-            </ul>
-        </div>
-        <div>
-            <ul class="productos">   
-            <li><img width=70px heigth= 70px src ="/img/EUKANUBA-peq1_.jpg" alt="producto2"></li>
-                <ul>
-                <li class="marca">EUKANUBA</li>
-                <li class="brevedescripción">PERROS ADULTO 1,5-6 AÑOS, BOLSA 25KG</li>
-                <li class="precio">$10.800</li>
-                <li class="cantidad">- Num +</li>
-                <li class="eliminar"><i class="fa-solid fa-trash-can"></i>Eliminar</li>
-                </ul>   
-            </ul>
-        </div>    
+                    <ul class="haciaDerecha">
+                    <li>CANTIDAD</li>
+                    <li>PRECIO</li>
+                    </ul>                                    
+                </div> <!--fin div encabezado que se despliega al pasar a desktop-->
 
-        <section>      
-            <h2>Resumen de mi Orden</h2>
+                <div class="productos"> <!--inicio producto1-->
+                    <div class="imagen">
+                        <img width=70px heigth= 70px src="/img/EUKANUBA-grande1.jpg" alt="producto1">
+                     </div>
+                    <div class="subcont1">
+                        <div class="productoTexto">
+                        <p class="marca">EUKANUBA</p>
+                        <p class="brevedescripción">RAZAS PEQUEÑAS, PERROS MAYORES A 1 AÑO, BOLSA 3KG</p>
+                        </div>
+                    <div class="subcont2">
+                        <div class="cantiPrecio">
+                            <p class="cantidad">- Num +</p>
+                            <p class="precio">$4.200</p>
+                        </div>
+                        <div class="botonEliminar">
+                            <span class="eliminar">Eliminar</span>  <button type="reset"><i class="fa-solid fa-trash-can"></i></button>  
+                        </div>
+                    </div>
+                    </div>
+                </div>  <!--finProducto1-->      
+                       
+    
+
+                <div class="productos"> <!--inicio producto2-->
+                    <div class="imagen">  
+                       <img width=70px heigth= 70px src ="/img/EUKANUBA-peq1_.jpg" alt="producto2">
+                    </div>
+                    <div class="subcont1">
+                        <div class="productoTexto">           
+                            <p class="marca">EUKANUBA</p>
+                            <p class="brevedescripción">PERROS ADULTO 1,5-6 AÑOS, BOLSA 25KG</p>
+                        </div>
+                    <div class="subcont2">
+                        <div class="cantiPrecio">
+                            <p class="cantidad">- Num +</p>    
+                            <p class="precio">$10.800</p>
+                        </div>
+                        <div class="botonEliminar">
+                            <span class="eliminar">Eliminar</span>  <button type="reset"><i class="fa-solid fa-trash-can"></i></button>  
+                        </div>
+                    </div>             
+                    </div>    
+                </div> <!--finProducto2-->  
+            </div> <!--fincontcol1-->
+            
+            <div class="contcol2">
+            <section class="finalCompra">  
+            <h2 class="resumen">Resumen de mi Orden</h2>
             <p class="cupon"><i class="fa-solid fa-tag"></i> Agregar Cupon de Descuento Aquí</p>
-        </section>  
-        <section>      
+            </section>  
+            <section class="finalCompra">      
             <h3>Descuentos</h3>
             <h3 class="subtotal">Subtotal <span>$15.000</span></h3>
             <h3 class="envio">Envio <span>GRATIS</span></h3>
             <h3 class="total">Total con Envío <span>$15.000</span></h3>
-
-        <p class="finalizarcompra">FINALIZAR COMPRA</p>
+            <div class="finalizarcompra">
+                <button type="submit" class="botonFin" >FINALIZAR COMPRA</button>
+            </div>
+            </div>
+        </div>
     </main>
 
 
