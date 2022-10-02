@@ -2,39 +2,405 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cachogos Pet Shop</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/styles.css">
-    <!-- <link rel="shortcut icon" href="favicon.ico"> todavia no se coloco ningun icono pero dejo la estructura-->
+    <title>Cachogos Pet Shop</title>
 
+    <!-- referencio a las hojas de estilo ppal (header y footer) y secundaria para esta pag (main)-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_Product.css"> 
+    <link rel="stylesheet" href="/css/style-home.css">  
+    
+    
+    <!-- <link rel="shortcut icon" href="favicon.ico"> todavia no se coloco ningun icono pero dejo la estructura-->
+    
+    <link rel="icon" type="image/png" href="/img/LOGO-PETSHOP.png" >  <!--imagen de nombre 'icono', formato '.png', en carpeta local 'imag' -->
+    
+    <!--siguientes 3 link copiados de google fonts para importar el tipo de letra ROBOTO, aplicado en el archivo .css -->
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+   
+    
+    <!--link copiados fontawsome cdn, ultima version para importar iconos -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+        <!--paquete bootstrap -->
+  <!-- Bootstrap CSS 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- script carrousel -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Hello, world!</title>
+  
 </head>
 <body>
     
-    <header>
-        <nav>
+  
+    <header class="mainHeader">  <!--es el header completo, que tendra tres lineas grandes, primera con logo llamada + nro + logo wapp, 
+        segunda con logoPetShop + barra buscadora + iconos de register y carrito y tercera con nav bar. -->
 
-        </nav>
-    </header>
-    <main>
-        <section>
-            <article>
+       <div class="contenedorSuperior">
+        
+        
+                <ul class ="listaLogo-Llamada-Numero-wapp">
 
+                    <li><a class ="phone" href="aaaaa.html"><i class="fa-solid fa-phone" ></i></a></li>
+                    <li><a class="numero" href="bbbbb.html">0800-999-2345</a></li>                
+                    <li class="separador">|</li>                                
+                    <li><a class="logoWapp" href="bbbbb.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>                 
+           
+       </div>
+         
+     
+        <div class = "contenedorIntermedio">   <!--linea superior del header que sera contenedor padre flex de logo, barra buscadora y 3 iconos -->
+
+                    
+            <div class="burger-logoPet">
+                <div class="burger-menu">
+
+                    <i class="fas fa-bars fa-lg"></i> 
+        
+                </div>      
+                
+                <a href="Inicio.html"><img class="logoCachogoPetShop" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop"></a>
+            </div>
+       
+            <!-- <div class = "barraBuscadora-Icon-Buscar">  contenedor padre flex de barra buscadora, icono y palabra buscar               -->
+                            
                 
 
-            </article>
-        </section>
-        <section>
-            <article>
+            <div class="input-searchIcon">
 
-            </article>
-        </section>
-    </main>
-    <footer>
+               <input type="text" class="textoBuscarEnBarra" placeholder="Buscar...">            
+               <i class="fa-solid fa-magnifying-glass searchIcon"></i>  <!--searchIcon es la segunda clase del icono search-->
+                
+            </div>
+          
+                               
+            <ul class = "logosMargenDerecho">
 
+                <li><a class="logo-wapp-desktop" href="aaaaa.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                
+                <ul class="iconoUserRegistrarse">
+                    <li><a class="iconoUserMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a class="IniciarSesion" href="aaaaa.html">Iniciar Sesión/</a></li>
+                    <li><a class="Registrarse" href="aaaaa.html">Registrarse</a></li>
+                    
+                </ul>
+
+                <ul class="iconoMisCompras">
+                <li><a class="iconoCarritoMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a class="misCompras" href="aaaaa.html">Mis Compras</a></li>
+                </ul>
+
+            </ul>
+
+        </div>
+
+        <nav class="contenedorInferior"> <!--linea inferior del header que contendra dos gruopos de listas desordenadas para el nav bar -->
+        
+            <ul class="leftBottomHeader">
+
+                <li><a class="productos" href="Productos.html">Productos</a></li>
+                
+            </ul>
+
+            <ul class="rigthBottomHeader">
+
+                <li ><a class="Inicio" href="Inicio.html">Inicio</a></li>
+                <li ><a class="Ofertas" href="Ofertas.html">Ofertas</a></li>
+                <li ><a class="Blog" href="Blog.html">Blog</a></li>
+                <li ><a class="Sucursales" href="Sucursales.html">Sucursales</a></li>
+                <li ><a class="Contacto" href="Contacto.html">Contacto</a></li>
+            
+            </ul>                                    
+
+        </nav>
+
+       
+
+    </header>
+    <main>
+        <section class="sliderHome">
+          <div class="carrousel">
+        
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/images/day-dog-promo.jpeg" class="d-block w-100" alt="dd">
+                </div>
+                <div class="carousel-item">
+                  <img src="/images/gato-promo2.jpg" class="d-block w-100" alt="dd">
+                </div>
+                <div class="carousel-item">
+                  <img src="/images/gato-promocion.jpg" class="d-block w-100" alt="dd">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            
+          </div>
+    
+          <div class="categoriasHome">
+            <div class="cat1"> 
+              <img
+                src="/images/fish-categoria-1.jpg" alt="">
+            </div>
+            <div class="cat1"> <img
+                src="/images/cat-categoria.jpg" alt="">
+            </div>
+            <div class="cat1"> <img
+                src="/images/dog-categoria.jpg" alt="">
+            </div>
+            <div class="cat1"> <img
+                src="/images/bird-categoria.jpg" alt="">
+            </div>
+    
+          </div>
+        </section>
+        <div class="contenedorPoliticas">
+          <section class="politicasEmpresa ">
+            <div class="promocionesBancaria"> <img src="data:image/png;base64,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" alt="">
+            Promociones Bancarias</div>
+            <div class="envioGratis cajaEmpresa">
+              <i class='bx bx-car'></i>
+             Envío en el día 
+            </div>
+            <div class="retiroSucursales cajaEmpresa">
+              <i class='bx bx-home'></i>
+              Retiro gratis en cualquiera de nuestras sucursales
+            </div>
+                </section>
+        </div>
+       
+        <h2>!Promociones imperdibles¡</h2>
+    
+     <section class="carrouselDos">
+    
+      <div class="promo"> 
+        <img
+          src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+      </div>
+      <div class="promo"> <img
+          src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+      </div>
+      <div class="promo"> <img
+          src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+      </div>
+      <div class="promo"> <img
+          src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+      </div>
+     </section>
+    
+    
+    
+      <div class="Carousel">
+        <h2>Subcategory Carousel</h2>
+        <div class="slick-list" id="slick-list">
+            <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+            </button>
+            <div class="slick-track" id="track">
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/1.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/2.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/3.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/4.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/5.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/6.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/7.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+              
+            </div>
+            <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+            </button>
+        </div>
+       
+    </div>
+    
+    <!-- <div class="buscaMarcas"> 
+      <img
+        src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+        src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+        src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+        src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+      src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+      src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div> -->
+    
+    
+    
+    
+    
+    
+      </main>
+    <div class="container-fluid">
+
+        <div class="row">
+          <div class=" col-sm-12 col-mb-2  col-lg-2"> <img
+              src="/img/LOGO-PETSHOP-sin-fondo.png" alt=""></div>
+          <div class="col col-mb-2 col-sm-12 col-lg-2">
+            <span class="tituloFooter"> CONTENIDO</span>
+            <ul>
+              <li>Quienes somos</li>
+              <li>Contacto</li>
+              <li>Trabaja con nosotros</li>
+            </ul>
+          </div>
+          <div class=" col-sm-12 col-mb-2 col-lg-2 ">
+            <span class="tituloFooter"> CATEGORÍAS </span>
+            <ul>
+              <li>Perros</li>
+              <li>Gatos</li>
+              <li>Peces</li>
+              <li>Aves</li>
+            </ul>
+          </div>
+          <div class=" col-mb-2 col-sm-12 col-lg-2"> <span class="tituloFooter"> INFORMACIÓN </span>
+            <ul>
+              <li>Delivery</li>
+              <li>Promociones bancarias</li>
+              <li>Términos y condiciones</li>
+            </ul>
+          </div>
+          <div class=" col-mb-2 col-sm-12 col-lg-2"><span class="tituloFooter"> SEGUINOS </span>
+  
+  
+            <div class="iconos-sociales">
+              <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en YouTube" height="35"
+                  width="35"
+                  src=" https://1.bp.blogspot.com/-0Ao8V_ZtT5Q/YPhkfO0JqkI/AAAAAAAAA1U/Sz5GlaSW78AsY3nZpcqeIoPA_HQUSCVLgCPcBGAYYCw/s0/Youtube-icono.png"
+                  title=" Sígueme en YouTube " /></a>
+  
+              <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en Facebook" height="35"
+                  width="35"
+                  src=" https://1.bp.blogspot.com/-Pop-U7OywXs/YPhkfrImyiI/AAAAAAAAA1Y/UBnVfTK9j2U-bIUqwZYMNSQPvz_l06mbwCPcBGAYYCw/s0/facebook-icono.png"
+                  title="Sígueme en Facebook" /></a>
+  
+              <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35"
+                  width="35"
+                  src="https://1.bp.blogspot.com/-VFfOISywV0c/YPhkeRXuRQI/AAAAAAAAA1M/L75S9Usg5AovunH2Y-VzqJbaaY1LuK3eACPcBGAYYCw/s0/Instagram-icono.png"
+                  title="Sígueme en Instagram" /></a>
+  
+            </div>
+  
+  
+            <!-- Aquí van los estilos -->
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+           >Digital House</a
+          >
+      </div>
+  
+  
     </footer>
-    <aside>
-
-    </aside>
-</body>
-</html>
+  
+  
+  <!-- JavaScript Bundle with Popper -->
+  <script src="/js/carrousel.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  
+  </body>
+  
+  </html>

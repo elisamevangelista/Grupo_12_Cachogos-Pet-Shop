@@ -65,14 +65,14 @@
                 <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                 
                 <ul class="iconoUserRegistrarse">
-                    <li><a class="iconoUserMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a class="iconoUserMargenDerecho" href="/login"><i class="fa-solid fa-user"></i></a></li>
                     <li><a class="IniciarSesion" href="/login">Iniciar Sesión/</a></li>
                     <li><a class="Registrarse" href="/register">Registrarse</a></li>
                     
                 </ul>
 
                 <ul class="iconoMisCompras">
-                <li><a class="iconoCarritoMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a class="iconoCarritoMargenDerecho" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a class="misCompras" href="/carrito">Mis Compras</a></li>
                 </ul>
 
@@ -90,7 +90,7 @@
 
             <ul class="rigthBottomHeader">
 
-                <li ><a class="Inicio" href="Inicio.html">Inicio</a></li>
+                <li ><a class="Inicio" href="/">Inicio</a></li>
                 <li ><a class="Ofertas" href="Ofertas.html">Ofertas</a></li>
                 <li ><a class="Blog" href="Blog.html">Blog</a></li>
                 <li ><a class="Sucursales" href="Sucursales.html">Sucursales</a></li>
@@ -103,49 +103,52 @@
     <main>
         <h2 class="titulo-main">Crear mi cuenta</h2>
        <form action="/" class="" id="" method="post">
-        <!-- Grupo: Nombre -->
-        <div class="nombre" id="">
-            <label for="nombre" class="nameLabel">Nombre</label>
-            <div class="nameInput-i">
-                <input type="text" class="nameInput" name="nombre" id="nombre" placeholder="example John">
-                <div class="nameIcon">
-                    <i class="fa-solid fa-circle-xmark"></i>
+        <div class="campos-form">
+
+            <!-- Grupo: Nombre -->
+            <div class="nombre" id="">
+                <label for="nombre" class="nameLabel">Nombre</label>
+                <div class="nameInput-i">
+                    <input type="text" class="nameInput" name="nombre" id="nombre" placeholder="example John">
+                    <div class="nameIcon">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
                 </div>
+                <p class="error-name">El nombre tiene que ser de 2 a 16 carácteres, no debe incluir numeros ni simbolos.</p>
             </div>
-            <p class="error-name">El nombre tiene que ser de 2 a 16 carácteres, no debe incluir numeros ni simbolos.</p>
-        </div>
-        <!-- Grupo: Apellido -->
-        <div class="apellido" id="">
-            <label for="apellido" class="lastnameLabel">Apellido</label>
-            <div class="lastnameInput-i">
-                <input type="text" class="lastnameInput" name="apellido" id="apellido" placeholder="example Travolta">
-                <div class="lastnameIcon">
-                    <i class="fa-solid fa-circle-xmark"></i>
+            <!-- Grupo: Apellido -->
+            <div class="apellido" id="">
+                <label for="apellido" class="lastnameLabel">Apellido</label>
+                <div class="lastnameInput-i">
+                    <input type="text" class="lastnameInput" name="apellido" id="apellido" placeholder="example Travolta">
+                    <div class="lastnameIcon">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
                 </div>
+                <p class="error-lastname">El apellido tiene que ser de 2 a 16 carácteres, no debe incluir numeros ni simbolos.</p>
             </div>
-            <p class="error-lastname">El apellido tiene que ser de 2 a 16 carácteres, no debe incluir numeros ni simbolos.</p>
-        </div>
-        <!-- Grupo: Email -->
-        <div class="email" id="">
-            <label for="email" class="mailLabel">E-mail</label>
-            <div class="mailInput-i">
-                <input type="email" class="mailInput" name="email" id="email" placeholder="correo@correo.com">
-                <div class="mailIcon">
-                    <i class="fa-solid fa-circle-xmark"></i>
+            <!-- Grupo: Email -->
+            <div class="email" id="">
+                <label for="email" class="mailLabel">E-mail</label>
+                <div class="mailInput-i">
+                    <input type="email" class="mailInput" name="email" id="email" placeholder="correo@correo.com">
+                    <div class="mailIcon">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
                 </div>
+                <p class="error-email">El email tiene que ser un formato de mail valido.</p>
             </div>
-            <p class="error-email">El email tiene que ser un formato de mail valido.</p>
-        </div>
-        <!-- Grupo: Contraseña -->
-        <div class="contraseña" id="">
-            <label for="password" class="contraLabel">Contraseña</label>
-            <div class="contraInput-i">
-                <input type="password" class="contraInput" name="password" id="password" placeholder="********">
-                <div class="contraIcon">
-                    <i class="fa-solid fa-circle-xmark"></i>
+            <!-- Grupo: Contraseña -->
+            <div class="contraseña" id="">
+                <label for="password" class="contraLabel">Contraseña</label>
+                <div class="contraInput-i">
+                    <input type="password" class="contraInput" name="password" id="password" placeholder="********">
+                    <div class="contraIcon">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
                 </div>
+                <p class="error-password">La contraseña tiene que ser de 8 a 16 carácteres, debe incluir minimamente mayúscula, minúscula y número.</p>
             </div>
-            <p class="error-password">La contraseña tiene que ser de 8 a 16 carácteres, debe incluir minimamente mayúscula, minúscula y número.</p>
         </div>
         <!-- Grupo: Terminos y Condiciones -->
         <div class="terminos" id="">
