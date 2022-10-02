@@ -1,0 +1,226 @@
+ /* estilo footer */
+ *{
+    box-sizing: border-box;
+  }
+  footer .container-fluid {
+    background: black;
+    width: 100%;
+    color: white;
+    padding: 5%;
+  }
+
+  .container-fluid .row img {
+    width: 67%;
+    margin: 4%;
+  }
+
+  .iconos-sociales {
+    display: flex;
+  }
+
+
+  .iconos-sociales img {
+    transition: all 0.5s ease-out;
+  }
+
+  .iconos-sociales img:hover {
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    transform: translate(0px, -5px);
+  }
+
+  /* SESION SLIDER HOME */
+  .sliderHome {
+    display: flex;
+  flex-wrap: nowrap;
+
+  }
+  .sliderHome img {
+    width: 100%;
+  }
+  .carrouselPrincipal {
+    order: 1;
+  flex-basis: 46%;
+  margin: 1%;
+  }
+
+  .categoriasHome {
+    padding: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 50%;
+  order: 2;
+  }
+
+  .categoriasHome img {
+    width: 100%;
+  }
+  .cat1{
+    order: 3;
+  flex-grow: 1;
+  flex-basis: 40%;
+  margin: 2%;
+  }
+
+  .politicasEmpresa {
+    display: flex;
+    width: 75%;
+  margin: 0 auto;
+  }
+  .politicasEmpresa img {
+    width: 30%;
+  }
+  .cajaEmpresa {
+    flex-basis: 30%;
+  }
+.contenedorPoliticas {
+    border: 1px solid black;
+  }
+
+  .carrouselPromociones h2 {
+    text-align: center;
+  }
+  .carrousel {
+    order: 1;
+    flex-basis: 50%;
+    margin: 1%;
+  }
+
+  /*display dos*/
+
+  .carrouselDos {
+    display: flex;
+  }
+
+  .carrouselDos img {
+    width: 100%;
+  }
+
+  .promo {
+    margin: 1%;
+  }
+
+
+  #carouselExampleIndicators {
+    order: 1;
+    flex-basis: 40%;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .busquedaMarcas{
+    display: flex;
+    width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  }
+
+  .busquedaMarcas img{
+    width: 100%;
+  }
+  .buscaMarcas {
+    order: 1;
+    flex-basis: 14%;
+    margin: 1%;
+  }
+
+/* carrousel home marcas */
+
+.Carousel{
+    width: 100%;
+    margin: 0px 60px;
+}
+.Carousel h2{
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+/* images */
+
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: #fff;
+    padding: 15px;
+}
+.slick h4 small{
+    font-size: 15px;
+    display: block;
+}
+.slick a img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    transition: .3s ease-in-out;
+}
+.slick a img:hover{
+    opacity: .85;
+}
+
+/* buttons */
+
+.slick-arrow{
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0,0,0,.7);
+}
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
