@@ -62,14 +62,14 @@
                 <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                 
                 <ul class="iconoUserRegistrarse">
-                    <li><a class="iconoUserMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a class="iconoUserMargenDerecho" href="/login"><i class="fa-solid fa-user"></i></a></li>
                     <li><a class="IniciarSesion" href="/login">Iniciar Sesión/</a></li>
                     <li><a class="Registrarse" href="/register">Registrarse</a></li>
                     
                 </ul>
 
                 <ul class="iconoMisCompras">
-                <li><a class="iconoCarritoMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a class="iconoCarritoMargenDerecho" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a class="misCompras" href="/carrito">Mis Compras</a></li>
                 </ul>
 
@@ -102,7 +102,9 @@
     <main>
         <h2>Ingresar a mi cuenta</h2>
         <form action="" class="" id="">
-         <!-- Grupo: Email -->
+
+            <div class="campos-form">
+                <!-- Grupo: Email -->
         <div class="email" id="">
             <label for="email" class="mailLabel">E-mail</label>
             <div class="mailInput-i">
@@ -122,6 +124,8 @@
                     <i class="fa-solid fa-circle-xmark"></i>
                 </div>
             </div>
+            </div>
+         
             <p class="error-password">La contraseña tiene que ser de 8 a 16 carácteres, debe incluir minimamente mayúscula, minúscula y número.</p>
         </div>
         <a href="">¿Olvidaste tu contraseña?</a>
@@ -131,7 +135,7 @@
         <div class="error-formulario" id="">
             <p class=""><b>Error:</b> Por favor rellena los campos correctamente.</p>
             </div>
-            <div>
+            <div class="separador-login">
                 <p>---------------------</p>
             </div>
             <a href="/register">¿Todavía no ténes una cuenta?</a>
@@ -152,13 +156,13 @@
                     <input type="email" class="registrarseNewsletter-mobile" placeholder="Su e-mail..."> 
 
                     <button type="submit" class="BotonSuscribite">Suscribite</button>
-
+                      
                 </section>
 
                 <section class = "desktop">
                     
                     <div class="envolope-Frase">
-                        <i class="fa-solid fa-envelope" ></i>
+                        <i class="fa-solid fa-envelope iconoMensaje"></i>
                         <h4>Registrate para recibir novedades!</h4>
                     </div>
 
@@ -169,7 +173,10 @@
                         
                     </div>
                 </section>
+
         </div>
+
+
 
 
         <div class = "footerIntermedio-mobile">
@@ -260,8 +267,6 @@
             
         </div>  
 
-                
-    
     </footer>
 
     <aside>
