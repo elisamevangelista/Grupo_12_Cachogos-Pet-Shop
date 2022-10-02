@@ -1,11 +1,21 @@
+*{
+
+    box-sizing: border-box;
+}
+
+.fotoProducto-Mobile{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
 .fotoProductoCarrouuselMobile{
-width: 90%;
+width: 80%;
 height: 400px;
 margin-top: 55px;
-margin-left: 15px;
-border: solid 1px;
 border-radius: 8px;
 
 }
@@ -17,18 +27,27 @@ border-radius: 8px;
     align-items: center;
     text-align: center;
     margin-bottom: 30px;
+    width:100%;
+    
+}
+
+main h2{
+
+
+    width: 90%;
 }
 
 .Producto-descripcion a,  .Producto-descripcion li{ 
 
     color:black;
-    
+    text-align: center;
 }
 
 .div-enlaceMarca-SKU-mobile{
 
     display: flex;
     justify-content: center;
+   
 }
 
 
@@ -36,6 +55,7 @@ border-radius: 8px;
 .enlaceMarca-li-mobile{
 
         padding-right: 8px;
+        font-size: 14px;
        
 }
 
@@ -47,12 +67,13 @@ border-radius: 8px;
 .SKU-mobile{
 
     padding-left: 8px;
+    font-size: 14px;
 }
 
 
 .precioProducto-moblie{
 
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
     padding: 12px 0px 12px 0px;
 }
@@ -60,7 +81,7 @@ border-radius: 8px;
 .cuotas-mobile{
 
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 
@@ -80,7 +101,7 @@ border-radius: 8px;
 
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .botonPeso-Mobile{
@@ -90,6 +111,11 @@ border-radius: 8px;
     margin-left: 10px;
     border-radius: 8px;
     margin-bottom: 15px;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
 }
 
 .divCantidadDisponible-mobile{
@@ -110,33 +136,41 @@ border-radius: 8px;
 .botonera-cantidad-carrito-comprar-mobile{
 
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
 }
 
 .Div-botones-cantidad-agregarCarrito-mobile{
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-top: 25px;
+    width: 90%;
+  
 }
 
 .botonSeleccionCantidad-Mobile{
 
-    margin-left: 5 px;
-    margin-right: 5px;
-    margin-left: 10px;
+
     border-radius: 8px;
     margin-bottom: 15px;
+    font-size: 15px;
+    width: 70px;
+   
+    
    
 }
 .botonAgregarAlCarrito-Mobile{
-    margin-left: 10 px;
-    margin-right: 5px;
-    margin-left: 10px;
+
+
     border-radius: 8px;
     margin-bottom: 15px;
-    width: 60%;
+    font-size: 15px;
+    width: 80%;
 
 }
 
@@ -147,17 +181,15 @@ border-radius: 8px;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
+    width: 90%;
 
 }
 
 .botoncomprarAhora-Mobile{
 
-    margin-left: 10 px;
-    margin-right: 5px;
-    margin-left: 10px;
     border-radius: 8px;
     margin-bottom: 15px;
-    width: 80%;
+    width: 100%;
     font-size: 20px;
     background-color: lightslategrey;
 }
@@ -172,13 +204,14 @@ border-radius: 8px;
     justify-content: flex-start;
     padding-left: 10px;
     margin-top: 10px;
+    align-items: center;
 
 
 }
 
 .divEnlacesSeccion2-mobile{
 
-    margin-left:10px;
+    margin-left:15px;
     margin-right:15px;
     border-top: solid 3px;
     margin-top: 15px;
@@ -217,24 +250,34 @@ border-radius: 8px;
     font-weight: bold;
 }
 
+article{
 
+    height: 410px;
+}
 
 .divRecomendados{
     background-color: gray;
     display: flex;
     justify-content: center;
+    margin-left:15px;
+    margin-right:15px;
+    font-size: 20px;
+    height: 44px;
+    align-items: center;
 }
 
 
 .div-Articulo-Recomendados-Mobile{
 
-    background-color: lightslategray;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
+    
+    margin-left:15px;
+    margin-right:15px;
 }
 
 
@@ -257,6 +300,7 @@ border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 8px;
+    height: 220px;
 }
 
 
@@ -275,6 +319,8 @@ border-radius: 8px;
 .div-Producto-recomendado-descripcion p{
     font-size: 16px ;
     font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .div-recomendado-enlaceMarca-SKU{
@@ -315,9 +361,12 @@ border-radius: 8px;
 .cuotas-recomendado-mobile{
     font-size: 12px;
     padding-bottom: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    
 }
 
-/* ---------------------------------------1era query 500px-> ocultos----------------------------- */
+/* ---------------------------------------1era query 500px-> Oculto clase de segundo articulo recomendado asi no se ve antes de los 500px. ----------------------------- */
 
 
 .div-tarjetaRecomendados2{
@@ -336,13 +385,66 @@ border-radius: 8px;
 /* ---------------------------------------cambio 2do query----------------------------- */
 
 
+.divfotosPeq{
+
+    display:none;
+    margin-top: 17px;
+}
+
+
+
+.fotosPeq{
+
+
+    display: none;
+    height: 120px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px black dotted;
+    border-radius: 8px;
+    padding:5px 1px 5px 1px   
+}
+
+
+
+/* ---------------------------------------cambio 3ra query----------------------------- */
+
+
+.div-tarjetaRecomendados3{
+
+    display: none;
+    background-color:antiquewhite;
+    width: 80%;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
 
 
+/* ---------------------------------------cambio 4t query----------------------------- */
 
 
-/* ---------------------------------------1era query 500px-> en recomendados: pasa a 2 articulos, el resto se mantiene igual----------------------------- */
+.div-tarjetaRecomendados4{
+
+    display: none;
+    background-color:antiquewhite;
+    width: 80%;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+/* ---------------------------------------1era query 500px-> en Recomendados: pasa a 2 articulos, el resto se mantiene igual----------------------------- */
 
 
 @media (min-width: 500px){
@@ -354,305 +456,200 @@ border-radius: 8px;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-      
+             
     }
+
+
+    .div-tarjetaRecomendados{
+      
+        margin-left: 22px;
+        margin-right: 6px;
+    }
+    
 
     .div-tarjetaRecomendados2{
         display: inline-block;
+        margin-left: 6px;
+        margin-right: 22px;
     }
     
 
 }   
 
-/* ---------------------------------------2da query 640px-> en seccion 1: pasa a vista desktop. Es decir, foto produto ppal a la izq y descrip a la derecha. El resto se mantiene----------------------------- */
 
-@media (min-width: 640px){
 
-    .MAIN-FOTO-DESCRIPCION-MOBILE-DESKTOP{
 
-        display: flex;
+/* ---------------------------------------2da query 640px-> en seccion 1: pasa a vista desktop. Es decir, foto producto ppal a la izq y descrip a la derecha. El resto se mantiene----------------------------- */
+
+@media (min-width:640px){
+
+    .main-foto-descripcion-mobile-desktop{
+
+        display: flex;  /* - foto producto ppal a la izq y descrip a la derecha- */
+        justify-content: center;
     }
+
+
+
+
+.div-fotoppal-fotospeque{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0px 12px;
+    
+
+}
+
+
+.divfotosPeq{
+    display: flex;
+    justify-content: center;
+    margin-left: 12px;
+
+
+   
+     
+}
+
+.fotosPeq{
+
+
+    display: block;
+    max-width: 90%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+  
+}
+
+.Producto-descripcion{
+
+   
+    align-items: flex-start;
+    text-align: left;
+    
+}
+
+.Producto-descripcion a,  .Producto-descripcion li{ 
+
+
+    text-align: left;
+}
+
+.div-enlaceMarca-SKU-mobile{
+
+   
+    justify-content: flex-start;
+   
+}
+
+
+.seleccionPeso-mobile{
+
+    align-items: flex-start;
+}
+
+.pesoAlimento-Mobile{
+
+    justify-content: flex-start;
+}
+
+.Div-botones-cantidad-agregarCarrito-mobile{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.botonSeleccionCantidad-Mobile{
+
+   
+    width: 60px;
+}
+
+.botonAgregarAlCarrito-Mobile{
+   
+    width: 70%;
+}
+
+
+.compartir-mobile{
+    padding-left: 10px;
+}
+
+.lista-enlacesRedes-mobile{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    margin-top: 10px;
+
+
+}
 
 }
 
 
 
-
-
 /* ---------------------------------------3ra query 750px-> en recomendados: 3 articulos, el resto se mantiene igual----------------------------- */
+@media (min-width:750px){
 
 
-/* ---------------------------------------4ta query 1024px-> footer pasa a desktop y en recomendados: 4 articulos, el resto se mantiene igual----------------------------- */
+    .div-tarjetaRecomendados3{
+        display: inline-block;
+        margin-left: 6px;
+        margin-right: 22px;
+        
+    }
+
+
+    .div-tarjetaRecomendados2{
+
+   
+        margin-left: 22px;
+        margin-right: 22px;
+      
+    }
+
+
+
+
+}
+
+/* ---------------------------------------4ta query 950px-> footer pasa a desktop y en recomendados: 4 articulos, el resto se mantiene igual----------------------------- */
+
+@media (min-width:950px){
+
+
+.div-tarjetaRecomendados4{
+
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 22px;
+}
+
+
+}
+
+
+
 
 /* ---------------------------------------5ta query 1240px-> se aplica marge % al main en ambos costados. ----------------------------- */
 
 
 
+@media (min-width:1240px){
 
 
-/* ---------------------------------------DESKTOP------------------------------------- */
+main{
 
-/* @media (min-width:640px) {
+    margin-left: 2%;
+    margin-right: 2%;
+}
     
-
-.fotoProdcuto-Mobile{
-    display: none;
-}
-
-
-
-#superior-Desktop{
-
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.divFotosIzq{
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-
-}
-
-.fotoGrande1{
-    width: 90%;
-    height: 450px;
-    margin-top: 15px;
-    margin-left: 15px;
-    border: solid 1px;
-    border-radius: 8px;
-
-} 
-
-.DivfotosPeq{
-    display: flex;
-    margin-top: 17px;
-
-      
-}
-
-
-.fotosPeq{
-
-    height: 120px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border: 1px black dotted;
-    border-radius: 8px;
-    padding:5px 1px 5px 1px   
-}
-
-
-.enlaceMarca-li{
-
-    list-style:circle;
-    color: black;
-    text-decoration:dotted;
-    display: inline-block;
-}
-
-.enlaceMarca-a{
-    
-    color: black;
-   
-
-}
-
-.SKU{
-    display: inline-block;
-
-}
-
-.descripcionCompra{
-
-    margin-left: 5px;
-    margin-right: 10px;
-    flex-grow: 0.5;
-}
-.descripcionCompra li {
-
-    color: black;
-}
-
-.descripcionCompra a{
-
-    color: black;
-}
-
-.precio{
-
-    font-size: 22px;
-    font-weight: bold;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    
-}
-
-.cuotas{
-    padding-bottom: 15px;
-    font-size: 12px;
-}
-
-
-                   
-.peso1{
-    display:inline-block;
-    border-radius: 8px;
-}
-
-.peso2{
-    display:inline-block;
-    margin-left: 10px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.botonesCantidad-Compra{
-
-    display: flex;
-    margin-bottom: 15px;
-   
-    
-}
-
-.seleccionCantidad{
-    width: 20%;
-    border-radius: 8px;
-    padding: 5px 5px
-}
-.agregarCarrito{
-    width: 80%;
-    margin-left: 10px;
-    font-size: 16px;
-    border-radius: 8px;
-    padding: 5px 5px
-}
-
-.comprarAhora{
-
-    width: 100%;
-    font-size: 18px;
-    border-radius: 8px;
-    background-color: grey;
-    padding: 5px 5px;
-    margin-bottom: 15px;
-}
-
-.redesSociales-Producto{
-
-    display: flex;
-}
-
-.comparti{
-    margin-bottom: 10px;
-}
-
------------------RECOMENDADOS---------------
-
-.divRecomendados{
-    background-color: #3694F5;
-    display: flex;
-    justify-content: center;
-}
-
-.carousel-recomendados{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.recomendados{
-    font-size: 22px;
-    color: white;
-    margin: 10px 10px;
-}
-
-
-
-.carousel-recomendados{
-
-    display: flex;
-    justify-content: space-around;
-  
-    
-}
-
-article{
-
-    display: flex;
-    flex-direction: column;
-   
-    background-color: burlywood;
-    margin-top: 25px;
-    margin-bottom:25px;
-    border: 1px solid;
-    border-radius: 8px;
-    margin-left: 10px;
-    margin-right: 10px;
-   
-    
-}
-
-article li{
-
-    color: black;
-}
-
-.divFotoRec{
-    display: flex;
-    justify-content: center;
-    margin-left: 21px;  /* -----------------COMO CENTRO LA FOT!!!???????????????????????--------------- */
-    
-
-/* 
-.fotosPeq-recomendados{
- 
-   
-    width: 90%;
-    margin-top: 8px;
-    border: solid 1px;
-    border-radius: 8px;
-    
-    
-}
-
-.cartaProducto{
-
-    margin-right: 10px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-}
-
-.precio-recomendados{
-
-    font-size: 16px;
-    font-weight: bold;
-    padding-top: 5px 
-}
-
-.cuotas-recomendados{
-
-    font-size: 12px;
-    padding-top: 5px 
- 
-}
-
-.agregarCarrito-recomendados{
-
-    margin-top: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 1px solid;
-    border-radius: 8px;
-    background-color: cadetblue;
-    align-items: center;
-} */
-
-
-/* -------------------------------------------DESKTOP-------------------------------------------- */
+    }
