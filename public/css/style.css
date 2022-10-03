@@ -5,7 +5,15 @@
 /* ---------------------------------- */
 /* HEADER */
 
+header a {
+    color: white;
+    text-decoration: none;
+}
 
+footer a {
+    color: white;
+    text-decoration: none;
+}
 
 .contenedorSuperior {
     display: flex;

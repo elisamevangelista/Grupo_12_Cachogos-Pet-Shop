@@ -49,99 +49,90 @@
 <body>
 
 
-    <header class="mainHeader">
+    <header class="mainHeader"> 
         <!--es el header completo, que tendra tres lineas grandes, primera con logo llamada + nro + logo wapp, 
-        segunda con logoPetShop + barra buscadora + iconos de register y carrito y tercera con nav bar. -->
+       segunda con logoPetShop + barra buscadora + iconos de register y carrito y tercera con nav bar. -->
 
-        <div class="contenedorSuperior">
+      <div class="contenedorSuperior">
+       
+       
+               <ul class ="listaLogo-Llamada-Numero-wapp">
 
+                   <li><a class ="phone" href="aaaaa.html"><i class="fa-solid fa-phone" ></i></a></li>
+                   <li><a class="numero" href="bbbbb.html">0800-999-2345</a></li>                
+                   <li class="separador">|</li>                                
+                   <li><a class="logoWapp" href="bbbbb.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+               </ul>                 
+          
+      </div>
+        
+    
+       <div class = "contenedorIntermedio">   <!--linea superior del header que sera contenedor padre flex de logo, barra buscadora y 3 iconos -->
 
-            <ul class="listaLogo-Llamada-Numero-wapp">
+                   
+           <div class="burger-logoPet">
+               <div class="burger-menu">
 
-                <li><a class="phone" href="aaaaa.html"><i class="fa-solid fa-phone"></i></a></li>
-                <li><a class="numero" href="bbbbb.html">0800-999-2345</a></li>
-                <li class="separador">|</li>
-                <li><a class="logoWapp" href="bbbbb.html"><i class="fa-brands fa-whatsapp"></i></a></li>
-            </ul>
+                   <i class="fas fa-bars fa-2x"></i> 
+       
+               </div>      
+               
+               <a href="Inicio.html"><img class="logoCachogoPetShop" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop"></a>
+           </div>
+                    
 
-        </div>
+           <div class="input-searchIcon"> <!--modo desktop -  barra buscadora-->
 
+              <input type="text" class="textoBuscarEnBarra" placeholder="Buscar...">            
+              <i class="fa-solid fa-magnifying-glass searchIcon"></i>  <!--searchIcon es la segunda clase del icono search-->
+               
+           </div>
+         
+                              
+           <ul class = "logosMargenDerecho">
 
-        <div class="contenedorIntermedio">
-            <!--linea superior del header que sera contenedor padre flex de logo, barra buscadora y 3 iconos -->
+               <li><a class="logo-wapp-desktop" href="aaaaa.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+               <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+               
+               <ul class="iconoUserRegistrarse">
+                   <li><a class="iconoUserMargenDerecho" href="/login"><i class="fa-solid fa-user"></i></a></li>
+                   <li><a class="IniciarSesion" href="/login">Iniciar Sesión/</a></li>
+                   <li><a class="Registrarse" href="/register">Registrarse</a></li>
+                   
+               </ul>
 
+               <ul class="iconoMisCompras">
+               <li><a class="iconoCarritoMargenDerecho" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
+               <li><a class="misCompras" href="/carrito">Mis Compras</a></li>
+               </ul>
 
-            <div class="burger-logoPet">
-                <div class="burger-menu">
+           </ul>
 
-                    <i class="fas fa-bars fa-lg"></i>
+       </div>
 
-                </div>
+       <nav class="contenedorInferior"> <!--linea inferior del header que contendra dos gruopos de listas desordenadas para el nav bar -->
+       
+           <ul class="leftBottomHeader">
 
-                <a href="Inicio.html"><img class="logoCachogoPetShop" src="/img/LOGO-PETSHOP.png"
-                        alt="Logotipo Cachgos Pet Shop"></a>
-            </div>
+               <li><a class="productos" href="Productos.html">Productos</a></li>
+               
+           </ul>
 
-            <!-- <div class = "barraBuscadora-Icon-Buscar">  contenedor padre flex de barra buscadora, icono y palabra buscar               -->
+           <ul class="rigthBottomHeader">
 
+               <li ><a class="Inicio" href="Inicio.html">Inicio</a></li>
+               <li ><a class="Ofertas" href="Ofertas.html">Ofertas</a></li>
+               <li ><a class="Blog" href="Blog.html">Blog</a></li>
+               <li ><a class="Sucursales" href="Sucursales.html">Sucursales</a></li>
+               <li ><a class="Contacto" href="Contacto.html">Contacto</a></li>
+           
+           </ul>                                    
 
+       </nav>
 
-            <div class="input-searchIcon">
+      
 
-                <input type="text" class="textoBuscarEnBarra" placeholder="Buscar...">
-                <i class="fa-solid fa-magnifying-glass searchIcon"></i>
-                <!--searchIcon es la segunda clase del icono search-->
-
-            </div>
-
-
-            <ul class="logosMargenDerecho">
-
-                <li><a class="logo-wapp-desktop" href="aaaaa.html"><i class="fa-brands fa-whatsapp"></i></a></li>
-                <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i
-                            class="fa-solid fa-magnifying-glass"></i></a></li>
-
-                <ul class="iconoUserRegistrarse">
-                    <li><a class="iconoUserMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a class="IniciarSesion" href="aaaaa.html">Iniciar Sesión/</a></li>
-                    <li><a class="Registrarse" href="aaaaa.html">Registrarse</a></li>
-
-                </ul>
-
-                <ul class="iconoMisCompras">
-                    <li><a class="iconoCarritoMargenDerecho" href="aaaaa.html"><i
-                                class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a class="misCompras" href="aaaaa.html">Mis Compras</a></li>
-                </ul>
-
-            </ul>
-
-        </div>
-
-        <nav class="contenedorInferior">
-            <!--linea inferior del header que contendra dos gruopos de listas desordenadas para el nav bar -->
-
-            <ul class="leftBottomHeader">
-
-                <li><a class="productos" href="Productos.html">Productos</a></li>
-
-            </ul>
-
-            <ul class="rigthBottomHeader">
-
-                <li><a class="Inicio" href="Inicio.html">Inicio</a></li>
-                <li><a class="Ofertas" href="Ofertas.html">Ofertas</a></li>
-                <li><a class="Blog" href="Blog.html">Blog</a></li>
-                <li><a class="Sucursales" href="Sucursales.html">Sucursales</a></li>
-                <li><a class="Contacto" href="Contacto.html">Contacto</a></li>
-
-            </ul>
-
-        </nav>
-
-
-
-    </header>
+   </header>
     <main>
         <section class="sliderHome">
                     <!-- carrousel home principal  -->
@@ -347,84 +338,144 @@
 
     </main>
     <footer>
-     <!--   <div class="suscribirse">
-          <form>
-            
-           
-            <div class="d-flex flex-row flex-sm-row w-100 p-2">
-              <i class='bx bx-envelope'></i>  <p>Registrese para recibir novedades</p>
-           </i>
-              <input id="newsletter1" type="text" class="form-control w-25 p-3" placeholder="Email address">
-              <button class="btn btn-primary" type="button">Subscribirse</button>
-            </div>
-          </form>
-    
-        </div> -->
-    <div class="container-fluid">
 
-        <div class="row">
-            <div class=" col-sm-12 col-mb-2  col-lg-2"> <img src="/img/LOGO-PETSHOP-sin-fondo.png" alt=""></div>
-            <div class="col col-mb-2 col-sm-12 col-lg-2">
-                <span class="tituloFooter"> CONTENIDO</span>
-                <ul>
-                    <li>Quienes somos</li>
-                    <li>Contacto</li>
-                    <li>Trabaja con nosotros</li>
-                </ul>
-            </div>
-            <div class=" col-sm-12 col-mb-2 col-lg-2 ">
-                <span class="tituloFooter"> CATEGORÍAS </span>
-                <ul>
-                    <li>Perros</li>
-                    <li>Gatos</li>
-                    <li>Peces</li>
-                    <li>Aves</li>
-                </ul>
-            </div>
-            <div class=" col-mb-2 col-sm-12 col-lg-2"> <span class="tituloFooter"> INFORMACIÓN </span>
-                <ul>
-                    <li>Delivery</li>
-                    <li>Promociones bancarias</li>
-                    <li>Términos y condiciones</li>
-                </ul>
-            </div>
-            <div class=" col-mb-2 col-sm-12 col-lg-2"><span class="tituloFooter"> SEGUINOS </span>
+        <div class = "newsLetter">
+                
+            <section class="mobile">
 
+                <h4>Registrate y recibí nuestras novedades!</h4>
 
-                <div class="iconos-sociales">
-                    <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en YouTube"
-                            height="35" width="35"
-                            src=" https://1.bp.blogspot.com/-0Ao8V_ZtT5Q/YPhkfO0JqkI/AAAAAAAAA1U/Sz5GlaSW78AsY3nZpcqeIoPA_HQUSCVLgCPcBGAYYCw/s0/Youtube-icono.png"
-                            title=" Sígueme en YouTube " /></a>
+                <input type="email" class="registrarseNewsletter-mobile" placeholder="Tu e-mail..."> 
 
-                    <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en Facebook"
-                            height="35" width="35"
-                            src=" https://1.bp.blogspot.com/-Pop-U7OywXs/YPhkfrImyiI/AAAAAAAAA1Y/UBnVfTK9j2U-bIUqwZYMNSQPvz_l06mbwCPcBGAYYCw/s0/facebook-icono.png"
-                            title="Sígueme en Facebook" /></a>
+                <button type="submit" class="BotonSuscribite">Suscribite</button>
+                  
+            </section>
 
-                    <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en Instagram"
-                            height="35" width="35"
-                            src="https://1.bp.blogspot.com/-VFfOISywV0c/YPhkeRXuRQI/AAAAAAAAA1M/L75S9Usg5AovunH2Y-VzqJbaaY1LuK3eACPcBGAYYCw/s0/Instagram-icono.png"
-                            title="Sígueme en Instagram" /></a>
-
+            <section class = "desktop">
+                
+                <div class="envolope-Frase">
+                    <i class="fa-solid fa-envelope iconoMensaje"></i>
+                    <p>Registrate y recibí nuestras novedades!</p>
                 </div>
 
-
-                <!-- Aquí van los estilos -->
-
-            </div>
+                <div class ="barraSuscribirse-BotonRegistrarse">
+                    <input type="email" class="registrarseNewsletter" placeholder="Tu e-mail..."> 
+                    
+                    <button type="submit" class="botonSuscribirse">Suscribite</button>
+                    
+                </div>
+            </section>
 
         </div>
 
-    </div>
+        <div class = "footerIntermedio-mobile">
 
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">Digital House</a>
-    </div>
+            
+            <a href="Inicio.html"><img class="logoCachogoPetShop-footer" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop"></a>
+    
+        </div>
 
 
+        <div class = "footerInferior-mobile">
+     
+               
+                <ul class="footerInferior-links">
+
+
+                    <div class="enlacesFooter-mobile">
+                        <li ><a class="NOSOTROS" href="Inicio.html">NOSOTROS</a></li>
+                        <li class="botonAmpliar-mobile">+</li>
+                    </div>
+
+                    <div class="enlacesFooter-mobile">
+                        <li ><a class="CATERGORÍAS" href="Ofertas.html">CATERGORÍAS</a></li>
+                        <li class="botonAmpliar-mobile">+</li>
+                    </div>
+
+
+                    <div class="enlacesFooter-mobile">
+                        <li ><a class="INFORMACIÓN" href="Blog.html">INFORMACIÓN</a></li>
+                        <li class="botonAmpliar-mobile">+</li>
+                    </div>
+                    
+                    <div class="enlacesFooter-mobile">
+                        <li ><a class="FORMAS DE PAGO" href="Sucursales.html">FORMAS DE PAGO</a></li>
+                        <li class="botonAmpliar-mobile">+</li>
+                    </div>                   
+                   
+
+                    <div class="enlacesFooterRedes-mobile">
+                        <li ><a href="Inicio.html"><img class="Instagram" src = "/img/INSTA.png" alt="Instagram"></a></li>
+                        <li ><a href="Ofertas.html"><img class="Facebook" src = "/img/FB.png" alt="Facebook"></a></li>
+                        <li ><a href="Blog.html"><img class="Youtube" src = "/img/YTUBE.png" alt="Youtube"></a></li>
+                    </div> 
+                                        
+                </ul>                                    
+    
+                
+        </div>
+
+        <div class = "footerInferior-desktop">
+   
+           <a href="Inicio.html"><img class="logoCachogoPetShop-footer" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop"></a>
+
+            <div class="links">
+
+                <ul class="listadoLinksNosotros">
+
+                    <li><a class="Nosotros" href="Inicio.html">NOSOTROS</a></li>
+                    <li><a class="QuienesSomos" href="Ofertas.html">Quienes somos</a></li>
+                    <li><a class="Contacto" href="Blog.html">Contacto</a></li>
+                    <li><a class="TrabajaConNosotros" href="Sucursales.html">Trabajá con nosotros</a></li>
+                    
+                </ul>  
+                
+                <ul class="listadoLinksCategorias">
+
+                    <li ><a class="Categorías" href="Inicio.html">CATERGORÍAS</a></li>
+                    <li ><a class="perros" href="Ofertas.html">Perros</a></li>
+                    <li ><a class="gatos" href="Blog.html">Gatos</a></li>
+                    <li ><a class="peces" href="Blog.html">Peces</a></li>
+                    <li ><a class="aves" href="Blog.html">Aves</a></li>
+                    
+                </ul>      
+                
+                <ul class="listadoLinksInformacion">
+
+                    <li ><a class="informacion" href="Inicio.html">INFORMACIÓN</a></li>
+                    <li ><a class="delivery" href="Ofertas.html">Delivery</a></li>
+                    <li ><a class="promocionesBancarias" href="Blog.html">Promociones bancarias</a></li>
+                    <li ><a class="terminosYCondiciones" href="Blog.html">Términos y condiciones</a></li>
+                                    
+                </ul>    
+
+                <div class="listadoLinksSeguinos-FormasdePago">
+                
+                    <ul>
+                        <li ><a class="redes" href="Inicio.html">SEGUINOS</a></li>
+                        <div class="redesSociales">
+                            <li ><a href="Inicio.html"><img class="Instagram" src = "/img/INSTA.png" alt="Instagram"></a></li>
+                            <li ><a href="Ofertas.html"><img class="Facebook" src = "/img/FB.png" alt="Facebook"></a></li>
+                            <li ><a href="Blog.html"><img class="Youtube" src = "/img/YTUBE.png" alt="Youtube"></a></li>
+                        </div>        
+                    </ul> 
+                    
+                    <ul>
+                        <li ><a class="formasDePago" href="Inicio.html">FORMAS DE PAGO</a></li>
+                        <div class="tarjetas">
+                            <li ><a href="Inicio.html"><img class="visa" src = "/img/VISA.png" alt="Tarjeta VISA"></a></li>
+                            <li ><a href="Blog.html"><img class="AmericanExpress" src = "/img/AMEX (1).png" alt="Tarjeta AMEX"></a></li>
+                            <li ><a href="Blog.html"><img class="mercadoPago" src = "/img/MP.png" alt="MERCADO PAGO"></a></li>
+                        </div>       
+                    </ul> 
+                </div>
+
+            </div>
+            
+        </div>  
+
+                
+    
     </footer>
 
 
