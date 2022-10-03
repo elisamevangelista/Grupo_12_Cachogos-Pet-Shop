@@ -57,7 +57,7 @@ a {
     background-color: #3694F5;
     height: 90px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     border-top: 1px white solid;
 }
@@ -66,14 +66,15 @@ a {
     display: flex;
     align-items: center;
     width: 195px;
-    color:white
+    color:white;
+    margin-left: 15px;
 }
 
 .burger-menu {
 
     color: white;
     margin-left: 10px;
-    padding: 3px;
+    padding: 4px;
     border: white solid 1px;
     border-radius: 3px;
     margin-top: 5px;
@@ -90,7 +91,7 @@ a {
 
 .textoBuscarEnBarra {
     color: grey;
-    font-size: 10px;
+    font-size: 11px;
     padding-left: 8px;
     height: 20px;
     border: solid 0px white;
@@ -127,19 +128,19 @@ a {
     display: flex;
     padding-right: 10px;
     padding-left: 10px;
-    font-size: 12px;
+    font-size: 13px;
     align-items: center;
     justify-content: flex-end;
 }
 
 .iconoUserRegistrarse {
     justify-content: center;
-    padding-left: 20px;
+    padding-left: 2px;
 }
 
 .iconoMisCompras {
     justify-content: center;
-    padding-left: 25px;
+    padding-left: 2px;
 }
 
 .IniciarSesion {
@@ -148,16 +149,16 @@ a {
 
 .Registrarse {
     display: none;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .misCompras {
     display: none;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .iconoBuscarMargenDerecho {
-    padding-right: 10px;
+    padding-right: 2px;
     display: block;
 }
 
@@ -172,6 +173,7 @@ a {
 
 .logo-wapp-desktop {
     padding-right: 10px;
+    padding-left: 10px;
 }
 
 .contenedorInferior {
@@ -179,9 +181,9 @@ a {
     height: 50px;
     align-items: center;
     justify-content: space-between;
-    display: none;
     border-top: 1px solid white;
-    font-size: 13px;
+    font-size: 14px;
+    display: none;
 }
 
 .rigthBottomHeader {
@@ -209,6 +211,9 @@ a {
 .Contacto {
     padding-right: 20px;
 }
+
+
+/*--------------------------------------------------1ra qery 525px----------------------------------------------------*/
 
 @media (min-width:525px) {
 
@@ -263,14 +268,23 @@ a {
     }
 }
 
+/*--------------------------------------------------2da qery 750px----------------------------------------------------*/
 
 @media (min-width:750px) {
 
     .iconoUserRegistrarse {
-        margin-top: 30px
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        margin-right: 8px;
     }
 
     .iconoMisCompras {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 15px
     }
 
@@ -287,13 +301,14 @@ a {
     }
 }
 
-/* ---------------------------------- */
 
-/* FOOTER */
+
+
+/*  ------------------------------------------------/FOOTER------------------------------------------------- */
 
 .newsLetter {
     background-color: #456A99;
-    height: 130px;
+    height: 160px;
     justify-content: center;
 }
 
@@ -314,25 +329,36 @@ a {
     border: solid 0px white;
     border-color: white;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 13px;
+    padding-left: 8px;
+    height: 32px
 }
 
+
+.envolope-Frase {
+ 
+    color: white;
+}
 .BotonSuscribite {
-    width: 91%;
+    width: 90%;
     outline: none;
     /*para sacar el borde negro del input al darle un click */
     border: solid 0px white;
     border-color: white;
     border-radius: 8px;
     margin-top: 8px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     background-color: grey;
+    height: 32px
 }
 
-footer h4 {
+footer p {
     color: white;
+    font-size: 25px;
 }
+
+
 
 
 
@@ -342,16 +368,19 @@ footer h4 {
 
     background-color:#3694F5 ;
     border-bottom: dotted 1px white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     
 }
 
 .logoCachogoPetShop-footer{
 
-    width: 50%;
+    width: 100%;
     height: 100px;
-    margin-top: 15px;
+    margin-top: 40px;
     margin-bottom: 10px;
-    margin-left: 15px;
+    margin-left: 30px;
     max-width: 120px;
     
 
@@ -360,7 +389,7 @@ footer h4 {
 .footerInferior-mobile{
 
     background-color:#3694F5 ;
-    height: 190px;
+    height: 215px;
 
 }
 
@@ -368,16 +397,31 @@ footer h4 {
 
 .footerInferior-links{
 
-    margin-top: 0;
-    padding-left: 15px;
     padding-top: 10px;
-    padding-bottom: 15px;
     font-weight: bold;
+    margin-top: 0px;
+    margin-left: 30px;
+    padding-left: 0px;
+    margin-right: 15px;
 }
 
 .footerInferior-links li{
 
    padding-bottom: 8px;
+
+}
+
+.enlacesFooter-mobile{
+    display: flex;
+    justify-content: space-between;
+}
+
+.enlacesFooterRedes-mobile{
+    display: flex;
+    padding-top: 5px;
+    justify-content: flex-start;
+    align-items: center;
+
 }
 
 .redesSociales-mobile{
@@ -387,6 +431,9 @@ footer h4 {
     align-items: center;
 }
 
+.botonAmpliar-mobile{
+    color: white;
+}
 
 .Instagram{
     width: 40px;
@@ -396,6 +443,8 @@ footer h4 {
 .Facebook{
 width: 35px;
 height: 33px;
+margin-left: 6px;
+margin-right: 6px;
 
 }
 .Youtube{
@@ -411,24 +460,21 @@ height: 40px;
     display: none;
 }
 
-.container-fluid{
-    background: #3694F5;
-}
-
-
 /*------------------------------------SOCALO MOBILE-------------------------------------------------------------------------- */
 .socalo-mobile{
 
     background-color: antiquewhite;
     align-items: center;
     display: flex;
+    padding-top: 6px;
+    padding-bottom: 6px
    
 }
 
 .dataFiscal-mobile{
     width: 40px;
     height: 40px;
-    margin-left: 5px;
+    margin-left: 30px;
     margin-top: 5px;
     margin-bottom: 8px;
     margin-right: 8px;
@@ -460,7 +506,7 @@ height: 40px;
         background-color: #456A99;
         display: flex;
         width: 100%;
-        height: 60px;
+        height: 80px;
         align-items: center;
     }
 
@@ -481,6 +527,7 @@ height: 40px;
         width: 50%;
         display: flex;
         align-items: center;
+        color: white;
     }
 
     .iconoMensaje {
@@ -492,10 +539,11 @@ height: 40px;
         justify-content: space-between;
         background-color: white;
         width: 50%;
-        height: 30px;
+        height: 38px;
         align-items: center;
         border: white 1px solid;
         border-radius: 8px;
+        margin-left: 20px;
     }
 
     .registrarseNewsletter {
@@ -504,50 +552,58 @@ height: 40px;
         outline: none;
         /*para sacar el borde negro del input al darle un click */
         margin-left: 5px;
+        font-size: 13px;
     }
 
     .botonSuscribirse {
-        padding-right: 5px;
         border-radius: 8px;
         border: 1px;
-        margin-right: 5px;
         color: black;
         background-color: grey;
+        font-size: 13px;
+        height: 36px;
     }
 
 
 
+}
 
-    .footerIntermedio-mobile{
+    @media (min-width:950px) {
 
-        display: none;
-    }
 
-    .footerInferior-mobile{
 
-        display: none;
-    }
+        .footerIntermedio-mobile{
 
+            display: none;
+        }
+    
+        .footerInferior-mobile{
+    
+            display: none;
+        }
+    
     .footerInferior-desktop{
 
-
-    display: flex;
-    
+    display: flex;  
     align-items: center;
     background-color:#3694F5 ;
-    height: 200px;
+    height: 215px;
     font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 25px;
 }
+
     .logoCachogoPetShop-footer{
         width: 100%;
         height: 160px;
-        margin-left: 15px;  /*OJO!! */
+        margin-left: 30px;  /*OJO!! */
     }
 
     .links{
 
         display: flex;
-        margin-inline: auto;      
+        margin-inline: auto; 
+        margin-top: 20px;     
     }
 
     
@@ -565,6 +621,11 @@ height: 40px;
 
     padding-bottom: 5px;
 }
+
+.listadoLinksSeguinos-FormasdePago{
+
+    margin-right: 5px;
+}
     
     .redesSociales{
 
@@ -577,6 +638,7 @@ height: 40px;
 
         display: flex;
         padding-top: 5px;
+        align-items: center;
 
     }
 
@@ -590,14 +652,16 @@ height: 40px;
 
     .AmericanExpress{
     width: 40px;
-    height: 40px;
+    height: 30px;
+    margin-left: 6px;
+    margin-right: 6px;
 
 
 }
 
     .mercadoPago{
     width: 40px;
-    height: 40px;
+    height: 30px;
 
 }
 
@@ -609,6 +673,8 @@ height: 40px;
 .Facebook{
     width: 35px;
     height: 33px;
+    margin-left: 6px;
+    margin-right: 6px;
 
 }
 .Youtube{
@@ -634,8 +700,9 @@ height: 40px;
     background-color: antiquewhite;
     align-items: center;
     display: flex;
-   
-    padding-left: 11px;
+    padding-top: 6px;
+    padding-bottom: 6px; 
+ 
 }
 .infoSocalo li {
 
@@ -648,12 +715,10 @@ height: 40px;
     display: block;
     width: 40px;
     height: 40px;
-    margin-left: 5px;
+    margin-left: 30px;
     margin-top: 5px;
     margin-bottom: 8px;
     margin-right: 8px;
 
 }
-
-
-}
+ }
