@@ -253,7 +253,21 @@ main h2{
 article{
 
     height: 410px;
+    transition: transform 1200ms;
 }
+
+
+
+article:hover{  /* - aplico efecto sobre articulos al pasar el mouse por encima- */
+
+    transform: scale(1.04);  /* - aplico transformacion de agrandar el article en escala superior- */
+
+}
+
+
+
+
+
 
 .divRecomendados{
     background-color: gray;
@@ -509,8 +523,7 @@ article{
     justify-content: center;
     margin-left: 12px;
 
-
-   
+  
      
 }
 
@@ -523,9 +536,34 @@ article{
     padding-left: 0px;
     margin-left: 0px;
     margin-right: 0px;
-
+    
   
 }
+
+
+.divfotosPeq a{ /* - aplico efecto sobre enlace 'a' que a su vez pertenece que contiene a la imagen- */
+
+
+    transition: transform 1100ms;  /* - creo transformacion  a determinada velocidad- */
+  
+}
+
+
+
+.divfotosPeq a:hover {  /* - aplico efecto sobre enlace 'a' que a su vez pertenece al div 'fotospeq'- */
+
+    transform: scale(1.15);  /* - aplico transformacion de agrandar 'a' es decir la  imagen en escala superior- */
+
+}
+
+
+
+
+
+
+
+
+
 
 .Producto-descripcion{
 
