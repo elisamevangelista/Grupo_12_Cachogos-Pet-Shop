@@ -90,9 +90,9 @@ a {
 }
 
 .logoCachogoPetShop {
-    width: 100%;
+ 
     height: 60px;
-    padding-right: 20px;
+    padding-right: 40px;
     padding-left: 40px;
 
 }
@@ -158,7 +158,7 @@ a {
 
 .Registrarse {
     display: none;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .misCompras {
@@ -201,6 +201,12 @@ a {
     margin-right: 12px;
 }
 
+.productos{
+
+    background-color: #456A99;
+    padding: 3px 5px 3px 5px;
+    border-radius: 8px;
+}
 .Inicio {
     padding-right: 20px;
 }
@@ -248,7 +254,7 @@ a {
         width: 100%;
         height: 75px;
         padding-right: 20px;
-        padding-left: 40px;
+        padding-left: 20px;
         margin-top: 10px;
     }
 
@@ -258,6 +264,7 @@ a {
 
     .input-searchIcon {
         display: flex;
+        padding: 3px 0px 3px 0px;
     }
 
     .contenedorInferior {
@@ -380,7 +387,10 @@ footer p {
     border-bottom: dotted 1px white;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+    padding-bottom: 5px;
+    padding-bottom: 5px;
     
 }
 
@@ -605,8 +615,9 @@ height: 40px;
 
     .logoCachogoPetShop-footer{
         width: 100%;
-        height: 160px;
-        margin-left: 30px;  /*OJO!! */
+        height: 140px;
+        margin-left: 30px;  /*OJO!! */;
+        margin-top: 20px;
     }
 
     .links{

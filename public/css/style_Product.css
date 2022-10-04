@@ -252,7 +252,7 @@ main h2{
 
 article{
 
-    height: 410px;
+    height: 430px;
     transition: transform 1200ms;
 }
 
@@ -406,19 +406,21 @@ article:hover{  /* - aplico efecto sobre articulos al pasar el mouse por encima-
 }
 
 
-
 .fotosPeq{
 
 
-    display: none;
+ 
     height: 120px;
-    margin-left: 5px;
-    margin-right: 5px;
     border: 1px black dotted;
     border-radius: 8px;
-    padding:5px 1px 5px 1px   
+    width: 90px;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+  
+    
 }
-
 
 
 /* ---------------------------------------cambio 3ra query----------------------------- */
@@ -517,51 +519,36 @@ article:hover{  /* - aplico efecto sobre articulos al pasar el mouse por encima-
 
 }
 
+.enlacesFotosPeq{
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+}
 .divfotosPeq{
     display: flex;
     justify-content: center;
-    margin-left: 12px;
-
+    align-items: center;
+  
   
      
 }
 
-.fotosPeq{
+.contendoresFotosPeq{ /* - aplico efecto sobre enlace 'a' que a su vez pertenece que contiene a la imagen- */
 
 
-    display: block;
-    max-width: 90%;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    
-  
-}
-
-
-.divfotosPeq a{ /* - aplico efecto sobre enlace 'a' que a su vez pertenece que contiene a la imagen- */
-
-
-    transition: transform 1100ms;  /* - creo transformacion  a determinada velocidad- */
+    transition: transform 1200ms;  /* - creo transformacion  a determinada velocidad- */
   
 }
 
 
 
-.divfotosPeq a:hover {  /* - aplico efecto sobre enlace 'a' que a su vez pertenece al div 'fotospeq'- */
+.contendoresFotosPeq:hover {  /* - aplico efecto sobre enlace 'a' que a su vez pertenece al div 'fotospeq'- */
 
     transform: scale(1.15);  /* - aplico transformacion de agrandar 'a' es decir la  imagen en escala superior- */
 
 }
-
-
-
-
-
-
-
 
 
 
