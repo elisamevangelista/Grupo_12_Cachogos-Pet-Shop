@@ -250,6 +250,77 @@ main h2{
     font-weight: bold;
 }
 
+
+
+.tabla-desktop{
+    display: none;
+}
+
+
+.tabla{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 3px;
+    padding-left: 25px;
+}
+.tabla li, a{
+    color: black;
+}
+
+.tabla a{
+    background-color: white;
+
+}
+
+
+.tabla a:hover{
+    background-color: rgb(0, 174, 255);
+    border: 1ps solid;
+    border-radius: 8px;
+    padding: 2px 3px 2px 3px;
+}
+
+
+
+
+
+#conteItemsCarrusel {  /* - div padre que contiene los 3 divs internos con las imagenes- */
+    margin: auto;
+    border: 2px solid black;
+    width: 95%;
+    height: 270px;  /* - altura del contenedor para limitar el alcance de muestra de 1 foto unicamente- */
+    overflow: hidden; /* - apila los contenedor hijos uno arriba del otro, solo se ve el primero- */
+    margin-bottom: 8px;
+  }
+  
+  .itemCarrusel {
+   
+    height: 100%; /* - ocupa el 100% del alto del padre contenedor 'conteItemsCarrusel' Es decir 240px, asi no entra a la vista los otros contenidos */
+  
+  }
+
+  .texto{
+    padding-left: 10px;
+    text-align: left;
+  }
+  
+.descripcion{
+    padding-right: 5px;
+
+}
+
+.opiniones{
+    padding-left: 5px;
+}
+
+.detalles{
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+
+
 article{
 
     height: 430px;
@@ -263,9 +334,6 @@ article:hover{  /* - aplico efecto sobre articulos al pasar el mouse por encima-
     transform: scale(1.04);  /* - aplico transformacion de agrandar el article en escala superior- */
 
 }
-
-
-
 
 
 
@@ -466,6 +534,17 @@ article:hover{  /* - aplico efecto sobre articulos al pasar el mouse por encima-
 @media (min-width: 500px){
 
 
+
+
+    .tabla-mobile{
+
+        display: none;
+    }
+
+    
+    .tabla-desktop{
+    display: block;
+}
     .div-Articulo-Recomendados-Mobile{
 
         display: flex;

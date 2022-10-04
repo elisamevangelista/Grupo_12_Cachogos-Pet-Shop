@@ -59,7 +59,7 @@
             <div class="burger-logoPet">
                 <div class="burger-menu">
 
-                    <i class="fas fa-bars fa-2x"></i> 
+                    <button type="submit" class="botonBurger"><i class="fas fa-bars fa-2x"></i></button>
         
                 </div>      
                 
@@ -70,8 +70,8 @@
             <div class="input-searchIcon"> <!--modo desktop -  barra buscadora-->
 
                <input type="text" class="textoBuscarEnBarra" placeholder="Buscar...">            
-               <i class="fa-solid fa-magnifying-glass searchIcon"></i>  <!--searchIcon es la segunda clase del icono search-->
-                
+               <button class="botonSearch-Desktop" type="submit"><i class="fa-solid fa-magnifying-glass botonSearchDektop"></i></button> <!--searchIcon es la segunda clase del icono search-->
+              
             </div>
           
                                
@@ -229,8 +229,60 @@
 
         </section>     
 
-        <section>
+        <section class="tabla-desktop">            
 
+            <div class ="tabla">
+                <li> <a class="descripcion" href="#texto-1">DESCRIPCIÓN</a></li>
+                <li>|</li>
+                <li><a class="detalles" href="#texto-2">DETALLES</a></li>
+                <li>|</li>
+                <li><a class="opiniones" href="#texto-3">OPINIONES</a></li>
+
+            </div>
+
+            <div id="conteItemsCarrusel">              
+                
+
+                <div class="itemCarrusel" id="itemCarrusel-1">
+
+                    <div class="texto" id="texto-1">
+                        <p>La selección de un alimento adecuado para tu mascota es muy importante para garantizar su crecimiento, desarrollo y salud. 
+                            Con esta opción de Cat Chow podrás cubrir las necesidades nutricionales y energéticas de tu gato.                           Tu mascota siempre saludable Una alimentación equilibrada es esencial para que tu fiel
+                            compañero se mantenga sano y fuerte. La dieta de tu gato se refleja en su pelaje,
+                             por eso es de vital importancia que contenga todos los nutrientes necesarios para su crecimiento.
+                              Asegurá la energía y vitalidad de tu amigo para que pueda correr, saltar y jugar todo el día.
+                        </p>
+                    </div>
+                  
+                </div>
+        
+                <div class="itemCarrusel" id="itemCarrusel-2">
+                    <div class="texto" id="texto-2">
+                        <p>
+                        Proteína para una nutrición completa.   
+                        Alimento rico en proteína animal de alto valor biológico, 
+                        contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, 
+                        fibras y ácidos grasos esenciales.
+                        </p>
+                    </div>
+                    
+                </div>
+        
+                <div class="itemCarrusel" id="itemCarrusel-3">
+                    <div class="texto" id="texto-3">
+                        <p>
+                            mayor ventaja de la comida seca para mascotas es que se puede almacenar por mucho más tiempo sin que se deteriore, 
+                        y evita la aparición de hongos o bacterias.
+                        </p>
+                    </div>
+                   
+                   
+                </div>
+        
+            </div>
+        </section>
+
+        <section class="tabla-mobile">
             <div class="divEnlacesSeccion2-mobile">
 
                 <div class="enlacesSeccion2-mobile">

@@ -5,6 +5,14 @@
 /* ---------------------------------- */
 /* HEADER */
 
+body{
+
+    margin:0px
+}
+
+
+
+
 header a {
     color: white;
     text-decoration: none;
@@ -89,6 +97,12 @@ a {
     display: block;
 }
 
+.botonBurger{
+    background-color: #3694F5;
+    border: none;
+    color:white
+}
+
 .logoCachogoPetShop {
  
     height: 60px;
@@ -126,6 +140,19 @@ a {
     justify-content: space-between;
     width: 40vw
 }
+
+.botonSearch-Desktop{
+
+    background-color: white;
+    border: none;
+    position: relative;
+    right: 3px;
+  
+}
+
+
+
+
 
 .logo-wapp-desktop {
     color: white;
@@ -201,7 +228,7 @@ a {
     margin-right: 12px;
 }
 
-.productos{
+header nav .productos{
 
     background-color: #456A99;
     padding: 3px 5px 3px 5px;
@@ -228,10 +255,36 @@ a {
 }
 
 
+button:hover , button:focus{  /* TRANSFORMO POINTER DEL MOUSE EN LOS BOTONES-- */
+
+    cursor:pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+
+
+
+
 /*--------------------------------------------------1ra qery 525px----------------------------------------------------*/
 
 @media (min-width:525px) {
-
+                                    /* FIJACION DEL HEADER-- */
+    
+    .mainHeader{
+        position: fixed;
+        top: 0;   /* PARA QUE SE AJUSTE AL TOPDE VIEWPORT-- */
+        width: 100%;
+        z-index: 999;  /* PARA QUE QUEDE ADELANTE DE TODOS LOS ELEMENTOS------- */
+    }
+    
+    main{
+        margin-top: 150px;  /* PARA QUE EL MAIN NO QUEDE TAPADO INICIALMENTE POR EL HEADER------- */
+    }
+    
+    
+    
+    
     .contenedorSuperior {
         display: none;
     }
