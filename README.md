@@ -29,3 +29,13 @@
 **Tablero de Trabajo:**
 
 [**https://trello.com/b/XIv2xDy9/proyecto-integrador-g12**](https://trello.com/b/XIv2xDy9/proyecto-integrador-g12)
+
+
+
+**Avance operativo**
+
+1. Se implementaron reuniones diarias con el fin de ahondar en el avance general del proyecto y el cumplimiento a tiempo de los objetivos planteados.
+2. Se implementó el trabajo por objetivos para cada integrante, asumiendo la responsabilidad de hacer un reporte diario del avance sobre las mismas.
+3. En reunión de retro, se replanteó el enfoque que se iba a dar al sitio web y se acordó una mejora del aspecto visual del home y de ciertas funciones.
+4. En reunión de retro, se expuso la situación de cada integrante del grupo con el fin de asignar tareas acordes al nivel de conocimientos de cada uno, con el fin de evitar cuellos de botella y trabajar de forma más productiva. Asímismo, se acordó mayor compromiso y participación por parte de cada uno de los integrantes.
+5. En reunión de retro, se estipularon múltiples medios de comunicación para despejar dudas y brindar ayuda mutua entre los integrantes.
