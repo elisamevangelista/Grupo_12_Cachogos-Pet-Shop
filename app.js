@@ -33,6 +33,6 @@ app.get('/carrito', (req,res)=>{
     res.sendFile(__dirname + '/views/carrito.html');
 })
 
-app.get('/productCart', (req,res)=>{
-    res.sendFile(__dirname + '/views/productCart.html');
+app.get('/test', (req,res)=>{
+    res.sendFile(__dirname + '/views/test.html');
 })
