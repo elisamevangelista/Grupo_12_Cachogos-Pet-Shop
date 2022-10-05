@@ -1,7 +1,10 @@
 *{
     box-sizing: border-box;
 }
-
+.cuerpo{
+    margin-left: 15px;
+    margin-right: 15px;
+}
 .compra-segura {
     font-size: 12px;
     text-align: right;
@@ -18,7 +21,7 @@ h2 {
     display: none;
 }
 
-.productos{
+.artcarrito{
     padding-inline-start:0;
     display: flex;   
     border: solid 1px gray;
@@ -89,7 +92,10 @@ h2 {
     margin-left: 40px;
     margin-right: 40px;
 }
-
+.elim{
+    border: none;
+    background-color: white;
+}
 /* cambiamos de h3 a main h3 para sus valores de props no afecten a los h3 del footer y solo afecten a los h3 del main */
 
 main h3{   
@@ -119,11 +125,12 @@ main h3{
     margin-bottom: 5px;
 }
 .botonFin{
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 8px;
     background-color: rgb(223, 219, 219);
-    padding: 5px 10px;
+    padding: 8px 16px;
     border-radius: solid 2px black;
+    font-weight: 800;
 }
 
 .opcionEnvio{
@@ -136,6 +143,16 @@ main h3{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.botonFin:hover{
+    background-color: #3694F5;
+    color: white;
+    border-color: solid 1px #456A99;
+}
+
+.elim:focus{
+    box-shadow : 0px 3px 0px  rgb ( 100 , 100 , 100 );
 }
 
 @media (min-width:750px){
@@ -203,12 +220,13 @@ main h3{
     }
     .resumen{
         background-color: #3694F5;
-        border-radius: 10px;
+        color: white;
         text-align: center;
         border-bottom: none;
         border-top: none;
         margin: 2px 15px;
-        
+        padding: 5px;
+        font-size: 18px;        
     }
 }
 

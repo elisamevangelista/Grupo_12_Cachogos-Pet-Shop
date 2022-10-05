@@ -37,22 +37,19 @@
             <div class="burger-logoPet">
                 <div class="burger-menu">
 
-                    <button type="submit" class="botonSuscribirse"><i class="fas fa-bars fa-lg"></i></button> 
+                    <button type="submit" class="botonBurger"><i class="fas fa-bars fa-2x"></i></button>
         
                 </div>      
                 
-                <img class="logoCachogoPetShop" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop">
+                <a href="Inicio.html"><img class="logoCachogoPetShop" src = "/Logo imgs/Logo7 color sec 1.png" alt="Logotipo Cachgos Pet Shop"></a>
             </div>
-       
-            <!-- <div class = "barraBuscadora-Icon-Buscar">  contenedor padre flex de barra buscadora, icono y palabra buscar               -->
-                            
-                
+                     
 
-            <div class="input-searchIcon">
+            <div class="input-searchIcon"> <!--modo desktop -  barra buscadora-->
 
                <input type="text" class="textoBuscarEnBarra" placeholder="Buscar...">            
-               <i class="fa-solid fa-magnifying-glass searchIcon"></i>  <!--searchIcon es la segunda clase del icono search-->
-                
+               <button class="botonSearch-Desktop" type="submit"><i class="fa-solid fa-magnifying-glass botonSearchDektop"></i></button> <!--searchIcon es la segunda clase del icono search-->
+              
             </div>
           
                                
@@ -62,15 +59,15 @@
                 <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                 
                 <ul class="iconoUserRegistrarse">
-                    <li><a class="iconoUserMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a class="IniciarSesion" href="aaaaa.html">Iniciar Sesión/</a></li>
-                    <li><a class="Registrarse" href="aaaaa.html">Registrarse</a></li>
+                    <li><a class="iconoUserMargenDerecho" href="/login"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a class="IniciarSesion" href="/login">Iniciar Sesión/</a></li>
+                    <li><a class="Registrarse" href="/register">Registrarse</a></li>
                     
                 </ul>
 
                 <ul class="iconoMisCompras">
-                <li><a class="iconoCarritoMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li><a class="misCompras" href="aaaaa.html">Mis Compras</a></li>
+                <li><a class="iconoCarritoMargenDerecho" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a class="misCompras" href="/carrito">Mis Compras</a></li>
                 </ul>
 
             </ul>
@@ -87,7 +84,7 @@
 
             <ul class="rigthBottomHeader">
 
-                <li ><a class="Inicio" href="Inicio.html">Inicio</a></li>
+                <li ><a class="Inicio" href="/index">Inicio</a></li>
                 <li ><a class="Ofertas" href="Ofertas.html">Ofertas</a></li>
                 <li ><a class="Blog" href="Blog.html">Blog</a></li>
                 <li ><a class="Sucursales" href="Sucursales.html">Sucursales</a></li>
@@ -96,10 +93,12 @@
             </ul>                                    
 
         </nav>
+       
+
     </header>
 
 
-    <main>
+    <main class="cuerpo">
         <section class=compra-segura>
             <i class="fa-solid fa-lock"></i> Compra Segura 
         </section>
@@ -120,7 +119,7 @@
                     </ul>                                    
                 </div> <!--fin div encabezado que se despliega al pasar a desktop-->
 
-                <div class="productos"> <!--inicio producto1-->
+                <div class="artcarrito"> <!--inicio producto1-->
                     <div class="imagen">
                         <img width=70px heigth= 70px src="/img/EUKANUBA-grande1.jpg" alt="producto1">
                      </div>
@@ -135,7 +134,7 @@
                             <p class="precio">$4.200</p>
                         </div>
                         <div class="botonEliminar">
-                            <span class="eliminar">Eliminar</span>  <button type="reset"><i class="fa-solid fa-trash-can"></i></button>  
+                            <span class="eliminar">Eliminar</span>  <button type="reset" class="elim"><i class="fa-solid fa-trash-can"></i></button>  
                         </div>
                     </div>
                     </div>
@@ -143,7 +142,7 @@
                        
     
 
-                <div class="productos"> <!--inicio producto2-->
+                <div class="artcarrito"> <!--inicio producto2-->
                     <div class="imagen">  
                        <img width=70px heigth= 70px src ="/img/EUKANUBA-peq1_.jpg" alt="producto2">
                     </div>
@@ -158,7 +157,7 @@
                             <p class="precio">$10.800</p>
                         </div>
                         <div class="botonEliminar">
-                            <span class="eliminar">Eliminar</span>  <button type="reset"><i class="fa-solid fa-trash-can"></i></button>  
+                            <span class="eliminar">Eliminar</span>  <button type="reset" class="elim"><i class="fa-solid fa-trash-can"></i></button>  
                         </div>
                     </div>             
                     </div>    
@@ -190,9 +189,9 @@
                 
             <section class="mobile">
 
-                <h4>Registrate para recibir novedades!</h4>
+                <h4>Registrate y recibí nuestras novedades!</h4>
 
-                <input type="email" class="registrarseNewsletter-mobile" placeholder="Su e-mail..."> 
+                <input type="email" class="registrarseNewsletter-mobile" placeholder="Tu e-mail..."> 
 
                 <button type="submit" class="BotonSuscribite">Suscribite</button>
                   
@@ -202,11 +201,11 @@
                 
                 <div class="envolope-Frase">
                     <i class="fa-solid fa-envelope iconoMensaje"></i>
-                    <h4>Registrate para recibir novedades!</h4>
+                    <p>Registrate y recibí nuestras novedades!</p>
                 </div>
 
                 <div class ="barraSuscribirse-BotonRegistrarse">
-                    <input type="email" class="registrarseNewsletter" placeholder="Su e-mail..."> 
+                    <input type="email" class="registrarseNewsletter" placeholder="Tu e-mail..."> 
                     
                     <button type="submit" class="botonSuscribirse">Suscribite</button>
                     
@@ -218,7 +217,7 @@
         <div class = "footerIntermedio-mobile">
 
             
-            <a href="Inicio.html"><img class="logoCachogoPetShop-footer" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop"></a>
+            <a href="Inicio.html"><img class="logoCachogoPetShop-footer" src = "/Logo imgs/Logo7 color sec 1.png" alt="Logotipo Cachgos Pet Shop"></a>
     
         </div>
 
@@ -227,16 +226,34 @@
      
                
                 <ul class="footerInferior-links">
-    
-                    <li ><a class="NOSOTROS" href="Inicio.html">NOSOTROS</a></li>
-                    <li ><a class="CATERGORÍAS" href="Ofertas.html">CATERGORÍAS</a></li>
-                    <li ><a class="INFORMACIÓN" href="Blog.html">INFORMACIÓN</a></li>
-                    <li ><a class="FORMAS DE PAGO" href="Sucursales.html">FORMAS DE PAGO</a></li>
 
-                    <div class="redesSociales-mobile">
-                        <li ><a href="Inicio.html"><img class="Instagram" src = "/img/INSTA.png" alt="Instagram"></a></li>
-                        <li ><a href="Ofertas.html"><img class="Facebook" src = "/img/FB.png" alt="Facebook"></a></li>
-                        <li ><a href="Blog.html"><img class="Youtube" src = "/img/YTUBE.png" alt="Youtube"></a></li>
+
+                    <div class="enlacesFooter-mobile">
+                        <li ><a class="NOSOTROS" href="Inicio.html">NOSOTROS</a></li>
+                        <li class="botonAmpliar-mobile">+</li>
+                    </div>
+
+                    <div class="enlacesFooter-mobile">
+                        <li ><a class="CATERGORÍAS" href="Ofertas.html">CATERGORÍAS</a></li>
+                        <li class="botonAmpliar-mobile">+</li>
+                    </div>
+
+
+                    <div class="enlacesFooter-mobile">
+                        <li ><a class="INFORMACIÓN" href="Blog.html">INFORMACIÓN</a></li>
+                        <li class="botonAmpliar-mobile">+</li>
+                    </div>
+                    
+                    <div class="enlacesFooter-mobile">
+                        <li ><a class="FORMAS DE PAGO" href="Sucursales.html">FORMAS DE PAGO</a></li>
+                        <li class="botonAmpliar-mobile">+</li>
+                    </div>                   
+                   
+
+                    <div class="enlacesFooterRedes-mobile">
+                        <li ><a href="https://www.instagram.com/"><img class="Instagram" src = "/img/INSTA.png" alt="Instagram"></a></li>
+                        <li ><a href="https://es-la.facebook.com/"><img class="Facebook" src = "/img/FB.png" alt="Facebook"></a></li>
+                        <li ><a href="https://www.youtube.com/"><img class="Youtube" src = "/img/YTUBE.png" alt="Youtube"></a></li>
                     </div> 
                                         
                 </ul>                                    
@@ -246,7 +263,7 @@
 
         <div class = "footerInferior-desktop">
    
-           <a href="Inicio.html"><img class="logoCachogoPetShop-footer" src = "/img/LOGO-PETSHOP.png" alt="Logotipo Cachgos Pet Shop"></a>
+           <a href="Inicio.html"><img class="logoCachogoPetShop-footer" src = "/Logo imgs/Logo7 color sec 1.png" alt="Logotipo Cachgos Pet Shop"></a>
 
             <div class="links">
 
@@ -306,13 +323,12 @@
                 
     
     </footer>
-
     <aside>
 
 
         <div class = "socalo-mobile">
 
-            <img class="dataFiscal-mobile" src = "/img/dataFiscal.png" alt="Data Fiscal">       
+            <a href="https://www.afip.gob.ar/960/formulario-960/concepto.asp"><img class="dataFiscal-mobile" src = "/img/dataFiscal.png" alt="Data Fiscal"></a>      
             <div class="infoSocalo">
                 <li >© 2022 - Cachogos Pet Shop - Todos los derechos reservados</li>
                     
@@ -323,7 +339,7 @@
 
         <div class = "socalo-desktop">
             
-            <img class="dataFiscal-desktop" src = "/img/dataFiscal.png" alt="Data Fiscal">       
+            <a href="https://www.afip.gob.ar/960/formulario-960/concepto.asp"><img class="dataFiscal-desktop" src = "/img/dataFiscal.png" alt="Data Fiscal"></a>
             <div class="infoSocalo">
                 <li >© 2022 - Cachogos Pet Shop - Todos los derechos reservados</li>
                     
