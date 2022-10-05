@@ -25,3 +25,7 @@
 
 - Para guía estética 
 1. [**https://www.templatemonsterpreview.com/es/demo/273580.html?_gl=1*1gcik62*_ga*MTg5NzE4NzM4Mi4xNjYyODU1MzMw*_ga_FTPYEGT5LY*MTY2Mjg1NTMyOS4xLjAuMTY2Mjg1NTMzMS41OC4wLjA.&_ga=2.54237928.15578804.1662855330-1897187382.1662855330**](https://www.templatemonsterpreview.com/es/demo/273580.html?_gl=1*1gcik62*_ga*MTg5NzE4NzM4Mi4xNjYyODU1MzMw*_ga_FTPYEGT5LY*MTY2Mjg1NTMyOS4xLjAuMTY2Mjg1NTMzMS41OC4wLjA.&_ga=2.54237928.15578804.1662855330-1897187382.1662855330)
+
+**Tablero de Trabajo:**
+
+[**https://trello.com/b/XIv2xDy9/proyecto-integrador-g12**](https://trello.com/b/XIv2xDy9/proyecto-integrador-g12)
