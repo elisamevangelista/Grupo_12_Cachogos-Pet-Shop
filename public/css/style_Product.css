@@ -526,6 +526,10 @@ article:hover{  /* - aplico efecto sobre articulos al pasar el mouse por encima-
     padding-bottom: 10px;
 }
 
+.carruselFotos {
+    display: none;
+  }
+  
 
 
 /* ---------------------------------------1era query 500px-> en Recomendados: pasa a 2 articulos, el resto se mantiene igual----------------------------- */
@@ -747,13 +751,122 @@ article:hover{  /* - aplico efecto sobre articulos al pasar el mouse por encima-
 
 
 
-@media (min-width:1240px){
+  @media screen and (min-width:1240px) {
+  
 
+    main{
 
-main{
-
-    margin-left: 2%;
-    margin-right: 2%;
-}
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+        
+    .noCarruselFotos {
+      display: none;
+    }
+  
+    .carruselFotos {
+      display: inline-block;
+    }
+  
+    #conteItemsCarruselFotos {
     
+      border:none;
+      width: 90%;
+      height: 600px;
+      overflow: hidden;
+      margin-bottom: 12%;
+  }
+  
+  .itemCarruselFotos {
+    position: relative;
+    height: 100%;
+    
+  }
+  
+  #itemCarruselFotos-1 {
+    position: relative;
+    height: 820px;
+    bottom: 35%;
+  }
+  
+  #itemCarruselFotos-2 {
+    position: relative;
+    height: 100%;
+    
+  }
+  
+  #imagenCarruselFotos-1 img {
+    margin-top: 60%;
+    height: 382px;
+    object-fit: contain;
+  }
+  
+  #imagenCarruselFotos-2 img {
+    height: 300px;
+    object-fit: contain;
+  }
+  
+  #imagenCarruselFotos-3 img {
+    height: 300px;
+    object-fit: contain;
+  }
+  
+  #itemCarruselFotos-1 .flechasCarruselFotos{
+    top: 50%;
+  }
+  
+  #itemCarruselFotos-2 .flechasCarruselFotos{
+    top: 35.1%;
+  }
+  
+  #itemCarruselFotos-3 .flechasCarruselFotos{
+    top: 35.2%;
+  }
+  
+  #itemCarruselFotos-1 .contePuntosFotos{
+    bottom: 8%
+  }
+  
+  #itemCarruselFotos-2 .contePuntosFotos{
+    top: 8%
+  }
+  
+  #itemCarruselFotos-3 .contePuntosFotos{
+    bottom: 1.8%;
+  }
+  
+  .imagenCarruselFotos img {
+    margin-top: 90px;
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+  }
+  
+  .flechasCarruselFotos {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .contePuntosFotos {
+    display: flex;
+    width: 100%;
+    position: relative;
+    bottom: 15%;
+    align-items: center;
+    padding: 1%;
+    justify-content: center;
+  }
+  }
+  
+
+
+
+
+
     }
