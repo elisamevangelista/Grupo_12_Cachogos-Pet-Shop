@@ -1,144 +1,312 @@
 /* ------ carrusel definitivo -------- */
 
-*{
+/* *{
   box-sizing: border-box;
+} */
+
+/* #conteItemsCarruselFotos {
+  
+    border:none;
+    width: 90%;
+    height: 600px;
+    overflow: hidden;
+    margin-bottom: 12%;
 }
 
-#conteItemsCarrusel {
-  margin: auto;
-  border: 5px solid black;
-  width: 90%;
-  height: 340px;
-  overflow: hidden
-}
-
-.itemCarrusel {
+.itemCarruselFotos {
   position: relative;
   height: 100%;
-
+  
 }
 
-.imagenCarrusel {
+#itemCarruselFotos-1 {
+  position: relative;
+  height: 820px;
+  bottom: 35%;
+}
+
+#itemCarruselFotos-2 {
+  position: relative;
   height: 100%;
+  
 }
 
-.flechasCarrusel {
+#imagenCarruselFotos-1 img {
+  margin-top: 29%;
+  height: 380px;
+  object-fit: contain;
+}
+
+#imagenCarruselFotos-2 img {
+  height: 300px;
+  object-fit: contain;
+}
+
+#imagenCarruselFotos-3 img {
+  height: 300px;
+  object-fit: contain;
+}
+
+#itemCarruselFotos-1 .flechasCarruselFotos{
+  top: 50%;
+}
+
+#itemCarruselFotos-2 .flechasCarruselFotos{
+  top: 35.1%;
+}
+
+#itemCarruselFotos-3 .flechasCarruselFotos{
+  top: 35.2%;
+}
+
+#itemCarruselFotos-1 .contePuntosFotos{
+  bottom: 7.8%
+}
+
+#itemCarruselFotos-2 .contePuntosFotos{
+  top: 8%
+}
+
+#itemCarruselFotos-3 .contePuntosFotos{
+  bottom: 1.8%;
+}
+
+.imagenCarruselFotos img {
+  margin-top: 90px;
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+}
+
+.flechasCarruselFotos {
   display: flex;
-  height: 100%;
+  height: 10%;
   width: 100%;
   position: absolute;
-  top: 0%;
+  top: 45%;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
 }
 
-.contePuntos {
+.contePuntosFotos {
   display: flex;
   width: 100%;
   position: relative;
-  bottom: 10%;
+  bottom: 15%;
+  align-items: center;
+  padding: 1%;
+  justify-content: center;
+} */
+
+
+
+
+
+
+/* -- copiar a partir de este código en la parte de style_Product.css asi como se ve al principio carruselFotos
+  y lo demás a partir de 1240px-- */
+
+.carruselFotos {
+  display: none;
+}
+
+@media screen and (min-width:1240px) {
+
+  .noCarruselFotos {
+    display: none;
+  }
+
+  .carruselFotos {
+    display: inline-block;
+  }
+
+  #conteItemsCarruselFotos {
+  
+    border:none;
+    width: 90%;
+    height: 600px;
+    overflow: hidden;
+    margin-bottom: 12%;
+}
+
+.itemCarruselFotos {
+  position: relative;
+  height: 100%;
+  
+}
+
+#itemCarruselFotos-1 {
+  position: relative;
+  height: 820px;
+  bottom: 35%;
+}
+
+#itemCarruselFotos-2 {
+  position: relative;
+  height: 100%;
+  
+}
+
+#imagenCarruselFotos-1 img {
+  margin-top: 60%;
+  height: 382px;
+  object-fit: contain;
+}
+
+#imagenCarruselFotos-2 img {
+  height: 300px;
+  object-fit: contain;
+}
+
+#imagenCarruselFotos-3 img {
+  height: 300px;
+  object-fit: contain;
+}
+
+#itemCarruselFotos-1 .flechasCarruselFotos{
+  top: 50%;
+}
+
+#itemCarruselFotos-2 .flechasCarruselFotos{
+  top: 35.1%;
+}
+
+#itemCarruselFotos-3 .flechasCarruselFotos{
+  top: 35.2%;
+}
+
+#itemCarruselFotos-1 .contePuntosFotos{
+  bottom: 8%
+}
+
+#itemCarruselFotos-2 .contePuntosFotos{
+  top: 8%
+}
+
+#itemCarruselFotos-3 .contePuntosFotos{
+  bottom: 1.8%;
+}
+
+.imagenCarruselFotos img {
+  margin-top: 90px;
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+}
+
+.flechasCarruselFotos {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.contePuntosFotos {
+  display: flex;
+  width: 100%;
+  position: relative;
+  bottom: 15%;
   align-items: center;
   padding: 1%;
   justify-content: center;
 }
+}
 
-.contePuntos a i {
+/* .contePuntosFotos a i {
   color: black;
   text-decoration: none;
   border-radius: 100%;
 }
 
-#itemCarrusel-1 > .contePuntos .circle1{
-  color: black;
-  text-decoration: none;
-  border-radius: 100%;
-  margin: 0% 2%;
-}
-
-#itemCarrusel-1 > .contePuntos .circle2{
+#itemCarruselFotos-1 > .contePuntosFotos .Fotos-1{
   color: black;
   text-decoration: none;
   border-radius: 100%;
   margin: 0% 2%;
 }
 
-#itemCarrusel-1 > .contePuntos .circle3{
+#itemCarruselFotos-1 > .contePuntosFotos .Fotos-2{
   color: black;
   text-decoration: none;
   border-radius: 100%;
   margin: 0% 2%;
 }
 
-#itemCarrusel-1 > .contePuntos .circle1 a i{
+#itemCarruselFotos-1 > .contePuntosFotos .Fotos-3{
+  color: black;
+  text-decoration: none;
+  border-radius: 100%;
+  margin: 0% 2%;
+}
+
+#itemCarruselFotos-1 > .contePuntosFotos .Fotos-1 a i{
   color: black;
   text-decoration: none;
   background-color: grey;
   border-radius: 100%;
 }
 
-#itemCarrusel-2 > .contePuntos .circle1{
+#itemCarruselFotos-2 > .contePuntosFotos .Fotos-1{
   color: black;
   text-decoration: none;
   border-radius: 100%;
   margin: 0% 2%;
 }
 
-#itemCarrusel-2 > .contePuntos .circle2{
+#itemCarruselFotos-2 > .contePuntosFotos .Fotos-2{
   color: black;
   text-decoration: none;
   border-radius: 100%;
   margin: 0% 2%;
 }
 
-#itemCarrusel-2 > .contePuntos .circle3{
+#itemCarruselFotos-2 > .contePuntosFotos .Fotos-3{
   color: black;
   text-decoration: none;
   border-radius: 100%;
   margin: 0% 2%;
 }
 
-#itemCarrusel-2 > .contePuntos .circle2 a i{
+#itemCarruselFotos-2 > .contePuntosFotos .Fotos-2 a i{
   color: black;
   text-decoration: none;
   background-color: grey;
   border-radius: 100%;
 }
 
-#itemCarrusel-3 > .contePuntos .circle1{
+#itemCarruselFotos-3 > .contePuntosFotos .Fotos-1{
   color: black;
   text-decoration: none;
   border-radius: 100%;
   margin: 0% 2%;
 }
 
-#itemCarrusel-3 > .contePuntos .circle2{
+#itemCarruselFotos-3 > .contePuntosFotos .Fotos-2{
   color: black;
   text-decoration: none;
   border-radius: 100%;
   margin: 0% 2%;
 }
 
-#itemCarrusel-3 > .contePuntos .circle3{
+#itemCarruselFotos-3 > .contePuntosFotos .Fotos-3{
   color: black;
   text-decoration: none;
   border-radius: 100%;
   margin: 0% 2%;
 }
 
-#itemCarrusel-3 > .contePuntos .circle3 a i{
+#itemCarruselFotos-3 > .contePuntosFotos .Fotos-3 a i{
   color: black;
   text-decoration: none;
   background-color: grey;
   border-radius: 100%;
 }
 
-.flechasCarrusel a i {
+.flechasCarruselFotos a i {
   color: grey;
-}
-
-.imagenCarrusel img {
-  width: 100%;
-  height: 290px;
-  object-fit: contain;
-}
+} */
