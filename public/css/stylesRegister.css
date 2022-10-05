@@ -7,24 +7,31 @@ main {
     height: 80%;
 }
 
-@media (max-width: 525px) {
-    
-    main section {
-        display: flex;
-        background-color: orange;
-        justify-content: space-around
-    }
-    
-    main section a {
-        background-color: grey;
-        justify-content: space-around
-    }
-    
-    main section div a {
-        background-color: grey;
-        justify-content: space-around;
-        margin: 10px;
-    }
+/* footer button, */
+form button {
+    height: 28px;
+    width: 200px;
+    transition: .7s;
+    font-size: 18px;
+}
+
+main form button:hover {
+    color:white;
+    background-color: rgb(4, 62, 255);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+footer button:hover {
+    color:white;
+    background-color: rgb(4, 62, 255);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.boton-registro {
+    height: 25px;
+}
+
+@media screen and (max-width: 525px) {
     
     form {
         border-radius: 10px;
@@ -178,15 +185,11 @@ main {
     }
 }
 
+@media screen and (min-width:525px) {
 
-
-/* section {
-    display: inline-block;
-    margin-top: 5%;
-    margin-bottom: 5%;
-} */
-
-@media (min-width:525px) {
+    main {
+        margin-top: 175px;
+    }
 
     main section {
         display: flex;
@@ -224,7 +227,7 @@ main {
     .boton-registro {
         margin-bottom: 3%;
     }
-    
+
     .boton {
         background-color: beige;
         border-radius: 8px;
@@ -391,4 +394,12 @@ main {
         margin-top: 4px;
         padding-right: 5px;
     }
+    
+    footer button {
+        height: 20px;
+        width: 120px;
+        transition: .7s;
+        font-size: 18px;
+    }
 }
+
