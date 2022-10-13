@@ -36,3 +36,13 @@ app.get('/carrito', (req,res)=>{
 app.get('/test', (req,res)=>{
     res.sendFile(__dirname + '/views/test.html');
 })
+
+app.get('/menu', (req,res)=>{
+    res.sendFile(__dirname + '/views/menu.html');
+})
+
+
+
+//const main = require('./src/routes/main.js');
+
+//const producto = require('./src/routes/producto.js');

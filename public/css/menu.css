@@ -1,0 +1,205 @@
+/* .contMenu{
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    height: 18px;
+    background-color: aquamarine;
+  
+} */
+
+/* .rightNavBar a{
+
+    transition: 0.4s;
+    padding: 0 1em;
+}
+
+.rightNavBar a:hover{
+
+    background-color: rgb(55, 88, 145);
+}
+
+
+
+.rightNavBar ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rightNavBar ul a{
+    text-decoration: none;
+    color: black;
+}
+.rightNavBar ul li{
+    list-style: none;
+} */
+
+body{
+    margin: 0;
+}
+a {
+    transition: 0.4s;
+} 
+
+a:hover{
+
+    background-color: rgb(55, 88, 145);
+}
+
+
+.leftNavBar ul {   /* aplica a todas las listas internas */
+
+    list-style: none;  /* quito bullets */
+    padding: 0; /* encolumno todos los li a la izq. */
+    display: table;
+    margin: 0px;
+ 
+}
+
+.leftNavBar a {
+   
+    text-decoration: none;  /* quito enlaces */
+    color: white;
+    padding: 1em 2em;
+   
+ 
+}
+
+.leftNavBar li {  
+line-height: 3rem; /* altura a cada li */
+position: relative;  /* asigno contenedor padre a 'productos' y poder mover relativamente a 'animales'*/
+background-color: rgb(56, 54, 54);
+
+}
+
+.leftNavBar li ul{
+    
+    position: absolute;  /* para poder manejar 'animales' respecto a su contenedor padre 'productos' y evitar que salgan de la pantalla */
+    top:100%   /* desplazamiento desde el tope del contenedor padre hacia abajo un 100% de su altura, es decir el doble de su altura */
+    }
+    
+
+.leftNavBar li li{
+        background-color: rgba(37, 33, 41, 0.522);
+        
+        }
+        
+
+
+.leftNavBar ul ul ul{   
+
+    display: none;     
+}
+
+.leftNavBar ul ul li ul{   
+
+    left: 100%;
+    top: 0%;     
+}
+
+
+.leftNavBar ul ul li:hover ul{   
+
+    display: block;     
+}
+
+
+
+/* 
+.leftNavBar ul:hover ul {   
+
+    display: block;     
+}
+
+
+.leftNavBar li ul {
+
+    position: relative;
+    line-height: 3rem;
+}
+
+.leftNavBar li ul {
+
+    position: absolute;
+}
+ */
+
+
+
+
+
+ 
+
+
+
+/* .leftNavBar li a {
+
+    background-color: black ;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+  
+}
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* .leftNavBar > li{
+
+    float: left;
+}
+
+
+.animales{
+
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.menuDesplegable li a:hover{
+
+    background-color: burlywood;
+}
+
+.menuDesplegable li ul{
+
+    display: none;
+    position: absolute;
+}
+
+.menuDesplegable li:hover ul{
+
+    display: block;   se bloquea 'ul' (animales) al pasar el mouse por 'productos' (li) 
+                        
+}
+
+
+.clasificacion{
+    position: relative;
+    left:100px;
+    bottom:38px
+}
+
+
+.menuDesplegable li ul li ul li{
+
+    display: none;
+}
+
+
+.menuDesplegable li ul li:hover  ul li{
+
+    display: block;
+}
+
+ */
