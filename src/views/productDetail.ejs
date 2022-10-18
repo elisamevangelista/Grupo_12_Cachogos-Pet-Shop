@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachogos Pet Shop</title>
+
+    <!-- referencio a las hojas de estilo ppal (header y footer) y secundaria para esta pag (main)-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_Product.css">   
+    
+    
+    <!-- <link rel="shortcut icon" href="favicon.ico"> todavia no se coloco ningun icono pero dejo la estructura-->
+    
+    <link rel="icon" type="image/png" href="/img/LOGO-PETSHOP.png" >  <!--imagen de nombre 'icono', formato '.png', en carpeta local 'imag' -->
+    
+    <!--siguientes 3 link copiados de google fonts para importar el tipo de letra ROBOTO, aplicado en el archivo .css -->
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+   
+    
+    <!--link copiados fontawsome cdn, ultima version para importar iconos -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+        <!--paquete bootstrap -->
+
+  
+</head>
+
+
+
+<body>   
+
+    <%- include('partials/header') %>
+
+    <main>
+
+              
+<!----------------------------------------------SECCION FOTO PPAL + DESCRPCION Y COMPRA DE PRODCUTO-------------------------------------------------->
+
+        <section class="main-foto-descripcion-mobile-desktop">
+            
+            
+            
+            <div class="noCarruselFotos">
+                <div class="div-fotoppal-fotospeque">
+                <div class="fotoProducto-Mobile">
+                    
+                    <img class="fotoProductoCarrouuselMobile" src = "/Publicación/Producto2.webp" alt="Producto">
+
+
+                </div>
+
+
+                <div class="divfotosPeq">
+
+                    <div class="contendoresFotosPeq">
+                        <img class="fotosPeq" src = "/Publicación/Producto2.webp" alt="Producto">
+                    </div>
+                    <div class="contendoresFotosPeq">
+                        <img class="fotosPeq" src = "/Publicación/Producto4.webp" alt="Producto">
+                    </div>
+                    <div class="contendoresFotosPeq">
+                        <img class="fotosPeq" src = "/Publicación/Producto5.webp" alt="Producto">
+                    </div>
+
+                </div>
+                
+                </div>
+            </div>
+
+
+
+            <div class="carruselFotos">
+                <div class="div-fotoppal-fotospeque">
+                        <div id="conteItemsCarruselFotos">
+                            <div class="itemCarruselFotos" id="itemCarruselFotos-1">
+                                <div class="imagenCarruselFotos" id="imagenCarruselFotos-1">
+                                    <div class="fotoProducto-Mobile">
+                                        <img src="/Publicación/Producto2.webp" />
+                                    </div>
+                                </div>
+                                <div class="flechasCarruselFotos">
+                                    <a href="#itemCarruselFotos-3"><i class="fa-solid fa-angle-left"></i></a>
+                                    <a href="#itemCarruselFotos-2"><i class="fa-solid fa-angle-right"></i></a>
+                                </div>
+                                <div class="divfotosPeq">
+                                    <div class="contePuntosFotos">
+                                        <div class="contendoresFotosPeq">
+                                            <div class="Foto-1">
+                                                <a href="#itemCarruselFotos-1"><img class="fotosPeq" src="/Publicación/Producto2.webp"
+                                                        alt="Producto"></a>
+                                            </div>
+                                        </div>
+                                        <div class="contendoresFotosPeq">
+                                            <div class="Foto-2">
+                                                <a href="#itemCarruselFotos-2"><img class="fotosPeq" src="/Publicación/Producto4.webp"
+                                                        alt="Producto"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="contendoresFotosPeq">
+                                            <div class="Foto-3">
+                                                <a href="#itemCarruselFotos-3"><img class="fotosPeq" src="/Publicación/Producto5.webp"
+                                                        alt="Producto"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="itemCarruselFotos" id="itemCarruselFotos-2">
+                                <div class="imagenCarruselFotos" id="imagenCarruselFotos-2">
+                                    <img src="/Publicación/Producto4.webp" />
+                                </div>
+                                <div class="flechasCarruselFotos">
+                                    <a href="#itemCarruselFotos-1"><i class="fa-solid fa-angle-left"></i></a>
+                                    <a href="#itemCarruselFotos-3"><i class="fa-solid fa-angle-right"></i></a>
+                                </div>
+                                <div class="divfotosPeq">
+                                    <div class="contePuntosFotos">
+                                        <div class="contendoresFotosPeq">
+                                            <div class="Foto-1">
+                                                <a href="#itemCarruselFotos-1"><img class="fotosPeq" src="/Publicación/Producto2.webp"
+                                                        alt="Producto"></a>
+                                            </div>
+                                        </div>
+                                        <div class="contendoresFotosPeq">
+                                            <div class="Foto-2">
+                                                <a href="#itemCarruselFotos-2"><img class="fotosPeq" src="/Publicación/Producto4.webp"
+                                                        alt="Producto"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="contendoresFotosPeq">
+                                            <div class="Foto-3">
+                                                <a href="#itemCarruselFotos-3"><img class="fotosPeq" src="/Publicación/Producto5.webp"
+                                                        alt="Producto"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="itemCarruselFotos" id="itemCarruselFotos-3">
+                                <div class="imagenCarruselFotos" id="imagenCarruselFotos-3">
+                                    <img src="/Publicación/Producto5.webp" />
+                                </div>
+                                <div class="flechasCarruselFotos">
+                                    <a href="#itemCarruselFotos-2"><i class="fa-solid fa-angle-left"></i></a>
+                                    <a href="#itemCarruselFotos-1"><i class="fa-solid fa-angle-right"></i></a>
+                                </div>
+                                <div class="divfotosPeq">
+                                    <div class="contePuntosFotos">
+                                        <div class="contendoresFotosPeq">
+                                            <div class="Foto-1">
+                                                <a href="#itemCarruselFotos-1"><img class="fotosPeq" src="/Publicación/Producto2.webp"
+                                                        alt="Producto"></a>
+                                            </div>
+                                        </div>
+                                        <div class="contendoresFotosPeq">
+                                            <div class="Foto-2">
+                                                <a href="#itemCarruselFotos-2"><img class="fotosPeq" src="/Publicación/Producto4.webp"
+                                                        alt="Producto"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="contendoresFotosPeq">
+                                            <div class="Foto-3">
+                                                <a href="#itemCarruselFotos-3"><img class="fotosPeq" src="/Publicación/Producto5.webp"
+                                                        alt="Producto"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            <div class="div-descripcion-a-desktop"> <!----DIV CREADO PARA SEGUNDA QUERY-------->
+            
+                <div class ="Producto-descripcion">
+
+                    <h2> Alimento Perros Mediano - Eukanuba - 10 kg</h2>
+
+                    <div class="div-enlaceMarca-SKU-mobile">
+                        <li class="enlaceMarca-li-mobile"><a class="enlaceMarca-a-mobile" href="Sucursales.html">Eukanuba</a></li>
+                        <li class="sepearador-mobile">|</li>
+                        <li class="SKU-mobile">SKU89458M2</li>
+                        
+                    </div>
+
+                    <li class="precioProducto-moblie">$ 10.000</li>
+                    <li class="cuotas-mobile">Hasta 4 cuotas sin interes de $2.500 con Bancos seleccionados</li>
+
+                    
+                </div>      
+
+                <hr class="separadorBarra">
+            
+                <div class ="seleccionPeso-mobile">
+
+                    <p>Seleccione el peso del alimento:</p>
+
+                    <div class="pesoAlimento-Mobile">
+                        
+                                            <!----------------------------------------------ver si es boton solo o con enlace?!-------------------------------------------------->
+                        <button class="botonPeso-Mobile" type="submit">7 Kg</button>
+                        <button class="botonPeso-Mobile" type="submit">15 Kg</button>
+                    
+                    </div>
+                    
+                </div>      
+                <hr class="separadorBarra">
+                <div class="divCantidadDisponible-mobile">
+                    <p class="cantidadDisponible-mobile">Cantidad disponible: (8 - ocho unidades)</p>
+                </div>
+
+
+                <div class ="botonera-cantidad-carrito-comprar-mobile">
+
+                
+                    <div class="Div-botones-cantidad-agregarCarrito-mobile">
+                        
+                                            <!----------------------------------------------ver si es boton solo o con enlace?!-------------------------------------------------->
+                        <button class="botonSeleccionCantidad-Mobile" type="submit">- / +</button>
+                        <button class="botonAgregarAlCarrito-Mobile" type="submit"> AGREGAR AL CARRITO</button>
+                    
+                    </div>
+
+                    <div class="Divbotones-comprarAhora-mobile">                  
+                    
+                        <button class="botoncomprarAhora-Mobile" type="submit">COMPRAR AHORA</button>
+
+                    </div>
+                    
+                </div>
+
+                <div class="divCompartirRedes-mobile">
+                    <p class="compartir-mobile">Compartir:</p>
+
+                    <ul class="lista-enlacesRedes-mobile">
+                    
+                        <li ><a href="https://www.instagram.com/"><img class="Instagram" src = "/img/INSTA.png" alt="Instagram"></a></li>
+                        <li ><a href="https://es-la.facebook.com/"><img class="Facebook" src = "/img/FB.png" alt="Facebook"></a></li>
+                        <li ><a href="https://www.youtube.com/"><img class="Youtube" src = "/img/YTUBE.png" alt="Youtube"></a></li>
+                                
+                    </ul>  
+                    
+                </div>     
+            </div>
+
+        </section>     
+
+         <!-- descripcion de productos con pestaña-->
+         <div class="contenedor-tabs">
+            <input type="radio" id="tabsDescripcion" name="tractor" checked='checked' />    
+              <input type="radio" id="tabsDetalles" name="tractor" />      
+            <input type="radio" id="tabsOpiniones" name="tractor" />      
+            <label class="labelTabs" for='tabsDescripcion'>DESCRIPCIÓN</label>	
+            <label class="labelTabs" for='tabsDetalles'>DETALLES</label>
+            <label class="labelTabs" for='tabsOpiniones'>OPINIONES</label>
+                
+            <div class="tab una">
+                               
+          
+              <p>La selección de un alimento adecuado para tu mascota es muy importante para garantizar su crecimiento, desarrollo y salud. Con esta opción de Cat Chow podrás cubrir las necesidades nutricionales y energéticas de tu gato.             </p>
+
+                <P>
+                    Tu mascota siempre saludable Una alimentación equilibrada es esencial para que tu fiel compañero se mantenga sano y fuerte. La dieta de tu gato se refleja en su pelaje, por eso es de vital importancia que contenga todos los nutrientes necesarios para su crecimiento. Asegurá la energía y vitalidad de tu amigo para que pueda correr, saltar y jugar todo el día.
+
+                </P>
+
+        
+                      </div>
+          
+                      <div class="tab tabsDescripcion">
+                                <p>
+                                    La selección de un alimento adecuado para tu mascota es muy importante para garantizar su crecimiento, desarrollo y salud. Con esta opción de Cat Chow podrás cubrir las necesidades nutricionales y energéticas de tu gato.   </p>
+                                    <p>
+                                        Tu mascota siempre saludable Una alimentación equilibrada es esencial para que tu fiel compañero se mantenga sano y fuerte. La dieta de tu gato se refleja en su pelaje, por eso es de vital importancia que contenga todos los nutrientes necesarios para su crecimiento. Asegurá la energía y vitalidad de tu amigo para que pueda correr, saltar y jugar todo el día.
+
+                                    </p>
+
+
+                             
+
+                      </div>
+          
+                      <div class="tab tabsDetalles">
+                              <p> Proteína para una nutrición completa. Alimento rico en proteína animal de alto valor biológico, contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, fibras y ácidos grasos esenciales.
+                            </p>
+          
+                      </div>
+          
+                      <div class="tab tabsOpiniones">
+                              <p> mayor ventaja de la comida seca para mascotas es que se puede almacenar por mucho más tiempo sin que se deteriore, y evita la aparición de hongos o bacterias.
+
+                            </p>
+          
+                      </div>
+              </div>
+        <!-- tabla de productos anterior
+        <section class="tabla-desktop">            
+
+            <div class ="tabla">
+                <li> <a class="descripcion" href="#texto-1">DESCRIPCIÓN</a></li>
+                <li>|</li>
+                <li><a class="detalles" href="#texto-2">DETALLES</a></li>
+                <li>|</li>
+                <li><a class="opiniones" href="#texto-3">OPINIONES</a></li>
+
+            </div>
+
+            <div id="conteItemsCarrusel">              
+                
+
+                <div class="itemCarrusel" id="itemCarrusel-1">
+
+                    <div class="texto" id="texto-1">
+                        <p>La selección de un alimento adecuado para tu mascota es muy importante para garantizar su crecimiento, desarrollo y salud. 
+                            Con esta opción de Cat Chow podrás cubrir las necesidades nutricionales y energéticas de tu gato.                           Tu mascota siempre saludable Una alimentación equilibrada es esencial para que tu fiel
+                            compañero se mantenga sano y fuerte. La dieta de tu gato se refleja en su pelaje,
+                             por eso es de vital importancia que contenga todos los nutrientes necesarios para su crecimiento.
+                              Asegurá la energía y vitalidad de tu amigo para que pueda correr, saltar y jugar todo el día.
+                        </p>
+                    </div>
+                  
+                </div>
+        
+                <div class="itemCarrusel" id="itemCarrusel-2">
+                    <div class="texto" id="texto-2">
+                        <p>
+                        Proteína para una nutrición completa.   
+                        Alimento rico en proteína animal de alto valor biológico, 
+                        contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, 
+                        fibras y ácidos grasos esenciales.
+                        </p>
+                    </div>
+                    
+                </div>
+        
+                <div class="itemCarrusel" id="itemCarrusel-3">
+                    <div class="texto" id="texto-3">
+                        <p>
+                            mayor ventaja de la comida seca para mascotas es que se puede almacenar por mucho más tiempo sin que se deteriore, 
+                        y evita la aparición de hongos o bacterias.
+                        </p>
+                    </div>
+                   
+                   
+                </div>
+        
+            </div>
+        </section> -->
+
+       
+
+
+
+
+ <!-- 
+        <section class="tabla-mobile">
+            <div class="divEnlacesSeccion2-mobile">
+
+                <div class="enlacesSeccion2-mobile">
+                    <li class="menuDesplegable-mobile">DESCRIPCIÓN</li>
+                    <li class="botonAmpliar-mobile">+</li>
+                </div>
+
+                
+                <div class="enlacesSeccion2-mobile">
+                    <li class="menuDesplegable-mobile">DETALLES</li>
+                    <li class="botonAmpliar-mobile">+</li>
+
+                </div>
+
+                <div class="enlacesSeccion2-mobile">
+                    <li class="menuDesplegable-mobile">OPINIONES</li>
+                    <li class="botonAmpliar-mobile">+</li>
+                </div>
+
+            </div>
+
+
+        </section>-->
+
+        <!--------------------------------------------RECOMENDADOS-------------------------------------------------->
+                
+
+
+        <section>
+
+            <div class="divRecomendados">
+                <p>PRODUCTOS RECOMENDADOS</p>
+            </div>
+
+            <div class="div-Articulo-Recomendados-Mobile">
+            
+                <!--------------------------LE DOY FLEX AL ENLACE TAMBIEN PARA CENTRAR LA FOTO CUANDO LE ACHICO EL WIDTH-------------------------------------------------->
+                                
+                <article class="div-tarjetaRecomendados">
+
+                    <a class="enlaceFotoRec-mobile" href="Inicio.html"><img class="fotoProductoRecomendado-Carrouusel-Mobile" src = "/images/images(revision)/Mobile - Home -Producto recomendado1.webp" alt="Producto"></a>
+
+                    <div class ="div-Producto-recomendado-descripcion">
+
+                        <p> Alimento Perros Grande - Royal Cannin - 15 kg</p>
+
+                     
+                        <li class="precioProducto-recomendado-moblie">$ 20.000</li>
+                        <li class="cuotas-recomendado-mobile">Hasta 4 cuotas sin interes de $5.000 con Bancos seleccionados</li>
+
+                
+                    </div>   
+                </article>
+
+
+                <article class="div-tarjetaRecomendados2">
+
+                    <a class="enlaceFotoRec-mobile" href="Inicio.html"><img class="fotoProductoRecomendado-Carrouusel-Mobile" src = "/images/images(revision)/Desk - Publicación abierta(productos recomendados4).webp" alt="Producto"></a>
+
+                    <div class ="div-Producto-recomendado-descripcion">
+
+                        <p> Alimento Perros Grande - Royal Cannin - 15 kg</p>
+
+                     
+                        <li class="precioProducto-recomendado-moblie">$ 20.000</li>
+                        <li class="cuotas-recomendado-mobile">Hasta 4 cuotas sin interes de $5.000 con Bancos seleccionados</li>
+
+                
+                    </div>   
+                </article>
+
+
+                <article class="div-tarjetaRecomendados3">
+
+                    <a class="enlaceFotoRec-mobile" href="Inicio.html"><img class="fotoProductoRecomendado-Carrouusel-Mobile" src = "/images/images(revision)/Mobile - Home -Producto recomendado2.webp" alt="Producto"></a>
+
+                    <div class ="div-Producto-recomendado-descripcion">
+
+                        <p> Alimento Perros Grande - Royal Cannin - 20 kg</p>
+
+                     
+                        <li class="precioProducto-recomendado-moblie">$ 30.000</li>
+                        <li class="cuotas-recomendado-mobile">Hasta 3 cuotas sin interes de $10.000 con Bancos seleccionados</li>
+
+                
+                    </div>   
+                </article>
+
+                <article class="div-tarjetaRecomendados4">
+
+                    <a class="enlaceFotoRec-mobile" href="Inicio.html"><img class="fotoProductoRecomendado-Carrouusel-Mobile" src = "/images/images(revision)/Mobile - Publicación -Producto recomendado.webp" alt="Producto"></a>
+
+                    <div class ="div-Producto-recomendado-descripcion">
+
+                        <p> Alimento Perros Grande - Royal Cannin - 3 kg</p>
+
+                     
+                        <li class="precioProducto-recomendado-moblie">$ 10.000</li>
+                        <li class="cuotas-recomendado-mobile">Hasta 4 cuotas sin interes de $2.500 con Bancos seleccionados</li>
+
+                
+                    </div>   
+                </article>
+
+            </div>
+
+
+        </section>
+      
+
+    </main>     
+
+    <%- include('partials/footer') %>
+
+</body>
+
+
+</html>

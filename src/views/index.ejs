@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachogos Pet Shop</title>
+
+    <!-- referencio a las hojas de estilo ppal (header y footer) y secundaria para esta pag (main)-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_Product.css">
+    <link rel="stylesheet" href="/css/style-home.css">
+
+
+    <!-- <link rel="shortcut icon" href="favicon.ico"> todavia no se coloco ningun icono pero dejo la estructura-->
+
+    <link rel="icon" type="image/png" href="/img/LOGO-PETSHOP.png">
+    <!--imagen de nombre 'icono', formato '.png', en carpeta local 'imag' -->
+
+    <!--siguientes 3 link copiados de google fonts para importar el tipo de letra ROBOTO, aplicado en el archivo .css -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+
+    <!--link copiados fontawsome cdn, ultima version para importar iconos -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!--paquete bootstrap -->
+    <!-- Bootstrap CSS 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- script carrousel -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Hello, world!</title>
+
+</head>
+
+<body>
+
+    <%- include('partials/header') %>
+
+    <main>
+        <section class="sliderHome">
+                    <!-- carrousel home principal  -->
+
+            <div class="carrousel">
+
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/images/p-peluqueriaCanina.png" class="d-block w-100" alt="dd">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/p-promocat2.png" class="d-block w-100" alt="dd">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/p-productos.png" class="d-block w-100" alt="dd">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+
+            </div>
+
+                    <!-- categorias destacadas home principal  -->
+
+            <div class="categoriasHome">
+                <div class="cat1">
+                    <img src="/images/mundocat.png" alt="">
+                </div>
+                <div class="cat1"> <img src="/images/mundodog.png" alt="">
+                </div>
+                <div class="cat1"> <img src="/images/mundobird.png" alt="">
+                </div>
+                <div class="cat1"> <img src="/images/mundofish.png" alt="">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- modulo beneficios -->
+        <div class="modulo-0">
+            <div class="item-beneficio"><i class="fas fa-shipping-fast"></i><span><strong>Envío gratis desde
+                        $200.000</strong></span></div>
+            <div class="item-beneficio"><i class="fas fa-lock"></i><span>Compra<br><strong>100% segura</strong></span>
+            </div>
+            <div class="item-beneficio"><i class="fas fa-credit-card"></i><span><strong>Múltiples medios</strong><br>de
+                    pago</span></div>
+            <div class="item-beneficio"><i class="fas fa-exchange-alt"></i><span>Devoluciones<br><strong> sin
+                        costo</strong></span></div>
+        </div>
+
+        <!-- topbar promos -->
+        <div class="promoImperdibles">
+
+            <div class="topbarActivacion">
+                <p><i class='bx bxs-hot'></i>Aprovecha hasta 50% queda poco tiempo </p>
+            </div>
+            <h2 class="loop-activacion-topbar topbarText">!Promociones imperdibles¡</h2>
+
+            <section class="carrouselDos">
+
+
+                <div class="promo">
+                    <img src="/images/promo3-2.png" alt="">
+                </div>
+                <div class="promo">
+                    <img src="/images/promo-new.png" alt="">
+                </div>
+                <div class="promo"> <img src="/images/promo-black.png" alt="">
+                </div>
+                <div class="promo"> <img src="/images/promo-juego.png" alt="">
+                </div>
+            </section>
+        </div>
+
+        <!-- carrousel marcas  -->
+        <div class="Carousel">
+            <h2>Compra por marca</h2>
+            <div class="slick-list" id="slick-list">
+                <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev"
+                    onclick="app.processingButton(event)">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                        class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                        </path>
+                    </svg>
+                </button>
+                <div class="slick-track" id="track">
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+
+                                <picture>
+                                    <img src="/images/logos-marcas/logo-max-cat.png" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+
+                                <picture>
+                                    <img src="/images/logos-marcas/logo-whiskas.webp" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+
+                                <picture>
+                                    <img src="/images/logos-marcas/logo-max.png" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+
+                                <picture>
+                                    <img src="/images/logos-marcas/logo-brekkies.png" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+
+                                <picture>
+                                    <img src="/images/logos-marcas/logo-dogui.webp" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="/">
+
+                                <picture>
+                                    <img src="/images/logos-marcas/pedigree-logo-marca.png" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <button class="slick-arrow slick-next" id="button-next" data-button="button-next"
+                    onclick="app.processingButton(event)">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- <div class="buscaMarcas"> 
+      <img
+        src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+        src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+        src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+        src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+      src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div>
+    <div class="buscaMarcas"> <img
+      src="https://img.freepik.com/vector-gratis/tienda-mascotas-relacionada_24908-57968.jpg?w=2000" alt="">
+    </div> -->
+
+
+
+
+
+
+    </main>
+    
+    <%- include('partials/footer') %>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="/js/carrousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

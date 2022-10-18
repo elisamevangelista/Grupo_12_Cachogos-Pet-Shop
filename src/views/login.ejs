@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachogos Pet Shop</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleLogin.css">
+    <link rel="icon" type="image/png" href="/img/LOGO-PETSHOP.png" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+    <main>
+        <h2>Ingresar a mi cuenta</h2>
+        <form action="/login" class="" id="" method="post">
+
+            <div class="campos-form">
+                <!-- Grupo: Email -->
+        <div class="email" id="">
+            <label for="email" class="mailLabel">E-mail</label>
+            <div class="mailInput-i">
+                <input type="email" class="mailInput" name="email" id="email" placeholder="correo@correo.com">
+                <div class="mailIcon">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+            </div>
+            <p class="error-email">El email tiene que ser un formato de mail valido.</p>
+        </div>
+        <!-- Grupo: Contraseña -->
+        <div class="contraseña" id="">
+            <label for="password" class="contraLabel">Contraseña</label>
+            <div class="contraInput-i">
+                <input type="password" class="contraInput" name="password" id="password" placeholder="********">
+                <div class="contraIcon">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+            </div>
+            </div>
+         
+            <p class="error-password">La contraseña tiene que ser de 8 a 16 carácteres, debe incluir minimamente mayúscula, minúscula y número.</p>
+        </div>
+        <a href="">¿Olvidaste tu contraseña?</a>
+        <div class="boton-inicio-sesión">
+            <button type="submit" class="boton">Iniciar Sesión</button>
+        </div>
+        <div class="error-formulario" id="">
+            <p class=""><b>Error:</b> Por favor rellena los campos correctamente.</p>
+            </div>
+            <div class="separador-login">
+                <p>---------------------</p>
+            </div>
+            <div class="link-registro">
+                <a href="/register">¿Todavía no ténes una cuenta?<br>
+                    <b>Registrarme</b>
+                </a>
+            </div>
+       </form>
+        
+     </main>
+
+     <%- include('partials/footer') %>
+     
+</body>
+</html>

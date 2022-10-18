@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachogos Pet Shop</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/stylecarrito.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+   
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+    <main class="cuerpo">
+        <section class=compra-segura>
+            <i class="fa-solid fa-lock"></i> Compra Segura 
+        </section>
+        <section>      
+            <h2>
+                <i class="fa-solid fa-cart-shopping"></i> Mi Carrito de Compras
+            </h2>
+        </section>  
+        <div class="contenedorPadre">    
+            <div class="contcol1">
+                <div class="encabezadoCarrito"> <!-- se desplega lista al pasar a desktop-->
+                    <ul class="haciaIzquierda">
+                    <li>PRODUCTO</li>            
+                    </ul>
+                    <ul class="haciaDerecha">
+                    <li>CANTIDAD</li>
+                    <li>PRECIO</li>
+                    </ul>                                    
+                </div> <!--fin div encabezado que se despliega al pasar a desktop-->
+
+                <div class="artcarrito"> <!--inicio producto1-->
+                    <div class="imagen">
+                        <img width=70px heigth= 70px src="/img/EUKANUBA-grande1.jpg" alt="producto1">
+                     </div>
+                    <div class="subcont1">
+                        <div class="productoTexto">
+                        <p class="marca">EUKANUBA</p>
+                        <p class="brevedescripción">RAZAS PEQUEÑAS, PERROS MAYORES A 1 AÑO, BOLSA 3KG</p>
+                        </div>
+                    <div class="subcont2">
+                        <div class="cantiPrecio">
+                            <p class="cantidad">- Num +</p>
+                            <p class="precio">$4.200</p>
+                        </div>
+                        <div class="botonEliminar">
+                            <span class="eliminar">Eliminar</span>  <button type="reset" class="elim"><i class="fa-solid fa-trash-can"></i></button>  
+                        </div>
+                    </div>
+                    </div>
+                </div>  <!--finProducto1-->      
+                       
+    
+
+                <div class="artcarrito"> <!--inicio producto2-->
+                    <div class="imagen">  
+                       <img width=70px heigth= 70px src ="/img/EUKANUBA-peq1_.jpg" alt="producto2">
+                    </div>
+                    <div class="subcont1">
+                        <div class="productoTexto">           
+                            <p class="marca">EUKANUBA</p>
+                            <p class="brevedescripción">PERROS ADULTO 1,5-6 AÑOS, BOLSA 25KG</p>
+                        </div>
+                    <div class="subcont2">
+                        <div class="cantiPrecio">
+                            <p class="cantidad">- Num +</p>    
+                            <p class="precio">$10.800</p>
+                        </div>
+                        <div class="botonEliminar">
+                            <span class="eliminar">Eliminar</span>  <button type="reset" class="elim"><i class="fa-solid fa-trash-can"></i></button>  
+                        </div>
+                    </div>             
+                    </div>    
+                </div> <!--finProducto2-->  
+            </div> <!--fincontcol1-->
+            
+            <div class="contcol2">
+            <section class="finalCompra">  
+            <h2 class="resumen">Resumen de mi Orden</h2>
+            <p class="cupon"><i class="fa-solid fa-tag"></i> Agregar Cupon de Descuento Aquí</p>
+            </section>  
+            <section class="finalCompra">      
+            <h3>Descuentos</h3>
+            <h3 class="subtotal">Subtotal <span>$15.000</span></h3>
+            <h3 class="envio">Envio <span>GRATIS</span></h3>
+            <h3 class="total">Total con Envío <span>$15.000</span></h3>
+            <div class="finalizarcompra">
+                <button type="submit" class="botonFin" >FINALIZAR COMPRA</button>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    </body>
+    </html>  
