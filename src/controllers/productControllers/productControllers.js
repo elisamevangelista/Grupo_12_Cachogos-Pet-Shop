@@ -1,3 +1,0 @@
-productDetail
-creacionProducto
-edicionProdcuto

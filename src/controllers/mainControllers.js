@@ -8,9 +8,7 @@ const mainControllers = {
     register: (req, res) => {
         res.render('register')
     },
-    productDetail: (req, res) => {
-        res.render('producDetail')
-    },
+   
     carrito: (req, res) => {
         res.render('carrito')
     }
