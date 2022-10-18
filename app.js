@@ -41,6 +41,12 @@ app.get('/menu', (req,res)=>{
     res.sendFile(__dirname + '/views/menu.html');
 })
 
+app.get('/creacionproducto', (req,res)=>{
+    console.log('__dirname ==> ', __dirname);
+    res.sendFile(__dirname + '/src/views/creacionproducto.html');
+
+})
+
 
 
 //const main = require('./src/routes/main.js');
