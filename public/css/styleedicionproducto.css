@@ -18,7 +18,7 @@ form{
 
 }
 
-.titulo-creacion{
+.titulo-edicion{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,14 +90,10 @@ fieldset{
     width: 100%;
 }
 
-.botones{
 
-    display: flex;
-    justify-content:flex-end;
-    margin-bottom:8px;
-}
 
-.botonEditar{
+
+.botonBuscar{
     display: flex;
     justify-content:flex-end;
     margin-bottom:0px;
@@ -105,22 +101,13 @@ fieldset{
     
 
 
-
-.botonEdit{
+.botonBusc{
    
     border-radius: 8px;
+    margin-right: 8px;
+    background-color: rgba(181, 181, 181, 0.914);
     
 }
-
-
-.botonIngresar{
-    margin-right: 10px;
-    background-color: rgba(181, 181, 181, 0.914);
-    border-radius: 8px;
-    width: 86px;
-   
-}
-
 
 .botonReset{
 
@@ -128,6 +115,29 @@ fieldset{
     
    
 }
+
+.botonSobre{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom:8px;
+   
+}
+
+
+.botonSobreescribir{
+    margin-right: 10px;
+    border-radius: 8px;
+    width: 150px;
+    background-color: rgba(181, 181, 181, 0.914);
+    font-size: 14px;
+    font-weight: bold;
+ 
+}
+
+
+
 @media (min-width:750px){
     form{
         width: 50%;

@@ -1,7 +1,7 @@
 
 <%- include('partials/head') %>
    
-<link rel="stylesheet" href="/css/stylecreacionproducto.css">     
+<link rel="stylesheet" href="/css/styleedicionproducto.css">     
       
 </head>
 
@@ -11,33 +11,32 @@
 
     <main>
 
-        <form  method="post" action="/creacionproducto.ejs">
+        <form  method="post" action="/edicionproducto.ejs">
 
-            <div class="titulo-creacion">
-                <p >Creacion Producto</p>
+            <div class="titulo-edicion">
+                <p >Edición Producto</p>
             </div>
 
             <fieldset>
-                <legend>Fecha creación</legend>
+                <legend>Fecha Edición</legend>
 
                 <div class = "fecha">
             
-                    <input class="fechaCrea" type="date"  id="fechaCreacion">
+                    <input class="fechaEdi" type="date"  id="fechaEdicion">
 
                 </div>
 
             </fieldset>
 
             <fieldset class ="fieldset-producto">
-                <legend>Producto</legend>
-
-
-                <div class = "botonEditar">
-                
-                    <input class ="botonEdit" type="submit" name="Editar" value="Editar" />
-                
-                </div>      
+                <legend>Producto</legend>             
     
+                <div class = "botonBuscar">
+                
+                    <input class ="botonBusc" type="submit" name="Editar" value="Buscar" />
+                    <input class ="botonReset" type="reset" name="reset" value="Restablecer" />
+                
+                </div> 
 
                 <div class = "referencia-SKU">
                     <label for="SKUProducto">SKU / ID</label>
@@ -180,13 +179,13 @@
 
 
          
-            <div class = "botones">
-                
-                <input class ="botonIngresar" type="submit" name="Ingresar" value="Ingresar" />
-                <input class ="botonReset" type="reset" name="reset" value="Restablecer" />
+            <div class = "botonSobre">
 
+                <input class ="botonSobreescribir" type="submit" name="Sobreescribir" value="Sobreescribir" />
+                           
 
-            </div>      
+            </div>  
+                 
 
 
         </form>
