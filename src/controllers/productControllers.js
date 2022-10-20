@@ -11,6 +11,9 @@ const productControllers = {
     },
     productdet: (req, res) => {
         res.render('productdet')
+    },
+    verproducto: (req, res) => {
+        res.render('verproducto')
     }
  
 }

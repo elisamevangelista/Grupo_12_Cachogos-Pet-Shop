@@ -100,7 +100,7 @@ fieldset{
 .botonEditar{
     display: flex;
     justify-content:flex-end;
-    margin-bottom:0px;
+    margin-bottom:5px;
 }
     
 

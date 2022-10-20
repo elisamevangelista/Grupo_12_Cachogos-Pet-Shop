@@ -17,7 +17,7 @@ app.use('/', mainRoutes);
 app.use('/', productRoutes);
 
 app.set('views', path.join(__dirname, '/src/views'))  ;
-// app.set('views', path.join(__dirname, '/src/views/users'));   //PREGUNTARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR!!!!!);
+    
 
 
 app.set('view engine', 'ejs');
