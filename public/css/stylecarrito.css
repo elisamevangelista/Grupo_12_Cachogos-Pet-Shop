@@ -4,6 +4,7 @@
 
 main{
     background-image: url("../images/fondo2.jpg");
+    background: contain;
 }   
  
 .compra-segura {
@@ -145,10 +146,6 @@ main h3{
     font-weight: 800;
 }
 
-.opcionEnvio{
-    display: none;
-    background-color: ;
-}
 .finalizarcompra {
     margin-top:30px;
     margin-bottom: 50px;
@@ -197,6 +194,9 @@ h2.resumen{
     }
     .contcol1{
         width: 70%;
+    }
+    .contcol2{
+        padding-right: 10px;
     }
     .encabezadoCarrito{ 
         background-color: #456A99;
