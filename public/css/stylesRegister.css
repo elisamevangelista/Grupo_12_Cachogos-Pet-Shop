@@ -7,6 +7,13 @@ main {
     height: 80%;
 }
 
+main {
+    text-align: center;
+    height: 400px;
+    background-image: url("../images/fondo2.jpg");
+    background: contain;
+}
+
 /* footer button, */
 form button {
     height: 28px;
@@ -38,7 +45,7 @@ footer button:hover {
         margin-bottom: 5%;
         display: inline-block;
         background-color: darkgrey;
-        height: 80%;
+        height: 70%;
         width: 70%;
     }
     
@@ -188,7 +195,12 @@ footer button:hover {
 @media screen and (min-width:525px) {
 
     main {
-        margin-top: 175px;
+        margin-top: 150px;
+        height: 400px;
+    }
+
+    main h2 {
+        padding-top: 20px;
     }
 
     main section {
@@ -209,7 +221,7 @@ footer button:hover {
     }
     
     .campos-form {
-        padding-top: 3%;
+        padding-top: 30px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -238,9 +250,9 @@ footer button:hover {
         border-radius: 10px;
         margin-bottom: 5%;
         display: flex;
-        background-color: darkgrey;
-        height: 80%;
-        width: 70%;
+        background-color: rgb(223, 219, 219);
+        height: 290px;
+        width: 470px;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
