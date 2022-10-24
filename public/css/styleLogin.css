@@ -4,7 +4,9 @@ header {
 
 main {
     text-align: center;
-    height: 80%;
+    height: 400px;
+    background-image: url("../images/fondo2.jpg");
+    background: contain;
 }
 
 main form button:hover {
@@ -30,6 +32,8 @@ footer button:hover {
 .link-registro b {
     text-decoration: underline;
 }
+
+
 
 @media (max-width: 525px) {
 
@@ -61,8 +65,8 @@ footer button:hover {
         border-radius: 10px;
         margin-bottom: 5%;
         display: inline-block;
-        background-color: darkgrey;
-        height: 80%;
+        background-color: rgb(223, 219, 219);
+        height: 70%;
         width: 70%;
     }
     
@@ -187,12 +191,20 @@ footer button:hover {
         transition: .7s;
         font-size: 18px;
     }
+
+    main h2{
+
+        padding-top: 15px;
+        margin-top: 0px;
+    }
+  
+
 }
 
 @media (min-width:525px) {
 
     main {
-        margin-top: 170px;
+        margin-top: 150px;
     }
 
     main section {
@@ -245,11 +257,10 @@ footer button:hover {
 
     form {
         border-radius: 10px;
-        margin-bottom: 5%;
         display: flex;
-        background-color: darkgrey;
-        height: 80%;
-        width: 70%;
+        background-color: rgb(223, 219, 219);
+        height: 280px;
+        width: 470px;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
@@ -414,5 +425,10 @@ footer button:hover {
         display: none;
         margin-top: 4px;
         padding-right: 5px;
+    }
+
+    main h2{
+
+        padding-top: 15px;
     }
 }
