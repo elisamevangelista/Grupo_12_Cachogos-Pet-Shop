@@ -42,6 +42,7 @@ footer button:hover {
     
     form {
         border-radius: 10px;
+        border: 1px solid #3694F5;
         margin-bottom: 5%;
         display: inline-block;
         background-color: darkgrey;
@@ -248,6 +249,7 @@ footer button:hover {
 
     form {
         border-radius: 10px;
+        border: 1px solid #3694F5;
         margin-bottom: 5%;
         display: flex;
         background-color: rgb(223, 219, 219);
