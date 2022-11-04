@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "nombre": "Wyatt",
+        "apellido": "Albinson",
+        "email": "walbinson0@chronoengine.com",
+        "contraseña": "CJplFAb",
+        "tipo de usuario": "usuario"
+    },
+    {
+        "id": 2,
+        "nombre": "Amy",
+        "apellido": "McArd",
+        "email": "amcard1@prweb.com",
+        "contraseña": "2XUYTTLTGa",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 3,
+        "nombre": "Seth",
+        "apellido": "Fisby",
+        "email": "sfisby2@indiegogo.com",
+        "contraseña": "gd3UOLkOW9Dq",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 4,
+        "nombre": "Novelia",
+        "apellido": "Spivey",
+        "email": "nspivey3@mashable.com",
+        "contraseña": "Mc4QMzvCZ",
+        "tipo de usuario": "usuario"
+    },
+    {
+        "id": 5,
+        "nombre": "Loralie",
+        "apellido": "Slaymaker",
+        "email": "lslaymaker4@baidu.com",
+        "contraseña": "1RQ7SMz",
+        "tipo de usuario": "usuario"
+    },
+    {
+        "id": 6,
+        "nombre": "Foster",
+        "apellido": "Garwood",
+        "email": "fgarwood5@mediafire.com",
+        "contraseña": "JAx1S3",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 7,
+        "nombre": "Nannie",
+        "apellido": "Crossfeld",
+        "email": "ncrossfeld6@bing.com",
+        "contraseña": "VpGZ43LPKfFe",
+        "tipo de usuario": "usuario"
+    },
+    {
+        "id": 8,
+        "nombre": "Myra",
+        "apellido": "Heigho",
+        "email": "mheigho7@jimdo.com",
+        "contraseña": "urrfngQR",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 9,
+        "nombre": "Elita",
+        "apellido": "Gordon-Giles",
+        "email": "egordongiles8@macromedia.com",
+        "contraseña": "COZkII",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 10,
+        "nombre": "Ainslie",
+        "apellido": "Strangward",
+        "email": "astrangward9@dagondesign.com",
+        "contraseña": "Ai6TsLO",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 11,
+        "nombre": "Kerri",
+        "apellido": "Skamal",
+        "email": "kskamala@elpais.com",
+        "contraseña": "KgZKuxDA",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 12,
+        "nombre": "Tabby",
+        "apellido": "Ollerhead",
+        "email": "tollerheadb@discuz.net",
+        "contraseña": "NOTVCOQblAi",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 13,
+        "nombre": "Maryjo",
+        "apellido": "Kleeman",
+        "email": "mkleemanc@go.com",
+        "contraseña": "jHquxfbKP",
+        "tipo de usuario": "usuario"
+    },
+    {
+        "id": 14,
+        "nombre": "Papageno",
+        "apellido": "Raxworthy",
+        "email": "praxworthyd@storify.com",
+        "contraseña": "twA04ZzBv",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 15,
+        "nombre": "Johnette",
+        "apellido": "Ickov",
+        "email": "jickove@prnewswire.com",
+        "contraseña": "qOrBa5yw95DB",
+        "tipo de usuario": "usuario"
+    },
+    {
+        "id": 16,
+        "nombre": "Tadd",
+        "apellido": "Bullas",
+        "email": "tbullasf@usa.gov",
+        "contraseña": "IMPBV0h1O",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 17,
+        "nombre": "Land",
+        "apellido": "Tolchar",
+        "email": "ltolcharg@github.io",
+        "contraseña": "K2qXoo4dAQ",
+        "tipo de usuario": "admin"
+    },
+    {
+        "id": 18,
+        "nombre": "Gina",
+        "apellido": "Browning",
+        "email": "gbrowningh@blogs.com",
+        "contraseña": "RJEbwn",
+        "tipo de usuario": "usuario"
+    },
+    {
+        "id": 19,
+        "nombre": "Juliana",
+        "apellido": "Dilke",
+        "email": "jdilkei@blogtalkradio.com",
+        "contraseña": "BOWLEH4",
+        "tipo de usuario": "usuario"
+    },
+    {
+        "id": 20,
+        "nombre": "Dahlia",
+        "apellido": "Allmark",
+        "email": "dallmarkj@usnews.com",
+        "contraseña": "Pcn84LV",
+        "tipo de usuario": "admin"
+    }
+]

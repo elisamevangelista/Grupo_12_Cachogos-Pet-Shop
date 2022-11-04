@@ -1,20 +1,20 @@
 const express = require('express');
 const mainRoutes = require('./src/routes/main');
 const productRoutes = require('./src/routes/product');
-
 const path = require('path');
+const methodOverride =  require('method-override');
 
 const app = express();
-
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));  //se puede prescidir de este termino __dirname//
-
+app.use(methodOverride('_method'))
 
 app.listen(3000, ()=>{
-    console.log('Servidor levantado');
+    console.log('Servidor levantado');          
 });
 
 app.use('/', mainRoutes);
-app.use('/', productRoutes);
+app.use('/products', productRoutes);
 
 app.set('views', path.join(__dirname, '/src/views'))  ;
     

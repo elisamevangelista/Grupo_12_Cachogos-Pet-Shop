@@ -116,44 +116,25 @@
 
             </div>
         </aside>
-<!-- 
-        <section class="cards">
-
-
-            <% for( let card=1; card <=20; card++ ) { %>
-                <div class="card">
-                    <img src="/image/card-produc1.jpg" alt="">
-                    <p class=" card__productName"> NOMBRE DEL PRODUCTO </p>
-                    <p class=" card__productPrice"> $ 100,00 </p>
-                    <p class=" card__productCuota"> Hasta cuotas sin interes de $ 1.793 con Bancos seleccionados</p>
-
-                </div>
-                <% } %>
-                    </div>
-        </section> -->
-
-       
+            
         <section class="cards">
             
             <% for( let productLis of productlist ) { %>
                 
                 <div class="card">
-            <img src="/images/card-produc1.jpg" alt=""> 
-                <p class=" card__productName"> <%= productLis.nombre %>  </p>
-                <p class=" card__productPrice"> $ <%= productLis.precio %> </p>
-                <p class=" card__productCuota"> Hasta cuotas sin interes de $ 1.793 con Bancos seleccionados</p>
-                
-            </div>
-               <% } %> 
+                    <img src="/images/<%= productLis.imagen %> " alt="imagen"> 
+                    <p class=" card__productName"> <%= productLis.nombre %>  </p>
+                    <p class=" card__productPrice"> $ <%= productLis.precio %> </p>
+                    <p class=" card__productCuota"> Hasta <%= parseInt(productLis.cantidadCuotas) %> cuotas sin interes de $ <%= parseInt(productLis.montoCuotas) %> con Bancos seleccionados</p>
+                                     <!--parseInt TRANSFORMA A ENTERO EL NRO. -->
+                </div>
+            <% } %> 
         </section>
     
     </main>
 
+<%- include('partials/footer') %>
 
-
-
-
-    <%- include('partials/footer') %>
 </body>
 
 </html>

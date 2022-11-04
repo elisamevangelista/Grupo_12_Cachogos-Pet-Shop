@@ -12,7 +12,7 @@
     <main>
 
     
-        <form  method="post" action="/creacionproducto.ejs">
+        <form  method="post" action="/products" enctype="multipart/form-data">
 
             <div class="titulo-creacion">
                 <p >Creacion Producto</p>
@@ -30,7 +30,7 @@
 
                 <div class = "fecha">
             
-                    <input class="fechaCrea" type="date"  id="fechaCreacion">
+                    <input class="fechaCrea" type="date"  id="fechaCreacion" name="fechaCreacion">
 
                 </div>
 
@@ -42,28 +42,28 @@
                 
                 <div class = "nombre-producto">
                     <label for="nombreProdcuto">Nombre</label>
-                    <input class="nombreprod" type="text" name="nombreProdcuto" id="nombreProdcuto" placeholder="Nombre del producto"  autocomplete="on">
+                    <input class="nombreprod" type="text" name="nombre" id="nombreProdcuto" placeholder="Nombre del producto"  autocomplete="on">
 
                 </div>
 
                     
                 <div class = "descripcion-producto">
                     <label for="descripcionProdcuto">Descripción</label>
-                    <input class="descriProd" type="text" name="descripcionProdcuto" id="descripcionProdcuto" placeholder="Descripcion del producto"  autocomplete="on">
+                    <input class="descriProd" type="text" name="descripcion" id="descripcionProdcuto" placeholder="Descripcion del producto"  autocomplete="on">
 
                 </div>
 
 
                 <div class = "marca-producto">
                     <label for="marcaProducto">Marca</label>
-                    <input class="marcaProd" type="text" name="marcaProducto" id="marcaProducto" placeholder="Marca del producto"  autocomplete="on">
+                    <input class="marcaProd" type="text" name="marca" id="marcaProducto" placeholder="Marca del producto"  autocomplete="on">
     
                 </div>
     
 
                 <div class = "lote-cantidad-producto">
                     <label for="CantidadProducto">Cantidad/lote</label>
-                    <input class="CantProd" type="number" name="CantidadProducto" id="CantidadProducto" placeholder="Unidades"  autocomplete="on">
+                    <input class="CantProd" type="number" name="depositoEntrante" id="CantidadProducto" placeholder="Unidades"  autocomplete="on">
     
                 </div>
 
@@ -71,17 +71,17 @@
                     <div class = "imagen-producto">
                         <label for="imagenProducto">Imagen</label>
                         <div class="imgProd">
-                            <input type="file" name="imagenProducto" id="imagenProducto">
+                            <input type="file" name="imagen" id="imagenProducto">
                         </div>
                     </div>
 
 
-                    <div class = "ArchivoAdjunto">
+                    <!-- <div class = "ArchivoAdjunto">
                         <label for="Adjunto">Adjunto</label>
                         <div class="ArcAdj">
                             <input type="file" name="Adjunto" id="Adjunto">
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </fieldset>
@@ -117,29 +117,28 @@
 
             </div>
 
-
             <div class = "categoria-producto">
                 
                 <fieldset class="categoria-fieldset-producto">
 
                     <legend>Categoría - Productos</legend>
-
+                                                                    <!-- name (subcategoriaProducto) debe ser igual a la clave del dataBase -->
                     <div>
                     
-                        <label for="alimento"><input class="alim" type="radio" name="Categorías" id="alimento">Alimentos</label>
+                        <label for="alimento"><input class="alim" type="radio" name="subcategoriaProducto" id="alimento">Alimentos</label>
                         
 
                     </div>
                     <div>
-                        <label for="juguete"><input class="jugue" type="radio" name="Categorías" id="juguete" >Juguetes</label>
+                        <label for="juguete"><input class="jugue" type="radio" name="subcategoriaProducto" id="juguete" >Juguetes</label>
                         
 
-                        <label for="camasEInd"><input class="camaeIN" type="radio" name="Categorías" id="camasEInd" >Camas e indumentaria</label>
+                        <label for="camasEInd"><input class="camaeIN" type="radio" name="subcategoriaProducto" id="camasEInd" >Camas e indumentaria</label>
                         
                     </div>
         
                     <div>
-                        <label for="PaseosYViajes"><input class="paseo-viaje" type="radio"  id="PaseosYViajes" name="Categorías" >Paseos y viajes</label>
+                        <label for="PaseosYViajes"><input class="paseo-viaje" type="radio"  id="PaseosYViajes" name="subcategoriaProducto" >Paseos y viajes</label>
                         
                     </div>
 
@@ -154,7 +153,7 @@
 
                 <div class = "precio-producto">
                     <label for="precioProducto">AR$</label>
-                    <input class="precioProd" type="number" name="precioProducto" id="precioProducto" placeholder="Precio del producto"  autocomplete="on">
+                    <input class="precioProd" type="number" name="precio" id="precioProducto" placeholder="Precio del producto"  autocomplete="on">
 
                 </div>
         
@@ -162,7 +161,7 @@
             </fieldset>
 
 
-            <fieldset>
+            <!-- <fieldset>
                 <legend>Detalles</legend>
                    
                 <div class = "palabras-claves">
@@ -170,7 +169,7 @@
                     <textarea class="palabras" id="palabrasClaves" name="palabrasClaves" rows="5" cols="33">Palabras claves...</textarea>
 
                 </div>
-            </fieldset>
+            </fieldset> -->
 
 
          
