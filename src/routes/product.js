@@ -26,9 +26,18 @@ router.get('/creacionproducto', productControllers.creacionproducto)
 router.post('/', uploadFile.single('imagen'), productControllers.store); 
 
 
+router.get('/detail/:id', productControllers.productdet)
 
-router.get('/edicionproducto', productControllers.edicionproducto)
-router.get('/productdet', productControllers.productdet)
+
+
+router.get('/edit', productControllers.edicionporsku)
+
+
+router.get('/edit/:id', productControllers.edicionproducto)
+router.put('/:id', uploadFile.single('imagen'), productControllers.update); 
+
+
+
 router.get('/verproducto', productControllers.verproducto)
 
 router.get('/carrito', productControllers.carrito)

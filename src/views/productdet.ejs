@@ -158,17 +158,17 @@
             
                 <div class ="Producto-descripcion">
 
-                    <h2> Alimento Perros Mediano - Eukanuba - 10 kg</h2>
+                    <h2> <%= products.nombre %></h2>
 
                     <div class="div-enlaceMarca-SKU-mobile">
-                        <li class="enlaceMarca-li-mobile"><a class="enlaceMarca-a-mobile" href="Sucursales.html">Eukanuba</a></li>
+                        <li class="enlaceMarca-li-mobile"><a class="enlaceMarca-a-mobile" href="Sucursales.html"><%= products.marca %></a></li>
                         <li class="sepearador-mobile">|</li>
-                        <li class="SKU-mobile">SKU89458M2</li>
+                        <li class="SKU-mobile">SKU: <%= products.sku %></li>
                         
                     </div>
 
-                    <li class="precioProducto-moblie">$ 10.000</li>
-                    <li class="cuotas-mobile">Hasta 4 cuotas sin interes de $2.500 con Bancos seleccionados</li>
+                    <li class="precioProducto-moblie">$ <%= products.precio %></li>
+                    <li class="cuotas-mobile">Hasta <%= products.cantidadCuotas %> cuotas sin interes de $<%= products.precio/products.cantidadCuotas %> con Bancos seleccionados</li>
 
                     
                 </div>      
@@ -182,15 +182,16 @@
                     <div class="pesoAlimento-Mobile">
                         
                                             <!----------------------------------------------ver si es boton solo o con enlace?!-------------------------------------------------->
-                        <button class="botonPeso-Mobile" type="submit">7 Kg</button>
-                        <button class="botonPeso-Mobile" type="submit">15 Kg</button>
+                        <button class="botonPeso-Mobile" type="submit"><%= products.kilogramos1%> Kg</button>
+                        <button class="botonPeso-Mobile" type="submit"><%= products.kilogramos2%> Kg</button>
+                        <button class="botonPeso-Mobile" type="submit"><%= products.kilogramos3%> Kg</button>
                     
                     </div>
                     
                 </div>      
                 <hr class="separadorBarra">
                 <div class="divCantidadDisponible-mobile">
-                    <p class="cantidadDisponible-mobile">Cantidad disponible: (8 - ocho unidades)</p>
+                    <p class="cantidadDisponible-mobile">Cantidad disponible: <%= products.stock %></p>
                 </div>
 
 

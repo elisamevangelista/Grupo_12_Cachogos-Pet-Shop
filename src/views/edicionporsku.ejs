@@ -1,0 +1,57 @@
+
+<%- include('partials/head') %>
+   
+<link rel="stylesheet" href="/css/styleedicionproducto.css">     
+      
+</head>
+
+<body>
+    
+    <%- include('partials/header') %>
+
+    <main>
+
+        <form  method="get" action="/products/edit">
+
+            <div class="titulo-edicion">
+                <p >Edición Producto</p>
+            </div>
+
+          
+            <fieldset class ="fieldset-producto">
+                <legend>Producto</legend>             
+    
+                <div class = "botonBuscar">
+                
+                    
+                    <!-- <input class ="botonBusc" type="submit" name="Editar" value="Buscar" /> -->
+
+                
+                    <button class ="botonBusc" type="submit" name="Editar">Buscar</button>
+                    <input class ="botonReset" type="reset" name="reset" value="Restablecer">
+                
+                </div> 
+
+                <div class = "referencia-SKU">
+                    <label for="SKUProducto">SKU / ID</label>
+                    <input class="refProd" type="number" name="SKUProducto" id="SKUProducto" placeholder="SKU del producto" required autocomplete="on">
+
+                </div>
+
+              
+
+        </form>
+
+
+</main>
+
+<%- include('partials/footer') %>
+
+
+
+</body>
+
+
+</html>
+
+
