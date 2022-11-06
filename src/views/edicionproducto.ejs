@@ -1,3 +1,9 @@
+<!-- PENDIENTES
+
+1- AUTOMATIZAR EL TEMA DEL STOCK.
+2-
+
+-->
 
 <%- include('partials/head') %>
    
@@ -11,8 +17,11 @@
 
     <main>
 
-        <form  method="post" action="/edicionproducto.ejs">
+   
 
+        <form method="POST" action="/products/<%=products.sku %>?_method=PUT"  enctype="multipart/form-data">
+
+          
             <div class="titulo-edicion">
                 <p >Edición Producto</p>
             </div>
@@ -22,62 +31,52 @@
                 <legend>Producto</legend>             
     
                 <div class = "botonBuscar">
-                
+
+                    <p class='edicionProductonro'> Edicion de producto: <%= products.sku %> </p>
                     <input class ="botonReset" type="reset" name="reset" value="Restablecer" />
+                    
                 
                 </div> 
 
                               
                 <div class = "nombre-producto">
-                    <label for="nombreProdcuto">Nombre</label>
-                    <input class="nombreprod" type="text" name="nombreProdcuto" id="nombreProdcuto" placeholder="Nombre del producto" required autocomplete="on">
+                    <label for="nombreProdcuto">Nombre: <%= products.nombre %></label>
+                    <input class="nombreprod" type="text" name="nombre" id="nombreProdcuto" placeholder="Nombre del producto" >
 
                 </div>
 
                     
                 <div class = "descripcion-producto">
-                    <label for="descripcionProdcuto">Descripción</label>
-                    <input class="descriProd" type="text" name="descripcionProdcuto" id="descripcionProdcuto" placeholder="Descripcion del producto" required autocomplete="on">
+                    <label for="descripcionProdcuto">Descripción: <%= products.descripcion %></label>
+                    <input class="descriProd" type="text" name="descripcion" id="descripcionProdcuto" placeholder="Descripcion del producto">
 
                 </div>
 
 
                 <div class = "marca-producto">
-                    <label for="marcaProducto">Marca</label>
-                    <input class="marcaProd" type="text" name="marcaProducto" id="marcaProducto" placeholder="Marca del producto" required autocomplete="on">
+                    <label for="marcaProducto">Marca: <%= products.marca %></label>
+                    <input class="marcaProd" type="text" name="marca" id="marcaProducto" placeholder="Marca del producto">
     
                 </div>
     
-
-                <div class = "lote-cantidad-producto">
-                    <label for="CantidadProducto">Cantidad/lote</label>
-                    <input class="CantProd" type="number" name="CantidadProducto" id="CantidadProducto" placeholder="Unidades" required autocomplete="on">
-    
-                </div>
-
+              
                 <div class="archivos">
                     <div class = "imagen-producto">
-                        <label for="imagenProducto">Imagen</label>
+                        <label for="imagenProducto">Imagen: <%= products.imagen %></label>
                         <div class="imgProd">
-                            <input type="file" name="imagenProducto" id="imagenProducto">
+                            <input type="file" name="imagen" id="imagenProducto">
                         </div>
                     </div>
 
 
-                    <div class = "ArchivoAdjunto">
-                        <label for="Adjunto">Adjunto</label>
-                        <div class="ArcAdj">
-                            <input type="file" name="Adjunto" id="Adjunto">
-                        </div>
-                    </div>
-
+                  
                 </div>
             </fieldset>
 
             <div class = "categoria-animal">
 
                 <fieldset>
-                    <legend>Categoría - Animales</legend>
+                    <legend>Categoría - Animales : <%= products.categoriaAnimal %></legend>
 
                     
                     <div>
@@ -110,24 +109,24 @@
                 
                 <fieldset class="categoria-fieldset-producto">
 
-                    <legend>Categoría - Productos</legend>
+                    <legend>Categoría - Productos: <%= products.subcategoriaProducto %></legend>
 
                     <div>
                     
-                        <label for="alimento"><input class="alim" type="radio" name="Categorías" id="alimento">Alimentos</label>
+                        <label for="alimento"><input class="alim" type="radio" name="subcategoriaProducto" id="alimento">Alimentos</label>
                         
 
                     </div>
                     <div>
-                        <label for="juguete"><input class="jugue" type="radio" name="Categorías" id="juguete" >Juguetes</label>
+                        <label for="juguete"><input class="jugue" type="radio" name="subcategoriaProducto" id="juguete" >Juguetes</label>
                         
 
-                        <label for="camasEInd"><input class="camaeIN" type="radio" name="Categorías" id="camasEInd" >Camas e indumentaria</label>
+                        <label for="camasEInd"><input class="camaeIN" type="radio" name="subcategoriaProducto" id="camasEInd" >Camas e indumentaria</label>
                         
                     </div>
         
                     <div>
-                        <label for="PaseosYViajes"><input class="paseo-viaje" type="radio"  id="PaseosYViajes" name="Categorías" >Paseos y viajes</label>
+                        <label for="PaseosYViajes"><input class="paseo-viaje" type="radio"  id="PaseosYViajes" name="subcategoriaProducto" >Paseos y viajes</label>
                         
                     </div>
 
@@ -135,14 +134,37 @@
 
             </div>
 
+            <fieldset>
+                <legend>Alimentos - Kg</legend>
+
+
+                <div class = "kg-producto">
+                    <label for="kilosProducto1">Kg1: <%= products.kilogramos1 %> Kg</label>
+                    <input class="kilosProd" type="number" name="kilogramos1" id="kilosProducto1" placeholder="Cantidad de kg - Opcion 1" >
+
+                </div>
+
+                <div class = "kg-producto">
+                    <label for="kilosProducto2">Kg2: <%= products.kilogramos2 %> Kg</label>
+                    <input class="kilosProd" type="number" name="kilogramos2" id="kilosProducto2" placeholder="Cantidad de kg - Opcion 2" >
+
+                </div>
+
+                <div class = "kg-producto">
+                    <label for="kilosProducto3">Kg3: <%= products.kilogramos3 %> Kg</label>
+                    <input class="kilosProd" type="number" name="kilogramos3" id="kilosProducto3" placeholder="Cantidad de kg - Opcion 3" >
+
+                </div>
+        
+            </fieldset>
 
             <fieldset>
                 <legend>Precio</legend>
 
 
                 <div class = "precio-producto">
-                    <label for="precioProducto">AR$</label>
-                    <input class="precioProd" type="number" name="precioProducto" id="precioProducto" placeholder="Precio del producto" required autocomplete="on">
+                    <label for="precioProducto">AR$: <%= products.precio %> </label>
+                    <input class="precioProd" type="number" name="precio" id="precioProducto" placeholder="Precio del producto">
 
                 </div>
         
@@ -151,6 +173,48 @@
 
 
             <fieldset>
+                <legend>Cantidad de cuotas</legend>
+
+
+                <div class = "cuotas-producto">
+                    <label for="cuotasProducto">Cuotas: <%= products.cantidadCuotas %></label>
+                    <input class="cuotasProd" type="number" name="cantidadCuotas" id="cantidadCuotas" placeholder="Cantidad de cuotas del producto" >
+
+                </div>
+        
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Deposito Entrante: <%=products.depositoEntrante %> unidades.</legend>
+
+
+                <!-- <div class = "depositoEntrante-producto">
+                    <label for="depositoProducto">Unidades entrantes:</label>
+                    <input class="depoProd" type="number" name="depositoEntrante" id="depositoEntrante" placeholder="Deposito entrate del producto" >
+
+                </div> -->
+        
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Stock</legend>
+
+
+                <div class = "stock-producto">
+                    <label for="stockProducto">Stock: <%= products.stock %></label>
+                    <input class="stoProd" type="number" name="stock" id="stock" placeholder="Stock inicial del producto" >
+
+                </div>
+        
+
+            </fieldset>
+
+
+            <!-- <fieldset>
                 <legend>Detalles</legend>
                    
                 <div class = "palabras-claves">
@@ -158,7 +222,7 @@
                     <textarea class="palabras" id="palabrasClaves" name="palabrasClaves" rows="5" cols="33">Palabras claves...</textarea>
 
                 </div>
-            </fieldset>
+            </fieldset> -->
 
 
          
@@ -168,10 +232,17 @@
                            
 
             </div>  
+
+           
                  
-
-
         </form>
+
+        <form action="/products/delete/<%=products.sku %>?_method=DELETE" method="POST">
+            <button type="submit" class="action-button delete">ELIMINAR</button>
+            
+        </form>
+
+        
 
 
 </main>

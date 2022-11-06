@@ -535,6 +535,34 @@ article:hover{  /* - aplico efecto sobre articulos al pasar el mouse por encima-
 /* ---------------------------------------1era query 500px-> en Recomendados: pasa a 2 articulos, el resto se mantiene igual----------------------------- */
 
 
+
+.deleteBotonForm {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+
+}
+
+.deleteBotonForm button{
+
+padding: 5px 10px;
+background-color: rgb(175, 56, 80);
+color:#fff;
+border-radius: 8px;
+
+}
+
+.botonSeleccionCantidad-Mobile {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+    margin: .4rem 0;
+    text-align: center;
+}
+
+
+
 @media (min-width: 500px){
 
 

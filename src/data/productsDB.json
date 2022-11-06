@@ -1,30 +1,11 @@
 [
  {
   "fechaCreacion": null,
-  "sku": 1,
-  "marca": "diam cras pellentesque volutpat dui",
-  "nombre": "orci nullam molestie nibh in",
-  "descuento": 40,
-  "descripción": "volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat",
-  "imagen": "PRODUCTS-golden-monkey.jpg",
-  "kilogramos1": 7,
-  "kilogramos2": 2,
-  "kilogramos3": 5,
-  "categoriaAnimal": "ave",
-  "subcategoriaProducto": "camas e indumentaria",
-  "precio": 16637.39,
-  "cantidadCuotas": 15.95,
-  "montoCuotas": 4101.24,
-  "stock": 41.62,
-  "depositoEntrante": 23.78
- },
- {
-  "fechaCreacion": null,
   "sku": 2,
   "marca": "dui",
   "nombre": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
   "descuento": 40,
-  "descripción": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut",
+  "descripcion": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut",
   "imagen": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -35,7 +16,8 @@
   "cantidadCuotas": 7.87,
   "montoCuotas": 2457.52,
   "stock": 24.42,
-  "depositoEntrante": 0.91
+  "depositoEntrante": 0.91,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -43,7 +25,7 @@
   "marca": "ut mauris eget massa",
   "nombre": "justo nec condimentum neque sapien placerat ante nulla",
   "descuento": 45,
-  "descripción": "enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis",
+  "descripcion": "enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis",
   "imagen": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -54,7 +36,8 @@
   "cantidadCuotas": 19.83,
   "montoCuotas": 1390.87,
   "stock": 44.83,
-  "depositoEntrante": 63.19
+  "depositoEntrante": 63.19,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -62,7 +45,7 @@
   "marca": "lorem",
   "nombre": "eget vulputate ut ultrices vel augue vestibulum ante",
   "descuento": 20,
-  "descripción": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis",
+  "descripcion": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis",
   "imagen": "PRODUCTS-golden-monkey.jpg",
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -73,7 +56,8 @@
   "cantidadCuotas": 8.34,
   "montoCuotas": 4245.91,
   "stock": 34.52,
-  "depositoEntrante": 53.77
+  "depositoEntrante": 53.77,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -81,7 +65,7 @@
   "marca": "rhoncus aliquam lacus morbi",
   "nombre": "eros viverra eget congue eget semper rutrum",
   "descuento": 2,
-  "descripción": "vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus",
+  "descripcion": "vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus",
   "imagen": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -92,7 +76,8 @@
   "cantidadCuotas": 10.48,
   "montoCuotas": 1664.11,
   "stock": 29.17,
-  "depositoEntrante": 55.08
+  "depositoEntrante": 55.08,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -100,7 +85,7 @@
   "marca": null,
   "nombre": "Christa",
   "descuento": null,
-  "descripción": null,
+  "descripcion": null,
   "imagen": null,
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -111,7 +96,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -119,7 +105,7 @@
   "marca": null,
   "nombre": "Ivan",
   "descuento": null,
-  "descripción": null,
+  "descripcion": null,
   "imagen": null,
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -130,7 +116,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -138,7 +125,7 @@
   "marca": null,
   "nombre": "Barbra",
   "descuento": null,
-  "descripción": null,
+  "descripcion": null,
   "imagen": null,
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -149,26 +136,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 9,
-  "marca": null,
-  "nombre": "Elysee",
-  "descuento": null,
-  "descripción": null,
-  "imagen": null,
-  "kilogramos1": 7,
-  "kilogramos2": 2,
-  "kilogramos3": 5,
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "precio": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -176,7 +145,7 @@
   "marca": null,
   "nombre": "Bryon",
   "descuento": null,
-  "descripción": null,
+  "descripcion": null,
   "imagen": null,
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -187,7 +156,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -195,7 +165,7 @@
   "marca": null,
   "nombre": "Helenelizabeth",
   "descuento": null,
-  "descripción": null,
+  "descripcion": null,
   "imagen": null,
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -206,7 +176,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -214,7 +185,7 @@
   "marca": null,
   "nombre": "Deeyn",
   "descuento": null,
-  "descripción": null,
+  "descripcion": null,
   "imagen": null,
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -225,7 +196,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -233,7 +205,7 @@
   "marca": null,
   "nombre": "Jacob",
   "descuento": null,
-  "descripción": null,
+  "descripcion": null,
   "imagen": null,
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -244,7 +216,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -252,7 +225,7 @@
   "marca": null,
   "nombre": "Gib",
   "descuento": null,
-  "descripción": null,
+  "descripcion": null,
   "imagen": null,
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -263,7 +236,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": null,
@@ -271,7 +245,7 @@
   "marca": null,
   "nombre": "Cybill",
   "descuento": null,
-  "descripción": null,
+  "descripcion": null,
   "imagen": null,
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -282,7 +256,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": 1667522790439,
@@ -290,7 +265,7 @@
   "marca": "erte",
   "nombre": null,
   "descuento": null,
-  "descripción": "ggg",
+  "descripcion": "ggg",
   "kilogramos1": 7,
   "kilogramos2": 2,
   "kilogramos3": 5,
@@ -300,7 +275,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": 55
+  "depositoEntrante": 55,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": 1667597740660,
@@ -308,7 +284,7 @@
   "marca": "fh",
   "nombre": null,
   "descuento": null,
-  "descripción": "fghf",
+  "descripcion": "fghf",
   "kilogramos1": 7,
   "kilogramos2": 2,
   "kilogramos3": 5,
@@ -318,7 +294,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": 6
+  "depositoEntrante": 6,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": 1667598163627,
@@ -326,7 +303,7 @@
   "marca": "fh",
   "nombre": null,
   "descuento": null,
-  "descripción": "fgh",
+  "descripcion": "fgh",
   "imagen": "imagen-1667598163621.png",
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -337,7 +314,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": 5
+  "depositoEntrante": 5,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": 1667598229316,
@@ -345,7 +323,7 @@
   "marca": "fgh",
   "nombre": null,
   "descuento": null,
-  "descripción": "fghf",
+  "descripcion": "fghf",
   "imagen": "imagen-1667598229310.jpg",
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -356,7 +334,8 @@
   "cantidadCuotas": null,
   "montoCuotas": null,
   "stock": null,
-  "depositoEntrante": 567
+  "depositoEntrante": 567,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": 1667598972091,
@@ -364,7 +343,7 @@
   "marca": "ert",
   "nombre": null,
   "descuento": null,
-  "descripción": "erg",
+  "descripcion": "erg",
   "imagen": "imagen-1667598972087.png",
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -375,14 +354,15 @@
   "cantidadCuotas": 5,
   "montoCuotas": null,
   "stock": 67,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": "11/05/2022",
   "sku": 21,
   "marca": "ert",
   "descuento": null,
-  "descripción": "et",
+  "descripcion": "et",
   "imagen": "imagen-1667680668677.png",
   "kilogramos1": 7,
   "kilogramos2": 2,
@@ -393,14 +373,15 @@
   "cantidadCuotas": 456,
   "montoCuotas": 0.10087719298245613,
   "stock": 456,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": "11/05/2022",
   "sku": 22,
   "marca": "fghf",
   "descuento": null,
-  "descripción": "yrty",
+  "descripcion": "yrty",
   "imagen": "imagen-1667681848899.jpg",
   "kilogramos": null,
   "categoriaAnimal": "on",
@@ -409,14 +390,15 @@
   "cantidadCuotas": 3,
   "montoCuotas": 152,
   "stock": 25,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": "11/05/2022",
   "sku": 23,
   "marca": "fghg",
   "descuento": null,
-  "descripción": "rtyrtr",
+  "descripcion": "rtyrtr",
   "imagen": "imagen-1667682270900.png",
   "kilogramos1": null,
   "kilogramos2": null,
@@ -427,14 +409,15 @@
   "cantidadCuotas": 6,
   "montoCuotas": 76,
   "stock": 56,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": "11/05/2022",
   "sku": 24,
   "marca": "ghj",
   "descuento": null,
-  "descripción": "yu",
+  "descripcion": "yu",
   "imagen": "imagen-1667682412050.png",
   "kilogramos1": null,
   "kilogramos2": null,
@@ -445,14 +428,15 @@
   "cantidadCuotas": 2,
   "montoCuotas": 228,
   "stock": 45,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  },
  {
   "fechaCreacion": "11/05/2022",
   "sku": 25,
   "marca": "ert",
   "descuento": null,
-  "descripción": "ert",
+  "descripcion": "ert",
   "imagen": "imagen-1667682663492.png",
   "kilogramos1": 3,
   "kilogramos2": 5,
@@ -463,25 +447,7 @@
   "cantidadCuotas": 4,
   "montoCuotas": 8.5,
   "stock": 66,
-  "depositoEntrante": null
- },
- {
-  "fechaCreacion": "11/05/2022",
-  "sku": 26,
-  "marca": "rty",
-  "nombre": "tttttt",
-  "descuento": null,
-  "descripción": "rty",
-  "imagen": "imagen-1667683241505.png",
-  "kilogramos1": 4,
-  "kilogramos2": 6,
-  "kilogramos3": 7,
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "precio": 35,
-  "cantidadCuotas": 345,
-  "montoCuotas": 0.10144927536231885,
-  "stock": 66,
-  "depositoEntrante": null
+  "depositoEntrante": null,
+  "fechaActualizada": null
  }
 ]

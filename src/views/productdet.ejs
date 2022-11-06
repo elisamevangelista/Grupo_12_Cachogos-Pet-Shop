@@ -1,3 +1,11 @@
+<!-- PENDIENTES
+
+1- AUTOMATIZAR EL TEMA LA SELECCION DE LOS DISTINTOS KGS.
+2- ALINEAR BOTON DE SELECCION DE CANTIDAD DE UNIDADES (CSS).
+3 - CORREGIR ENLACE <a> A VISTA DE CARRITO.
+
+-->
+
 
 <%- include('partials/head') %>
 
@@ -156,6 +164,11 @@
 
             <div class="div-descripcion-a-desktop"> <!----DIV CREADO PARA SEGUNDA QUERY-------->
             
+                <form class="deleteBotonForm" action="/products/delete/<%=products.sku %>?_method=DELETE" method="POST">
+                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                    
+                </form>
+                
                 <div class ="Producto-descripcion">
 
                     <h2> <%= products.nombre %></h2>
@@ -201,9 +214,13 @@
                     <div class="Div-botones-cantidad-agregarCarrito-mobile">
                         
                                             <!----------------------------------------------ver si es boton solo o con enlace?!-------------------------------------------------->
-                        <button class="botonSeleccionCantidad-Mobile" type="submit">- / +</button>
-                        <button class="botonAgregarAlCarrito-Mobile" type="submit"> AGREGAR AL CARRITO</button>
-                    
+                        <label for="selectorUnidades">Cantidad:</label>                 
+                        <input type="number" id="selectorUnidades" name="selectorUnidades" class="botonSeleccionCantidad-Mobile"
+                        min="1" max="50" placeholder="1">
+                        
+                        <!-- <button class="botonSeleccionCantidad-Mobile" type="submit">- / +</button> -->
+                        
+                        <a class = "enlaceACarrito" href="/products/carrito"><button class="botonAgregarAlCarrito-Mobile" type="submit"> AGREGAR AL CARRITO</button></a>
                     </div>
 
                     <div class="Divbotones-comprarAhora-mobile">                  

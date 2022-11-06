@@ -121,7 +121,7 @@
             
             <% for( let productLis of productlist ) { %>
                 
-                <div class="card">     <!--/products/detail/<=productLis.sku %> es un link que conduce a ruta param > '/detail/:id', productControllers.productdet-->
+                <div class="card">     <!--/products/detail/<=productLis.sku %> es un link que conduce a ruta param > '/detail/:sku', productControllers.productdet-->
                     <a href="/products/detail/<%=productLis.sku %>">
                     
                     <img src="/images/<%= productLis.imagen %> " alt="imagen"> 

@@ -34,7 +34,7 @@ const productControllers = {
             marca: req.body.marca,
             nombre: req.body.nombre,
             descuento: Number(req.body.descuento),
-            descripción: req.body.descripcion,
+            descripcion: req.body.descripcion,
             imagen: req.file.filename,
             kilogramos1: Number(req.body.kilogramos1),
             kilogramos2: Number(req.body.kilogramos2),
@@ -44,7 +44,7 @@ const productControllers = {
             precio: Number(req.body.precio),
             cantidadCuotas: Number(req.body.cantidadCuotas),
             montoCuotas: Number(req.body.precio/req.body.cantidadCuotas),
-            stock: Number(req.body.stock),
+            stock: Number(req.body.depositoEntrante),
             depositoEntrante: Number(req.body.depositoEntrante)
         }
 
@@ -57,14 +57,14 @@ const productControllers = {
     
     productdet: (req, res) => {
 
-        let product = products.find(p => p.sku == req.params.id)
+        let product = products.find(p => p.sku == req.params.sku)
 		res.render('productdet', {products: product} )
     },
 
 
     edicionporsku: (req, res) => {
 
-        let product = products.find(p => p.sku == req.params.id)
+        let product = products.find(p => p.sku == req.params.sku)
 		res.render('edicionporsku', {products: product} )
     },
 
@@ -72,28 +72,29 @@ const productControllers = {
 
     edicionproducto: (req, res) => {
 
-        let product = products.find(p => p.sku == req.params.id)
+        let product = products.find(p => p.sku == req.params.sku)
 		res.render('edicionproducto', {products: product} )
     },
 
     
     update: (req, res) => {
 		
-		products[req.params.id - 1].marca = req.body.marca,
-        products[req.params.id - 1].nombre = req.body.nombre,
-        products[req.params.id - 1].descuento = Number(req.body.descuento),  // edito el objeto cuya posicion dentro del array corresponde al id asignado.
-        products[req.params.id - 1].descripción = req.body.descripcion,
-        products[req.params.id - 1].imagen = req.file.filename
-        products[req.params.id - 1].kilogramos1 = Number(req.body.kilogramos1),
-        products[req.params.id - 1].kilogramos2 = Number(req.body.kilogramos2),
-        products[req.params.id - 1].kilogramos3 = Number(req.body.kilogramos3),
-        products[req.params.id - 1].categoriaAnimal = req.body.categoriaAnimal,
-        products[req.params.id - 1].subcategoriaProducto = req.body.subcategoriaProducto,
-        products[req.params.id - 1].precio = Number(req.body.precio),
-        products[req.params.id - 1].cantidadCuotas = Number(req.body.cantidadCuotas),
-        products[req.params.id - 1].montoCuotas = Number(req.body.precio/req.body.cantidadCuotas),
-        products[req.params.id - 1].stock = Number(req.body.stock),
-        products[req.params.id - 1].depositoEntrante = Number(req.body.depositoEntrante)
+        products[req.params.sku - 1].fechaActualizada =  moment().format('L'),
+		products[req.params.sku - 1].marca = req.body.marca,
+        products[req.params.sku - 1].nombre = req.body.nombre,
+        products[req.params.sku - 1].descuento = Number(req.body.descuento),  // edito el objeto cuya posicion dentro del array corresponde al id asignado.
+        products[req.params.sku - 1].descripcion = req.body.descripcion,
+        products[req.params.sku - 1].imagen = req.file.filename
+        products[req.params.sku - 1].kilogramos1 = Number(req.body.kilogramos1),
+        products[req.params.sku - 1].kilogramos2 = Number(req.body.kilogramos2),
+        products[req.params.sku - 1].kilogramos3 = Number(req.body.kilogramos3),
+        products[req.params.sku - 1].categoriaAnimal = req.body.categoriaAnimal,
+        products[req.params.sku - 1].subcategoriaProducto = req.body.subcategoriaProducto,
+        products[req.params.sku - 1].precio = Number(req.body.precio),
+        products[req.params.sku - 1].cantidadCuotas = Number(req.body.cantidadCuotas),
+        products[req.params.sku - 1].montoCuotas = Number(req.body.precio/req.body.cantidadCuotas),
+        products[req.params.sku - 1].stock = Number(req.body.stock),
+        products[req.params.sku - 1].depositoEntrante = Number(req.body.depositoEntrante)
 
     
     
@@ -105,10 +106,20 @@ const productControllers = {
 },
 
 
+    destroy : (req, res) => {
 
-    verproducto: (req, res) => {
-        res.render('verproducto')
-    },
+    let producstFiltrados = products.filter(p => p.sku != req.params.sku)
+  
+    fs.writeFileSync(productsFilePath, JSON.stringify(producstFiltrados, null, ' '))   
+
+    res.redirect('/products')  // luego de poner 'guardar/sobreescribir' envia a pagina de productos.
+    
+    
+},
+
+    // verproducto: (req, res) => {
+    //     res.render('verproducto')
+    // },
 
     
     carrito: (req, res) => {

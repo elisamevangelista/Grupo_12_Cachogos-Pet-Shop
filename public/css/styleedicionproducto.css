@@ -95,11 +95,15 @@ fieldset{
 
 .botonBuscar{
     display: flex;
-    justify-content:flex-end;
+    justify-content:space-between;
     margin-bottom:0px;
+  
 }
-    
 
+.edicionProductonro{
+    font-weight: bold;
+
+}
 
 .botonBusc{
    
