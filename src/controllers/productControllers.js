@@ -79,13 +79,22 @@ const productControllers = {
     
     update: (req, res) => {
 		
-		
-        products[req.params.id - 1].name = req.body.name ? req.body.name : null,
-        products[req.params.id - 1].price = Number(req.body.price) ? Number(req.body.price) : null ,
-        products[req.params.id - 1].discount = Number(req.body.discount) ? Number(req.body.discount) : null,  // edito el objeto cuya posicion dentro del array corresponde al id asignado.
-        products[req.params.id - 1].category = req.body.category ? req.body.category : null
-        products[req.params.id - 1].description = req.body.description ? req.body.description : null,
-        products[req.params.id - 1].image = req.file.filename  ? req.file.filename  : null
+		products[req.params.id - 1].marca = req.body.marca,
+        products[req.params.id - 1].nombre = req.body.nombre,
+        products[req.params.id - 1].descuento = Number(req.body.descuento),  // edito el objeto cuya posicion dentro del array corresponde al id asignado.
+        products[req.params.id - 1].descripción = req.body.descripcion,
+        products[req.params.id - 1].imagen = req.file.filename
+        products[req.params.id - 1].kilogramos1 = Number(req.body.kilogramos1),
+        products[req.params.id - 1].kilogramos2 = Number(req.body.kilogramos2),
+        products[req.params.id - 1].kilogramos3 = Number(req.body.kilogramos3),
+        products[req.params.id - 1].categoriaAnimal = req.body.categoriaAnimal,
+        products[req.params.id - 1].subcategoriaProducto = req.body.subcategoriaProducto,
+        products[req.params.id - 1].precio = Number(req.body.precio),
+        products[req.params.id - 1].cantidadCuotas = Number(req.body.cantidadCuotas),
+        products[req.params.id - 1].montoCuotas = Number(req.body.precio/req.body.cantidadCuotas),
+        products[req.params.id - 1].stock = Number(req.body.stock),
+        products[req.params.id - 1].depositoEntrante = Number(req.body.depositoEntrante)
+
     
     
         
