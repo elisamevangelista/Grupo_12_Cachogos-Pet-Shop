@@ -22,4 +22,18 @@ Adicionalmente, completamos la carpeta partials para reutilizar código.
 
 Finalmente, repasamos los pendientes.
 
+- ***Miércoles 26/10***
+
+Nos juntamos AR, JTG y EE para hablar del lanzamiento del sprint 4.
+Consideramos que era bueno intentar hacer este sprint en grupo así todos podíamos aportar con el tema del CRUD de productos y de paso fijar conocimiento.
+Avise que iba a estar de vacaciones del 27 de octubre al domingo 6 de noviembre por lo que no iba a poder participar de todas las reuniones. 
+
+- ***Jueves 03/11***
+
+Se juntaron AR y JTG para avanzar con la creación de los archivos JSON y la implementación del CRUD de productos.
+
+- ***Domingo 06/11***
+
+Nos juntamos AR, JTG y EE para continuar con la implementación de CRUD de productos.
+
 

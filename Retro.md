@@ -41,7 +41,25 @@ Se planteo la dificultad para conseguir que todos los compañeros puedan partici
 1. Se dividieron las tareas para el trabajo del tercer sprint.
 1. Se plantea seguir comunicándonos por grupo de whatsapp y se mantienen las reuniones por meet entre quienes se pueden sumar para ver temas en conjunto y repasar avance individual.
 
+**Retrospectiva: Reunión de inicio de Sprint 4** 
 
+Se realizó reunión el miércoles 26 de Octubre para lanzamiento del Sprint 4 donde solo pudieron participar AR, JTG y EE.
+
+***Análisis de estado:***
+
+Se observó que el trabajo del sprint 3 se pudo desarrollar sin sobresaltos, todos los integrantes participaron salvo JPM que termino dejando el curso.
+En las reuniones de grupo, durante el sprint 3 pudimos participar siempre AR, JTG y EE.
+Notamos que BO llego sin problemas con su parte pero no tuvo oportunidad de hacer una puesta en común de su trabajo.
+
+Para el sprint 4 arrancamos comentando que perdimos un integrante que se fue del curso definitivamente (JPM).
+Comentamos que BO no participa de las reuniones, y comentamos que sería importante que comparta su experiencia del trabajo.
+
+Adicionalmente, yo (EE) mencione que estaba viajando por vacaciones y que no iba a poder sumarme a todas las reuniones durante el sprint 4.
+
+***¿Cómo seguimos?:***
+
+1. Seguimos manteniendo las reuniones por meet y la comunicación por whatsapp.
+1. En particular para el sprint 4 consideramos que era buena idea intentar hacer este sprint en grupo así todos podíamos aplicar y repasar el tema del CRUD de productos y de paso fijar conocimientos.
 
 
 
