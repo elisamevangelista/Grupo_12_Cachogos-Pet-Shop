@@ -56,9 +56,18 @@ const productControllers = {
 
     
     productdet: (req, res) => {
+        // console.log(req.query)
 
         let product = products.find(p => p.sku == req.params.sku)
-		res.render('productdet', {products: product} )
+        let precio = product.pesos.filter(p => p.kg == req.query.kg)  //'kg' es el la propiedad de los objetos que estan dentro de la clave 'pesos' de cada producto del .json
+        console.log("precio =", precio)
+
+		
+        // precio -> es un objeto del array 'pesos' que tiene las pros 'kg' y 'precio'.
+        res.render('productdet', {
+            products: product,
+            precioKGSeleccionado:precio[0]
+        } )
     },
 
 

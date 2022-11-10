@@ -30,7 +30,7 @@
                 <div class="div-fotoppal-fotospeque">
                 <div class="fotoProducto-Mobile">
                     
-                    <img class="fotoProductoCarrouuselMobile" src = "/Publicación/Producto2.webp" alt="Producto">
+                    <img class="fotoProductoCarrouuselMobile" src = "/images/logos-marcas/<%= products.imagen %>" alt="Producto">
 
 
                 </div>
@@ -61,7 +61,7 @@
                             <div class="itemCarruselFotos" id="itemCarruselFotos-1">
                                 <div class="imagenCarruselFotos" id="imagenCarruselFotos-1">
                                     <div class="fotoProducto-Mobile">
-                                        <img src="/Publicación/Producto2.webp" />
+                                        <img src="/images/logos-marcas/<%= products.imagen %>" />
                                     </div>
                                 </div>
                                 <div class="flechasCarruselFotos">
@@ -94,7 +94,7 @@
                     
                             <div class="itemCarruselFotos" id="itemCarruselFotos-2">
                                 <div class="imagenCarruselFotos" id="imagenCarruselFotos-2">
-                                    <img src="/Publicación/Producto4.webp" />
+                                    <img src="/images/logos-marcas/<%= products.imagen %>" />
                                 </div>
                                 <div class="flechasCarruselFotos">
                                     <a href="#itemCarruselFotos-1"><i class="fa-solid fa-angle-left"></i></a>
@@ -126,7 +126,7 @@
                     
                             <div class="itemCarruselFotos" id="itemCarruselFotos-3">
                                 <div class="imagenCarruselFotos" id="imagenCarruselFotos-3">
-                                    <img src="/Publicación/Producto5.webp" />
+                                    <img src="/images/logos-marcas/<%= products.imagen %>" />
                                 </div>
                                 <div class="flechasCarruselFotos">
                                     <a href="#itemCarruselFotos-2"><i class="fa-solid fa-angle-left"></i></a>
@@ -172,16 +172,17 @@
                 <div class ="Producto-descripcion">
 
                     <h2> <%= products.nombre %></h2>
-
+                
                     <div class="div-enlaceMarca-SKU-mobile">
                         <li class="enlaceMarca-li-mobile"><a class="enlaceMarca-a-mobile" href="Sucursales.html"><%= products.marca %></a></li>
                         <li class="sepearador-mobile">|</li>
                         <li class="SKU-mobile">SKU: <%= products.sku %></li>
                         
                     </div>
-
-                    <li class="precioProducto-moblie">$ <%= products.precio %></li>
-                    <li class="cuotas-mobile">Hasta <%= products.cantidadCuotas %> cuotas sin interes de $<%= products.precio/products.cantidadCuotas %> con Bancos seleccionados</li>
+                    <!-- precioKGSeleccionado? precioKGSeleccionado.precio -> existe query ingresado por navegador? si existe, devolve el valor de 'precio' para ese objeto perteneciente a 'precioKGSeleccionado'-->
+                    <!-- : products.precio -> si no existe, devuelve el valor de la propiedad 'precio' total del objeto coincidente por sku-->
+                    <li class="precioProducto-moblie">$ <%= precioKGSeleccionado ? precioKGSeleccionado.precio : products.precio %></li>
+                    <li class="cuotas-mobile">Hasta <%= precioKGSeleccionado ? precioKGSeleccionado.cantCuotasSegunKg : products.cantidadCuotas %> cuotas sin interes de $<%= precioKGSeleccionado ? precioKGSeleccionado.precio/precioKGSeleccionado.cantCuotasSegunKg : products.precio/products.cantidadCuotas %> con Bancos seleccionados</li>
 
                     
                 </div>      
@@ -195,10 +196,11 @@
                     <div class="pesoAlimento-Mobile">
                         
                                             <!----------------------------------------------ver si es boton solo o con enlace?!-------------------------------------------------->
-                        <button class="botonPeso-Mobile" type="submit"><%= products.kilogramos1%> Kg</button>
-                        <button class="botonPeso-Mobile" type="submit"><%= products.kilogramos2%> Kg</button>
-                        <button class="botonPeso-Mobile" type="submit"><%= products.kilogramos3%> Kg</button>
+                        
                     
+                        <%products.pesos.map(peso => {%> 
+                            <a href="/products/detail/<%= products.sku %>?kg=<%= peso.kg%>"><button class="botonPeso-Mobile" type="submit"><%= peso.kg%> Kg</button></a>
+                        <%})%>
                     </div>
                     
                 </div>      
