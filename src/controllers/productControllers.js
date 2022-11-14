@@ -53,7 +53,7 @@ const productControllers = {
             nombre: nombre,
             descuento: Number(descuento),
             descripcion: descripcion,
-            imagen,
+            imagen: imagen ? imagen[0] : null,
             pesos,
             categoriaAnimal: categoriaAnimal,
             subcategoriaProducto: subcategoriaProducto,

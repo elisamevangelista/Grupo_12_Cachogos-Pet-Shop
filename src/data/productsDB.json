@@ -1,919 +1,869 @@
 [
- {
-  "fechaCreacion": null,
-  "sku": 1,
-  "marca": "dui",
-  "nombre": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
-  "descuento": 40,
-  "descripcion": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut",
-  "imagen": 
-    {
-     "imagen1": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "perro",
-  "subcategoriaProducto": "alimento",
-  "costo": 29428.73,
-  "cantidadCuotas": 7.87,
-  "montoCuotas": 2457.52,
-  "stock": 24.42,
-  "depositoEntrante": 0.91,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 2,
-  "marca": "dui",
-  "nombre": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
-  "descuento": 40,
-  "descripcion": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut",
-  "imagen": 
-    {
-     "imagen1": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 300,
-    "cantCuotasSegunKg": 4,
-    "PrecioPorcantCuotasSegunKg": 22
-   }
-  ],
-  "categoriaAnimal": "perro",
-  "subcategoriaProducto": "alimento",
-  "costo": 29428.73,
-  "cantidadCuotas": 7.87,
-  "montoCuotas": 2457.52,
-  "stock": 24.42,
-  "depositoEntrante": 0.91,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 3,
-  "marca": "ut mauris eget massa",
-  "nombre": "justo nec condimentum neque sapien placerat ante nulla",
-  "descuento": 45,
-  "descripcion": "enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis",
-  "imagen": 
-    {
-     "imagen1": "bird-categoria.jpg",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "gato",
-  "subcategoriaProducto": "alimento",
-  "costo": 22039.1,
-  "cantidadCuotas": 19.83,
-  "montoCuotas": 1390.87,
-  "stock": 44.83,
-  "depositoEntrante": 63.19,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 4,
-  "marca": "lorem",
-  "nombre": "eget vulputate ut ultrices vel augue vestibulum ante",
-  "descuento": 20,
-  "descripcion": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis",
-  "imagen": 
-    {
-     "imagen1": "PRODUCTS-golden-monkey.jpg",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "pez",
-  "subcategoriaProducto": "alimento",
-  "costo": 31346.65,
-  "cantidadCuotas": 8.34,
-  "montoCuotas": 4245.91,
-  "stock": 34.52,
-  "depositoEntrante": 53.77,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 5,
-  "marca": "rhoncus aliquam lacus morbi",
-  "nombre": "eros viverra eget congue eget semper rutrum",
-  "descuento": 2,
-  "descripcion": "vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus",
-  "imagen": 
-    {
-     "imagen1": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "perro",
-  "subcategoriaProducto": "camas e indumentaria",
-  "costo": 20000.01,
-  "cantidadCuotas": 10.48,
-  "montoCuotas": 1664.11,
-  "stock": 29.17,
-  "depositoEntrante": 55.08,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 6,
-  "marca": null,
-  "nombre": "Christa",
-  "descuento": null,
-  "descripcion": null,
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "costo": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 7,
-  "marca": null,
-  "nombre": "Ivan",
-  "descuento": null,
-  "descripcion": null,
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "costo": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 8,
-  "marca": null,
-  "nombre": "Barbra",
-  "descuento": null,
-  "descripcion": null,
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "costo": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 10,
-  "marca": null,
-  "nombre": "Bryon",
-  "descuento": null,
-  "descripcion": null,
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "costo": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 11,
-  "marca": null,
-  "nombre": "Helenelizabeth",
-  "descuento": null,
-  "descripcion": null,
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "costo": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 12,
-  "marca": null,
-  "nombre": "Deeyn",
-  "descuento": null,
-  "descripcion": null,
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "costo": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 13,
-  "marca": null,
-  "nombre": "Jacob",
-  "descuento": null,
-  "descripcion": null,
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "costo": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 14,
-  "marca": null,
-  "nombre": "Gib",
-  "descuento": null,
-  "descripcion": null,
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "costo": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": null,
-  "sku": 15,
-  "marca": null,
-  "nombre": "Cybill",
-  "descuento": null,
-  "descripcion": null,
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": null,
-  "subcategoriaProducto": null,
-  "costo": null,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": 1667522790439,
-  "sku": 16,
-  "marca": "erte",
-  "nombre": null,
-  "descuento": null,
-  "descripcion": "ggg",
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 34534,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": 55,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": 1667597740660,
-  "sku": 17,
-  "marca": "fh",
-  "nombre": null,
-  "descuento": null,
-  "descripcion": "fghf",
-  "imagen": 
-    {
-     "imagen1": null,
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 4565,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": 6,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": 1667598163627,
-  "sku": 18,
-  "marca": "fh",
-  "nombre": null,
-  "descuento": null,
-  "descripcion": "fgh",
-  "imagen": 
-    {
-     "imagen1": "imagen-1667598163621.png",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 67657,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": 5,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": 1667598229316,
-  "sku": 19,
-  "marca": "fgh",
-  "nombre": null,
-  "descuento": null,
-  "descripcion": "fghf",
-  "imagen": 
-    {
-     "imagen1": "imagen-1667598229310.jpg",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 56575,
-  "cantidadCuotas": null,
-  "montoCuotas": null,
-  "stock": null,
-  "depositoEntrante": 567,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": 1667598972091,
-  "sku": 20,
-  "marca": "ert",
-  "nombre": null,
-  "descuento": null,
-  "descripcion": "erg",
-  "imagen": 
-    {
-     "imagen1": "imagen-1667598972087.png",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 3563,
-  "cantidadCuotas": 5,
-  "montoCuotas": null,
-  "stock": 67,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": "11/05/2022",
-  "sku": 21,
-  "marca": "ert",
-  "descuento": null,
-  "descripcion": "et",
-  "imagen": 
-    {
-     "imagen1": "imagen-1667680668677.png",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 46,
-  "cantidadCuotas": 456,
-  "montoCuotas": 0.10087719298245613,
-  "stock": 456,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": "11/05/2022",
-  "sku": 22,
-  "marca": "fghf",
-  "descuento": null,
-  "descripcion": "yrty",
-  "imagen": 
-    {
-     "imagen1": "imagen-1667681848899.jpg",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 456,
-  "cantidadCuotas": 3,
-  "montoCuotas": 152,
-  "stock": 25,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": "11/05/2022",
-  "sku": 23,
-  "marca": "fghg",
-  "descuento": null,
-  "descripcion": "rtyrtr",
-  "imagen": 
-    {
-     "imagen1": "imagen-1667682270900.png",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 456,
-  "cantidadCuotas": 6,
-  "montoCuotas": 76,
-  "stock": 56,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": "11/05/2022",
-  "sku": 24,
-  "marca": "ghj",
-  "descuento": null,
-  "descripcion": "yu",
-  "imagen": 
-    {
-     "imagen1": "imagen-1667682412050.png",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 80
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 456,
-  "cantidadCuotas": 2,
-  "montoCuotas": 228,
-  "stock": 45,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": "11/05/2022",
-  "sku": 25,
-  "marca": "ert",
-  "descuento": null,
-  "descripcion": "ert",
-  "imagen": 
-    {
-     "imagen1": "imagen-1667682663492.png",
-     "imagen2": null,
-     "imagen3": null
-    }
-   ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   },
-   {
-    "kg": 8,
-    "precio": 100,
-    "cantCuotasSegunKg": 3,
-    "PrecioPorcantCuotasSegunKg": 33
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 34,
-  "cantidadCuotas": 4,
-  "montoCuotas": 8.5,
-  "stock": 66,
-  "depositoEntrante": null,
-  "fechaActualizada": null
- },
- {
-  "fechaCreacion": "11/13/2022",
-  "sku": 26,
-  "marca": "super cat",
-  "nombre": "Gato man",
-  "descuento": null,
-  "descripcion": "gato volador",
-  "imagen": 
-   {
-    "imagen1": "imagen-1668393772159.jpg",
-    "imagen2": "imagen-1668393772164.jpg",
-    "imagen3": null
-   }
-  ,
-  "pesos": [
-   {
-    "kg": 7,
-    "precio": 1500
-   },
-   {
-    "kg": 14,
-    "precio": 3000
-   },
-   {
-    "kg": 25,
-    "precio": 5100
-   }
-  ],
-  "categoriaAnimal": "on",
-  "subcategoriaProducto": "on",
-  "costo": 5000,
-  "cantidadCuotas": 6,
-  "montoCuotas": null,
-  "stock": 30,
-  "depositoEntrante": 30
- }
+  {
+    "fechaCreacion": null,
+    "sku": 1,
+    "marca": "dui",
+    "nombre": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
+    "descuento": 40,
+    "descripcion": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut",
+    "imagen": {
+      "imagen1": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "perro",
+    "subcategoriaProducto": "alimento",
+    "costo": 29428.73,
+    "cantidadCuotas": 7.87,
+    "montoCuotas": 2457.52,
+    "stock": 24.42,
+    "depositoEntrante": 0.91,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 2,
+    "marca": "dui",
+    "nombre": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
+    "descuento": 40,
+    "descripcion": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut",
+    "imagen": {
+      "imagen1": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 300,
+        "cantCuotasSegunKg": 4,
+        "PrecioPorcantCuotasSegunKg": 22
+      }
+    ],
+    "categoriaAnimal": "perro",
+    "subcategoriaProducto": "alimento",
+    "costo": 29428.73,
+    "cantidadCuotas": 7.87,
+    "montoCuotas": 2457.52,
+    "stock": 24.42,
+    "depositoEntrante": 0.91,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 3,
+    "marca": "ut mauris eget massa",
+    "nombre": "justo nec condimentum neque sapien placerat ante nulla",
+    "descuento": 45,
+    "descripcion": "enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis",
+    "imagen": {
+      "imagen1": "bird-categoria.jpg",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "gato",
+    "subcategoriaProducto": "alimento",
+    "costo": 22039.1,
+    "cantidadCuotas": 19.83,
+    "montoCuotas": 1390.87,
+    "stock": 44.83,
+    "depositoEntrante": 63.19,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 4,
+    "marca": "lorem",
+    "nombre": "eget vulputate ut ultrices vel augue vestibulum ante",
+    "descuento": 20,
+    "descripcion": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis",
+    "imagen": {
+      "imagen1": "PRODUCTS-golden-monkey.jpg",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "pez",
+    "subcategoriaProducto": "alimento",
+    "costo": 31346.65,
+    "cantidadCuotas": 8.34,
+    "montoCuotas": 4245.91,
+    "stock": 34.52,
+    "depositoEntrante": 53.77,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 5,
+    "marca": "rhoncus aliquam lacus morbi",
+    "nombre": "eros viverra eget congue eget semper rutrum",
+    "descuento": 2,
+    "descripcion": "vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus",
+    "imagen": {
+      "imagen1": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "perro",
+    "subcategoriaProducto": "camas e indumentaria",
+    "costo": 20000.01,
+    "cantidadCuotas": 10.48,
+    "montoCuotas": 1664.11,
+    "stock": 29.17,
+    "depositoEntrante": 55.08,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 6,
+    "marca": null,
+    "nombre": "Christa",
+    "descuento": null,
+    "descripcion": null,
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": null,
+    "subcategoriaProducto": null,
+    "costo": null,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 7,
+    "marca": null,
+    "nombre": "Ivan",
+    "descuento": null,
+    "descripcion": null,
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": null,
+    "subcategoriaProducto": null,
+    "costo": null,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 8,
+    "marca": null,
+    "nombre": "Barbra",
+    "descuento": null,
+    "descripcion": null,
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": null,
+    "subcategoriaProducto": null,
+    "costo": null,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 10,
+    "marca": null,
+    "nombre": "Bryon",
+    "descuento": null,
+    "descripcion": null,
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": null,
+    "subcategoriaProducto": null,
+    "costo": null,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 11,
+    "marca": null,
+    "nombre": "Helenelizabeth",
+    "descuento": null,
+    "descripcion": null,
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": null,
+    "subcategoriaProducto": null,
+    "costo": null,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 12,
+    "marca": null,
+    "nombre": "Deeyn",
+    "descuento": null,
+    "descripcion": null,
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": null,
+    "subcategoriaProducto": null,
+    "costo": null,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 13,
+    "marca": null,
+    "nombre": "Jacob",
+    "descuento": null,
+    "descripcion": null,
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": null,
+    "subcategoriaProducto": null,
+    "costo": null,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 14,
+    "marca": null,
+    "nombre": "Gib",
+    "descuento": null,
+    "descripcion": null,
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": null,
+    "subcategoriaProducto": null,
+    "costo": null,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": null,
+    "sku": 15,
+    "marca": null,
+    "nombre": "Cybill",
+    "descuento": null,
+    "descripcion": null,
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": null,
+    "subcategoriaProducto": null,
+    "costo": null,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": 1667522790439,
+    "sku": 16,
+    "marca": "erte",
+    "nombre": null,
+    "descuento": null,
+    "descripcion": "ggg",
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 34534,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": 55,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": 1667597740660,
+    "sku": 17,
+    "marca": "fh",
+    "nombre": null,
+    "descuento": null,
+    "descripcion": "fghf",
+    "imagen": {
+      "imagen1": null,
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 4565,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": 6,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": 1667598163627,
+    "sku": 18,
+    "marca": "fh",
+    "nombre": null,
+    "descuento": null,
+    "descripcion": "fgh",
+    "imagen": {
+      "imagen1": "imagen-1667598163621.png",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 67657,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": 5,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": 1667598229316,
+    "sku": 19,
+    "marca": "fgh",
+    "nombre": null,
+    "descuento": null,
+    "descripcion": "fghf",
+    "imagen": {
+      "imagen1": "imagen-1667598229310.jpg",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 56575,
+    "cantidadCuotas": null,
+    "montoCuotas": null,
+    "stock": null,
+    "depositoEntrante": 567,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": 1667598972091,
+    "sku": 20,
+    "marca": "ert",
+    "nombre": null,
+    "descuento": null,
+    "descripcion": "erg",
+    "imagen": {
+      "imagen1": "imagen-1667598972087.png",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 3563,
+    "cantidadCuotas": 5,
+    "montoCuotas": null,
+    "stock": 67,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": "11/05/2022",
+    "sku": 21,
+    "marca": "ert",
+    "descuento": null,
+    "descripcion": "et",
+    "imagen": {
+      "imagen1": "imagen-1667680668677.png",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 46,
+    "cantidadCuotas": 456,
+    "montoCuotas": 0.10087719298245613,
+    "stock": 456,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": "11/05/2022",
+    "sku": 22,
+    "marca": "fghf",
+    "descuento": null,
+    "descripcion": "yrty",
+    "imagen": {
+      "imagen1": "imagen-1667681848899.jpg",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 456,
+    "cantidadCuotas": 3,
+    "montoCuotas": 152,
+    "stock": 25,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": "11/05/2022",
+    "sku": 23,
+    "marca": "fghg",
+    "descuento": null,
+    "descripcion": "rtyrtr",
+    "imagen": {
+      "imagen1": "imagen-1667682270900.png",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 456,
+    "cantidadCuotas": 6,
+    "montoCuotas": 76,
+    "stock": 56,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": "11/05/2022",
+    "sku": 24,
+    "marca": "ghj",
+    "descuento": null,
+    "descripcion": "yu",
+    "imagen": {
+      "imagen1": "imagen-1667682412050.png",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 80
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 456,
+    "cantidadCuotas": 2,
+    "montoCuotas": 228,
+    "stock": 45,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": "11/05/2022",
+    "sku": 25,
+    "marca": "ert",
+    "descuento": null,
+    "descripcion": "ert",
+    "imagen": {
+      "imagen1": "imagen-1667682663492.png",
+      "imagen2": null,
+      "imagen3": null
+    },
+    "pesos": [
+      {
+        "kg": 7,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      },
+      {
+        "kg": 8,
+        "precio": 100,
+        "cantCuotasSegunKg": 3,
+        "PrecioPorcantCuotasSegunKg": 33
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 34,
+    "cantidadCuotas": 4,
+    "montoCuotas": 8.5,
+    "stock": 66,
+    "depositoEntrante": null,
+    "fechaActualizada": null
+  },
+  {
+    "fechaCreacion": "11/14/2022",
+    "sku": 26,
+    "marca": "super cat",
+    "nombre": "Gato man",
+    "descuento": null,
+    "descripcion": "gato volador",
+    "imagen": {
+      "imagen1": "imagen-1668462791483.jpg",
+      "imagen2": "imagen-1668462791489.png",
+      "imagen3": "imagen-1668462791500.jpg"
+    },
+    "pesos": [
+      {
+        "kg": 25,
+        "precio": 7000
+      },
+      {
+        "kg": 15,
+        "precio": 5000
+      },
+      {
+        "kg": 7,
+        "precio": 2500
+      }
+    ],
+    "categoriaAnimal": "on",
+    "subcategoriaProducto": "on",
+    "costo": 7000,
+    "cantidadCuotas": 5,
+    "montoCuotas": null,
+    "stock": 30,
+    "depositoEntrante": 30
+  }
 ]
