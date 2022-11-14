@@ -6,7 +6,13 @@
   "nombre": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
   "descuento": 40,
   "descripcion": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut",
-  "imagen": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+  "imagen": 
+    {
+     "imagen1": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -37,7 +43,13 @@
   "nombre": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
   "descuento": 40,
   "descripcion": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut",
-  "imagen": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+  "imagen": 
+    {
+     "imagen1": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -68,7 +80,13 @@
   "nombre": "justo nec condimentum neque sapien placerat ante nulla",
   "descuento": 45,
   "descripcion": "enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis",
-  "imagen": "bird-categoria.jpg",
+  "imagen": 
+    {
+     "imagen1": "bird-categoria.jpg",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -99,7 +117,13 @@
   "nombre": "eget vulputate ut ultrices vel augue vestibulum ante",
   "descuento": 20,
   "descripcion": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis",
-  "imagen": "PRODUCTS-golden-monkey.jpg",
+  "imagen": 
+    {
+     "imagen1": "PRODUCTS-golden-monkey.jpg",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -130,7 +154,13 @@
   "nombre": "eros viverra eget congue eget semper rutrum",
   "descuento": 2,
   "descripcion": "vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus",
-  "imagen": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+  "imagen": 
+    {
+     "imagen1": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -161,7 +191,13 @@
   "nombre": "Christa",
   "descuento": null,
   "descripcion": null,
-  "imagen": null,
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -192,7 +228,13 @@
   "nombre": "Ivan",
   "descuento": null,
   "descripcion": null,
-  "imagen": null,
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -223,7 +265,13 @@
   "nombre": "Barbra",
   "descuento": null,
   "descripcion": null,
-  "imagen": null,
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -254,7 +302,13 @@
   "nombre": "Bryon",
   "descuento": null,
   "descripcion": null,
-  "imagen": null,
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -285,7 +339,13 @@
   "nombre": "Helenelizabeth",
   "descuento": null,
   "descripcion": null,
-  "imagen": null,
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -316,7 +376,13 @@
   "nombre": "Deeyn",
   "descuento": null,
   "descripcion": null,
-  "imagen": null,
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -347,7 +413,13 @@
   "nombre": "Jacob",
   "descuento": null,
   "descripcion": null,
-  "imagen": null,
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -378,7 +450,13 @@
   "nombre": "Gib",
   "descuento": null,
   "descripcion": null,
-  "imagen": null,
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -409,7 +487,13 @@
   "nombre": "Cybill",
   "descuento": null,
   "descripcion": null,
-  "imagen": null,
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -440,6 +524,13 @@
   "nombre": null,
   "descuento": null,
   "descripcion": "ggg",
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -470,6 +561,13 @@
   "nombre": null,
   "descuento": null,
   "descripcion": "fghf",
+  "imagen": 
+    {
+     "imagen1": null,
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -500,7 +598,13 @@
   "nombre": null,
   "descuento": null,
   "descripcion": "fgh",
-  "imagen": "imagen-1667598163621.png",
+  "imagen": 
+    {
+     "imagen1": "imagen-1667598163621.png",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -531,7 +635,13 @@
   "nombre": null,
   "descuento": null,
   "descripcion": "fghf",
-  "imagen": "imagen-1667598229310.jpg",
+  "imagen": 
+    {
+     "imagen1": "imagen-1667598229310.jpg",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -562,7 +672,13 @@
   "nombre": null,
   "descuento": null,
   "descripcion": "erg",
-  "imagen": "imagen-1667598972087.png",
+  "imagen": 
+    {
+     "imagen1": "imagen-1667598972087.png",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -592,7 +708,13 @@
   "marca": "ert",
   "descuento": null,
   "descripcion": "et",
-  "imagen": "imagen-1667680668677.png",
+  "imagen": 
+    {
+     "imagen1": "imagen-1667680668677.png",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -622,7 +744,13 @@
   "marca": "fghf",
   "descuento": null,
   "descripcion": "yrty",
-  "imagen": "imagen-1667681848899.jpg",
+  "imagen": 
+    {
+     "imagen1": "imagen-1667681848899.jpg",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -652,7 +780,13 @@
   "marca": "fghg",
   "descuento": null,
   "descripcion": "rtyrtr",
-  "imagen": "imagen-1667682270900.png",
+  "imagen": 
+    {
+     "imagen1": "imagen-1667682270900.png",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -682,7 +816,13 @@
   "marca": "ghj",
   "descuento": null,
   "descripcion": "yu",
-  "imagen": "imagen-1667682412050.png",
+  "imagen": 
+    {
+     "imagen1": "imagen-1667682412050.png",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -710,7 +850,13 @@
   "marca": "ert",
   "descuento": null,
   "descripcion": "ert",
-  "imagen": "imagen-1667682663492.png",
+  "imagen": 
+    {
+     "imagen1": "imagen-1667682663492.png",
+     "imagen2": null,
+     "imagen3": null
+    }
+   ,
   "pesos": [
    {
     "kg": 7,
@@ -741,13 +887,13 @@
   "nombre": "Gato man",
   "descuento": null,
   "descripcion": "gato volador",
-  "imagen": [
+  "imagen": 
    {
     "imagen1": "imagen-1668393772159.jpg",
     "imagen2": "imagen-1668393772164.jpg",
     "imagen3": null
    }
-  ],
+  ,
   "pesos": [
    {
     "kg": 7,

@@ -124,10 +124,10 @@
                 <div class="card">     <!--/products/detail/<=productLis.sku %> es un link que conduce a ruta param > '/detail/:sku', productControllers.productdet-->
                     <a href="/products/detail/<%=productLis.sku %>">
                     
-                    <img src="/images/<%= productLis.imagen %> " alt="imagen"> 
+                    <img src="/images/<%= productLis.imagen.imagen1 %> " alt="imagen"> 
                     <p class=" card__productName"> <%= productLis.nombre %>  </p>
-                    <p class=" card__productPrice"> $ <%= productLis.precio %> </p>
-                    <p class=" card__productCuota"> Hasta <%= parseInt(productLis.cantidadCuotas) %> cuotas sin interes de $ <%= parseInt(productLis.precio / parseInt(productLis.cantidadCuotas)) %> con Bancos seleccionados</p>
+                    <p class=" card__productPrice"> $ <%= productLis.costo %> </p>
+                    <p class=" card__productCuota"> Hasta <%= parseInt(productLis.cantidadCuotas) %> cuotas sin interes de $ <%= parseInt(productLis.costo / parseInt(productLis.cantidadCuotas)) %> con Bancos seleccionados</p>
                                      <!--parseInt TRANSFORMA A ENTERO EL NRO. -->
                     </a>
                 </div>
