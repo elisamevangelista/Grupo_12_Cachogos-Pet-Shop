@@ -23,29 +23,45 @@ const productControllers = {
 
 	//Method to store
 	store: (req, res) => {
+        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, depositoEntrante } = req.body
+
+        let pesos = []
+        for (let i = 0; i < kg.length; i++) {
+            pesos.push({
+                kg: Number(kg[i]),
+                precio: Number(precio[i])
+            })
+        }
+
+        let imagen = []
+        for (let i = 0; i < 1; i++) {
+            imagen.push({
+                imagen1: req.files[i] ? req.files[i].filename : null,
+                imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
+                imagen3: req.files[i + 2] ? req.files[i + 2].filename : null,
+            })
+        }
+        // : req.files.map(i => i.filename)
+        // console.log('imagenes:', imagenes)
 
         let newPoduct = {       //kilogramos: igual a clave del database, y req.body.kilogramos > kilogramos debe ser igual al "name" del input del formulario de la vista.
-                                
                                 // le doy formato a la fecha. No hace falta incluir campo de fecha en creacion de prodcuto. Se asigna automatica// en la DB.
                                 // se debe 1ro instalar > npm install moment --save, y 2do > crear const moment = require('moment') para requerirlo.
-            
             fechaCreacion: moment().format('L'),   
             sku: products[products.length - 1].sku + 1,
-            marca: req.body.marca,
-            nombre: req.body.nombre,
-            descuento: Number(req.body.descuento),
-            descripcion: req.body.descripcion,
-            imagen: req.file.filename,
-            kilogramos1: Number(req.body.kilogramos1),
-            kilogramos2: Number(req.body.kilogramos2),
-            kilogramos3: Number(req.body.kilogramos3),
-            categoriaAnimal: req.body.categoriaAnimal,
-            subcategoriaProducto: req.body.subcategoriaProducto,
-            precio: Number(req.body.precio),
-            cantidadCuotas: Number(req.body.cantidadCuotas),
-            montoCuotas: Number(req.body.precio/req.body.cantidadCuotas),
-            stock: Number(req.body.depositoEntrante),
-            depositoEntrante: Number(req.body.depositoEntrante)
+            marca: marca,
+            nombre: nombre,
+            descuento: Number(descuento),
+            descripcion: descripcion,
+            imagen,
+            pesos,
+            categoriaAnimal: categoriaAnimal,
+            subcategoriaProducto: subcategoriaProducto,
+            costo: Number(costo),
+            cantidadCuotas: Number(cantidadCuotas),
+            montoCuotas: Number(precio/cantidadCuotas),
+            stock: Number(depositoEntrante),
+            depositoEntrante: Number(depositoEntrante)
         }
 
 		    products.push(newPoduct);
@@ -56,7 +72,6 @@ const productControllers = {
 
     
     productdet: (req, res) => {
-        // console.log(req.query)
 
         let product = products.find(p => p.sku == req.params.sku)
         let precio = product.pesos.filter(p => p.kg == req.query.kg)  //'kg' es el la propiedad de los objetos que estan dentro de la clave 'pesos' de cada producto del .json

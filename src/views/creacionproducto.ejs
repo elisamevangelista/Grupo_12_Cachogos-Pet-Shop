@@ -55,7 +55,7 @@
                     <div class = "imagen-producto">
                         <label for="imagenProducto">Imagen</label>
                         <div class="imgProd">
-                            <input type="file" name="imagen" id="imagenProducto">
+                            <input type="file" name="imagen" id="imagenProducto" multiple>
                         </div>
                     </div>
 
@@ -63,7 +63,14 @@
                     <!-- <div class = "ArchivoAdjunto">
                         <label for="Adjunto">Adjunto</label>
                         <div class="ArcAdj">
-                            <input type="file" name="Adjunto" id="Adjunto">
+                            <input type="file" name="imagen" id="Adjunto">
+                        </div>
+                    </div>
+
+                    <div class = "ArchivoAdjunto2">
+                        <label for="Adjunto2">Adjunto</label>
+                        <div class="ArcAdj">
+                            <input type="file" name="imagen" id="Adjunto2">
                         </div>
                     </div> -->
 
@@ -137,20 +144,23 @@
 
                 <div class = "kg-producto">
                     <label for="kilosProducto1">Kg1:</label>
-                    <input class="kilosProd" type="number" name="kilogramos1" id="kilosProducto1" placeholder="Cantidad de kg - Opcion 1" >
-
+                    <input class="kilosProd" type="number" name="kg" id="kilosProducto1" placeholder="Cantidad de kg - Opcion 1" >
+                    <label for="precioProducto1">precio1:</label>
+                    <input class="kilosProd" type="number" name="precio" id="precioProducto1" placeholder="Precio por kg - Opcion 1" >
                 </div>
 
                 <div class = "kg-producto">
                     <label for="kilosProducto2">Kg2:</label>
-                    <input class="kilosProd" type="number" name="kilogramos2" id="kilosProducto2" placeholder="Cantidad de kg - Opcion 2" >
-
+                    <input class="kilosProd" type="number" name="kg" id="kilosProducto2" placeholder="Cantidad de kg - Opcion 2" >
+                    <label for="precioProducto2">precio2:</label>
+                    <input class="kilosProd" type="number" name="precio" id="precioProducto2" placeholder="Precio por kg - Opcion 2" >
                 </div>
 
                 <div class = "kg-producto">
                     <label for="kilosProducto3">Kg3:</label>
-                    <input class="kilosProd" type="number" name="kilogramos3" id="kilosProducto3" placeholder="Cantidad de kg - Opcion 3" >
-
+                    <input class="kilosProd" type="number" name="kg" id="kilosProducto3" placeholder="Cantidad de kg - Opcion 3" >
+                    <label for="precioProducto3">precio3:</label>
+                    <input class="kilosProd" type="number" name="precio" id="precioProducto3" placeholder="Precio por kg - Opcion 3" >
                 </div>
         
             </fieldset>
@@ -161,7 +171,7 @@
 
                 <div class = "precio-producto">
                     <label for="precioProducto">AR$</label>
-                    <input class="precioProd" type="number" name="precio" id="precioProducto" placeholder="Precio del producto"  autocomplete="on">
+                    <input class="precioProd" type="number" name="costo" id="precioProducto" placeholder="Precio del producto"  autocomplete="on">
 
                 </div>
         

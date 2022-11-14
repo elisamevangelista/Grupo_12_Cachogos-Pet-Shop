@@ -182,8 +182,8 @@
                     </div>
                     <!-- precioKGSeleccionado? precioKGSeleccionado.precio -> existe query ingresado por navegador? si existe, devolve el valor de 'precio' para ese objeto perteneciente a 'precioKGSeleccionado'-->
                     <!-- : products.precio -> si no existe, devuelve el valor de la propiedad 'precio' total del objeto coincidente por sku-->
-                    <li class="precioProducto-moblie">$ <%= precioKGSeleccionado ? precioKGSeleccionado.precio : products.precio %></li>
-                    <li class="cuotas-mobile">Hasta <%= precioKGSeleccionado ? precioKGSeleccionado.cantCuotasSegunKg : products.cantidadCuotas %> cuotas sin interes de $<%= precioKGSeleccionado ? precioKGSeleccionado.precio/precioKGSeleccionado.cantCuotasSegunKg : products.precio/products.cantidadCuotas %> con Bancos seleccionados</li>
+                    <li class="precioProducto-moblie">$ <%= precioKGSeleccionado ? precioKGSeleccionado.precio : products.costo %></li>
+                    <li class="cuotas-mobile">Hasta <%= precioKGSeleccionado ? precioKGSeleccionado.cantCuotasSegunKg : products.cantidadCuotas %> cuotas sin interes de $<%= precioKGSeleccionado ? precioKGSeleccionado.precio/precioKGSeleccionado.cantCuotasSegunKg : products.costo/products.cantidadCuotas %> con Bancos seleccionados</li>
 
                     
                 </div>      
