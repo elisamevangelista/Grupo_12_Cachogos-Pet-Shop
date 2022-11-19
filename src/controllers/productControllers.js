@@ -61,7 +61,8 @@ const productControllers = {
             cantidadCuotas: Number(cantidadCuotas),
             montoCuotas: Number(precio/cantidadCuotas),
             stock: Number(depositoEntrante),
-            depositoEntrante: Number(depositoEntrante)
+            depositoEntrante: Number(depositoEntrante),
+            fechaActualizada: null
         }
 
 		    products.push(newPoduct);
@@ -103,15 +104,29 @@ const productControllers = {
     
     update: (req, res) => {
 		
+        let pesos = []
+        for (let i = 0; i < kg.length; i++) {
+            pesos.push({
+                kg: Number(kg[i]),
+                precio: Number(precio[i])
+            })
+        }
+
+        let imagen = []
+        for (let i = 0; i < 1; i++) {
+            imagen.push({
+                imagen1: req.files[i] ? req.files[i].filename : null,
+                imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
+                imagen3: req.files[i + 2] ? req.files[i + 2].filename : null,
+            })
+        }
         products[req.params.sku - 1].fechaActualizada =  moment().format('L'),
 		products[req.params.sku - 1].marca = req.body.marca,
         products[req.params.sku - 1].nombre = req.body.nombre,
         products[req.params.sku - 1].descuento = Number(req.body.descuento),  // edito el objeto cuya posicion dentro del array corresponde al id asignado.
         products[req.params.sku - 1].descripcion = req.body.descripcion,
-        products[req.params.sku - 1].imagen = req.file.filename
+        products[req.params.sku - 1].imagen = imagen ? imagen[0] : null,
         products[req.params.sku - 1].kilogramos1 = Number(req.body.kilogramos1),
-        products[req.params.sku - 1].kilogramos2 = Number(req.body.kilogramos2),
-        products[req.params.sku - 1].kilogramos3 = Number(req.body.kilogramos3),
         products[req.params.sku - 1].categoriaAnimal = req.body.categoriaAnimal,
         products[req.params.sku - 1].subcategoriaProducto = req.body.subcategoriaProducto,
         products[req.params.sku - 1].precio = Number(req.body.precio),
@@ -121,14 +136,10 @@ const productControllers = {
         products[req.params.sku - 1].depositoEntrante = Number(req.body.depositoEntrante)
 
     
-    
-        
-
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))   
 
     res.redirect('/products')  // luego de poner 'guardar/sobreescribir' envia a pagina de productos.
 },
-
 
     destroy : (req, res) => {
 
