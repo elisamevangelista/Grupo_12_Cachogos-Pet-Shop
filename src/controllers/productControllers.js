@@ -23,15 +23,29 @@ const productControllers = {
 
 	//Method to store
 	store: (req, res) => {
-        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, depositoEntrante } = req.body
+        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, depositoEntrante, cantCuotasSegunKg, PrecioPorcantCuotasSegunKg } = req.body
+
 
         let pesos = []
-        for (let i = 0; i < kg.length; i++) {
-            pesos.push({
-                kg: Number(kg[i]),
-                precio: Number(precio[i])
-            })
+
+        if (subcategoriaProducto === 'Alimentos') {
+            for (let i = 0; i < kg.length; i++) {
+                pesos.push({
+                    kg: Number(kg[i]),
+                    precio: Number(precio[i]),
+                    cantCuotasSegunKg: Number(cantCuotasSegunKg[i]),
+                    PrecioPorcantCuotasSegunKg: parseInt(precio[i]/cantCuotasSegunKg[i])
+
+                })
+               
+            }
+          
+        } else {
+            pesos = []
+            
         }
+   
+      
 
         let imagen = []
         for (let i = 0; i < 1; i++) {
@@ -57,9 +71,9 @@ const productControllers = {
             pesos,
             categoriaAnimal: categoriaAnimal,
             subcategoriaProducto: subcategoriaProducto,
-            costo: Number(costo),
-            cantidadCuotas: Number(cantidadCuotas),
-            montoCuotas: Number(precio/cantidadCuotas),
+            costo: subcategoriaProducto !== 'Alimentos' ? Number(costo) : null,
+            cantidadCuotas: subcategoriaProducto !== 'Alimentos' ? Number(cantidadCuotas) : null,
+            montoCuotas: subcategoriaProducto !== 'Alimentos' ? Number(precio/cantidadCuotas) : null,
             stock: Number(depositoEntrante),
             depositoEntrante: Number(depositoEntrante),
             fechaActualizada: null
