@@ -17,13 +17,13 @@ const productControllers = {
     },
     
     creacionproducto: (req, res) => {
-        res.render('creacionproducto')
+        res.render('creacionproducto')   //muestra vista de formulario de creacion
     },
   
 
-	//Method to store
+	//guardar info cargada en formulario de creacion en la base de datos (.json)
 	store: (req, res) => {
-        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, depositoEntrante, cantCuotasSegunKg, PrecioPorcantCuotasSegunKg } = req.body
+        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, depositoEntrante, cantCuotasSegunKg} = req.body
 
 
         let pesos = []
@@ -34,7 +34,8 @@ const productControllers = {
                     kg: Number(kg[i]),
                     precio: Number(precio[i]),
                     cantCuotasSegunKg: Number(cantCuotasSegunKg[i]),
-                    PrecioPorcantCuotasSegunKg: parseInt(precio[i]/cantCuotasSegunKg[i])
+                    PrecioPorcantCuotasSegunKg: parseInt(precio[i]/cantCuotasSegunKg[i]),
+                    precioFinal: precio[i] - ((Number(precio[i]) * Number(descuento))/100)
 
                 })
                
@@ -46,7 +47,6 @@ const productControllers = {
         }
    
       
-
         let imagen = []
         for (let i = 0; i < 1; i++) {
             imagen.push({
@@ -65,17 +65,18 @@ const productControllers = {
             sku: products[products.length - 1].sku + 1,
             marca: marca,
             nombre: nombre,
-            descuento: Number(descuento),
             descripcion: descripcion,
             imagen: imagen ? imagen[0] : null,
             pesos,
             categoriaAnimal: categoriaAnimal,
             subcategoriaProducto: subcategoriaProducto,
-            costo: subcategoriaProducto !== 'Alimentos' ? Number(costo) : null,
             cantidadCuotas: subcategoriaProducto !== 'Alimentos' ? Number(cantidadCuotas) : null,
-            montoCuotas: subcategoriaProducto !== 'Alimentos' ? Number(precio/cantidadCuotas) : null,
+            montoCuotas: subcategoriaProducto !== 'Alimentos' ? Number(costo/cantidadCuotas) : null,
             stock: Number(depositoEntrante),
             depositoEntrante: Number(depositoEntrante),
+            costo: subcategoriaProducto !== 'Alimentos' ? Number(costo) : null,
+            descuento: Number(descuento),
+            costoFinal: costo - ((Number(costo) * Number(descuento))/100),
             fechaActualizada: null
         }
 
@@ -89,14 +90,14 @@ const productControllers = {
     productdet: (req, res) => {
 
         let product = products.find(p => p.sku == req.params.sku)
-        let precio = product.pesos.filter(p => p.kg == req.query.kg)  //'kg' es el la propiedad de los objetos que estan dentro de la clave 'pesos' de cada producto del .json
-        console.log("precio =", precio)
-
+        let objetoPesos = product.pesos.filter(p => p.kg == req.query.kg)  //'kg' es el la propiedad de los objetos que estan dentro de la clave 'pesos' de cada producto del .json
+        
+        console.log('objetoPesos:' , objetoPesos[0])
 		
         // precio -> es un objeto del array 'pesos' que tiene las pros 'kg' y 'precio'.
         res.render('productdet', {
             products: product,
-            precioKGSeleccionado:precio[0]
+            productSelect: objetoPesos[0]
         } )
     },
 

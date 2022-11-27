@@ -1615,5 +1615,140 @@
   "stock": 45,
   "depositoEntrante": 45,
   "fechaActualizada": null
+ },
+ {
+  "fechaCreacion": "11/27/2022",
+  "sku": 46,
+  "marca": "wer",
+  "nombre": "rwerwe",
+  "descripcion": "wer",
+  "imagen": {
+   "imagen1": null,
+   "imagen2": null,
+   "imagen3": null
+  },
+  "pesos": [],
+  "categoriaAnimal": "Perro",
+  "subcategoriaProducto": "Juguetes",
+  "cantidadCuotas": 3,
+  "montoCuotas": 333,
+  "stock": 234,
+  "depositoEntrante": 234,
+  "costo": 1000,
+  "descuento": 10,
+  "costoFinal": 900,
+  "fechaActualizada": null
+ },
+ {
+  "fechaCreacion": "11/27/2022",
+  "sku": 47,
+  "marca": "wer",
+  "nombre": "rwerwe",
+  "descripcion": "wer",
+  "imagen": {
+   "imagen1": null,
+   "imagen2": null,
+   "imagen3": null
+  },
+  "pesos": [],
+  "categoriaAnimal": "Perro",
+  "subcategoriaProducto": "Juguetes",
+  "cantidadCuotas": 3,
+  "montoCuotas": 333.3333333333333,
+  "stock": 234,
+  "depositoEntrante": 234,
+  "costo": 1000,
+  "descuento": 10,
+  "costoFinal": 900,
+  "fechaActualizada": null
+ },
+ {
+  "fechaCreacion": "11/27/2022",
+  "sku": 48,
+  "marca": "wer",
+  "nombre": "rwerwe",
+  "descripcion": "wer",
+  "imagen": {
+   "imagen1": null,
+   "imagen2": null,
+   "imagen3": null
+  },
+  "pesos": [
+   {
+    "kg": 4,
+    "precio": 345,
+    "cantCuotasSegunKg": 2,
+    "PrecioPorcantCuotasSegunKg": 172,
+    "precioFinal": null
+   },
+   {
+    "kg": 10,
+    "precio": 6554,
+    "cantCuotasSegunKg": 3,
+    "PrecioPorcantCuotasSegunKg": 2184,
+    "precioFinal": null
+   },
+   {
+    "kg": 30,
+    "precio": 234523,
+    "cantCuotasSegunKg": 5,
+    "PrecioPorcantCuotasSegunKg": 46904,
+    "precioFinal": null
+   }
+  ],
+  "categoriaAnimal": "Perro",
+  "subcategoriaProducto": "Alimentos",
+  "cantidadCuotas": null,
+  "montoCuotas": null,
+  "stock": 234,
+  "depositoEntrante": 234,
+  "costo": null,
+  "descuento": 25,
+  "costoFinal": 750,
+  "fechaActualizada": null
+ },
+ {
+  "fechaCreacion": "11/27/2022",
+  "sku": 49,
+  "marca": "asd",
+  "nombre": "dsasd",
+  "descripcion": "asdas",
+  "imagen": {
+   "imagen1": null,
+   "imagen2": null,
+   "imagen3": null
+  },
+  "pesos": [
+   {
+    "kg": 3,
+    "precio": 4346,
+    "cantCuotasSegunKg": 5,
+    "PrecioPorcantCuotasSegunKg": 2173,
+    "precioFinal": 3259.5
+   },
+   {
+    "kg": 6,
+    "precio": 34367,
+    "cantCuotasSegunKg": 2,
+    "PrecioPorcantCuotasSegunKg": 6873,
+    "precioFinal": 25775.25
+   },
+   {
+    "kg": 10,
+    "precio": 43443,
+    "cantCuotasSegunKg": 0,
+    "PrecioPorcantCuotasSegunKg": 5430,
+    "precioFinal": 32582.25
+   }
+  ],
+  "subcategoriaProducto": "Alimentos",
+  "cantidadCuotas": null,
+  "montoCuotas": null,
+  "stock": 34,
+  "depositoEntrante": 34,
+  "costo": null,
+  "descuento": 25,
+  "costoFinal": 0,
+  "fechaActualizada": null
  }
 ]

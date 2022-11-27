@@ -180,12 +180,20 @@
                         <li class="SKU-mobile">SKU: <%= products.sku %></li>
                         
                     </div>
+
+
                     <!-- precioKGSeleccionado? precioKGSeleccionado.precio -> existe query ingresado por navegador? si existe, devolve el valor de 'precio' para ese objeto perteneciente a 'precioKGSeleccionado'-->
                     <!-- : products.precio -> si no existe, devuelve el valor de la propiedad 'precio' total del objeto coincidente por sku-->
-                    <li class="precioProducto-moblie">$ <%= precioKGSeleccionado ? precioKGSeleccionado.precio : products.costo %></li>
-                    <li class="cuotas-mobile">Hasta <%= precioKGSeleccionado ? precioKGSeleccionado.cantCuotasSegunKg : products.cantidadCuotas %> cuotas sin interes de $<%= precioKGSeleccionado ? precioKGSeleccionado.precio/precioKGSeleccionado.cantCuotasSegunKg : products.costo/products.cantidadCuotas %> con Bancos seleccionados</li>
-
+                    <li class="precioProducto-moblie">$ <%= productSelect ? productSelect.precio : products.pesos.length !== 0 ? products.pesos[0].precio : products.costo %></li>
                     
+                    
+                    <% if (products.pesos.length !== 0 && products.pesos[0].cantCuotasSegunKg > 1 && (products.pesos[1].cantCuotasSegunKg > 1 && products.pesos[2].cantCuotasSegunKg > 1) || products.cantidadCuotas > 1) { %> 
+                        <li class="cuotas-mobile">Hasta <%= productSelect ? productSelect.cantCuotasSegunKg : products.pesos.length !== 0 ? products.pesos[0].cantCuotasSegunKg : products.cantidadCuotas %> cuotas sin interes de $<%= productSelect ? productSelect.PrecioPorcantCuotasSegunKg : products.pesos.length !== 0 ? products.pesos[0].PrecioPorcantCuotasSegunKg : products.montoCuotas %> con Bancos seleccionados</li>
+                        
+                        <% } else if ((productSelect && productSelect.cantCuotasSegunKg > 1) || products.cantidadCuotas > 1) { %> 
+                            <li class="cuotas-mobile">Hasta <%= productSelect ? productSelect.cantCuotasSegunKg : products.pesos.length !== 0 ? products.pesos[0].cantCuotasSegunKg : products.cantidadCuotas %> cuotas sin interes de $<%= productSelect ? productSelect.PrecioPorcantCuotasSegunKg : products.pesos.length !== 0 ? products.pesos[0].PrecioPorcantCuotasSegunKg : products.montoCuotas %> con Bancos seleccionados</li>
+
+                    <% } %>
                 </div>      
 
                 <hr class="separadorBarra">
