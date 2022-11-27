@@ -1,5 +1,6 @@
 const express = require('express');
 const mainRoutes = require('./src/routes/main');
+const usersRoutes = require('./src/routes/users');
 const productRoutes = require('./src/routes/product');
 const path = require('path');
 const methodOverride =  require('method-override');
@@ -15,6 +16,7 @@ app.listen(3000, ()=>{
 
 app.use('/', mainRoutes);
 app.use('/products', productRoutes);
+app.use('/users', usersRoutes);
 
 app.set('views', path.join(__dirname, '/src/views'))  ;
     
