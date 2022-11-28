@@ -17,28 +17,16 @@ const usersControllers = {
     },
 
     store: (req, res) => {
-        let {nombre, apellido, email, password, terminos} = req.body
-
-      
-        // let imagen = []
-        // for (let i = 0; i < 1; i++) {
-        //     imagen.push({
-        //         imagen1: req.files[i + 1] ? req.files[i + 1].filename : null,  //foto por default-> corregir ruta.
-        //         imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
-    
-        //     })
-        // }
+        let {nombre, apellido, email, password} = req.body
         
-
         let newUser = {       
             
             id: users[users.length - 1].id + 1,
             nombre: nombre,   
             apellido: apellido,
             email: email,
-            password: password,
             imagen: req.file.filename,
-            terminos: terminos  //esta bien?
+            password: password,  //esta bien?
             }
 
 		    users.push(newUser);
