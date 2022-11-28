@@ -22,7 +22,7 @@ const usersController = require('../controllers/usersControllers')
 
 /*** CREATE ONE USER***/  
 router.get('/register', usersController.register)
-// router.post('/', uploadFile.array('imagen'), usersControllers.store); 
+router.post('/', uploadFile.single('imagen'), usersController.store); 
 
 
 

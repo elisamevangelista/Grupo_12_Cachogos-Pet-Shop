@@ -9,7 +9,7 @@
 
     <main>
         <h2 class="titulo-main">Crear mi cuenta</h2>
-        <form action="/register" class="" id="" method="post">
+        <form action="/register" class="" id="" method="post" enctype="multipart/form-data">
             <div class="campos-form">
 
                 <!-- Grupo: Nombre -->
@@ -47,6 +47,17 @@
                         </div>
                     </div>
                     <p class="error-email">El email tiene que ser un formato de mail valido.</p>
+                </div>
+                <!-- Grupo: Imagen -->
+                <div class="Image" id="">
+                    <label for="image" class="imageLabel">Imagen de perfil</label>
+                    <div class="imageInput-i">
+                        <input type="file" class="imageInput" name="image" id="image">
+                        <div class="imageIcon">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </div>
+                    </div>
+                    <p class="error-image">Solo puede cargar una imagen.</p>
                 </div>
                 <!-- Grupo: Contraseña -->
                 <div class="contraseña" id="">

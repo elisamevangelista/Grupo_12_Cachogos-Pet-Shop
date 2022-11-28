@@ -3,11 +3,11 @@ const path = require('path');
 const moment = require('moment')
 
 const usersFilePath = path.join(__dirname, '../data/usersDB.json');
-const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const mainControllers = {
+const usersControllers = {
     
     login: (req, res) => {
         res.render('users/login')
@@ -20,14 +20,14 @@ const mainControllers = {
         let {nombre, apellido, email, password, terminos} = req.body
 
       
-        let imagen = []
-        for (let i = 0; i < 1; i++) {
-            imagen.push({
-                imagen1: ../../public/images/users/cucha promo.webp,  //foto por default-> corregir ruta.
-                imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
+        // let imagen = []
+        // for (let i = 0; i < 1; i++) {
+        //     imagen.push({
+        //         imagen1: req.files[i + 1] ? req.files[i + 1].filename : null,  //foto por default-> corregir ruta.
+        //         imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
     
-            })
-        }
+        //     })
+        // }
         
 
         let newUser = {       
@@ -37,7 +37,7 @@ const mainControllers = {
             apellido: apellido,
             email: email,
             password: password,
-            imagen: imagen ? imagen[0] : null,
+            imagen: req.file.filename,
             terminos: terminos  //esta bien?
             }
 
