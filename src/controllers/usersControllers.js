@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment')
+let bcrypt = require('bcryptjs') //requerir el metodo de la encriptacion de password.
 
 const usersFilePath = path.join(__dirname, '../data/usersDB.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -18,6 +19,10 @@ const usersControllers = {
 
     store: (req, res) => {
         let {nombre, apellido, email, password} = req.body
+
+        let contraseña = password
+
+        let contraseñaEncriptada = bcrypt.hashSync(contraseña, 10)
         
         let newUser = {       
             
@@ -27,14 +32,14 @@ const usersControllers = {
             apellido: apellido,
             email: email,
             imagen: req.file ? req.file.filename : 'bird-categoria.jpg',
-            password: password,  //esta bien?
+            password: contraseñaEncriptada,  
             tipodeusuario: 'usuario'
             }
 
 		    users.push(newUser);
 		    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '))
 
-		res.redirect('/products') 
+		res.redirect('/') 
     
        
 }}

@@ -1,182 +1,192 @@
 [
-    {
-        "id": 1,
-        "nombre": "Wyatt",
-        "apellido": "Albinson",
-        "email": "walbinson0@chronoengine.com",
-        "imagen": "",
-        "contraseña": "CJplFAb",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 2,
-        "nombre": "Amy",
-        "apellido": "McArd",
-        "email": "amcard1@prweb.com",
-        "imagen": "",
-        "contraseña": "2XUYTTLTGa",
-        "tipodeusuario": "admin"
-    },
-    {
-        "id": 3,
-        "nombre": "Seth",
-        "apellido": "Fisby",
-        "email": "sfisby2@indiegogo.com",
-        "imagen": "",
-        "contraseña": "gd3UOLkOW9Dq",
-        "tipodeusuario": "admin"
-    },
-    {
-        "id": 4,
-        "nombre": "Novelia",
-        "apellido": "Spivey",
-        "email": "nspivey3@mashable.com",
-        "imagen": "",
-        "contraseña": "Mc4QMzvCZ",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 5,
-        "nombre": "Loralie",
-        "apellido": "Slaymaker",
-        "email": "lslaymaker4@baidu.com",
-        "imagen": "",
-        "contraseña": "1RQ7SMz",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 6,
-        "nombre": "Foster",
-        "apellido": "Garwood",
-        "email": "fgarwood5@mediafire.com",
-        "imagen": "",
-        "contraseña": "JAx1S3",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 7,
-        "nombre": "Nannie",
-        "apellido": "Crossfeld",
-        "email": "ncrossfeld6@bing.com",
-        "imagen": "",
-        "contraseña": "VpGZ43LPKfFe",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 8,
-        "nombre": "Myra",
-        "apellido": "Heigho",
-        "email": "mheigho7@jimdo.com",
-        "imagen": "",
-        "contraseña": "urrfngQR",
-        "tipodeusuario": "admin"
-    },
-    {
-        "id": 9,
-        "nombre": "Elita",
-        "apellido": "Gordon-Giles",
-        "email": "egordongiles8@macromedia.com",
-        "imagen": "",
-        "contraseña": "COZkII",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 10,
-        "nombre": "Ainslie",
-        "apellido": "Strangward",
-        "email": "astrangward9@dagondesign.com",
-        "imagen": "",
-        "contraseña": "Ai6TsLO",
-        "tipodeusuario": "admin"
-    },
-    {
-        "id": 11,
-        "nombre": "Kerri",
-        "apellido": "Skamal",
-        "email": "kskamala@elpais.com",
-        "imagen": "",
-        "contraseña": "KgZKuxDA",
-        "tipodeusuario": "admin"
-    },
-    {
-        "id": 12,
-        "nombre": "Tabby",
-        "apellido": "Ollerhead",
-        "email": "tollerheadb@discuz.net",
-        "imagen": "",
-        "contraseña": "NOTVCOQblAi",
-        "tipodeusuario": "admin"
-    },
-    {
-        "id": 13,
-        "nombre": "Maryjo",
-        "apellido": "Kleeman",
-        "email": "mkleemanc@go.com",
-        "imagen": "",
-        "contraseña": "jHquxfbKP",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 14,
-        "nombre": "Papageno",
-        "apellido": "Raxworthy",
-        "email": "praxworthyd@storify.com",
-        "imagen": "",
-        "contraseña": "twA04ZzBv",
-        "tipodeusuario": "admin"
-    },
-    {
-        "id": 15,
-        "nombre": "Johnette",
-        "apellido": "Ickov",
-        "email": "jickove@prnewswire.com",
-        "imagen": "",
-        "contraseña": "qOrBa5yw95DB",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 16,
-        "nombre": "Tadd",
-        "apellido": "Bullas",
-        "email": "tbullasf@usa.gov",
-        "imagen": "",
-        "contraseña": "IMPBV0h1O",
-        "tipodeusuario": "admin"
-    },
-    {
-        "id": 17,
-        "nombre": "Land",
-        "apellido": "Tolchar",
-        "email": "ltolcharg@github.io",
-        "imagen": "",
-        "contraseña": "K2qXoo4dAQ",
-        "tipodeusuario": "admin"
-    },
-    {
-        "id": 18,
-        "nombre": "Gina",
-        "apellido": "Browning",
-        "email": "gbrowningh@blogs.com",
-        "imagen": "",
-        "contraseña": "RJEbwn",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 19,
-        "nombre": "Juliana",
-        "apellido": "Dilke",
-        "email": "jdilkei@blogtalkradio.com",
-        "imagen": "",
-        "contraseña": "BOWLEH4",
-        "tipodeusuario": "usuario"
-    },
-    {
-        "id": 20,
-        "nombre": "Dahlia",
-        "apellido": "Allmark",
-        "email": "dallmarkj@usnews.com",
-        "imagen": "",
-        "contraseña": "Pcn84LV",
-        "tipodeusuario": "admin"
-    }
+ {
+  "id": 1,
+  "nombre": "Wyatt",
+  "apellido": "Albinson",
+  "email": "walbinson0@chronoengine.com",
+  "imagen": "",
+  "contraseña": "CJplFAb",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 2,
+  "nombre": "Amy",
+  "apellido": "McArd",
+  "email": "amcard1@prweb.com",
+  "imagen": "",
+  "contraseña": "2XUYTTLTGa",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 3,
+  "nombre": "Seth",
+  "apellido": "Fisby",
+  "email": "sfisby2@indiegogo.com",
+  "imagen": "",
+  "contraseña": "gd3UOLkOW9Dq",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 4,
+  "nombre": "Novelia",
+  "apellido": "Spivey",
+  "email": "nspivey3@mashable.com",
+  "imagen": "",
+  "contraseña": "Mc4QMzvCZ",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 5,
+  "nombre": "Loralie",
+  "apellido": "Slaymaker",
+  "email": "lslaymaker4@baidu.com",
+  "imagen": "",
+  "contraseña": "1RQ7SMz",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 6,
+  "nombre": "Foster",
+  "apellido": "Garwood",
+  "email": "fgarwood5@mediafire.com",
+  "imagen": "",
+  "contraseña": "JAx1S3",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 7,
+  "nombre": "Nannie",
+  "apellido": "Crossfeld",
+  "email": "ncrossfeld6@bing.com",
+  "imagen": "",
+  "contraseña": "VpGZ43LPKfFe",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 8,
+  "nombre": "Myra",
+  "apellido": "Heigho",
+  "email": "mheigho7@jimdo.com",
+  "imagen": "",
+  "contraseña": "urrfngQR",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 9,
+  "nombre": "Elita",
+  "apellido": "Gordon-Giles",
+  "email": "egordongiles8@macromedia.com",
+  "imagen": "",
+  "contraseña": "COZkII",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 10,
+  "nombre": "Ainslie",
+  "apellido": "Strangward",
+  "email": "astrangward9@dagondesign.com",
+  "imagen": "",
+  "contraseña": "Ai6TsLO",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 11,
+  "nombre": "Kerri",
+  "apellido": "Skamal",
+  "email": "kskamala@elpais.com",
+  "imagen": "",
+  "contraseña": "KgZKuxDA",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 12,
+  "nombre": "Tabby",
+  "apellido": "Ollerhead",
+  "email": "tollerheadb@discuz.net",
+  "imagen": "",
+  "contraseña": "NOTVCOQblAi",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 13,
+  "nombre": "Maryjo",
+  "apellido": "Kleeman",
+  "email": "mkleemanc@go.com",
+  "imagen": "",
+  "contraseña": "jHquxfbKP",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 14,
+  "nombre": "Papageno",
+  "apellido": "Raxworthy",
+  "email": "praxworthyd@storify.com",
+  "imagen": "",
+  "contraseña": "twA04ZzBv",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 15,
+  "nombre": "Johnette",
+  "apellido": "Ickov",
+  "email": "jickove@prnewswire.com",
+  "imagen": "",
+  "contraseña": "qOrBa5yw95DB",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 16,
+  "nombre": "Tadd",
+  "apellido": "Bullas",
+  "email": "tbullasf@usa.gov",
+  "imagen": "",
+  "contraseña": "IMPBV0h1O",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 17,
+  "nombre": "Land",
+  "apellido": "Tolchar",
+  "email": "ltolcharg@github.io",
+  "imagen": "",
+  "contraseña": "K2qXoo4dAQ",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 18,
+  "nombre": "Gina",
+  "apellido": "Browning",
+  "email": "gbrowningh@blogs.com",
+  "imagen": "",
+  "contraseña": "RJEbwn",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 19,
+  "nombre": "Juliana",
+  "apellido": "Dilke",
+  "email": "jdilkei@blogtalkradio.com",
+  "imagen": "",
+  "contraseña": "BOWLEH4",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 20,
+  "nombre": "Dahlia",
+  "apellido": "Allmark",
+  "email": "dallmarkj@usnews.com",
+  "imagen": "",
+  "contraseña": "Pcn84LV",
+  "tipodeusuario": "admin"
+ },
+ {
+  "id": 21,
+  "fechaCreacion": "11/28/2022",
+  "nombre": "John",
+  "apellido": "Travolta",
+  "email": "JTravolta@gmail.com",
+  "imagen": "bird-categoria.jpg",
+  "password": "$2a$10$U6.e7uMo.dITr1SFepy5b.qtDPxAy3oM.GftTKIWCV.Mrc70.eY5u",
+  "tipodeusuario": "usuario"
+ }
 ]
