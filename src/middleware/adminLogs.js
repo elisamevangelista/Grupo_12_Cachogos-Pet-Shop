@@ -1,5 +1,6 @@
 const usersFilePath = path.join(__dirname, '../data/usersDB.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
 let adminlogs = (req, res, next) => {
     let { name } = req.query
     let admins = users.filter(ad => ad.tipodeusuario === 'admin')

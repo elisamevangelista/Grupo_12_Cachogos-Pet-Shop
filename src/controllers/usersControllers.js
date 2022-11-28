@@ -22,11 +22,13 @@ const usersControllers = {
         let newUser = {       
             
             id: users[users.length - 1].id + 1,
+            fechaCreacion: moment().format('L'),
             nombre: nombre,   
             apellido: apellido,
             email: email,
-            imagen: req.file.filename,
+            imagen: req.file ? req.file.filename : 'bird-categoria.jpg',
             password: password,  //esta bien?
+            tipodeusuario: 'usuario'
             }
 
 		    users.push(newUser);

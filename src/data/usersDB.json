@@ -51,7 +51,7 @@
         "email": "fgarwood5@mediafire.com",
         "imagen": "",
         "contraseña": "JAx1S3",
-        "tipodeusuario": "admin"
+        "tipodeusuario": "usuario"
     },
     {
         "id": 7,
@@ -78,7 +78,7 @@
         "email": "egordongiles8@macromedia.com",
         "imagen": "",
         "contraseña": "COZkII",
-        "tipodeusuario": "admin"
+        "tipodeusuario": "usuario"
     },
     {
         "id": 10,
