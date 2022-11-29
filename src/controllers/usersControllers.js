@@ -3,6 +3,9 @@ const path = require('path');
 const moment = require('moment')
 let bcrypt = require('bcryptjs') //requerir el metodo de la encriptacion de password.
 
+const {validationResult} = require("express-validator")
+
+
 const usersFilePath = path.join(__dirname, '../data/usersDB.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -39,9 +42,41 @@ const usersControllers = {
 		    users.push(newUser);
 		    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '))
 
-		res.redirect('/') 
-    
-       
-}}
+		res.redirect('/')   
+       },
+
+    processLogin: function(req, res){
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            let usersJSON = fs.readFileSync(usersFilePath, 'utf-8')
+            let users;
+            if(usersJSON == ""){
+                users = []
+            } else {
+                users = JSON.parse(usersJSON)
+            }
+             //for (const user of users) {
+               // if(user.email)
+            let usuarioALoguearse;    
+            for (let i=0; i<users.length; i++){
+                if(users[i].email == req.body.email){
+                    if(bcrypt.compareSync(req.body.password, users[i].contraseña)){
+                        usuarioALoguearse = users[i];
+                        break;
+                    }
+                }
+            }
+            if(usuarioALoguearse == undefined){
+                return res.render("users/login", {errors:[
+                    {msg: "Credenciales Inválidas"}
+                ]})      
+            }
+            req.session.usuarioLoguedo = usuarioALoguearse
+            res.render("index", {miUsuario: req.session.usuarioLoqueado});
+        }else{
+            return res.render("users/login", {errors: errors.mapped})
+        }
+       }
+    }
 
 module.exports = usersControllers

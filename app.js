@@ -5,6 +5,8 @@ const productRoutes = require('./src/routes/product');
 const path = require('path');
 const methodOverride =  require('method-override');
 
+const session = require("express-session")
+
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));  //se puede prescidir de este termino __dirname//
@@ -31,3 +33,5 @@ app.set('view engine', 'ejs');
 app.get('/menu', (req,res)=>{
     res.sendFile(__dirname + '/views/menu.html');
 })
+
+app.use(session({secret: "Secreto"}))
