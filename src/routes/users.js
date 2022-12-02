@@ -27,6 +27,6 @@ router.post('/',validacionRegister, uploadFile.single('image'), usersController.
 /*** LOGIN ONE USER***/  
 
 router.get('/login', usersController.login)
-router.post("/login",usersController.processLogin) //ruta para hacer validación
+router.post('/',usersController.processLogin) //ruta para hacer validación
 
 module.exports = router

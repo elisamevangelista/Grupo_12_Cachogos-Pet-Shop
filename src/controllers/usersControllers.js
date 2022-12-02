@@ -46,6 +46,7 @@ const usersControllers = {
        },
 
     processLogin: function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
+     
         let errors = validationResult(req);  //error es un objeto. Validation result es el resultado de la validacion. (req -> llegan los datos del forumlaruio) 
         if(errors.isEmpty()){
             let usersJSON = fs.readFileSync(usersFilePath, 'utf-8')
@@ -71,12 +72,15 @@ const usersControllers = {
                     {msg: "Credenciales Inválidas"}
                 ]})      
             }
-            req.session.usuarioLoguedo = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
-            res.render("index", {miUsuario: req.session.usuarioLoqueado});  //se utilizara en el header, como identificacion del usuario logueado.
+            
+                req.session.usuarioLogueado = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
+                return res.render("index", {'miUsuario': req.session.usuarioLogueado});  //se utilizara en el header, como identificacion del usuario logueado.           
+        
         }else{
             return res.render("users/login", {errors: errors.mapped, old: req.body}) //old: req.body-> mantiene los datos correctos cargados por el usuario.
         }
        }
+     
     }
 
 module.exports = usersControllers
