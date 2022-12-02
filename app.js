@@ -34,4 +34,7 @@ app.get('/menu', (req,res)=>{
     res.sendFile(__dirname + '/views/menu.html');
 })
 
-app.use(session({secret: "Secreto"}))
+app.use(session({
+    secret: "Secreto",
+    resave: false,
+    saveUninitialized: false})) //resave y saveUninitialized es para configuración de la sesion y elimina un error en la terminal
