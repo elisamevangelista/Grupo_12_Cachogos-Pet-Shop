@@ -188,5 +188,55 @@
   "imagen": "bird-categoria.jpg",
   "password": "$2a$10$U6.e7uMo.dITr1SFepy5b.qtDPxAy3oM.GftTKIWCV.Mrc70.eY5u",
   "tipodeusuario": "usuario"
+ },
+ {
+  "id": 22,
+  "fechaCreacion": "12/01/2022",
+  "nombre": "andres",
+  "apellido": "rich",
+  "email": "asa@gmail.com",
+  "imagen": "bird-categoria.jpg",
+  "password": "$2a$10$3Ntfj9UZkTdQwdRhMXl7mu7CGmYkKaFH5A5TauhoaJv4.eBH9NBbe",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 23,
+  "fechaCreacion": "12/01/2022",
+  "nombre": "JJ",
+  "apellido": "GOMEZ",
+  "email": "A@GMAIL.COM",
+  "imagen": "image-1669937537032.png",
+  "password": "$2a$10$iAEA1SKIgcwAjP5Hl3tKq.V2yy2KCfeHqYcCGe3U9Qo23PekAggim",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 24,
+  "fechaCreacion": "12/01/2022",
+  "nombre": "JJa",
+  "apellido": "GOMEZ",
+  "email": "A@GMAIL.COM",
+  "imagen": "image-1669937762623.png",
+  "password": "$2a$10$Ils4mV5JD/wpzorhnpUQdOT8GCb1SiwcqyiyfLi26pIZETeDqtIXG",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 25,
+  "fechaCreacion": "12/01/2022",
+  "nombre": "sss",
+  "apellido": "ere",
+  "email": "ere@gmail",
+  "imagen": "bird-categoria.jpg",
+  "password": "$2a$10$aIkCMbEtA1u7LXnrzNKCwOB2aBhXs3qQcRPhrUdBV5779ngC0nSBi",
+  "tipodeusuario": "usuario"
+ },
+ {
+  "id": 26,
+  "fechaCreacion": "12/01/2022",
+  "nombre": "sss",
+  "apellido": "ere",
+  "email": "ERE@GMAIL.COM",
+  "imagen": "bird-categoria.jpg",
+  "password": "$2a$10$AFXckkTryE8iZBJObrsySuRy/7.hKVU60mUIEdJP/ZM2aMUvX4/O.",
+  "tipodeusuario": "usuario"
  }
 ]
