@@ -48,7 +48,8 @@ const usersControllers = {
     processLogin: function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
      
         let errors = validationResult(req);  //error es un objeto. Validation result es el resultado de la validacion. (req -> llegan los datos del forumlaruio) 
-        if(errors.isEmpty()){
+        
+         if(errors.isEmpty()){
             let usersJSON = fs.readFileSync(usersFilePath, 'utf-8')
             let users;
             if(usersJSON == ""){
@@ -58,10 +59,11 @@ const usersControllers = {
             }
              //for (const user of users) {
                // if(user.email)
-            let usuarioALoguearse;    
+               
+               let usuarioALoguearse;    
             for (let i=0; i<users.length; i++){
                 if(users[i].email == req.body.email){
-                    if(bcrypt.compareSync(req.body.password, users[i].contraseña)){
+                    if(bcrypt.compareSync(req.body.password, users[i].password)){
                         usuarioALoguearse = users[i];
                         break;
                     }
@@ -72,10 +74,11 @@ const usersControllers = {
                     {msg: "Credenciales Inválidas"}
                 ]})      
             }
-            
-                req.session.usuarioLogueado = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
-                return res.render("index", {'miUsuario': req.session.usuarioLogueado});  //se utilizara en el header, como identificacion del usuario logueado.           
-        
+                // console.log(usuarioALoguearse)
+                req.session = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
+                // console.log('req.session:', req.session)
+                return res.render("index", {miUsuario: req.session});  //se utilizara en el header, como identificacion del usuario logueado.           
+                
         }else{
             return res.render("users/login", {errors: errors.mapped, old: req.body}) //old: req.body-> mantiene los datos correctos cargados por el usuario.
         }

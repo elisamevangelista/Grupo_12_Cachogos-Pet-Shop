@@ -5,12 +5,16 @@ const productRoutes = require('./src/routes/product');
 const path = require('path');
 const methodOverride =  require('method-override');
 
-const session = require("express-session")
+const session = require("express-session");
+const cookieParser = require('cookie-parser')
+
+
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));  //se puede prescidir de este termino __dirname//
 app.use(methodOverride('_method'))
+
 
 app.listen(3000, ()=>{
     console.log('Servidor levantado');          
@@ -19,6 +23,8 @@ app.listen(3000, ()=>{
 app.use('/', mainRoutes);
 app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
+
+app.use(cookieParser())
 
 app.set('views', path.join(__dirname, '/src/views'))  ;
     

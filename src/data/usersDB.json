@@ -5,7 +5,7 @@
   "apellido": "Albinson",
   "email": "walbinson0@chronoengine.com",
   "imagen": "",
-  "contraseña": "CJplFAb",
+  "password": "CJplFAb",
   "tipodeusuario": "usuario"
  },
  {
@@ -14,7 +14,7 @@
   "apellido": "McArd",
   "email": "amcard1@prweb.com",
   "imagen": "",
-  "contraseña": "2XUYTTLTGa",
+  "password": "2XUYTTLTGa",
   "tipodeusuario": "admin"
  },
  {
@@ -23,7 +23,7 @@
   "apellido": "Fisby",
   "email": "sfisby2@indiegogo.com",
   "imagen": "",
-  "contraseña": "gd3UOLkOW9Dq",
+  "password": "gd3UOLkOW9Dq",
   "tipodeusuario": "admin"
  },
  {
@@ -32,7 +32,7 @@
   "apellido": "Spivey",
   "email": "nspivey3@mashable.com",
   "imagen": "",
-  "contraseña": "Mc4QMzvCZ",
+  "password": "Mc4QMzvCZ",
   "tipodeusuario": "usuario"
  },
  {
@@ -41,7 +41,7 @@
   "apellido": "Slaymaker",
   "email": "lslaymaker4@baidu.com",
   "imagen": "",
-  "contraseña": "1RQ7SMz",
+  "password": "1RQ7SMz",
   "tipodeusuario": "usuario"
  },
  {
@@ -50,7 +50,7 @@
   "apellido": "Garwood",
   "email": "fgarwood5@mediafire.com",
   "imagen": "",
-  "contraseña": "JAx1S3",
+  "password": "JAx1S3",
   "tipodeusuario": "usuario"
  },
  {
@@ -59,7 +59,7 @@
   "apellido": "Crossfeld",
   "email": "ncrossfeld6@bing.com",
   "imagen": "",
-  "contraseña": "VpGZ43LPKfFe",
+  "password": "VpGZ43LPKfFe",
   "tipodeusuario": "usuario"
  },
  {
@@ -68,7 +68,7 @@
   "apellido": "Heigho",
   "email": "mheigho7@jimdo.com",
   "imagen": "",
-  "contraseña": "urrfngQR",
+  "password": "urrfngQR",
   "tipodeusuario": "admin"
  },
  {
@@ -77,7 +77,7 @@
   "apellido": "Gordon-Giles",
   "email": "egordongiles8@macromedia.com",
   "imagen": "",
-  "contraseña": "COZkII",
+  "password": "COZkII",
   "tipodeusuario": "usuario"
  },
  {
@@ -86,7 +86,7 @@
   "apellido": "Strangward",
   "email": "astrangward9@dagondesign.com",
   "imagen": "",
-  "contraseña": "Ai6TsLO",
+  "password": "Ai6TsLO",
   "tipodeusuario": "admin"
  },
  {
@@ -95,7 +95,7 @@
   "apellido": "Skamal",
   "email": "kskamala@elpais.com",
   "imagen": "",
-  "contraseña": "KgZKuxDA",
+  "password": "KgZKuxDA",
   "tipodeusuario": "admin"
  },
  {
@@ -104,7 +104,7 @@
   "apellido": "Ollerhead",
   "email": "tollerheadb@discuz.net",
   "imagen": "",
-  "contraseña": "NOTVCOQblAi",
+  "password": "NOTVCOQblAi",
   "tipodeusuario": "admin"
  },
  {
@@ -113,7 +113,7 @@
   "apellido": "Kleeman",
   "email": "mkleemanc@go.com",
   "imagen": "",
-  "contraseña": "jHquxfbKP",
+  "password": "jHquxfbKP",
   "tipodeusuario": "usuario"
  },
  {
@@ -122,7 +122,7 @@
   "apellido": "Raxworthy",
   "email": "praxworthyd@storify.com",
   "imagen": "",
-  "contraseña": "twA04ZzBv",
+  "password": "twA04ZzBv",
   "tipodeusuario": "admin"
  },
  {
@@ -131,7 +131,7 @@
   "apellido": "Ickov",
   "email": "jickove@prnewswire.com",
   "imagen": "",
-  "contraseña": "qOrBa5yw95DB",
+  "password": "qOrBa5yw95DB",
   "tipodeusuario": "usuario"
  },
  {
@@ -140,7 +140,7 @@
   "apellido": "Bullas",
   "email": "tbullasf@usa.gov",
   "imagen": "",
-  "contraseña": "IMPBV0h1O",
+  "password": "IMPBV0h1O",
   "tipodeusuario": "admin"
  },
  {
@@ -149,7 +149,7 @@
   "apellido": "Tolchar",
   "email": "ltolcharg@github.io",
   "imagen": "",
-  "contraseña": "K2qXoo4dAQ",
+  "password": "K2qXoo4dAQ",
   "tipodeusuario": "admin"
  },
  {
@@ -158,7 +158,7 @@
   "apellido": "Browning",
   "email": "gbrowningh@blogs.com",
   "imagen": "",
-  "contraseña": "RJEbwn",
+  "password": "RJEbwn",
   "tipodeusuario": "usuario"
  },
  {
@@ -167,7 +167,7 @@
   "apellido": "Dilke",
   "email": "jdilkei@blogtalkradio.com",
   "imagen": "",
-  "contraseña": "BOWLEH4",
+  "password": "BOWLEH4",
   "tipodeusuario": "usuario"
  },
  {
@@ -176,67 +176,17 @@
   "apellido": "Allmark",
   "email": "dallmarkj@usnews.com",
   "imagen": "",
-  "contraseña": "Pcn84LV",
+  "password": "Pcn84LV",
   "tipodeusuario": "admin"
  },
  {
   "id": 21,
-  "fechaCreacion": "11/28/2022",
-  "nombre": "John",
-  "apellido": "Travolta",
-  "email": "JTravolta@gmail.com",
+  "fechaCreacion": "12/04/2022",
+  "nombre": "sara",
+  "apellido": "wu",
+  "email": "sarawu@gmail.com",
   "imagen": "bird-categoria.jpg",
-  "password": "$2a$10$U6.e7uMo.dITr1SFepy5b.qtDPxAy3oM.GftTKIWCV.Mrc70.eY5u",
-  "tipodeusuario": "usuario"
- },
- {
-  "id": 22,
-  "fechaCreacion": "12/01/2022",
-  "nombre": "andres",
-  "apellido": "rich",
-  "email": "asa@gmail.com",
-  "imagen": "bird-categoria.jpg",
-  "password": "$2a$10$3Ntfj9UZkTdQwdRhMXl7mu7CGmYkKaFH5A5TauhoaJv4.eBH9NBbe",
-  "tipodeusuario": "usuario"
- },
- {
-  "id": 23,
-  "fechaCreacion": "12/01/2022",
-  "nombre": "JJ",
-  "apellido": "GOMEZ",
-  "email": "A@GMAIL.COM",
-  "imagen": "image-1669937537032.png",
-  "password": "$2a$10$iAEA1SKIgcwAjP5Hl3tKq.V2yy2KCfeHqYcCGe3U9Qo23PekAggim",
-  "tipodeusuario": "usuario"
- },
- {
-  "id": 24,
-  "fechaCreacion": "12/01/2022",
-  "nombre": "JJa",
-  "apellido": "GOMEZ",
-  "email": "A@GMAIL.COM",
-  "imagen": "image-1669937762623.png",
-  "password": "$2a$10$Ils4mV5JD/wpzorhnpUQdOT8GCb1SiwcqyiyfLi26pIZETeDqtIXG",
-  "tipodeusuario": "usuario"
- },
- {
-  "id": 25,
-  "fechaCreacion": "12/01/2022",
-  "nombre": "sss",
-  "apellido": "ere",
-  "email": "ere@gmail",
-  "imagen": "bird-categoria.jpg",
-  "password": "$2a$10$aIkCMbEtA1u7LXnrzNKCwOB2aBhXs3qQcRPhrUdBV5779ngC0nSBi",
-  "tipodeusuario": "usuario"
- },
- {
-  "id": 26,
-  "fechaCreacion": "12/01/2022",
-  "nombre": "sss",
-  "apellido": "ere",
-  "email": "ERE@GMAIL.COM",
-  "imagen": "bird-categoria.jpg",
-  "password": "$2a$10$AFXckkTryE8iZBJObrsySuRy/7.hKVU60mUIEdJP/ZM2aMUvX4/O.",
+  "password": "$2a$10$kvvH84c/JC1/FSCIMYUo5.x/lsYVTER1VSV1Mp40x5.Y47j/jpLfy",
   "tipodeusuario": "usuario"
  }
 ]

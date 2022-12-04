@@ -48,24 +48,15 @@
                <li><a class="iconoUserMargenDerecho" href="/users/login"><i class="fa-solid fa-user"></i></a></li>
                
 
-               <% if ('miUsuario' != undefined) { %>   
-                                                                <!-- miUsuario va con comillas? -->
-                <li class="IniciarSesion"> <%= 'miUsuario'.nombre %> </li>
+               <% if (locals.miUsuario) { %>    <!-- locals verifica si req.session existe, e importa lada data guardadda si existe. -->
+                                                                
+                <li class="IniciarSesion"> <%= miUsuario.nombre %> </li>
 
             <% }  else { %>
                 <li><a class="IniciarSesion" href="/users/login">Iniciar Sesión/</a></li>
                 <li><a class="Registrarse" href="/users/register">Registrarse</a></li>
 
-                <% } %>
-
-
-
-
-               
-                    <li><a class="IniciarSesion" href="/users/login">Iniciar Sesión/</a></li>
-                    <li><a class="Registrarse" href="/users/register">Registrarse</a></li>
-
-                 
+                <% } %>            
                             
 
            </ul>
