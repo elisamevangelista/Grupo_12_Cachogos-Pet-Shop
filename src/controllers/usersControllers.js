@@ -77,13 +77,26 @@ const usersControllers = {
                 // console.log(usuarioALoguearse)
                 req.session = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
                 // console.log('req.session:', req.session)
-                return res.render("index", {miUsuario: req.session});  //se utilizara en el header, como identificacion del usuario logueado.           
+
+                                                        //recordame es el valor del atributo 'name' del formulario de login.
+                if(req.body.recordame != undefined){  //si por Formu se clickeo el checkbox 'recordarme', entonces se guarda en la cookie el mail del usuario regristrado, en un tiempo de 1 min.
+
+                    res.cookie('recordame', usuarioALoguearse.email, {maxAge: 60000})   
+                }
+                            
                 
+                res.render("perfil", {miUsuario: req.session})
+              
+
+
         }else{
             return res.render("users/login", {errors: errors.mapped, old: req.body}) //old: req.body-> mantiene los datos correctos cargados por el usuario.
         }
-       }
-     
-    }
+       },
 
+       perfil: function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
+        console.log(req.session)
+        return res.render("perfil");  //se utilizara en el header, como identificacion del usuario logueado.    
+       }
+}
 module.exports = usersControllers

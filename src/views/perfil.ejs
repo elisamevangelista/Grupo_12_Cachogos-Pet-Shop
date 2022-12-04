@@ -1,0 +1,47 @@
+
+
+<%- include('partials/head') %>
+
+
+</head>
+
+<body>
+
+    <%- include('partials/header') %>
+
+    <main>
+    
+        <% if (locals.miUsuario) { %>    <!-- locals verifica si req.session existe, e importa lada data guardadda si existe. -->
+            <p>Bienvenid@ <%= miUsuario.nombre %> !</p>                                                   
+            <p>Su correo electrónico es: <%= miUsuario.email %> </p>
+            <img src="/images/users/<%= miUsuario.imagen %> " alt="imagen"> 
+                      
+
+        <% }  else { %>
+            <p>El usuario no esta logueado</p>
+          
+            <% } %>  
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+                        
+    
+    </main>
+    
+    <%- include('partials/footer') %>
+
+  
+
+
+</body>
+
+</html>

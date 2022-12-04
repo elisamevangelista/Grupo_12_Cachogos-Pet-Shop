@@ -8,7 +8,7 @@ const methodOverride =  require('method-override');
 const session = require("express-session");
 const cookieParser = require('cookie-parser')
 
-
+const cookieAuth = require('./src/middleware/cookieAuth')
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
@@ -25,6 +25,7 @@ app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
 
 app.use(cookieParser())
+app.use(cookieAuth)
 
 app.set('views', path.join(__dirname, '/src/views'))  ;
     
