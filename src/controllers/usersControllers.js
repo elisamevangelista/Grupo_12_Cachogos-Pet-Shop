@@ -75,7 +75,7 @@ const usersControllers = {
                 ]})      
             }
                 // console.log(usuarioALoguearse)
-                req.session = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
+                req.session.usuarioALoguearse = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
                 // console.log('req.session:', req.session)
 
                                                         //recordame es el valor del atributo 'name' del formulario de login.
@@ -85,7 +85,7 @@ const usersControllers = {
                 }
                             
                 
-                res.render("perfil", {miUsuario: req.session})
+                res.redirect("/users/perfil")
               
 
 
@@ -95,8 +95,8 @@ const usersControllers = {
        },
 
        perfil: function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
-        console.log(req.session)
-        return res.render("perfil");  //se utilizara en el header, como identificacion del usuario logueado.    
+       console.log(req.session)
+        return res.render("perfil", {miUsuario: req.session.usuarioALoguearse});  //se utilizara en el header, como identificacion del usuario logueado.    
        }
 }
 module.exports = usersControllers
