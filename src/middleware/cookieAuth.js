@@ -4,10 +4,7 @@ const path = require('path');
 
 let cookieAuth = (req, res, next) => { //M que atraviesa toda la app para recordar el correo del usuario registrado por 1 min, luego de cerrado el navegador.
 
-    console.log('cookie:', req.cookies)
-    console.log('usuarioLogueado:', usuarioALoguearse)
-    // recordame viene de -> res.cookie('recordame', usuarioALoguearse.email, {maxAge: 60000})
-    if (req.cookies.recordame != undefined &&  //si existe un mail guardado en la cookie y se ha cerrado el navegador sin volverse a loguear, hace lo sguiente:
+    if (req.cookies.recordame &&  //si existe un mail guardado en la cookie y se ha cerrado el navegador sin volverse a loguear, hace lo sguiente:
         usuarioALoguearse == undefined) {
 
         let usersJSON = fs.readFileSync(usersFilePath, 'utf-8')

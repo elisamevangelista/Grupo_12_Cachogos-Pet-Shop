@@ -3,7 +3,7 @@ const path = require('path');
 const moment = require('moment')
 let bcrypt = require('bcryptjs') //requerir el metodo de la encriptacion de password.
 
-const {validationResult} = require("express-validator")
+const { check, validationResult} = require("express-validator")
 
 
 const usersFilePath = path.join(__dirname, '../data/usersDB.json');
@@ -21,28 +21,34 @@ const usersControllers = {
     },
 
     store: (req, res) => {
-        let {nombre, apellido, email, password} = req.body
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let {nombre, apellido, email, password} = req.body
 
-        let contraseña = password
-
-        let contraseñaEncriptada = bcrypt.hashSync(contraseña, 10)
-        
-        let newUser = {       
+            let contraseña = password
+    
+            let contraseñaEncriptada = bcrypt.hashSync(contraseña, 10)
             
-            id: users[users.length - 1].id + 1,
-            fechaCreacion: moment().format('L'),
-            nombre: nombre,   
-            apellido: apellido,
-            email: email,
-            imagen: req.file ? req.file.filename : 'bird-categoria.jpg',
-            password: contraseñaEncriptada,  
-            tipodeusuario: 'usuario'
-            }
-
-		    users.push(newUser);
-		    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '))
-
-		res.redirect('/')   
+            let newUser = {       
+                
+                id: users[users.length - 1].id + 1,
+                fechaCreacion: moment().format('L'),
+                nombre: nombre,   
+                apellido: apellido,
+                email: email,
+                imagen: req.file ? req.file.filename : 'bird-categoria.jpg',
+                password: contraseñaEncriptada,  
+                tipodeusuario: 'usuario'
+                }
+    
+                users.push(newUser);
+                fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '))
+    
+            res.redirect('/')  
+        } else {
+            res.send("Datos incorrectos")
+        }
+        
        },
 
     processLogin: function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
@@ -64,6 +70,7 @@ const usersControllers = {
             for (let i=0; i<users.length; i++){
                 if(users[i].email == req.body.email){
                     if(bcrypt.compareSync(req.body.password, users[i].password)){
+                        delete users[i].password;
                         usuarioALoguearse = users[i];
                         break;
                     }
@@ -74,14 +81,15 @@ const usersControllers = {
                     {msg: "Credenciales Inválidas"}
                 ]})      
             }
-                // console.log(usuarioALoguearse)
+                //console.log("usuarioALog:", usuarioALoguearse)
                 req.session.usuarioALoguearse = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
-                // console.log('req.session:', req.session)
+               //console.log('req.session:', req.session)
 
                                                         //recordame es el valor del atributo 'name' del formulario de login.
                 if(req.body.recordame != undefined){  //si por Formu se clickeo el checkbox 'recordarme', entonces se guarda en la cookie el mail del usuario regristrado, en un tiempo de 1 min.
-
+                    
                     res.cookie('recordame', usuarioALoguearse.email, {maxAge: 60000})   
+                   // console.log("cookieres:", res.cookie())
                 }
                             
                 
@@ -95,8 +103,11 @@ const usersControllers = {
        },
 
        perfil: function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
-       console.log(req.session)
         return res.render("perfil", {miUsuario: req.session.usuarioALoguearse});  //se utilizara en el header, como identificacion del usuario logueado.    
+       },
+       logout: function(req, res){
+        req.session.destroy();
+        return res.redirect("/")
        }
 }
 module.exports = usersControllers

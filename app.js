@@ -11,6 +11,11 @@ const cookieParser = require('cookie-parser')
 const cookieAuth = require('./src/middleware/cookieAuth')
 
 const app = express();
+
+app.use(session({
+    secret: "Secreto",
+    resave: false,
+    saveUninitialized: false})) //resave y saveUninitialized es para configuración de la sesion y elimina un error en la terminal
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));  //se puede prescidir de este termino __dirname//
 app.use(methodOverride('_method'))
@@ -41,7 +46,3 @@ app.get('/menu', (req,res)=>{
     res.sendFile(__dirname + '/views/menu.html');
 })
 
-app.use(session({
-    secret: "Secreto",
-    resave: false,
-    saveUninitialized: false})) //resave y saveUninitialized es para configuración de la sesion y elimina un error en la terminal

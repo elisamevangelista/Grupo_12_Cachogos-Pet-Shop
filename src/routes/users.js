@@ -1,5 +1,6 @@
 const express = require("express");
-const router = express.Router()
+const router = express.Router();
+const { check } = require("express-validator")  
 
 const validacionRegister = require('../middleware/userRegister')
 const multer = require('multer');
@@ -19,18 +20,21 @@ const uploadFile = multer({ storage });
 
 const usersController = require('../controllers/usersControllers')
 
-// const userLogged = require('../middleware/userLogged')
+const userLogged = require('../middleware/userLogged')
+const authMiddleware = require('../middleware/authMiddleware')
 
 /*** REGISTER ONE USER***/    //el M userLogged funciona unicamente si el usuario esta logueado, es decir tiene abierta su sesion.
-router.get('/register', usersController.register)  // image es el valor del atributo 'name' para el input de la imagen en el formulario.
-router.post('/register',validacionRegister, uploadFile.single('image'), usersController.store); //validacionRegister-> SERIA EL MIDDLEWARE. LO SACAMOS PORQUE DEVUELVE ERROR
+router.get('/register', userLogged, usersController.register)  // image es el valor del atributo 'name' para el input de la imagen en el formulario.
+router.post('/register', validacionRegister, uploadFile.single('image'), usersController.store); //validacionRegister-> SERIA EL MIDDLEWARE. LO SACAMOS PORQUE DEVUELVE ERROR
 
 /*** LOGIN ONE USER***/  
 
-router.get('/login', usersController.login) //traigo vista formulario
-router.post('/login',usersController.processLogin) //posteo la informacion cargada, ruta para hacer validación
+router.get('/login', userLogged, usersController.login) //traigo vista formulario
+router.post('/login', validacionRegister, usersController.processLogin) //posteo la informacion cargada, ruta para hacer validación
 
 
-router.get('/perfil',usersController.perfil)
+router.get('/perfil', authMiddleware, usersController.perfil)
+
+router.get('/logout', usersController.logout)
 
 module.exports = router

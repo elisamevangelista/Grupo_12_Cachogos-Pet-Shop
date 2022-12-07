@@ -12,7 +12,8 @@ const productControllers = {
 
     productlist: (req, res) => {
         res.render('productlist', {
-            productlist: products
+            productlist: products,
+            miUsuario: req.session.usuarioALoguearse
         })
     },
     
@@ -97,7 +98,8 @@ const productControllers = {
         // precio -> es un objeto del array 'pesos' que tiene las pros 'kg' y 'precio'.
         res.render('productdet', {
             products: product,
-            productSelect: objetoPesos[0]
+            productSelect: objetoPesos[0],
+            miUsuario: req.session.usuarioALoguearse
         } )
     },
 
