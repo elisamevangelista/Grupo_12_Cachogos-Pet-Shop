@@ -41,6 +41,39 @@ LOCK TABLES `brands` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `carts`
+--
+
+DROP TABLE IF EXISTS `carts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `carts` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `product_sku` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `quantityItems` int(10) unsigned NOT NULL,
+  `sold` tinyint(1) NOT NULL DEFAULT 0,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `deletedAt` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `carts_FK` (`product_sku`),
+  KEY `carts_FK_1` (`user_id`),
+  CONSTRAINT `carts_FK` FOREIGN KEY (`product_sku`) REFERENCES `products` (`sku`),
+  CONSTRAINT `carts_FK_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `carts`
+--
+
+LOCK TABLES `carts` WRITE;
+/*!40000 ALTER TABLE `carts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `categories`
 --
 
@@ -261,4 +294,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-15 21:04:33
+-- Dump completed on 2022-12-17 19:28:45
