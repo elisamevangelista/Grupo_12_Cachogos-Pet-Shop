@@ -1,0 +1,25 @@
+// .sequelizerc
+
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('src/db', 'config.js'),
+  'models-path': path.resolve('src/db', 'models'),
+  'seeders-path': path.resolve('src/db', 'seeders'),
+  'migrations-path': path.resolve('src/db', 'migrations')
+};
+
+//Create migration: sequelize migration:generate --name name_table
+//Example syntax file: 20220531170615-test.js
+
+//Update migration: sequelize migration:generate --name name_table_add_column
+//Example syntax file: 20220531170709-test-add.js
+
+//Create seeder: sequelize seed:generate --name test
+//Example syntax file: 20220531170751-test.js
+
+//Execute migration: sequelize db:migrate --to my_migration_file
+//Example cmd: sequelize db:migrate --to 20220531170615-test.js
+
+//Execute seeder: sequelize db:migrate --to my_seeder_file
+//Example cmd: sequelize db:seed --to 20220531170751-test.js
