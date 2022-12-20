@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Categories';
+    let alias = 'Brands';
     let cols = {
         id: {
             type: dataTypes.INT(10).UNSIGNED,
@@ -7,26 +7,28 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        animalType: {
+        brand: {
             type: dataTypes.STRING(255),
             allowNull: false
         }
     };
     let config = {
-        tableName: 'categories',
+        tableName: 'brands',
         timestamps: true,
-        createdAt: 'createdAt',
-        updatedAt: 'updatedAt',
+        createdAt: 'createdAt', //'createdAt' es el nombre de la columna
         deletedAt: 'deletedAt'
     }
-    const Categories = sequelize.define(alias,cols,config);
+    const Brands = sequelize.define(alias,cols,config);
 
     Categories.associate = function (models) {
-        Categories.hasMany(models.Subcategories, {
-            as: "subcategories",
-            foreignKey: "subcategory_id"
+        Brands.belongsToMany(models.Products, {
+            as: "products",
+            through: 'products_brands',
+            foreignKey: 'brand_id',
+            otherKey: 'product_sku',
+            timestamps: true
         });
     }
 
-    return Categories
+    return Brands
 };

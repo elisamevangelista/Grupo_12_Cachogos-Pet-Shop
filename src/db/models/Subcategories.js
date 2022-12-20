@@ -21,10 +21,11 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
+        tableName: 'subcategories',
         timestamps: true,
         createdAt: 'createdAt',
         updatedAt: 'updatedAt',
-        deletedAt: false
+        deletedAt: 'deletedAt'
     }
     const Subcategories = sequelize.define(alias,cols,config);
 
@@ -32,6 +33,11 @@ module.exports = (sequelize, dataTypes) => {
         Subcategories.belongsTo(models.Categories, { // models.Genre -> Genres es el valor de alias en genres.js
             as: "categories",
             foreignKey: "category_id"
+        });
+
+        Subcategories.hasMany(models.Products, {
+            as: "products",
+            foreignKey: "subcategory_id"
         });
     }
 

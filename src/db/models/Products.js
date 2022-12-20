@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Products'; // esto debería estar en singular
     let cols = {
         sku: {
-            type: dataTypes.BIGINT(20).UNSIGNED,
+            type: dataTypes.INT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -37,10 +37,11 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
+        tableName: 'products',
         timestamps: true,
         createdAt: 'createdAt',
         updatedAt: 'updatedAt',
-        deletedAt: false
+        deletedAt: 'deletedAt'
     }
     const Products = sequelize.define(alias,cols,config);
 
@@ -48,7 +49,17 @@ module.exports = (sequelize, dataTypes) => {
         Products.belongsTo(models.Subcategories, {
             as: "subcategories",
             foreignKey: "subcategory_id"
-        })
+        });
+
+        Products.hasMany(models.Products_images, {
+            as: "products_images",
+            foreignKey: "product_sku"
+        });
+
+        Products.hasMany(models.Foods, {
+            as: "foods",
+            foreignKey: "product_sku"
+        });
 
         Products.belongsToMany(models.Brands, {
             as: "brands",
@@ -56,7 +67,15 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'product_sku',
             otherKey: 'brand_id',
             timestamps: false
-        })
+        });
+
+        Products.belongsToMany(models.Users, {
+            as: "products",
+            through: 'carts',
+            foreignKey: 'product_sku',
+            otherKey: 'user_id',
+            timestamps: false
+        });
     }
 
     return Products
