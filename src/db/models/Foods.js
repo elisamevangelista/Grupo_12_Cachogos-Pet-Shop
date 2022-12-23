@@ -2,25 +2,25 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Foods';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         product_sku: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         weight: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         cost_x_bag: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         quotesQuantity: {
-            type: dataTypes.INT(10).UNSIGNED
+            type: dataTypes.INTEGER(10).UNSIGNED
         },
     };
     let config = {
@@ -39,5 +39,5 @@ module.exports = (sequelize, dataTypes) => {
         });
     }
 
-    return Products_images
+    return Foods
 };

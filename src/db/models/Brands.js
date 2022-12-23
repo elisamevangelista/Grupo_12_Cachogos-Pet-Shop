@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Brands';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Brands = sequelize.define(alias,cols,config);
 
-    Categories.associate = function (models) {
+    Brands.associate = function (models) {
         Brands.belongsToMany(models.Products, {
             as: "products",
             through: 'products_brands',

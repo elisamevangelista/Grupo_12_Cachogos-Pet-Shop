@@ -67,7 +67,7 @@ footer button:hover {
         display: inline-block;
         background-color: rgb(223, 219, 219);
         border: 1px solid #3694F5;
-        height: 70%;
+        height: 80%;
         width: 70%;
     }
     
@@ -261,7 +261,7 @@ footer button:hover {
         display: flex;
         background-color: rgb(223, 219, 219);
         border: 1px solid #3694F5;
-        height: 280px;
+        height: 300px;
         width: 470px;
         flex-direction: column;
         flex-wrap: wrap;

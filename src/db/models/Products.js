@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Products'; // esto debería estar en singular
     let cols = {
         sku: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -18,10 +18,10 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         quotesQuantity: {
-            type: dataTypes.INT(10).UNSIGNED
+            type: dataTypes.INTEGER(10).UNSIGNED
         },
         stock: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         cost: {
@@ -29,10 +29,10 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         discount: {
-            type: dataTypes.INT(10).UNSIGNED
+            type: dataTypes.INTEGER(10).UNSIGNED
         },
         subcategory_id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         }
     };
