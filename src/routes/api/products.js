@@ -3,17 +3,16 @@ const router = express.Router();
 const productsAPIController = require('../../controllers/api/productsAPIController');
 
 //Rutas
-//Listado de películas
+//Listado de productos
 router.get('/', productsAPIController.list);
-//Detalle de una película
+//Detalle de un producto
 router.get('/:id', productsAPIController.detail);
-//Filtrar películas por rating. Puede colocar desde 1 hasta 10
 // router.get('/recomended/:rating', productsAPIController.recomended);
-//Agregar una película
+//Agregar un producto
 router.post('/create', productsAPIController.create);
-//Modificar una película
+//Modificar un producto
 router.put('/update/:id', productsAPIController.update);
-//Eliminar una película
+//Eliminar un producto
 router.delete('/delete/:id', productsAPIController.destroy);
 
 module.exports = router;
