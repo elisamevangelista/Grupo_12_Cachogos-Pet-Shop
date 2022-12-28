@@ -68,6 +68,7 @@ const productsAPIController = {
                         image: req.files
                     }
                 )
+                db.Products_brands
                 .then(confirm => {
                     let respuesta;
                     if (confirm) {

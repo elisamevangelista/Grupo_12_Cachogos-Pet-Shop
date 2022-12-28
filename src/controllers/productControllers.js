@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment')
-
+const db = require('../db/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -11,18 +13,67 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productControllers = {
 
     productlist: (req, res) => {
-        res.render('productlist', {
-            productlist: products,
-            miUsuario: req.session.usuarioALoguearse
+        db.Products.findAll()
+        .then(products => {
+            res.render('productlist', {
+                productlist: products,
+                miUsuario: req.session.usuarioALoguearse
+            })
         })
+        // res.render('productlist', {
+        //     productlist: products,
+        //     miUsuario: req.session.usuarioALoguearse
+        // })
     },
     
     creacionproducto: (req, res) => {
-        res.render('creacionproducto')   //muestra vista de formulario de creacion
+        let brand = db.Brands.findAll({
+            attributes: ['id', 'brand']
+        });
+        let category = db.Categories.findAll({
+            attributes: ['id', 'animalType']
+        });
+        Promise.all([category, brand])
+        .then(([allCategory, allBrand]) => {
+            console.log('allCategory, allBrand:', {allCategory, allBrand})
+        res.render('creacionproducto', {allCategory, allBrand})})
+        .catch(error => res.send(error))  //muestra vista de formulario de creacion
     },
   
 
 	//guardar info cargada en formulario de creacion en la base de datos (.json)
+    create: (req, res) => {
+        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
+        db.Subcategories.findAll({
+            where: {
+                name: subcategoriaProducto,
+                category_id: categoriaAnimal
+            },
+            attributes: ['id', 'name', 'category_id'] 
+        }).then(subcategory => {
+            db.Products
+                .create(
+                    {
+                        name: nombre,
+                        description: descripcion,
+                        quotesQuantity: cantidadCuotas,
+                        stock: stock,
+                        cost: costo,
+                        discount: descuento,
+                        subcategory_id: subcategory.id
+                    }
+                )
+            for (let img of req.files) {
+                db.Products_images
+                    .create(
+                        {
+                            image: img
+                        }
+                    )
+            }
+            
+        })
+    },
 	store: (req, res) => {
         let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, depositoEntrante, cantCuotasSegunKg} = req.body
 

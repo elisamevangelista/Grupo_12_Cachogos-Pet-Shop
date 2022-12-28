@@ -44,11 +44,24 @@
                 </div>
 
 
-                <div class = "marca-producto">
+                <!-- <div class = "marca-producto">
                     <label for="marcaProducto">Marca</label>
                     <input class="marcaProd" type="text" name="marca" id="marcaProducto" placeholder="Marca del producto"  autocomplete="on">
     
-                </div>
+                </div> -->
+                <fieldset>
+                    <legend>Marcas</legend>
+                    <div class="marca-producto">
+                        <select name="brand_id" id="brand_id">
+                            <option value="" disabled selected>- Seleccione la Marca - </option>
+                            <% allBrand.forEach(brand=> { %>
+                                <option value="<%= brand.id %>">
+                                    <%= brand.brand %>
+                                </option>
+                                <% }); %>
+                        </select>
+                    </div>
+                </fieldset>
                   
 
                 <div class="archivos">
@@ -82,8 +95,16 @@
                 <fieldset>
                     <legend>Categoría - Animales</legend>
 
-                    
                     <div>
+                        <select name="categoriaAnimal" id="categoriaAnimal" >
+                            <option value="" disabled selected>- Seleccione la categoria - </option>
+                            <% allCategory.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.animalType %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    
+                    <!-- <div>
                         <label for="perro"><input class="categPerro" type="radio" name="categoriaAnimal" id="perro" value="1">Perro</label>
                         
                      </div>
@@ -101,7 +122,7 @@
                     <div>
                         <label for="ave"><input class="categAve" type="radio" name="categoriaAnimal" id="ave" value="4">Ave</label>
                         
-                    </div>
+                    </div> -->
 
 
                 </fieldset>
