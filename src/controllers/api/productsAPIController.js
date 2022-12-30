@@ -7,8 +7,6 @@ const moment = require('moment');
 
 //Aqui tienen otra forma de llamar a cada uno de los modelos
 const Products = db.Products;
-const Genres = db.Genre;
-const Users = db.Users;
 
 
 const productsAPIController = {

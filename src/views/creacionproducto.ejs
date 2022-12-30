@@ -52,7 +52,7 @@
                 <fieldset>
                     <legend>Marcas</legend>
                     <div class="marca-producto">
-                        <select name="brand_id" id="brand_id">
+                        <select name="marca" id="marca">
                             <option value="" disabled selected>- Seleccione la Marca - </option>
                             <% allBrand.forEach(brand=> { %>
                                 <option value="<%= brand.id %>">
@@ -136,6 +136,14 @@
                     <legend>Categoría - Productos</legend>
                                                                     <!-- name (subcategoriaProducto) debe ser igual a la clave del dataBase -->
                     <div>
+                        <select name="subcategoriaProducto" id="subcategoriaProducto" >
+                            <option value="" disabled selected>- Seleccione la subcategoria - </option>
+                            <% allSubcategory.forEach(subcategory => { %>
+                            <option value="<%= subcategory.name %>"><%= subcategory.name %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <!-- <div>
                     
                         <label for="alimento"><input class="alim" type="radio" name="subcategoriaProducto" id="alimento" value="Alimentos">Alimentos</label>
                         
@@ -152,7 +160,7 @@
                     <div>
                         <label for="PaseosYViajes"><input class="paseo-viaje" type="radio"  id="PaseosYViajes" name="subcategoriaProducto" value="Paseos y viajes">Paseos y viajes</label>
                         
-                    </div>
+                    </div> -->
 
                 </fieldset>
 

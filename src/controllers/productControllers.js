@@ -13,8 +13,11 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productControllers = {
 
     productlist: (req, res) => {
-        db.Products.findAll()
+        db.Products.findAll({
+            include: ['products_images', 'foods']
+        })
         .then(products => {
+            console.log('products:', products[0].foods[0].cost)
             res.render('productlist', {
                 productlist: products,
                 miUsuario: req.session.usuarioALoguearse
@@ -33,24 +36,34 @@ const productControllers = {
         let category = db.Categories.findAll({
             attributes: ['id', 'animalType']
         });
-        Promise.all([category, brand])
-        .then(([allCategory, allBrand]) => {
-            console.log('allCategory, allBrand:', {allCategory, allBrand})
-        res.render('creacionproducto', {allCategory, allBrand})})
+        let subcategory = db.Subcategories.findAll({
+            attributes: ['name'],
+            group: ['name']
+        })
+        Promise.all([category, subcategory, brand])
+        .then(([allCategory, allSubcategory, allBrand]) => {
+            // console.log('allCategory, allBrand:', {allCategory, allSubcategory, allBrand})
+        res.render('creacionproducto', {allCategory, allSubcategory, allBrand})})
         .catch(error => res.send(error))  //muestra vista de formulario de creacion
     },
-  
-
-	//guardar info cargada en formulario de creacion en la base de datos (.json)
-    create: (req, res) => {
+    store: (req, res) => {
         let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
-        db.Subcategories.findAll({
+        let subcategory = db.Subcategories.findOne({
             where: {
                 name: subcategoriaProducto,
                 category_id: categoriaAnimal
             },
             attributes: ['id', 'name', 'category_id'] 
-        }).then(subcategory => {
+        })
+        let brand = db.Brands.findOne({
+            where: {
+                id: marca
+            },
+            attributes: ['id', 'brand']
+        })
+        Promise.all([subcategory, brand])
+        .then(([allSubcategory, allBrand]) => {
+            console.log('allSubcategory ==>', allSubcategory)
             db.Products
                 .create(
                     {
@@ -60,83 +73,105 @@ const productControllers = {
                         stock: stock,
                         cost: costo,
                         discount: descuento,
-                        subcategory_id: subcategory.id
+                        subcategory_id: allSubcategory.id
                     }
                 )
-            for (let img of req.files) {
-                db.Products_images
-                    .create(
-                        {
-                            image: img
+                .then(product => {
+                    for (let img of req.files) {
+                        db.Products_images
+                            .create(
+                                {
+                                    product_sku: product.sku,
+                                    image: img.filename
+                                }
+                            )
+                    }
+                    db.Products_brands
+                        .create({
+                            product_sku: product.sku,
+                            brand_id: allBrand.id
+                        })
+                    if (allSubcategory.name == 'Alimentos') {
+                        for (let i = 0; i < kg.length; i++) {
+                            db.Foods
+                                .create({
+                                    product_sku: product.sku,
+                                    weight: Number(kg[i]),
+                                    cost_x_bag: Number(precio[i]),
+                                    quotesQuantity: Number(cantCuotasSegunKg[i])
+                                })
                         }
-                    )
-            }
-            
-        })
-    },
-	store: (req, res) => {
-        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, depositoEntrante, cantCuotasSegunKg} = req.body
-
-
-        let pesos = []
-
-        if (subcategoriaProducto === 'Alimentos') {
-            for (let i = 0; i < kg.length; i++) {
-                pesos.push({
-                    kg: Number(kg[i]),
-                    precio: Number(precio[i]),
-                    cantCuotasSegunKg: Number(cantCuotasSegunKg[i]),
-                    PrecioPorcantCuotasSegunKg: parseInt(precio[i]/cantCuotasSegunKg[i]),
-                    precioFinal: precio[i] - ((Number(precio[i]) * Number(descuento))/100)
-
+                    }
+                }).then(() => {
+                    return res.redirect('/products')
                 })
-               
-            }
-          
-        } else {
-            pesos = []
+                .catch(error => res.send(error))
+                })
             
-        }
+    },
+	// store: (req, res) => {
+    //     let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, depositoEntrante, cantCuotasSegunKg} = req.body
+
+
+    //     let pesos = []
+
+    //     if (subcategoriaProducto === 'Alimentos') {
+    //         for (let i = 0; i < kg.length; i++) {
+    //             pesos.push({
+    //                 kg: Number(kg[i]),
+    //                 precio: Number(precio[i]),
+    //                 cantCuotasSegunKg: Number(cantCuotasSegunKg[i]),
+    //                 PrecioPorcantCuotasSegunKg: parseInt(precio[i]/cantCuotasSegunKg[i]),
+    //                 precioFinal: precio[i] - ((Number(precio[i]) * Number(descuento))/100)
+
+    //             })
+               
+    //         }
+          
+    //     } else {
+    //         pesos = []
+            
+    //     }
    
       
-        let imagen = []
-        for (let i = 0; i < 1; i++) {
-            imagen.push({
-                imagen1: req.files[i] ? req.files[i].filename : null,
-                imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
-                imagen3: req.files[i + 2] ? req.files[i + 2].filename : null,
-            })
-        }
-        // : req.files.map(i => i.filename)
-        // console.log('imagenes:', imagenes)
+    //     let imagen = []
+    //     for (let i = 0; i < 1; i++) {
+    //         imagen.push({
+    //             imagen1: req.files[i] ? req.files[i].filename : null,
+    //             imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
+    //             imagen3: req.files[i + 2] ? req.files[i + 2].filename : null,
+    //         })
+    //     }
+    //     // : req.files.map(i => i.filename)
+    //     // console.log('imagenes:', imagenes)
 
-        let newPoduct = {       //kilogramos: igual a clave del database, y req.body.kilogramos > kilogramos debe ser igual al "name" del input del formulario de la vista.
-                                // le doy formato a la fecha. No hace falta incluir campo de fecha en creacion de prodcuto. Se asigna automatica// en la DB.
-                                // se debe 1ro instalar > npm install moment --save, y 2do > crear const moment = require('moment') para requerirlo.
-            fechaCreacion: moment().format('L'),   
-            sku: products[products.length - 1].sku + 1,
-            marca: marca,
-            nombre: nombre,
-            descripcion: descripcion,
-            imagen: imagen ? imagen[0] : null,
-            pesos,
-            categoriaAnimal: categoriaAnimal,
-            subcategoriaProducto: subcategoriaProducto,
-            cantidadCuotas: subcategoriaProducto !== 'Alimentos' ? Number(cantidadCuotas) : null,
-            montoCuotas: subcategoriaProducto !== 'Alimentos' ? Number(costo/cantidadCuotas) : null,
-            stock: Number(depositoEntrante),
-            depositoEntrante: Number(depositoEntrante),
-            costo: subcategoriaProducto !== 'Alimentos' ? Number(costo) : null,
-            descuento: Number(descuento),
-            costoFinal: costo - ((Number(costo) * Number(descuento))/100),
-            fechaActualizada: null
-        }
+    //     let newPoduct = {       //kilogramos: igual a clave del database, y req.body.kilogramos > kilogramos debe ser igual al "name" del input del formulario de la vista.
+    //                             // le doy formato a la fecha. No hace falta incluir campo de fecha en creacion de prodcuto. Se asigna automatica// en la DB.
+    //                             // se debe 1ro instalar > npm install moment --save, y 2do > crear const moment = require('moment') para requerirlo.
+    //         fechaCreacion: moment().format('L'),   
+    //         sku: products[products.length - 1].sku + 1,
+    //         marca: marca,
+    //         nombre: nombre,
+    //         descripcion: descripcion,
+    //         imagen: imagen ? imagen[0] : null,
+    //         pesos,
+    //         categoriaAnimal: categoriaAnimal,
+    //         subcategoriaProducto: subcategoriaProducto,
+    //         cantidadCuotas: subcategoriaProducto !== 'Alimentos' ? Number(cantidadCuotas) : null,
+    //         montoCuotas: subcategoriaProducto !== 'Alimentos' ? Number(costo/cantidadCuotas) : null,
+    //         stock: Number(depositoEntrante),
+    //         depositoEntrante: Number(depositoEntrante),
+    //         costo: subcategoriaProducto !== 'Alimentos' ? Number(costo) : null,
+    //         descuento: Number(descuento),
+    //         costoFinal: costo - ((Number(costo) * Number(descuento))/100),
+    //         fechaActualizada: null
+    //     }
 
-		    products.push(newPoduct);
-		    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
+	// 	    products.push(newPoduct);
+	// 	    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
 
-		res.redirect('/products') 
-	},
+	// 	res.redirect('/products') 
+	// },
 
     
     productdet: (req, res) => {

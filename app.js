@@ -2,12 +2,8 @@ const express = require('express');
 const mainRoutes = require('./src/routes/main');
 const usersRoutes = require('./src/routes/users');
 const productRoutes = require('./src/routes/product');
-//Aquí llamo a la ruta de las api de movies
-const apiProductsRouter = require('./src/routes/api/products')
-//Aquí llamo a la ruta de las api de actors
-// const apiGenresRouter = require('./routes/api/genres')
-//Aquí llamo a la ruta de las api de actors
-// const apiActorsRouter = require('./routes/api/actors')
+
+// const apiProductsRouter = require('./src/routes/api/products')
 
 const path = require('path');
 const methodOverride =  require('method-override');
@@ -36,9 +32,7 @@ app.use('/', mainRoutes);
 app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
 
-app.use('/api/products',apiProductsRouter);
-// app.use('/api/actors',apiActorsRouter);
-// app.use('/api/genres',apiGenresRouter);
+// app.use('/api/products',apiProductsRouter);
 
 app.use(cookieParser())
 app.use(cookieAuth)
