@@ -16,6 +16,7 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'brands',
         timestamps: true,
         createdAt: 'createdAt', //'createdAt' es el nombre de la columna
+        updatedAt: false,
         deletedAt: 'deletedAt'
     }
     const Brands = sequelize.define(alias,cols,config);
@@ -26,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
             through: 'products_brands',
             foreignKey: 'brand_id',
             otherKey: 'product_sku',
-            timestamps: true
+            timestamps: false
         });
     }
 

@@ -17,7 +17,6 @@ const productControllers = {
             include: ['products_images', 'foods']
         })
         .then(products => {
-            console.log('products:', products[0].foods[0].cost)
             res.render('productlist', {
                 productlist: products,
                 miUsuario: req.session.usuarioALoguearse
@@ -63,7 +62,6 @@ const productControllers = {
         })
         Promise.all([subcategory, brand])
         .then(([allSubcategory, allBrand]) => {
-            console.log('allSubcategory ==>', allSubcategory)
             db.Products
                 .create(
                     {
@@ -198,50 +196,158 @@ const productControllers = {
 
 
 
+    // edicionproducto: (req, res) => {
+
+    //     let product = products.find(p => p.sku == req.params.sku)
+	// 	res.render('edicionproducto', {products: product} )
+    // },
+
     edicionproducto: (req, res) => {
 
-        let product = products.find(p => p.sku == req.params.sku)
-		res.render('edicionproducto', {products: product} )
+        let brand = db.Brands.findAll({
+            attributes: ['id', 'brand']
+        });
+        let category = db.Categories.findAll({
+            attributes: ['id', 'animalType']
+        });
+        let subcategory = db.Subcategories.findAll({
+            attributes: ['name'],
+            group: ['name']
+        })
+        Promise.all([category, subcategory, brand])
+        .then(([allCategory, allSubcategory, allBrand]) => {
+            db.Products.findByPk(req.params.sku, {include: ['subcategories', 'foods', 'brands']})
+            .then(product => {
+                db.Categories.findOne({
+                    where: {
+                        id: product.subcategories.category_id
+                    }
+                })
+                .then(category => {
+                    res.render('edicionproducto', {products: product, category, allCategory, allSubcategory, allBrand} )
+                })
+            })
+        })
     },
 
     
     update: (req, res) => {
 		
-        let pesos = []
-        for (let i = 0; i < kg.length; i++) {
-            pesos.push({
-                kg: Number(kg[i]),
-                precio: Number(precio[i])
-            })
-        }
+        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
+        let subcategory = db.Subcategories.findOne({
+            where: {
+                name: subcategoriaProducto,
+                category_id: categoriaAnimal
+            },
+            attributes: ['id', 'name', 'category_id'] 
+        })
+        let brand = db.Brands.findOne({
+            where: {
+                id: marca
+            },
+            attributes: ['id', 'brand']
+        })
+        Promise.all([subcategory, brand])
+        .then(([allSubcategory, allBrand]) => {
+            db.Products
+                .update(
+                    {
+                        where: {
+                            sku: req.params.sku
+                        }
+                    },
+                    {
+                        name: nombre,
+                        description: descripcion,
+                        quotesQuantity: cantidadCuotas,
+                        stock: stock,
+                        cost: costo,
+                        discount: descuento,
+                        subcategory_id: allSubcategory.id
+                    }
+                )
+                .then(product => {
+                    for (let img of req.files) {
+                        db.Products_images
+                            .update(
+                                {
+                                    where: {
+                                        product_sku: req.params.sku
+                                    }
+                                },
+                                {
+                                    image: img.filename
+                                }
+                            )
+                    }
+                    db.Products_brands
+                        .update(
+                            {
+                                where: {
+                                    product_sku: req.params.sku
+                                }
+                            },
+                            {
+                                brand_id: allBrand.id
+                            }
+                        )
+                    if (allSubcategory.name == 'Alimentos') {
+                        for (let i = 0; i < kg.length; i++) {
+                            db.Foods
+                                .update(
+                                    {
+                                        where: {
+                                            product_sku: req.params.sku
+                                        }
+                                    },
+                                    {
+                                    weight: Number(kg[i]),
+                                    cost_x_bag: Number(precio[i]),
+                                    quotesQuantity: Number(cantCuotasSegunKg[i])
+                                })
+                        }
+                    }
+                }).then(() => {
+                    return res.redirect('/products')
+                })
+                .catch(error => res.send(error))
+                })
 
-        let imagen = []
-        for (let i = 0; i < 1; i++) {
-            imagen.push({
-                imagen1: req.files[i] ? req.files[i].filename : null,
-                imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
-                imagen3: req.files[i + 2] ? req.files[i + 2].filename : null,
-            })
-        }
-        products[req.params.sku - 1].fechaActualizada =  moment().format('L'),
-		products[req.params.sku - 1].marca = req.body.marca,
-        products[req.params.sku - 1].nombre = req.body.nombre,
-        products[req.params.sku - 1].descuento = Number(req.body.descuento),  // edito el objeto cuya posicion dentro del array corresponde al id asignado.
-        products[req.params.sku - 1].descripcion = req.body.descripcion,
-        products[req.params.sku - 1].imagen = imagen ? imagen[0] : null,
-        products[req.params.sku - 1].kilogramos1 = Number(req.body.kilogramos1),
-        products[req.params.sku - 1].categoriaAnimal = req.body.categoriaAnimal,
-        products[req.params.sku - 1].subcategoriaProducto = req.body.subcategoriaProducto,
-        products[req.params.sku - 1].precio = Number(req.body.precio),
-        products[req.params.sku - 1].cantidadCuotas = Number(req.body.cantidadCuotas),
-        products[req.params.sku - 1].montoCuotas = Number(req.body.precio/req.body.cantidadCuotas),
-        products[req.params.sku - 1].stock = Number(req.body.stock),
-        products[req.params.sku - 1].depositoEntrante = Number(req.body.depositoEntrante)
+    //     let pesos = []
+    //     for (let i = 0; i < kg.length; i++) {
+    //         pesos.push({
+    //             kg: Number(kg[i]),
+    //             precio: Number(precio[i])
+    //         })
+    //     }
+
+    //     let imagen = []
+    //     for (let i = 0; i < 1; i++) {
+    //         imagen.push({
+    //             imagen1: req.files[i] ? req.files[i].filename : null,
+    //             imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
+    //             imagen3: req.files[i + 2] ? req.files[i + 2].filename : null,
+    //         })
+    //     }
+    //     products[req.params.sku - 1].fechaActualizada =  moment().format('L'),
+	// 	products[req.params.sku - 1].marca = req.body.marca,
+    //     products[req.params.sku - 1].nombre = req.body.nombre,
+    //     products[req.params.sku - 1].descuento = Number(req.body.descuento),  // edito el objeto cuya posicion dentro del array corresponde al id asignado.
+    //     products[req.params.sku - 1].descripcion = req.body.descripcion,
+    //     products[req.params.sku - 1].imagen = imagen ? imagen[0] : null,
+    //     products[req.params.sku - 1].kilogramos1 = Number(req.body.kilogramos1),
+    //     products[req.params.sku - 1].categoriaAnimal = req.body.categoriaAnimal,
+    //     products[req.params.sku - 1].subcategoriaProducto = req.body.subcategoriaProducto,
+    //     products[req.params.sku - 1].precio = Number(req.body.precio),
+    //     products[req.params.sku - 1].cantidadCuotas = Number(req.body.cantidadCuotas),
+    //     products[req.params.sku - 1].montoCuotas = Number(req.body.precio/req.body.cantidadCuotas),
+    //     products[req.params.sku - 1].stock = Number(req.body.stock),
+    //     products[req.params.sku - 1].depositoEntrante = Number(req.body.depositoEntrante)
 
     
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))   
+    // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))   
 
-    res.redirect('/products')  // luego de poner 'guardar/sobreescribir' envia a pagina de productos.
+    // res.redirect('/products')  // luego de poner 'guardar/sobreescribir' envia a pagina de productos.
 },
 
     destroy : (req, res) => {

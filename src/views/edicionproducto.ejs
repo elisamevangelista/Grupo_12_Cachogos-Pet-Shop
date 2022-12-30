@@ -40,31 +40,45 @@
 
                               
                 <div class = "nombre-producto">
-                    <label for="nombreProdcuto">Nombre: <%= products.nombre %></label>
+                    <label for="nombreProdcuto">Nombre: <%= products.name %></label>
                     <input class="nombreprod" type="text" name="nombre" id="nombreProdcuto" placeholder="Nombre del producto" >
 
                 </div>
 
                     
                 <div class = "descripcion-producto">
-                    <label for="descripcionProdcuto">Descripción: <%= products.descripcion %></label>
-                    <input class="descriProd" type="text" name="descripcion" id="descripcionProdcuto" placeholder="Descripcion del producto">
+                    <label for="descripcionProdcuto">Descripción: <%= products.description %></label>
+                    <input class="descriProd" type="textArea" name="descripcion" id="descripcionProdcuto" placeholder="Descripcion del producto">
 
                 </div>
 
 
-                <div class = "marca-producto">
-                    <label for="marcaProducto">Marca: <%= products.marca %></label>
+                <!-- <div class = "marca-producto">
+                    <label for="marcaProducto">Marca:</label>
                     <input class="marcaProd" type="text" name="marca" id="marcaProducto" placeholder="Marca del producto">
     
-                </div>
+                </div> -->
+
+                <fieldset>
+                    <legend>Marca: <%= products.brands[0].brand %></legend>
+                    <div class="marca-producto">
+                        <select name="marca" id="marca">
+                            <option value="" disabled selected>- Seleccione la Marca - </option>
+                            <% allBrand.forEach(brand=> { %>
+                                <option value="<%= brand.id %>">
+                                    <%= brand.brand %>
+                                </option>
+                                <% }); %>
+                        </select>
+                    </div>
+                </fieldset>
     
               
                 <div class="archivos">
                     <div class = "imagen-producto">
-                        <label for="imagenProducto">Imagen: <%= products.imagen %></label>
+                        <label for="imagenProducto">Imagen</label>
                         <div class="imgProd">
-                            <input type="file" name="imagen" id="imagenProducto">
+                            <input type="file" name="imagen" id="imagenProducto" multiple>
                         </div>
                     </div>
 
@@ -76,10 +90,17 @@
             <div class = "categoria-animal">
 
                 <fieldset>
-                    <legend>Categoría - Animales : <%= products.categoriaAnimal %></legend>
+                    <legend>Categoría - Animales: <%= category.animalType %></legend>
 
-                    
                     <div>
+                        <select name="categoriaAnimal" id="categoriaAnimal" >
+                            <option value="" disabled selected>- Seleccione la categoria - </option>
+                            <% allCategory.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.animalType %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <!-- <div>
                         <label for="perro"><input class="categPerro" type="radio" name="categoriaAnimal" id="perro">Perro</label>
                         
                      </div>
@@ -97,7 +118,7 @@
                     <div>
                         <label for="ave"><input class="categAve" type="radio" name="categoriaAnimal" id="ave" >Ave</label>
                         
-                    </div>
+                    </div> -->
 
 
                 </fieldset>
@@ -109,9 +130,17 @@
                 
                 <fieldset class="categoria-fieldset-producto">
 
-                    <legend>Categoría - Productos: <%= products.subcategoriaProducto %></legend>
+                    <legend>Categoría - Productos: <%= products.subcategories.name %></legend>
 
                     <div>
+                        <select name="subcategoriaProducto" id="subcategoriaProducto" >
+                            <option value="" disabled selected>- Seleccione la subcategoria - </option>
+                            <% allSubcategory.forEach(subcategory => { %>
+                            <option value="<%= subcategory.name %>"><%= subcategory.name %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <!-- <div>
                     
                         <label for="alimento"><input class="alim" type="radio" name="subcategoriaProducto" id="alimento">Alimentos</label>
                         
@@ -128,7 +157,7 @@
                     <div>
                         <label for="PaseosYViajes"><input class="paseo-viaje" type="radio"  id="PaseosYViajes" name="subcategoriaProducto" >Paseos y viajes</label>
                         
-                    </div>
+                    </div> -->
 
                 </fieldset>
 
@@ -139,21 +168,30 @@
 
 
                 <div class = "kg-producto">
-                    <label for="kilosProducto1">Kg1: <%= products.kilogramos1 %> Kg</label>
-                    <input class="kilosProd" type="number" name="kilogramos1" id="kilosProducto1" placeholder="Cantidad de kg - Opcion 1" >
-
+                    <label for="kilosProducto1">Kg1:</label>
+                    <input class="kilosProd" type="number" name="kg" id="kilosProducto1" placeholder="Cantidad de kg - Opcion 1" >
+                    <label for="precioProducto1">precio1:</label>
+                    <input class="kilosProd" type="number" name="precio" id="precioProducto1" placeholder="Precio por kg - Opcion 1" >
+                    <label for="cuotaProducto1">cuotas:</label>
+                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto1" placeholder="cuotas por kg - Opcion 1" >
                 </div>
 
                 <div class = "kg-producto">
-                    <label for="kilosProducto2">Kg2: <%= products.kilogramos2 %> Kg</label>
-                    <input class="kilosProd" type="number" name="kilogramos2" id="kilosProducto2" placeholder="Cantidad de kg - Opcion 2" >
-
+                    <label for="kilosProducto2">Kg2:</label>
+                    <input class="kilosProd" type="number" name="kg" id="kilosProducto2" placeholder="Cantidad de kg - Opcion 2" >
+                    <label for="precioProducto2">precio2:</label>
+                    <input class="kilosProd" type="number" name="precio" id="precioProducto2" placeholder="Precio por kg - Opcion 2" >
+                    <label for="cuotaProducto2">cuotas:</label>
+                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto2" placeholder="cuotas por kg - Opcion 2" >
                 </div>
 
                 <div class = "kg-producto">
-                    <label for="kilosProducto3">Kg3: <%= products.kilogramos3 %> Kg</label>
-                    <input class="kilosProd" type="number" name="kilogramos3" id="kilosProducto3" placeholder="Cantidad de kg - Opcion 3" >
-
+                    <label for="kilosProducto3">Kg3:</label>
+                    <input class="kilosProd" type="number" name="kg" id="kilosProducto3" placeholder="Cantidad de kg - Opcion 3" >
+                    <label for="precioProducto3">precio3:</label>
+                    <input class="kilosProd" type="number" name="precio" id="precioProducto3" placeholder="Precio por kg - Opcion 3" >
+                    <label for="cuotaProducto3">cuotas:</label>
+                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto3" placeholder="cuotas por kg - Opcion 3" >
                 </div>
         
             </fieldset>
@@ -163,7 +201,7 @@
 
 
                 <div class = "precio-producto">
-                    <label for="precioProducto">AR$: <%= products.precio %> </label>
+                    <label for="precioProducto">AR$: <%= products.cost %> </label>
                     <input class="precioProd" type="number" name="precio" id="precioProducto" placeholder="Precio del producto">
 
                 </div>
@@ -177,7 +215,7 @@
 
 
                 <div class = "cuotas-producto">
-                    <label for="cuotasProducto">Cuotas: <%= products.cantidadCuotas %></label>
+                    <label for="cuotasProducto">Cuotas: <%= products.quotesQuantity %></label>
                     <input class="cuotasProd" type="number" name="cantidadCuotas" id="cantidadCuotas" placeholder="Cantidad de cuotas del producto" >
 
                 </div>
@@ -186,18 +224,18 @@
             </fieldset>
 
 
-            <fieldset>
-                <legend>Deposito Entrante: <%=products.depositoEntrante %> unidades.</legend>
+            <!-- <fieldset>
+                <legend>Deposito Entrante unidades.</legend>
 
 
-                <!-- <div class = "depositoEntrante-producto">
+                <div class = "depositoEntrante-producto">
                     <label for="depositoProducto">Unidades entrantes:</label>
                     <input class="depoProd" type="number" name="depositoEntrante" id="depositoEntrante" placeholder="Deposito entrate del producto" >
 
-                </div> -->
+                </div>
         
 
-            </fieldset>
+            </fieldset> -->
 
 
             <fieldset>
