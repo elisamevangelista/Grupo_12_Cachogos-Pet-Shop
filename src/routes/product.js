@@ -38,7 +38,7 @@ router.get('/edit', productControllers.edicionporsku)
 
 /*** EDIT ONE PRODUCT***/
 router.get('/edit/:sku', productControllers.edicionproducto)
-router.put('/:sku', uploadFile.single('imagen'), productControllers.update); 
+router.put('/:sku', uploadFile.array('imagen'), productControllers.update); 
 
 /*** DELETE ONE PRODUCT***/  
 router.delete('/delete/:sku', productControllers.destroy);  /*** seria: /products/delete/:id ***/ 

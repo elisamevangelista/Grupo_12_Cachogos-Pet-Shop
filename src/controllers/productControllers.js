@@ -17,6 +17,7 @@ const productControllers = {
             include: ['products_images', 'foods']
         })
         .then(products => {
+            console.log('products:', products.foods)
             res.render('productlist', {
                 productlist: products,
                 miUsuario: req.session.usuarioALoguearse
@@ -100,7 +101,8 @@ const productControllers = {
                                 })
                         }
                     }
-                }).then(() => {
+                })
+                .then(() => {
                     return res.redirect('/products')
                 })
                 .catch(error => res.send(error))
@@ -232,7 +234,7 @@ const productControllers = {
 
     
     update: (req, res) => {
-		
+		let product_sku = req.params.sku
         let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
         let subcategory = db.Subcategories.findOne({
             where: {
@@ -252,11 +254,6 @@ const productControllers = {
             db.Products
                 .update(
                     {
-                        where: {
-                            sku: req.params.sku
-                        }
-                    },
-                    {
                         name: nombre,
                         description: descripcion,
                         quotesQuantity: cantidadCuotas,
@@ -264,54 +261,60 @@ const productControllers = {
                         cost: costo,
                         discount: descuento,
                         subcategory_id: allSubcategory.id
+                    },
+                    {
+                        where: {
+                            sku: req.params.sku
+                        }
                     }
                 )
-                .then(product => {
+                // .then(product => {
                     for (let img of req.files) {
                         db.Products_images
                             .update(
                                 {
-                                    where: {
-                                        product_sku: req.params.sku
-                                    }
+                                    image: img.filename
                                 },
                                 {
-                                    image: img.filename
+                                    where: {
+                                        product_sku: product_sku
+                                    }
                                 }
                             )
                     }
                     db.Products_brands
                         .update(
                             {
-                                where: {
-                                    product_sku: req.params.sku
-                                }
+                                brand_id: allBrand.id
                             },
                             {
-                                brand_id: allBrand.id
+                                where: {
+                                    product_sku: product_sku
+                                }
                             }
                         )
-                    if (allSubcategory.name == 'Alimentos') {
+                    if (allSubcategory.name === 'Alimentos') {
                         for (let i = 0; i < kg.length; i++) {
                             db.Foods
                                 .update(
                                     {
-                                        where: {
-                                            product_sku: req.params.sku
-                                        }
+                                        weight: Number(kg[i]),
+                                        cost_x_bag: Number(precio[i]),
+                                        quotesQuantity: Number(cantCuotasSegunKg[i])
                                     },
                                     {
-                                    weight: Number(kg[i]),
-                                    cost_x_bag: Number(precio[i]),
-                                    quotesQuantity: Number(cantCuotasSegunKg[i])
-                                })
-                        }
+                                        where: {
+                                            product_sku: product_sku
+                                        }
+                                    }
+                                    )
+                                }
                     }
                 }).then(() => {
                     return res.redirect('/products')
                 })
                 .catch(error => res.send(error))
-                })
+                
 
     //     let pesos = []
     //     for (let i = 0; i < kg.length; i++) {
@@ -352,11 +355,24 @@ const productControllers = {
 
     destroy : (req, res) => {
 
-    let producstFiltrados = products.filter(p => p.sku != req.params.sku)
-  
-    fs.writeFileSync(productsFilePath, JSON.stringify(producstFiltrados, null, ' '))   
+        let product_sku = req.params.sku;
+        db.Foods
+        .destroy({where: {product_sku: product_sku}})
+        db.Products_brands
+        .destroy({where: {product_sku: product_sku}})
+        db.Products_images
+        .destroy({where: {product_sku: product_sku}})
+        db.Products
+        .destroy({where: {sku: product_sku}}) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/products')})
+        .catch(error => res.send(error)) 
 
-    res.redirect('/products')  // luego de poner 'guardar/sobreescribir' envia a pagina de productos.
+    // let producstFiltrados = products.filter(p => p.sku != req.params.sku)
+  
+    // fs.writeFileSync(productsFilePath, JSON.stringify(producstFiltrados, null, ' '))   
+
+    // res.redirect('/products')  // luego de poner 'guardar/sobreescribir' envia a pagina de productos.
     
     
 },

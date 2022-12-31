@@ -3,7 +3,8 @@ const path = require('path');
 const moment = require('moment')
 let bcrypt = require('bcryptjs') //requerir el metodo de la encriptacion de password.
 
-const { check, validationResult} = require("express-validator")
+const { check, validationResult} = require("express-validator");
+const db = require('../db/models');
 
 
 const usersFilePath = path.join(__dirname, '../data/usersDB.json');
@@ -22,29 +23,42 @@ const usersControllers = {
 
     store: (req, res) => {
         let errors = validationResult(req);
+        console.log('error:', errors)
         if (errors.isEmpty()) {
             let {nombre, apellido, email, password} = req.body
 
             let contraseña = password
     
             let contraseñaEncriptada = bcrypt.hashSync(contraseña, 10)
-            
-            let newUser = {       
-                
-                id: users[users.length - 1].id + 1,
-                fechaCreacion: moment().format('L'),
-                nombre: nombre,   
-                apellido: apellido,
+            console.log('req.files:', email)
+            db.Users
+            .create({
+                name: nombre,
+                surname: apellido,
                 email: email,
-                imagen: req.file ? req.file.filename : 'bird-categoria.jpg',
-                password: contraseñaEncriptada,  
-                tipodeusuario: 'usuario'
-                }
+                image: req.file.filename,
+                password: contraseñaEncriptada,
+                userType: 'user'
+            })
+            .then(() => {
+                res.redirect('/')
+            })
+            // let newUser = {       
+                
+            //     id: users[users.length - 1].id + 1,
+            //     fechaCreacion: moment().format('L'),
+            //     nombre: nombre,   
+            //     apellido: apellido,
+            //     email: email,
+            //     imagen: req.file ? req.file.filename : 'bird-categoria.jpg',
+            //     password: contraseñaEncriptada,  
+            //     tipodeusuario: 'usuario'
+            //     }
     
-                users.push(newUser);
-                fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '))
+            //     users.push(newUser);
+            //     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '))
     
-            res.redirect('/')  
+            // res.redirect('/')  
         } else {
             res.send("Datos incorrectos")
         }

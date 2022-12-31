@@ -25,7 +25,7 @@ const authMiddleware = require('../middleware/authMiddleware')
 
 /*** REGISTER ONE USER***/    //el M userLogged funciona unicamente si el usuario esta logueado, es decir tiene abierta su sesion.
 router.get('/register', userLogged, usersController.register)  // image es el valor del atributo 'name' para el input de la imagen en el formulario.
-router.post('/register', validacionRegister, uploadFile.single('image'), usersController.store); //validacionRegister-> SERIA EL MIDDLEWARE. LO SACAMOS PORQUE DEVUELVE ERROR
+router.post('/register', uploadFile.single('image'), usersController.store); //validacionRegister-> SERIA EL MIDDLEWARE. LO SACAMOS PORQUE DEVUELVE ERROR
 
 /*** LOGIN ONE USER***/  
 

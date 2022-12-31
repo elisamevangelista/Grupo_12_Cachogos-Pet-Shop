@@ -18,9 +18,10 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'products_brands',
+        paranoid: true,
         timestamps: true,
         createdAt: 'createdAt',
-        updatedAt: false,
+        updatedAt: 'updatedAt',
         deletedAt: 'deletedAt'
     }
     const Products_brands = sequelize.define(alias,cols,config);
