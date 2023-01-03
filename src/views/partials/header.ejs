@@ -50,7 +50,7 @@
 
                <% if (locals.miUsuario) { %>    <!-- locals verifica si req.session existe, e importa lada data guardadda si existe. -->
                                                                 
-                <li class="IniciarSesion"> <%= miUsuario.nombre %> </li>
+                <li class="IniciarSesion"> <%= miUsuario.name %> </li>
                 <li><a class="IniciarSesion" href="/users/logout">Cerrar Sesión</a></li>
             <% }  else { %>
                 <li><a class="IniciarSesion" href="/users/login">Iniciar Sesión/</a></li>

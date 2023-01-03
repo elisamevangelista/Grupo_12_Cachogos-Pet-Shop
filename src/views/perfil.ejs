@@ -12,9 +12,9 @@
     <main>
     
         <% if (locals.miUsuario) { %>    <!-- locals verifica si req.session existe, e importa lada data guardadda si existe. -->
-            <p>Bienvenid@ <%= miUsuario.nombre %> !</p>                                                   
+            <p>Bienvenid@ <%= miUsuario.name %> !</p>    <!-- (.name, .email, .image) son nombres especificos de las columnas de la base de datos de la tabla users -->  
             <p>Su correo electrónico es: <%= miUsuario.email %> </p>
-            <img src="/images/users/<%= miUsuario.imagen %> " alt="imagen"> 
+            <img src="/images/users/<%= miUsuario.image %> " alt="imagen"> 
                       
 
         <% }  else { %>

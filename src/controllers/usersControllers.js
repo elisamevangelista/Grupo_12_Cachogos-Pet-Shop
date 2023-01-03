@@ -40,8 +40,11 @@ const usersControllers = {
                 password: contraseñaEncriptada,
                 userType: 'user'
             })
-            .then(() => {
-                res.redirect('/')
+            .then((user) => {
+                delete user.password
+                req.session.usuarioALoguearse = user
+                res.redirect("/users/perfil")
+                // res.redirect('/')
             })
             // let newUser = {       
                 
@@ -59,9 +62,12 @@ const usersControllers = {
             //     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '))
     
             // res.redirect('/')  
-        } else {
-            res.send("Datos incorrectos")
+        } else{
+            return res.render("users/register", {errors: errors.mapped, old: req.body}) //old: req.body-> mantiene los datos correctos cargados por el usuario.
         }
+        // else {
+        //     res.send("Datos incorrectos")
+        // }
         
        },
 
@@ -70,44 +76,77 @@ const usersControllers = {
         let errors = validationResult(req);  //error es un objeto. Validation result es el resultado de la validacion. (req -> llegan los datos del forumlaruio) 
         
          if(errors.isEmpty()){
-            let usersJSON = fs.readFileSync(usersFilePath, 'utf-8')
-            let users;
-            if(usersJSON == ""){
-                users = []
-            } else {
-                users = JSON.parse(usersJSON)
-            }
+            // let usersJSON = fs.readFileSync(usersFilePath, 'utf-8')
+            let usuarioALoguearse;
+            db.Users.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+            .then(user => {
+                if (bcrypt.compareSync(req.body.password, user.password)) {
+                    delete user.password
+                    usuarioALoguearse = user
+                }
+                    
+                if(usuarioALoguearse == undefined){
+                    return res.render("users/login", {errors:[
+                        {msg: "Credenciales Inválidas"}
+                    ]})      
+                }
+                    //console.log("usuarioALog:", usuarioALoguearse)
+                    req.session.usuarioALoguearse = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
+                   //console.log('req.session:', req.session)
+    
+                                                            //recordame es el valor del atributo 'name' del formulario de login.
+                    if(req.body.recordame != undefined){  //si por Formu se clickeo el checkbox 'recordarme', entonces se guarda en la cookie el mail del usuario regristrado, en un tiempo de 1 min.
+                        
+                        res.cookie('recordame', usuarioALoguearse.email, {maxAge: 600000})   
+                       // console.log("cookieres:", res.cookie())
+                    }
+                                
+                    
+                    res.redirect("/users/perfil")
+                })
+                
+            
+            // let users;
+            // if(usersJSON == ""){
+            //     users = []
+            // } else {
+            //     users = JSON.parse(usersJSON)
+            // }
              //for (const user of users) {
                // if(user.email)
                
-               let usuarioALoguearse;    
-            for (let i=0; i<users.length; i++){
-                if(users[i].email == req.body.email){
-                    if(bcrypt.compareSync(req.body.password, users[i].password)){
-                        delete users[i].password;
-                        usuarioALoguearse = users[i];
-                        break;
-                    }
-                }
-            }
-            if(usuarioALoguearse == undefined){
-                return res.render("users/login", {errors:[
-                    {msg: "Credenciales Inválidas"}
-                ]})      
-            }
-                //console.log("usuarioALog:", usuarioALoguearse)
-                req.session.usuarioALoguearse = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
-               //console.log('req.session:', req.session)
+            //    let usuarioALoguearse;    
+            // for (let i=0; i<users.length; i++){
+            //     if(users[i].email == req.body.email){
+            //         if(bcrypt.compareSync(req.body.password, users[i].password)){
+            //             delete users[i].password;
+            //             usuarioALoguearse = users[i];
+            //             break;
+            //         }
+            //     }
+            // }
+            // if(usuarioALoguearse == undefined){
+            //     return res.render("users/login", {errors:[
+            //         {msg: "Credenciales Inválidas"}
+            //     ]})      
+            // }
+            //     //console.log("usuarioALog:", usuarioALoguearse)
+            //     req.session.usuarioALoguearse = usuarioALoguearse    //generacion de identificacion del cliente cuando esta logueado.
+            //    //console.log('req.session:', req.session)
 
-                                                        //recordame es el valor del atributo 'name' del formulario de login.
-                if(req.body.recordame != undefined){  //si por Formu se clickeo el checkbox 'recordarme', entonces se guarda en la cookie el mail del usuario regristrado, en un tiempo de 1 min.
+            //                                             //recordame es el valor del atributo 'name' del formulario de login.
+            //     if(req.body.recordame != undefined){  //si por Formu se clickeo el checkbox 'recordarme', entonces se guarda en la cookie el mail del usuario regristrado, en un tiempo de 1 min.
                     
-                    res.cookie('recordame', usuarioALoguearse.email, {maxAge: 60000})   
-                   // console.log("cookieres:", res.cookie())
-                }
+            //         res.cookie('recordame', usuarioALoguearse.email, {maxAge: 600000})   
+            //        // console.log("cookieres:", res.cookie())
+            //     }
                             
                 
-                res.redirect("/users/perfil")
+            //     res.redirect("/users/perfil")
               
 
 
