@@ -184,7 +184,7 @@
 
                     <!-- precioKGSeleccionado? precioKGSeleccionado.precio -> existe query ingresado por navegador? si existe, devolve el valor de 'precio' para ese objeto perteneciente a 'precioKGSeleccionado'-->
                     <!-- : products.precio -> si no existe, devuelve el valor de la propiedad 'precio' total del objeto coincidente por sku-->
-                    <li class="precioProducto-moblie">$ <%= products?.cost > 0 ? products.cost : products?.foods[0]?.cost_x_bag %></li>
+                    <li class="precioProducto-moblie">$ <%= products?.cost > 0 ? products.cost : productSelect ? productSelect.cost_x_bag : products?.foods[0]?.cost_x_bag %></li>
                          <!-- si existe prodcuts y ademas cost es >0 devuelve el costo del prodcuto, y si no si existe products y el food, devuelve el valor-->
                     
                     <% if (products.foods.length !== 0 && products.foods[0].quotesQuantity > 1 && (products.foods[1].quotesQuantity > 1 && products.foods[2].quotesQuantity > 1) || products.quotesQuantity > 1) { %> 
