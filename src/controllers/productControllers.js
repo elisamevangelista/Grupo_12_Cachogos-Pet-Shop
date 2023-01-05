@@ -179,11 +179,13 @@ const productControllers = {
                     //req.params.sku es el sku que ingresamos por navegador. De ese registro de SKU, trae las tablas del include.
         db.Products.findByPk(req.params.sku, {include: ['subcategories', 'foods', 'brands', 'products_images']})
         .then(producto => {
-            console.log('products.brands[0]', producto.brands[0])
-            let pesoSeleccionado = producto.filter(p => p.weight == req.query.kg)
+            // let product = new Array(producto)
+            let pesoSeleccionado = producto.foods.filter(p => p.weight == req.query.kg)
+              
+            console.log('pesoSeleccionado:', pesoSeleccionado)
             res.render('productdet', {
                 products: producto,
-                productSelect: pesoSeleccionado,
+                productSelect: pesoSeleccionado[0],
                 miUsuario: req.session.usuarioALoguearse
             } )
 
