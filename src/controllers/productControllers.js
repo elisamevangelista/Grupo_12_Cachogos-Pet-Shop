@@ -176,17 +176,22 @@ const productControllers = {
     
     productdet: (req, res) => {
 
-        let product = products.find(p => p.sku == req.params.sku)
-        let objetoPesos = product.pesos.filter(p => p.kg == req.query.kg)  //'kg' es el la propiedad de los objetos que estan dentro de la clave 'pesos' de cada producto del .json
-        
-        console.log('objetoPesos:' , objetoPesos[0])
-		
+                    //req.params.sku es el sku que ingresamos por navegador. De ese registro de SKU, trae las tablas del include.
+        db.Products.findByPk(req.params.sku, {include: ['subcategories', 'foods', 'brands', 'products_images']})
+        .then(producto => {
+            console.log('products.brands[0]', producto.brands[0])
+            let pesoSeleccionado = producto.filter(p => p.weight == req.query.kg)
+            res.render('productdet', {
+                products: producto,
+                productSelect: pesoSeleccionado,
+                miUsuario: req.session.usuarioALoguearse
+            } )
+
+        })
+        // let product = products.find(p => p.sku == req.params.sku)
+        // let objetoPesos = product.pesos.filter(p => p.kg == req.query.kg)  //'kg' es el la propiedad de los objetos que estan dentro de la clave 'pesos' de cada producto del .json      		
         // precio -> es un objeto del array 'pesos' que tiene las pros 'kg' y 'precio'.
-        res.render('productdet', {
-            products: product,
-            productSelect: objetoPesos[0],
-            miUsuario: req.session.usuarioALoguearse
-        } )
+        
     },
 
 

@@ -31,7 +31,7 @@
                 <div class="div-fotoppal-fotospeque">
                 <div class="fotoProducto-Mobile">
                     
-                    <img class="fotoProductoCarrouuselMobile" src = "/images/logos-marcas/<%= products.imagen %>" alt="Producto">
+                    <img class="fotoProductoCarrouuselMobile" src = "/images/logos-marcas/log-purina.png" alt="Producto">
 
 
                 </div>
@@ -62,7 +62,7 @@
                             <div class="itemCarruselFotos" id="itemCarruselFotos-1">
                                 <div class="imagenCarruselFotos" id="imagenCarruselFotos-1">
                                     <div class="fotoProducto-Mobile">
-                                        <img src="/images/logos-marcas/<%= products.imagen %>" />
+                                        <img src="/images/logos-marcas/log-purina.png" />
                                     </div>
                                 </div>
                                 <div class="flechasCarruselFotos">
@@ -95,7 +95,7 @@
                     
                             <div class="itemCarruselFotos" id="itemCarruselFotos-2">
                                 <div class="imagenCarruselFotos" id="imagenCarruselFotos-2">
-                                    <img src="/images/logos-marcas/<%= products.imagen %>" />
+                                    <img src="/images/logos-marcas/log-purina.png" />
                                 </div>
                                 <div class="flechasCarruselFotos">
                                     <a href="#itemCarruselFotos-1"><i class="fa-solid fa-angle-left"></i></a>
@@ -127,7 +127,7 @@
                     
                             <div class="itemCarruselFotos" id="itemCarruselFotos-3">
                                 <div class="imagenCarruselFotos" id="imagenCarruselFotos-3">
-                                    <img src="/images/logos-marcas/<%= products.imagen %>" />
+                                    <img src="/images/logos-marcas/log-purina.png" />
                                 </div>
                                 <div class="flechasCarruselFotos">
                                     <a href="#itemCarruselFotos-2"><i class="fa-solid fa-angle-left"></i></a>
@@ -172,10 +172,10 @@
                 
                 <div class ="Producto-descripcion">
 
-                    <h2> <%= products.nombre %></h2>
+                    <h2> <%= products.name %></h2>
                 
-                    <div class="div-enlaceMarca-SKU-mobile">
-                        <li class="enlaceMarca-li-mobile"><a class="enlaceMarca-a-mobile" href="Sucursales.html"><%= products.marca %></a></li>
+                    <div class="div-enlaceMarca-SKU-mobile">   <!-- products es el producto que coicide el sku de navegador con el de la DB. Ademas .brands es la Tabla ´brands' y [0] es la posicion cero del array-->
+                        <li class="enlaceMarca-li-mobile"><a class="enlaceMarca-a-mobile" href="Sucursales.html"><%= products.brands[0].brand %></a></li>
                         <li class="sepearador-mobile">|</li>
                         <li class="SKU-mobile">SKU: <%= products.sku %></li>
                         
@@ -184,14 +184,14 @@
 
                     <!-- precioKGSeleccionado? precioKGSeleccionado.precio -> existe query ingresado por navegador? si existe, devolve el valor de 'precio' para ese objeto perteneciente a 'precioKGSeleccionado'-->
                     <!-- : products.precio -> si no existe, devuelve el valor de la propiedad 'precio' total del objeto coincidente por sku-->
-                    <li class="precioProducto-moblie">$ <%= productSelect ? productSelect.precio : products.pesos.length !== 0 ? products.pesos[0].precio : products.costo %></li>
+                    <li class="precioProducto-moblie">$ <%= products?.cost > 0 ? products.cost : products?.foods[0]?.cost_x_bag %></li>
+                         <!-- si existe prodcuts y ademas cost es >0 devuelve el costo del prodcuto, y si no si existe products y el food, devuelve el valor-->
                     
-                    
-                    <% if (products.pesos.length !== 0 && products.pesos[0].cantCuotasSegunKg > 1 && (products.pesos[1].cantCuotasSegunKg > 1 && products.pesos[2].cantCuotasSegunKg > 1) || products.cantidadCuotas > 1) { %> 
-                        <li class="cuotas-mobile">Hasta <%= productSelect ? productSelect.cantCuotasSegunKg : products.pesos.length !== 0 ? products.pesos[0].cantCuotasSegunKg : products.cantidadCuotas %> cuotas sin interes de $<%= productSelect ? productSelect.PrecioPorcantCuotasSegunKg : products.pesos.length !== 0 ? products.pesos[0].PrecioPorcantCuotasSegunKg : products.montoCuotas %> con Bancos seleccionados</li>
+                    <% if (products.foods.length !== 0 && products.foods[0].quotesQuantity > 1 && (products.foods[1].quotesQuantity > 1 && products.foods[2].quotesQuantity > 1) || products.quotesQuantity > 1) { %> 
+                        <li class="cuotas-mobile">Hasta <%= productSelect ? productSelect.quotesQuantity : products.foods.length !== 0 ? products.foods[0].quotesQuantity : products.quotesQuantity %> cuotas sin interes de $<%= productSelect ? productSelect.cost_x_bag/productSelect.quotesQuantity : products.foods.length !== 0 ? products.foods[0].cost_x_bag/products.foods[0].quotesQuantity : products.cost/products.quotesQuantity %> con Bancos seleccionados</li>
                         
-                        <% } else if ((productSelect && productSelect.cantCuotasSegunKg > 1) || products.cantidadCuotas > 1) { %> 
-                            <li class="cuotas-mobile">Hasta <%= productSelect ? productSelect.cantCuotasSegunKg : products.pesos.length !== 0 ? products.pesos[0].cantCuotasSegunKg : products.cantidadCuotas %> cuotas sin interes de $<%= productSelect ? productSelect.PrecioPorcantCuotasSegunKg : products.pesos.length !== 0 ? products.pesos[0].PrecioPorcantCuotasSegunKg : products.montoCuotas %> con Bancos seleccionados</li>
+                        <% } else if ((productSelect && productSelect.quotesQuantity > 1) || products.quotesQuantity > 1) { %> 
+                            <li class="cuotas-mobile">Hasta <%= productSelect ? productSelect.quotesQuantity : products.foods.length !== 0 ? products.foods[0].quotesQuantity : products.quotesQuantity %> cuotas sin interes de $<%= productSelect ? productSelect.cost_x_bag/productSelect.quotesQuantity : products.foods.length !== 0 ? products.foods[0].cost_x_bag/products.foods[0].quotesQuantity : products.cost/products.quotesQuantity %> con Bancos seleccionados</li>
 
                     <% } %>
                 </div>      
@@ -207,8 +207,8 @@
                                             <!----------------------------------------------ver si es boton solo o con enlace?!-------------------------------------------------->
                         
                     
-                        <%products.pesos.map(peso => {%> 
-                            <a href="/products/detail/<%= products.sku %>?kg=<%= peso.kg%>"><button class="botonPeso-Mobile" type="submit"><%= peso.kg%> Kg</button></a>
+                        <%products.foods.map(peso => {%> 
+                            <a href="/products/detail/<%= products.sku %>?kg=<%= peso.weight%>"><button class="botonPeso-Mobile" type="submit"><%= peso.weight%> Kg</button></a>
                         <%})%>
                     </div>
                     
