@@ -203,6 +203,69 @@ const productControllers = {
 		res.render('edicionporsku', {products: product} )
     },
 
+    buscar: async function (req, res) {
+
+        let productoSearch =  req.query.buscar;
+        let productos
+        let palabraClave = productoSearch.split(' ').map(p => {
+            p = p.toLowerCase()
+            if (p.length <= 1) {
+                p = p
+              } else {
+                p = p.charAt(0).toUpperCase() + p.slice(1)
+              }
+            })
+
+        let indiceClave = palabraClave.indexOf('Perro' || 'Gato' || 'Ave' || 'Pez')
+
+        let producto = await db.Products.findOne({
+            where:{
+                [Op.or]: [{
+                    name: {
+                        [Op.like]: '%' + productoSearch + '%'
+                    }
+                }, {
+                    description: {
+                        [Op.like]: '%' + productoSearch + '%'
+                    }
+                }],
+            },
+        })
+
+        if(producto != undefined){
+
+        if (indiceClave != -1) {
+            productos = await db.Products.findAll({
+                where: {
+                    [Op.or]: [{
+                        name: {
+                            [Op.like]: '%' + productoSearch + '%'
+                        }
+                    }, {
+                        description: {
+                            [Op.like]: '%' + productoSearch + '%'
+                        }
+                    }],
+                },
+                include: [{
+                    model: Subcategories,
+                    include: {
+                        model: Categories,
+                        where: {
+                            animalType: palabraClave[indiceClave]
+                        }
+                    }
+                }]
+            })
+        }
+            
+        console.log(productos)
+
+        return res.render("productlist", { product: productos })
+
+    }
+    },
+
 
 
     // edicionproducto: (req, res) => {
