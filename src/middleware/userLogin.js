@@ -1,15 +1,12 @@
 const { check, body } = require("express-validator")       //Middleware utilizado para verificar que los datos ingresados por el usuario al registrarse en el formulario, tengan el formato correcto esperado.
 
 
-let validationRegister = 
+let validationLogin = 
     [
-        body("name")
-        .exists()
-        .withMessage("el nombre es requerido"),
-        body("lastname")
-        .exists()
-        .withMessage("el apellido es requerido"),
         body("email")
+        .exists()
+        .withMessage("el email es requerido")
+        .bail()
         .isEmail()
         .withMessage("Formato de Email no válido"),
         body("password")
@@ -20,4 +17,4 @@ let validationRegister =
     ]
     
 
-module.exports = validationRegister
+module.exports = validationLogin

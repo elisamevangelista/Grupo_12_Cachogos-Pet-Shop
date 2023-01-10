@@ -216,6 +216,7 @@ const productControllers = {
               }
             })
 
+        let productoClave = palabraClave.join('-')
         let indiceClave = palabraClave.indexOf('Perro' || 'Gato' || 'Ave' || 'Pez')
 
         let producto = await db.Products.findOne({
@@ -230,9 +231,22 @@ const productControllers = {
                     }
                 }],
             },
+            include: [{
+                model: Subcategories,
+                include: [{
+                    model: Categories
+                }]
+            },
+            {
+                model: Foods
+            },
+            {
+                model: Products_images
+            }
+        ]
         })
 
-        if(producto != undefined){
+        if (producto != undefined) {
 
         if (indiceClave != -1) {
             productos = await db.Products.findAll({
@@ -255,13 +269,20 @@ const productControllers = {
                             animalType: palabraClave[indiceClave]
                         }
                     }
-                }]
+                },
+                {
+                    model: Foods
+                },
+                {
+                    model: Products_images
+                }
+            ]
             })
         }
             
         console.log(productos)
 
-        return res.render("productlist", { product: productos })
+        return res.render("productlist", { product: productos , queryProduct: productoClave })
 
     }
     },

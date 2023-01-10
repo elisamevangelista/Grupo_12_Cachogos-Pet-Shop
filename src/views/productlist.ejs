@@ -119,7 +119,22 @@
             
         <section class="cards"> 
             
-            <% for( let productLis of productlist ) { %>
+            <% if(queryProduct) {%>
+                <% for( let productLis of product ) { %>
+                    <div class="card">     <!--/products/detail/<=productLis.sku %> es un link que conduce a ruta param > '/detail/:sku', productControllers.productdet-->
+                        <a href="/products/detail/<%= productLis.sku %>">
+                        
+                        <img src="/images/<%= productLis.products_images[0].image %> " alt="imagen"> 
+                        <p class=" card__productName"> <%= productLis.name %>  </p>  
+                        <p class=" card__productPrice"> $ <%= productLis.cost != 0 ? productLis.cost : productLis.foods[0].cost_x_bag %> </p>
+                        <p class=" card__productCuota"> Hasta <%= productLis.quotesQuantity != 0 ? productLis.quotesQuantity : productLis.foods[0].quotesQuantity %> cuotas sin interes de $ <%= productLis.quotesQuantity != 0 ? (productLis.cost)/(productLis.quotesQuantity) : (productLis.foods[0].cost_x_bag)/(productLis.foods[0].quotesQuantity) %> con Bancos seleccionados</p>
+                                         <!--parseInt TRANSFORMA A ENTERO EL NRO. -->
+                                        <!-- productLis.costo ? ->  existe? , si existe devuelve-> productLis.costo , si no existe devuelve -> productLis.pesos[0].precio-->
+                        </a>
+                    </div>
+                <% } %>
+                <% } else { %>
+                    <% for( let productLis of productlist ) { %>
                 <div class="card">     <!--/products/detail/<=productLis.sku %> es un link que conduce a ruta param > '/detail/:sku', productControllers.productdet-->
                     <a href="/products/detail/<%= productLis.sku %>">
                     
@@ -132,6 +147,7 @@
                     </a>
                 </div>
             <% } %> 
+                    <% } %>   
         </section>
     
     </main>
