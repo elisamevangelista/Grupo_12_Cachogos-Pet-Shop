@@ -158,6 +158,7 @@ const usersControllers = {
        perfil: function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
         return res.render("perfil", {miUsuario: req.session.usuarioALoguearse});  //se utilizara en el header, como identificacion del usuario logueado.    
        },
+      
        logout: function(req, res){
         req.session.destroy();
         return res.redirect("/")

@@ -34,8 +34,15 @@ router.get('/login', userLogged, usersController.login) //traigo vista formulari
 router.post('/login', validacionLogin, usersController.processLogin) //posteo la informacion cargada, ruta para hacer validación
 
 
+
 router.get('/perfil', authMiddleware, usersController.perfil)
 
 router.get('/logout', usersController.logout)
+
+// /*** EDIT USER***/
+// router.get('/perfil', usersControllers.edicionUsuario)
+// router.put('/:sku', uploadFile.array('imagen'), productControllers.update); 
+
+
 
 module.exports = router

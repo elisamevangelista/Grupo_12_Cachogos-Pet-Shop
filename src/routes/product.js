@@ -37,7 +37,7 @@ router.get('/detail/:sku', productControllers.productdet)
 router.get('/edit', productControllers.edicionporsku)
 
 /*** EDIT ONE PRODUCT***/
-router.get('/edit/:sku', productControllers.edicionproducto)
+router.get('/edit/:sku', productControllers.edicionproducto)  //trae vista de edicion con info precargada.
 router.put('/:sku', uploadFile.array('imagen'), productControllers.update); 
 
 /*** DELETE ONE PRODUCT***/  

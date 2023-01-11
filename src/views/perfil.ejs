@@ -10,6 +10,15 @@
     <%- include('partials/header') %>
 
     <main>
+
+
+        <div class="enlaceEditarUsuario"> 
+                
+            <!-- href="/products/edit">  redireccion a la vista de edicionporsku, segun archivo rutas.-->
+        <a class = "EnlaceEditarusu" href="/users/edituser">Editar Usuario</a>
+
+        </div> 
+
     
         <% if (locals.miUsuario) { %>    <!-- locals verifica si req.session existe, e importa lada data guardadda si existe. -->
             <p>Bienvenid@ <%= miUsuario.name %> !</p>    <!-- (.name, .email, .image) son nombres especificos de las columnas de la base de datos de la tabla users -->  
@@ -34,7 +43,8 @@
             <br>
             <br>
                         
-    
+   
+
     </main>
     
     <%- include('partials/footer') %>
