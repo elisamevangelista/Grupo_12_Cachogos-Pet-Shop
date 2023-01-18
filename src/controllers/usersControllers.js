@@ -71,6 +71,48 @@ const usersControllers = {
         
        },
 
+       editUser: (req, res) => {  
+        res.render('users/edituser', {miUsuario: req.session.usuarioALoguearse})   //renderizar vista 'edituser' con formulario para modifcar data
+    },
+
+        edit: async (req, res) => {
+
+        
+        let errors = validationResult(req);
+        console.log('error:', errors)
+
+        if (errors.isEmpty()) {
+            let {nombre, apellido, email} = req.body   //lo que ingreso se guarda en los 'name' de los input del formulario 
+            let user
+
+            await db.Users
+            .update({
+                name: nombre,    //en formulario, name="nombre" y en la tabla de la db, name es el nombre la columna
+                surname: apellido,
+                image: req.file.filename,
+                
+            },{
+                where: {
+                    email: email,  
+                }
+            })
+            .then(async () => {
+                user = await db.Users.findOne({
+                    where: {
+                        email: email
+                    }
+                }) 
+                // console.log('user: ', user) 
+                delete user.password
+                req.session.usuarioALoguearse = user     
+            })         
+                res.redirect("/users/perfil")
+
+        } else{
+            return res.render("users/edituser", {errors: errors.mapped, old: req.body}) //old: req.body-> mantiene los datos correctos cargados por el usuario.
+        }       
+       },
+
     processLogin: function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
      
         let errors = validationResult(req);  //error es un objeto. Validation result es el resultado de la validacion. (req -> llegan los datos del forumlaruio) 

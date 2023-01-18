@@ -2,8 +2,9 @@
 
 <%- include('partials/head') %>
 
-
+<link rel="stylesheet" href="/css/perfil.css">   <!-- dejo esta linea en este archivo -->
 </head>
+
 
 <body>
 
@@ -23,7 +24,7 @@
         <% if (locals.miUsuario) { %>    <!-- locals verifica si req.session existe, e importa lada data guardadda si existe. -->
             <p>Bienvenid@ <%= miUsuario.name %> !</p>    <!-- (.name, .email, .image) son nombres especificos de las columnas de la base de datos de la tabla users -->  
             <p>Su correo electrónico es: <%= miUsuario.email %> </p>
-            <img src="/images/users/<%= miUsuario.image %> " alt="imagen"> 
+            <img class="imagenPerfil" src="/images/users/<%= miUsuario.image %> " alt="imagen"> 
                       
 
         <% }  else { %>

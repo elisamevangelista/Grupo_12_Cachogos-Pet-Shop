@@ -34,9 +34,12 @@ router.get('/login', userLogged, usersController.login) //traigo vista formulari
 router.post('/login', validacionLogin, usersController.processLogin) //posteo la informacion cargada, ruta para hacer validación
 
 
+/*** EDIT ONE USER***/ 
+router.get('/edituser', usersController.editUser)  //renderizar la vista del formulario con los datos actuales del perfil
+router.post('/edituser', uploadFile.single('image'), usersController.edit); //permite editar y guardar los datos modificados del formulario.
+// va por put, porque se usa para cuando ya tenemos datos cargados y queremos editarlos y guardarlos.
 
 router.get('/perfil', authMiddleware, usersController.perfil)
-
 router.get('/logout', usersController.logout)
 
 // /*** EDIT USER***/

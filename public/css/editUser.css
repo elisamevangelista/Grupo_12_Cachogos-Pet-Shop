@@ -1,0 +1,14 @@
+.padreImagen{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.editImagen{
+    width: 120px;
+    height: 120px;
+  
+   
+}
+
