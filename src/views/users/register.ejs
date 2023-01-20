@@ -14,7 +14,13 @@
   
                
         <h2 class="titulo-main">Crear mi cuenta</h2>
-        <form action="/users/register" class="" id="" method="post" enctype="multipart/form-data">
+
+        <div class ="errores">
+            <ul> </ul>
+
+        </div>
+
+        <form action="/users/register" class="formuRegister" id="" method="post" enctype="multipart/form-data">
             <div class="campos-form">
 
                 <!-- Grupo: Nombre -->
@@ -97,12 +103,15 @@
             <div class="boton-registro">
                 <button type="submit" class="boton">Registrarme</button>
             </div>
+
+            
         </form>
 
     </main>
 
     <%- include('../partials/footer') %>
 
+    <script src = "../../../public/js/validacionReg.js"></script>   
 </body>
 
 </html>
