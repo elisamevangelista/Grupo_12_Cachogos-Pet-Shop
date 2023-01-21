@@ -505,9 +505,7 @@ footer button:hover {
         font-size: 18px;
     }
 
-    .errores {
-        
-            
+    .errores {          
           
             text-align: center;
             display: flex;
@@ -519,9 +517,7 @@ footer button:hover {
             align-items: center;
             border-radius: 10px;
             width: 470px;
-            background-color: rgb(223, 219, 219);
-            
-          
+            background-color: rgb(223, 219, 219);         
           
     }
     .errores li{

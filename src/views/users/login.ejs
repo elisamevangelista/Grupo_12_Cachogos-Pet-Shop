@@ -15,7 +15,13 @@
 
     <main>
         <h2>Ingresar a mi cuenta</h2>
-        <form action="/users/login" class="" id="" method="POST">  
+
+        <ul class="erroresLogin">
+            <li></li>
+        </ul>
+
+
+        <form action="/users/login" class="formuLogin" id="" method="POST">  
 
             <div class="campos-form">
                 <!-- Grupo: Email -->
@@ -78,5 +84,6 @@
 
      <%- include('../partials/footer') %>
      
+     <script src= "/js/loginReg.js"></script>   
 </body>
 </html>

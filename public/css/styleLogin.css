@@ -198,6 +198,26 @@ footer button:hover {
         padding-top: 15px;
         margin-top: 0px;
     }
+
+
+    .erroresLogin {
+        border-radius: 10px;
+        border: 1px solid #3694F5;
+       
+        display: inline-block;
+        background-color: rgb(223, 219, 219);
+      
+        width: 70%;
+    }
+
+    .erroresLogin li{
+        
+         
+        text-decoration: black dotted;
+        text-align: center;
+        border-radius: 10px;
+        color:#ff1024;
+}
   
 
 }
@@ -433,4 +453,28 @@ footer button:hover {
 
         padding-top: 15px;
     }
+
+    
+    .erroresLogin {          
+          
+        text-align: center;
+        display: flex;
+        border-radius: 10px;
+        border: 1px solid #3694F5;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        align-items: center;
+        border-radius: 10px;
+        width: 470px;
+        background-color: rgb(223, 219, 219);         
+      
+}
+.erroresLogin li{
+     
+        text-decoration: black dotted;
+        text-align: center;
+        border-radius: 10px;
+        color:#ff1024;
+}
 }
