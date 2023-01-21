@@ -228,6 +228,25 @@ footer button:hover {
         margin-top: 4px;
         padding-right: 5px;
     }
+    .errores {
+        border-radius: 10px;
+        border: 1px solid #3694F5;
+       
+        display: inline-block;
+        background-color: rgb(223, 219, 219);
+      
+        width: 70%;
+    }
+
+    .errores li{
+        
+         
+        text-decoration: black dotted;
+        text-align: center;
+        border-radius: 10px;
+        color:#ff1024;
+}
+
 }
 
 @media screen and (min-width:525px) {
@@ -484,6 +503,34 @@ footer button:hover {
         width: 120px;
         transition: .7s;
         font-size: 18px;
+    }
+
+    .errores {
+        
+            
+          
+            text-align: center;
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid #3694F5;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-inline: auto;
+            align-items: center;
+            border-radius: 10px;
+            width: 470px;
+            background-color: rgb(223, 219, 219);
+            
+          
+          
+    }
+    .errores li{
+        
+         
+            text-decoration: black dotted;
+            text-align: center;
+            border-radius: 10px;
+            color:#ff1024;
     }
 }
 
