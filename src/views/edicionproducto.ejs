@@ -17,9 +17,11 @@
 
     <main>
 
-   
+        <ul class="erroresEditProd">
+            <li></li>
+        </ul>
 
-        <form method="POST" action="/products/<%= products.sku %>?_method=PUT" enctype="multipart/form-data">
+        <form method="POST" action="/products/<%= products.sku %>?_method=PUT" enctype="multipart/form-data" class="edicionProd">
 
           
             <div class="titulo-edicion">
@@ -41,14 +43,14 @@
                               
                 <div class = "nombre-producto">
                     <label for="nombreProdcuto">Nombre: <%= products.name %></label>
-                    <input class="nombreprod" type="text" name="nombre" id="nombreProdcuto" placeholder="Nombre del producto" >
+                    <input class="nombreprod" type="text" name="nombre" id="nombreProducto" placeholder="Nombre del producto" >
 
                 </div>
 
                     
                 <div class = "descripcion-producto">
                     <label for="descripcionProdcuto">Descripción: <%= products.description %></label>
-                    <input class="descriProd" type="textArea" name="descripcion" id="descripcionProdcuto" placeholder="Descripcion del producto">
+                    <input class="descriProd" type="textArea" name="descripcion" id="descripcionProducto" placeholder="Descripcion del producto">
 
                 </div>
 
@@ -241,16 +243,13 @@
             <fieldset>
                 <legend>Stock</legend>
 
-
                 <div class = "stock-producto">
                     <label for="stockProducto">Stock: <%= products.stock %></label>
                     <input class="stoProd" type="number" name="stock" id="stock" placeholder="Stock inicial del producto" >
 
-                </div>
-        
+                </div>       
 
             </fieldset>
-
 
             <!-- <fieldset>
                 <legend>Detalles</legend>
@@ -262,32 +261,21 @@
                 </div>
             </fieldset> -->
 
-
-         
             <div class = "botonSobre">
-
-                <input class ="botonSobreescribir" type="submit" name="Sobreescribir" value="Sobreescribir" />
-                           
-
+                <button type="submit" class="botonSobreescribir">Sobreescribir</button>
             </div>  
-
-           
-                 
+     
         </form>
 
         <form action="/products/delete/<%=products.sku %>?_method=DELETE" method="POST">
-            <button type="submit" class="action-button delete">ELIMINAR</button>
-            
+            <button type="submit" class="action-button delete">ELIMINAR</button> 
         </form>
-
-        
-
 
 </main>
 
 <%- include('partials/footer') %>
 
-
+<script src="/js/validacionProdEdit.js"></script>
 
 </body>
 

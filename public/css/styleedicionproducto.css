@@ -140,7 +140,29 @@ fieldset{
  
 }
 
+.erroresEditProd {          
+          
+    text-align: center;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid #3694F5;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    align-items: center;
+    border-radius: 10px;
+    width: 470px;
+    background-color: rgb(223, 219, 219);         
+  
+}
 
+.erroresEditProd li{
+
+    text-decoration: black dotted;
+    text-align: center;
+    border-radius: 10px;
+    color:#ff1024;
+}
 
 @media (min-width:750px){
     form{

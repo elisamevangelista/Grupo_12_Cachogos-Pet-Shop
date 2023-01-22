@@ -1,6 +1,6 @@
 window.onload = function(){
 
-    let formularioCreacionProd = document.querySelector('form.creacionProd')
+    let formularioedicionProd = document.querySelector('form.edicionProd')
     let nombre = document.querySelector('#nombreProducto')
     let descripcion = document.querySelector('#descripcionProducto')
     let allowedExtension = ['jpeg', 'jpg', 'png', 'gif'];
@@ -8,7 +8,7 @@ window.onload = function(){
     
     let arrayError =[]
         
-    formularioCreacionProd.addEventListener('submit', (e) => {
+    formularioedicionProd.addEventListener('submit', (e) => {
 
         arrayError = []
        
@@ -33,13 +33,13 @@ window.onload = function(){
             e.preventDefault()
         }
                 
-            let erroresCreacProd = document.querySelector('.erroresCreacProd')
+            let erroresEditProd = document.querySelector('.erroresEditProd')
 
             if (arrayError.length > 0) {
                 e.preventDefault()
-                erroresCreacProd.innerHTML = ''
+                erroresEditProd.innerHTML = ''
                 for (let error of arrayError) {
-                    erroresCreacProd.innerHTML += `<li>${error}</li>`
+                    erroresEditProd.innerHTML += `<li>${error}</li>`
                 }
             }
     
