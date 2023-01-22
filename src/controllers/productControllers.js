@@ -238,10 +238,10 @@ const productControllers = {
                 }]
             },
             {
-                model: Foods
+                model: db.Foods
             },
             {
-                model: Products_images
+                model: db.Products_images
             }
         ]
         })
@@ -271,10 +271,10 @@ const productControllers = {
                     }
                 },
                 {
-                    model: Foods
+                    model: db.Foods
                 },
                 {
-                    model: Products_images
+                    model: db.Products_images
                 }
             ]
             })
