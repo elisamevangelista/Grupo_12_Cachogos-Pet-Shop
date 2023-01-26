@@ -22,11 +22,24 @@ const uploadFile = multer({ storage });
 const usersController = require('../controllers/usersControllers')
 
 const userLogged = require('../middleware/userLogged')
-const authMiddleware = require('../middleware/authMiddleware')
+const authMiddleware = require('../middleware/authMiddleware');
+const db = require('../db/models');
 
 /*** REGISTER ONE USER***/    //el M userLogged funciona unicamente si el usuario esta logueado, es decir tiene abierta su sesion.
 router.get('/register', userLogged, usersController.register)  // image es el valor del atributo 'name' para el input de la imagen en el formulario.
-router.post('/register', uploadFile.single('image'), validacionRegister, usersController.store); //validacionRegister-> SERIA EL MIDDLEWARE. LO SACAMOS PORQUE DEVUELVE ERROR
+
+db.Users.findAll()
+    .then((users) => {
+        
+        router.post('/register', uploadFile.single('image'), validacionRegister, usersController.store); //validacionRegister-> SERIA EL MIDDLEWARE. LO SACAMOS PORQUE DEVUELVE ERROR
+
+    })
+    .catch((errors) => {
+        console.log(errors)
+
+    })
+
+
 
 /*** LOGIN ONE USER***/  
 

@@ -19,6 +19,8 @@
             <li></li>
         </ul>
 
+    
+
         <form action="/users/register" class="formuRegister" id="" method="post" enctype="multipart/form-data">
             <div class="campos-form">
 
@@ -69,7 +71,11 @@
                     </div>
                     <p class="error-image">Solo puede cargar una imagen.</p>
                 </div>
-                <!-- Grupo: Contraseña -->
+                <!-- Grupo: Contraseña -->   
+
+
+                <!-- error = {'errors': [withmsg1,withmsg2,.....]'} -->
+
                 <div class="contraseña" id="">
                     <label for="password" class="contraLabel">Contraseña</label>
                     <div class="contraInput-i">
@@ -110,7 +116,7 @@
 
     <%- include('../partials/footer') %>
 
-    <script src="/js/validacionReg.js"></script>   
+    <!-- <script src="/js/validacionReg.js"></script>    -->
 </body>
 
 </html>
