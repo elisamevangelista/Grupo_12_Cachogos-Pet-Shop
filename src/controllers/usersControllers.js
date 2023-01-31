@@ -21,11 +21,20 @@ const usersControllers = {
         res.render('users/register')   //archivo dentro de carpeta users
     },
 
-    store: (req, res) => {
+    store: async (req, res) => {
         let errors = validationResult(req);
         console.log('error:', errors)
         if (errors.isEmpty()) {
             let {nombre, apellido, email, password} = req.body
+            let users = await db.Users.count({  //count devuelve el numero de registros encontrados que cumplen el 'where'.
+                where: {
+                    email: email   // email del cambo de base de datos sea igual al valor del input email del req.body del formulario
+                }
+            })
+
+            if (users > 0){
+                return Promise.reject('El usuario ya existe. Por favor, ingrese otro e-mail diferente')
+            }
 
             let contraseña = password
     
