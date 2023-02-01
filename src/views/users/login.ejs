@@ -16,9 +16,23 @@
     <main>
         <h2>Ingresar a mi cuenta</h2>
 
-        <ul class="erroresLogin">
+        <ul class="erroresLogin">         <!-- ERRORES DE FRONTEND. -->
             <li></li>
         </ul>
+
+
+        
+        <% if(typeof(errors) != 'undefined') {%>    <!-- ERRORES DE BACKEND. -->
+            
+            <ul class = 'erroresLogin'>
+
+                <% errors.forEach(error => { %>
+                    <li> <%= error.msg%></li>
+               <%}) %>
+            </ul>
+            
+            <%}%>
+        
 
 
         <form action="/users/login" class="formuLogin" id="" method="POST">  

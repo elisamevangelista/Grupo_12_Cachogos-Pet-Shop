@@ -12,4 +12,4 @@ function userLogged(req,res,next){  //'miUsuario': req.session.usuarioLogueado
     module.exports = userLogged
 
 ////el M userLogged funciona unicamente si el usuario esta logueado, es decir tiene abierta su sesion.
-    ////el M userLogged funciona unicamente si el usuario esta logueado, es decir tiene abierta su sesion.
+    

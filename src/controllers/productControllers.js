@@ -4,6 +4,8 @@ const moment = require('moment')
 const db = require('../db/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { validationResult } = require("express-validator");
+
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -42,11 +44,15 @@ const productControllers = {
         })
         Promise.all([category, subcategory, brand])
         .then(([allCategory, allSubcategory, allBrand]) => {
+            allBrand = JSON.parse(JSON.stringify(allBrand));
+            console.log('allBrand:', allBrand)
             // console.log('allCategory, allBrand:', {allCategory, allSubcategory, allBrand})
         res.render('creacionproducto', {allCategory, allSubcategory, allBrand})})
         .catch(error => res.send(error))  //muestra vista de formulario de creacion
     },
     store: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
         let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
         let subcategory = db.Subcategories.findOne({
             where: {
@@ -107,73 +113,14 @@ const productControllers = {
                 })
                 .catch(error => res.send(error))
                 })
+
+            } else{     //errors.errors  -> porque 'errors' es un objeto con distintas claves, una clave es 'errors' que es un array de objetos tambien.
+                console.log('errores;', errors)
+                return res.render("creacionproducto", {errores: errors.errors, old: req.body}) //old: req.body-> mantiene los datos correctos cargados por el usuario.
+            }
             
     },
-	// store: (req, res) => {
-    //     let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, depositoEntrante, cantCuotasSegunKg} = req.body
-
-
-    //     let pesos = []
-
-    //     if (subcategoriaProducto === 'Alimentos') {
-    //         for (let i = 0; i < kg.length; i++) {
-    //             pesos.push({
-    //                 kg: Number(kg[i]),
-    //                 precio: Number(precio[i]),
-    //                 cantCuotasSegunKg: Number(cantCuotasSegunKg[i]),
-    //                 PrecioPorcantCuotasSegunKg: parseInt(precio[i]/cantCuotasSegunKg[i]),
-    //                 precioFinal: precio[i] - ((Number(precio[i]) * Number(descuento))/100)
-
-    //             })
-               
-    //         }
-          
-    //     } else {
-    //         pesos = []
-            
-    //     }
-   
-      
-    //     let imagen = []
-    //     for (let i = 0; i < 1; i++) {
-    //         imagen.push({
-    //             imagen1: req.files[i] ? req.files[i].filename : null,
-    //             imagen2: req.files[i + 1] ? req.files[i + 1].filename : null,
-    //             imagen3: req.files[i + 2] ? req.files[i + 2].filename : null,
-    //         })
-    //     }
-    //     // : req.files.map(i => i.filename)
-    //     // console.log('imagenes:', imagenes)
-
-    //     let newPoduct = {       //kilogramos: igual a clave del database, y req.body.kilogramos > kilogramos debe ser igual al "name" del input del formulario de la vista.
-    //                             // le doy formato a la fecha. No hace falta incluir campo de fecha en creacion de prodcuto. Se asigna automatica// en la DB.
-    //                             // se debe 1ro instalar > npm install moment --save, y 2do > crear const moment = require('moment') para requerirlo.
-    //         fechaCreacion: moment().format('L'),   
-    //         sku: products[products.length - 1].sku + 1,
-    //         marca: marca,
-    //         nombre: nombre,
-    //         descripcion: descripcion,
-    //         imagen: imagen ? imagen[0] : null,
-    //         pesos,
-    //         categoriaAnimal: categoriaAnimal,
-    //         subcategoriaProducto: subcategoriaProducto,
-    //         cantidadCuotas: subcategoriaProducto !== 'Alimentos' ? Number(cantidadCuotas) : null,
-    //         montoCuotas: subcategoriaProducto !== 'Alimentos' ? Number(costo/cantidadCuotas) : null,
-    //         stock: Number(depositoEntrante),
-    //         depositoEntrante: Number(depositoEntrante),
-    //         costo: subcategoriaProducto !== 'Alimentos' ? Number(costo) : null,
-    //         descuento: Number(descuento),
-    //         costoFinal: costo - ((Number(costo) * Number(descuento))/100),
-    //         fechaActualizada: null
-    //     }
-
-	// 	    products.push(newPoduct);
-	// 	    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
-
-	// 	res.redirect('/products') 
-	// },
-
-    
+	
     productdet: (req, res) => {
 
                     //req.params.sku es el sku que ingresamos por navegador. De ese registro de SKU, trae las tablas del include.

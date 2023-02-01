@@ -11,9 +11,21 @@
 
     <main>
 
-        <ul class="erroresCreacProd">
+        <ul class="erroresCreacProd">   <!-- ERRORES FRONTEND-->
             <li></li>
         </ul>
+
+        <% if(typeof(errores) != 'undefined') {%>    <!-- ERRORES DE BACKEND. -->
+            
+            <ul class = 'erroresCreacProd'>
+
+                <% errores.forEach(error => { %>
+                    <li> <%= error.msg%></li>
+               <%}) %>
+            </ul>
+            
+            <%}%>
+        
 
 
         <form  method="post" action="/products" enctype="multipart/form-data" class="creacionProd">
@@ -296,7 +308,7 @@
 
 <%- include('partials/footer') %>
 
-        <script src="/js/validacionProdCreac.js"></script>   
+        <!-- <script src="/js/validacionProdCreac.js"></script>    -->
 
 </body>
 

@@ -1,6 +1,4 @@
 const { check, body } = require("express-validator");       //Middleware utilizado para verificar que los datos ingresados por el usuario al registrarse en el formulario, tengan el formato correcto esperado.
-const usersControllers = require("../controllers/usersControllers");
-const db = require('../db/models');
 const path = require('path')
 
 

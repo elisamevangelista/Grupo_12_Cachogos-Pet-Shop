@@ -15,11 +15,23 @@
                
         <h2 class="titulo-main">Crear mi cuenta</h2>
 
-        <ul class="errores">
+        <ul class="errores">  <!-- ERRORES DE FRONTEND. -->
             <li></li>
         </ul>
 
-    
+        
+            <% if(typeof(errores) != 'undefined') {%>    <!-- ERRORES DE BACKEND. -->
+            
+            <ul class = 'errores'>
+
+                <% errores.forEach(error => { %>
+                    <li> <%= error.msg%></li>
+               <%}) %>
+            </ul>
+            
+            <%}%>
+        
+
 
         <form action="/users/register" class="formuRegister" id="" method="post" enctype="multipart/form-data">
             <div class="campos-form">
@@ -116,7 +128,7 @@
 
     <%- include('../partials/footer') %>
 
-    <!-- <script src="/js/validacionReg.js"></script>    -->
+    <script src="/js/validacionReg.js"></script>
 </body>
 
 </html>
