@@ -27,7 +27,7 @@ router.get('/', productControllers.productlist )  // trae lista de productos.
 
 /*** CREATE ONE PRODUCT***/  
 router.get('/creacionproducto', productControllers.creacionproducto)
-router.post('/', uploadFile.array('imagen'),validationProduct, productControllers.store); 
+router.post('/creacionproducto', uploadFile.array('imagen'), validationProduct, productControllers.store); 
 
 
 /*** DETAIL OF ONE PRODUCT***/  

@@ -44,15 +44,13 @@ const productControllers = {
         })
         Promise.all([category, subcategory, brand])
         .then(([allCategory, allSubcategory, allBrand]) => {
-            allBrand = JSON.parse(JSON.stringify(allBrand));
-            console.log('allBrand:', allBrand)
-            // console.log('allCategory, allBrand:', {allCategory, allSubcategory, allBrand})
         res.render('creacionproducto', {allCategory, allSubcategory, allBrand})})
         .catch(error => res.send(error))  //muestra vista de formulario de creacion
     },
     store: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
+            console.log('entre aca')
         let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
         let subcategory = db.Subcategories.findOne({
             where: {
@@ -115,8 +113,20 @@ const productControllers = {
                 })
 
             } else{     //errors.errors  -> porque 'errors' es un objeto con distintas claves, una clave es 'errors' que es un array de objetos tambien.
-                console.log('errores;', errors)
-                return res.render("creacionproducto", {errores: errors.errors, old: req.body}) //old: req.body-> mantiene los datos correctos cargados por el usuario.
+                let brand = db.Brands.findAll({
+                    attributes: ['id', 'brand']
+                });
+                let category = db.Categories.findAll({
+                    attributes: ['id', 'animalType']
+                });
+                let subcategory = db.Subcategories.findAll({
+                    attributes: ['name'],
+                    group: ['name']
+                })
+                Promise.all([category, subcategory, brand])      // ademas de traer los errores del middleware traemos de la BD otra vez las marcas, categorias y subcategoria para que se muestre nuevamente en el formulario
+                .then(([allCategory, allSubcategory, allBrand]) => {
+                return res.render('creacionproducto', {errores: errors.errors, old: req.body, allCategory, allSubcategory, allBrand})})
+                .catch(error => res.send(error))  //muestra vista de formulario de creacion
             }
             
     },
