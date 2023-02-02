@@ -17,9 +17,24 @@
 
     <main>
 
-        <ul class="erroresEditProd">
+        <ul class="erroresEditProd">  <!-- ERRORES DE FRONTEND. -->
             <li></li>
         </ul>
+
+        <% if(typeof(errores) != 'undefined') {%>    <!-- ERRORES DE BACKEND. -->
+            
+            <ul class = 'erroresEditProd'>
+
+                <% errores.forEach(error => { %>
+                    <li> <%= error.msg%></li>
+               <%}) %>
+            </ul>
+            
+            <%}%>
+        
+
+
+
 
         <form method="POST" action="/products/<%= products.sku %>?_method=PUT" enctype="multipart/form-data" class="edicionProd">
 
@@ -275,7 +290,7 @@
 
 <%- include('partials/footer') %>
 
-<script src="/js/validacionProdEdit.js"></script>
+<!-- <script src="/js/validacionProdEdit.js"></script> -->
 
 </body>
 

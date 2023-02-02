@@ -189,35 +189,35 @@
 
                 <div class = "kg-producto">
                     <label for="kilosProducto1">Kg1:</label>
-                    <input class="kilosProd" type="number" name="kg" id="kilosProducto1" placeholder="Cantidad de kg - Opcion 1" >
+                    <input class="kilosProd" type="number" name="kg" id="kilosProducto1" placeholder="Cantidad de kg - Opcion 1" value="<%= typeof(old) != 'undefined' ? old.kg : '' %>">
                     <label for="precioProducto1">precio1:</label>
-                    <input class="kilosProd" type="number" name="precio" id="precioProducto1" placeholder="Precio por kg - Opcion 1" >
+                    <input class="kilosProd" type="number" name="precio" id="precioProducto1" placeholder="Precio por kg - Opcion 1" value="<%= typeof(old) != 'undefined' ? old.precio : '' %>">
                     <label for="cuotaProducto1">cuotas:</label>
-                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto1" placeholder="cuotas por kg - Opcion 1" >
+                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto1" placeholder="cuotas por kg - Opcion 1" value="<%= typeof(old) != 'undefined' ? old.cantCuotasSegunKg : '' %>" >
                     <label for="stockProducto">stock:</label>
-                    <input class="stoProd" type="number" name="stock" id="stock" placeholder="Stock inicial del producto" >
+                    <input class="stoProd" type="number" name="stock" id="stock" placeholder="Stock inicial del producto" value="<%= typeof(old) != 'undefined' ? old.stock : '' %>">
                 </div>
 
                 <div class = "kg-producto">
                     <label for="kilosProducto2">Kg2:</label>
-                    <input class="kilosProd" type="number" name="kg" id="kilosProducto2" placeholder="Cantidad de kg - Opcion 2" >
+                    <input class="kilosProd" type="number" name="kg" id="kilosProducto2" placeholder="Cantidad de kg - Opcion 2" value="<%= typeof(old) != 'undefined' ? old.kg : '' %>">
                     <label for="precioProducto2">precio2:</label>
-                    <input class="kilosProd" type="number" name="precio" id="precioProducto2" placeholder="Precio por kg - Opcion 2" >
+                    <input class="kilosProd" type="number" name="precio" id="precioProducto2" placeholder="Precio por kg - Opcion 2" value="<%= typeof(old) != 'undefined' ? old.precio : '' %>">
                     <label for="cuotaProducto2">cuotas:</label>
-                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto2" placeholder="cuotas por kg - Opcion 2" >
+                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto2" placeholder="cuotas por kg - Opcion 2" value="<%= typeof(old) != 'undefined' ? old.cantCuotasSegunKg : '' %>" >
                     <label for="stockProducto">stock:</label>
-                    <input class="stoProd" type="number" name="stock" id="stock" placeholder="Stock inicial del producto" >
+                    <input class="stoProd" type="number" name="stock" id="stock" placeholder="Stock inicial del producto" value="<%= typeof(old) != 'undefined' ? old.stock : '' %>">
                 </div>
 
                 <div class = "kg-producto">
                     <label for="kilosProducto3">Kg3:</label>
-                    <input class="kilosProd" type="number" name="kg" id="kilosProducto3" placeholder="Cantidad de kg - Opcion 3" >
+                    <input class="kilosProd" type="number" name="kg" id="kilosProducto3" placeholder="Cantidad de kg - Opcion 3" value="<%= typeof(old) != 'undefined' ? old.kg : '' %>">
                     <label for="precioProducto3">precio3:</label>
-                    <input class="kilosProd" type="number" name="precio" id="precioProducto3" placeholder="Precio por kg - Opcion 3" >
+                    <input class="kilosProd" type="number" name="precio" id="precioProducto3" placeholder="Precio por kg - Opcion 3" value="<%= typeof(old) != 'undefined' ? old.precio : '' %>">
                     <label for="cuotaProducto3">cuotas:</label>
-                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto3" placeholder="cuotas por kg - Opcion 3" >
+                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto3" placeholder="cuotas por kg - Opcion 3" value="<%= typeof(old) != 'undefined' ? old.cantCuotasSegunKg : '' %>">
                     <label for="stockProducto">stock:</label>
-                    <input class="stoProd" type="number" name="stock" id="stock" placeholder="Stock inicial del producto" >
+                    <input class="stoProd" type="number" name="stock" id="stock" placeholder="Stock inicial del producto" value="<%= typeof(old) != 'undefined' ? old.stock : '' %>">
                 </div>
         
             </fieldset>
@@ -228,7 +228,7 @@
 
                 <div class = "precio-producto">
                     <label for="precioProducto">AR$</label>
-                    <input class="precioProd" type="number" name="costo" id="precioProducto" placeholder="Precio del producto"  autocomplete="on">
+                    <input class="precioProd" type="number" name="costo" id="precioProducto" placeholder="Precio del producto"  autocomplete="on" value="<%= typeof(old) != 'undefined' ? old.costo : '' %>">
 
                 </div>
         
@@ -242,7 +242,7 @@
 
                 <div class = "descuento-producto">
                     <label for="descuentoProducto">%</label>
-                    <input class="descuentoProd" type="number" name="descuento" id="descuentoProducto" placeholder="Descuento del producto"  autocomplete="on">
+                    <input class="descuentoProd" type="number" name="descuento" id="descuentoProducto" placeholder="Descuento del producto"  autocomplete="on" value="<%= typeof(old) != 'undefined' ? old.descuento : '' %>">
 
                 </div>
         
@@ -256,7 +256,7 @@
 
                 <div class = "cuotas-producto">
                     <label for="cuotasProducto">Cuotas:</label>
-                    <input class="cuotasProd" type="number" name="cantidadCuotas" id="cantidadCuotas" placeholder="Cantidad de cuotas del producto" >
+                    <input class="cuotasProd" type="number" name="cantidadCuotas" id="cantidadCuotas" placeholder="Cantidad de cuotas del producto" value="<%= typeof(old) != 'undefined' ? old.cantidadCuotas : '' %>">
 
                 </div>
         
@@ -283,7 +283,7 @@
 
 
                 <div class = "stock-producto">
-                    <label for="stockProducto">Stock:</label>
+                    <label for="stockProducto">Stock:</label>    
                     <input class="stoProd" type="number" name="stock" id="stock" placeholder="Stock inicial del producto" >
 
                 </div>

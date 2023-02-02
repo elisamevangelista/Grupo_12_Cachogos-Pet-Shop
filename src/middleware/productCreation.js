@@ -15,6 +15,8 @@ let validationProduct =
     .withMessage("El nombre debe tener al menos 5 caracteres"),
 
     check("descripcion")
+    .optional({nullable: true, checkFalsy: true})  //si no se completa nada, esta ok. Si se completa, debe tener un minimo de 20 caracteres.
+    .bail()
     .isLength({ min:20 })
     .withMessage("La descripción debe tener al menos 20 caracteres"),
 

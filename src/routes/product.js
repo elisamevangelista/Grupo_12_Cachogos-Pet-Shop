@@ -40,7 +40,7 @@ router.get('/edit', productControllers.edicionporsku)
 
 /*** EDIT ONE PRODUCT***/
 router.get('/edit/:sku', productControllers.edicionproducto)  //trae vista de edicion con info precargada.
-router.put('/:sku', uploadFile.array('imagen'), productControllers.update); 
+router.put('/:sku', uploadFile.array('imagen'),validationProduct, productControllers.update); 
 
 /*** DELETE ONE PRODUCT***/  
 router.delete('/delete/:sku', productControllers.destroy);  /*** seria: /products/delete/:id ***/ 

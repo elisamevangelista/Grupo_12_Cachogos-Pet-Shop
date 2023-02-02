@@ -50,7 +50,7 @@ const productControllers = {
     store: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            console.log('entre aca')
+            
         let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
         let subcategory = db.Subcategories.findOne({
             where: {
@@ -282,7 +282,10 @@ const productControllers = {
 
     
     update: (req, res) => {
-		let product_sku = req.params.sku
+		let errors = validationResult(req);
+        if (errors.isEmpty()) {
+
+        let product_sku = req.params.sku
         let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
         let subcategory = db.Subcategories.findOne({
             where: {
@@ -362,6 +365,34 @@ const productControllers = {
                     return res.redirect('/products')
                 })
                 .catch(error => res.send(error))
+
+            } else{     //errors.errors  -> porque 'errors' es un objeto con distintas claves, una clave es 'errors' que es un array de objetos tambien.
+                let brand = db.Brands.findAll({
+                    attributes: ['id', 'brand']
+                });
+                let category = db.Categories.findAll({
+                    attributes: ['id', 'animalType']
+                });
+                let subcategory = db.Subcategories.findAll({
+                    attributes: ['name'],
+                    group: ['name']
+                })
+                Promise.all([category, subcategory, brand])
+                .then(([allCategory, allSubcategory, allBrand]) => {
+                    db.Products.findByPk(req.params.sku, {include: ['subcategories', 'foods', 'brands']})
+                    .then(product => {
+                        db.Categories.findOne({
+                            where: {
+                                id: product.subcategories.category_id
+                            }
+                        })
+                        .then(category => {
+                            return res.render('edicionproducto', {errores: errors.errors, old: req.body, products: product, category, allCategory, allSubcategory, allBrand} )
+                        })
+                    })
+                })
+                .catch(error => res.send(error))  //muestra vista de formulario de creacion
+            }
                 
 
     //     let pesos = []
