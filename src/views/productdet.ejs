@@ -165,10 +165,14 @@
 
             <div class="div-descripcion-a-desktop"> <!----DIV CREADO PARA SEGUNDA QUERY-------->
             
+                            <!----El boton 'eliminar' producto, solo se mostrara si el usuario es 'admin', para user normal y user regitrado, no se mostrara este boton.-------->
+                <% if (locals.miUsuario && locals.miUsuario.userType == 'admin') { %>
                 <form class="deleteBotonForm" action="/products/delete/<%=products.sku %>?_method=DELETE" method="POST">
                     <button type="submit" class="action-button delete">ELIMINAR</button>
                     
                 </form>
+
+                <% } %>
                 
                 <div class ="Producto-descripcion">
 
