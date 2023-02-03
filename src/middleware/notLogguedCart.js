@@ -5,7 +5,7 @@ function notLogguedCart(req,res,next){  //'miUsuario': req.session.usuarioLoguea
 
     if (req.session.usuarioALoguearse === undefined) {
 
-        return res.redirect('/users/register')
+        return res.redirect('/users/login')
  
     }
     next();  
