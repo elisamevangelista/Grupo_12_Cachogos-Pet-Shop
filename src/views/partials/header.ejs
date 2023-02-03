@@ -41,28 +41,57 @@
                           
        <ul class = "logosMargenDerecho">
 
-           <li><a class="logo-wapp-desktop" href="aaaaa.html"><i class="fa-brands fa-whatsapp"></i></a></li>
-           <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-           
-           <ul class="iconoUserRegistrarse">
+        <% if (locals.miUsuario && locals.miUsuario.userType == 'admin') { %>
+            <ul class="iconoUserRegistrarse">
+            
+                <li><a class="iconoUserMargenDerecho" href="/users/login"><i class="fa-solid fa-user"></i></a></li> 
+            
+                <li class="IniciarSesion"><%= miUsuario.name %> (admin)</li>
+                <li><a class="IniciarSesion" href="/users/logout">Cerrar Sesión</a></li>
+            </ul>
+        <% } else {%>
+
+            <li><a class="logo-wapp-desktop" href="aaaaa.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a class="iconoBuscarMargenDerecho" href="aaaaa.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <ul class="iconoUserRegistrarse">
             
                <li><a class="iconoUserMargenDerecho" href="/users/login"><i class="fa-solid fa-user"></i></a></li>
                
+            <% } %> 
 
-               <% if (locals.miUsuario) { %>    <!-- locals verifica si req.session existe, e importa lada data guardadda si existe. -->
+               <% if (locals.miUsuario && locals.miUsuario.userType == 'user') { %>    <!-- locals verifica si req.session existe, e importa lada data guardadda si existe. -->
                                                                 
-                <li class="IniciarSesion"> <%= miUsuario.name %> </li>
+                <li class="IniciarSesion"><%= miUsuario.name %></li>
                 <li><a class="IniciarSesion" href="/users/logout">Cerrar Sesión</a></li>
 
-                </ul>
+           </ul>
                 
                 <ul class="iconoMisCompras">
-                    <li><a class="iconoCarritoMargenDerecho" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a class="misCompras" href="/carrito">Mis Compras</a></li>
+                    <li><a class="iconoCarritoMargenDerecho" href="/users/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a class="misCompras" href="/users/carrito">Mis Compras</a></li>
                 </ul>
                 
+        </ul>
+            
+        
+        <% } else if (locals.miUsuario && locals.miUsuario.userType == 'admin') { %>
+        </ul>
+                <ul class="iconoMisCompras">
+                    <li><a class="iconoCarritoMargenDerecho" href="/products/creacionproducto"><i class="fa-solid fa-file-circle-plus"></i></a></li>
+                    <li><a class="misCompras" href="/products/creacionproducto">Crear producto</a></li>
                 </ul>
-            <% } else { %>
+
+
+                <ul class="iconoMisCompras">
+                    <li><a class="iconoCarritoMargenDerecho" href="/products/edit"><i class="fa-solid fa-pen-to-square"></i></a></li>
+                    <li><a class="misCompras" href="/products/edit">Editar productos</a></li>
+                </ul>
+                
+            </ul>
+                
+                
+                <% } else { %>                           
+                
                 <li><a class="IniciarSesion" href="/users/login">Iniciar Sesión/</a></li>
                 <li><a class="Registrarse" href="/users/register">Registrarse</a></li>
 

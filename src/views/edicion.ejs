@@ -1,0 +1,61 @@
+
+<%- include('partials/head') %>
+   
+<link rel="stylesheet" href="/css/styleedicionproducto.css">     
+<link rel="stylesheet" href="/css/styleProductList.css">
+<link rel="stylesheet" href="/css/style_Product.css">
+      
+</head>
+
+<body>
+    
+    <%- include('partials/header') %>
+
+    <main>
+
+        <form  method="get" action="/products/edit">
+
+            <div class="titulo-edicion">
+                <p >Productos a editar:</p>
+            </div>
+
+          
+            <fieldset class ="fieldset-producto">
+                <legend>Productos</legend>             
+    
+                <section class="cards"> 
+            
+          
+                    <% for( let productLis of productlist ) { %>
+                    <!--/products/detail/<=productLis.sku %> es un link que conduce a ruta param > '/detail/:sku', productControllers.productdet-->
+                    <a href="/products/edit/<%= productLis.sku %>">
+                    <ul>
+                        <li class="colorListadoEdit"> SKU: <%= productLis.sku %>, Nombre: <%= productLis.name %></li>
+                        
+                    </ul>
+                                    <!-- productLis.costo ? ->  existe? , si existe devuelve-> productLis.costo , si no existe devuelve -> productLis.pesos[0].precio-->
+                    </a>
+                
+            <% } %> 
+                  
+            </section>
+                      
+
+
+              
+
+        </form>
+
+
+</main>
+
+<%- include('partials/footer') %>
+
+
+
+</body>
+
+
+</html>
+
+

@@ -98,6 +98,15 @@
     display: none;
 }
 
+
+
+
+.colorListadoEdit{
+  color:black;
+  list-style-type: circle
+    
+}
+
 @media (max-width: 640px){
 .mainProductList {
         padding: 0;

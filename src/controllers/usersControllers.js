@@ -166,6 +166,13 @@ const usersControllers = {
        logout: function(req, res){
         req.session.destroy();
         return res.redirect("/")
-       }
+       },
+
+
+       carrito: (req, res) => {
+        res.render('carrito', {miUsuario: req.session.usuarioALoguearse})
+    }
+ 
+
 }
 module.exports = usersControllers

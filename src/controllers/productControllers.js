@@ -44,7 +44,7 @@ const productControllers = {
         })
         Promise.all([category, subcategory, brand])
         .then(([allCategory, allSubcategory, allBrand]) => {
-        res.render('creacionproducto', {allCategory, allSubcategory, allBrand})})
+        res.render('creacionproducto', {allCategory, allSubcategory, allBrand, miUsuario: req.session.usuarioALoguearse})})
         .catch(error => res.send(error))  //muestra vista de formulario de creacion
     },
     store: (req, res) => {
@@ -154,10 +154,18 @@ const productControllers = {
     },
 
 
-    edicionporsku: (req, res) => {
+    edicion: (req, res) => {
 
-        let product = products.find(p => p.sku == req.params.sku)
-		res.render('edicionporsku', {products: product} )
+        db.Products.findAll({
+            include: ['products_images', 'foods'] // me traigo las tablas.
+        })
+        .then(products => {
+            res.render('edicion', {
+                productlist: products,
+                miUsuario: req.session.usuarioALoguearse
+            })
+        })
+	
     },
 
     buscar: async function (req, res) {
@@ -274,7 +282,7 @@ const productControllers = {
                     }
                 })
                 .then(category => {
-                    res.render('edicionproducto', {products: product, category, allCategory, allSubcategory, allBrand} )
+                    res.render('edicionproducto', {products: product, category, allCategory, allSubcategory, allBrand, miUsuario: req.session.usuarioALoguearse} )
                 })
             })
         })
@@ -461,10 +469,7 @@ const productControllers = {
     // },
 
     
-    carrito: (req, res) => {
-        res.render('carrito')
-    }
- 
+   
 }
 
 module.exports = productControllers

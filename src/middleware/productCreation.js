@@ -42,7 +42,7 @@ let validationProduct =
         }         
 
     })
-    .withMessage('Archivo no cargado o no compatible con las siguientes extensiones: JPG, JPEG, PING O GIF.'), 
+    .withMessage('Archivo de imagen no cargado o no compatible con las siguientes extensiones: JPG, JPEG, PING O GIF.'), 
 
 ] 
 

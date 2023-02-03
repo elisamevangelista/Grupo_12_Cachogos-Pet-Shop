@@ -4,6 +4,7 @@ const { check, body } = require("express-validator")
 
 const validacionRegister = require('../middleware/userRegister')
 const validacionLogin = require('../middleware/userLogin')
+const notLogguedCart = require('../middleware/notLogguedCart')
 const multer = require('multer');
 
 const path = require('path');
@@ -43,6 +44,12 @@ router.post('/edituser', uploadFile.single('image'), usersController.edit); //pe
 
 router.get('/perfil', authMiddleware, usersController.perfil)
 router.get('/logout', usersController.logout)
+
+
+/*** CARRITO***/ 
+router.get('/carrito',notLogguedCart, usersController.carrito)
+
+
 
 // /*** EDIT USER***/
 // router.get('/perfil', usersControllers.edicionUsuario)
