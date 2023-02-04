@@ -3,7 +3,8 @@ const mainRoutes = require('./src/routes/main');
 const usersRoutes = require('./src/routes/users');
 const productRoutes = require('./src/routes/product');
 
-// const apiProductsRouter = require('./src/routes/api/products')
+const productsAPIRouter = require('./src/routes/api/products')
+const usersAPIRouter = require('./src/routes/api/users')
 
 const path = require('path');
 const methodOverride =  require('method-override');
@@ -32,7 +33,8 @@ app.use('/', mainRoutes);
 app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
 
-// app.use('/api/products',apiProductsRouter);
+app.use('/api/products',productsAPIRouter);
+app.use('/api/users',usersAPIRouter);
 
 app.use(cookieParser())
 app.use(cookieAuth)

@@ -5,27 +5,62 @@ const { Op } = require("sequelize");
 const moment = require('moment');
 
 
-//Aqui tienen otra forma de llamar a cada uno de los modelos
-const Products = db.Products;
-
-
 const productsAPIController = {
-    'list': (req, res) => {
-        db.Products.findAll()
-        .then(product => {
-            let respuesta = {
-                meta: {
-                    status : 200,
-                    total: product.length,
-                    url: 'api/products'
-                },
-                data: product
-            }
-                res.json(respuesta);
+
+    list: (req, res) => {
+
+        db.Products.findAll({
+
+            attributes: ['sku','name','description'],  // id','name','email' coinciden en nombre con las columnas de la base de datos.
+            include: ['foods','subcategories']   // subcategories es el nombre de la asociacion que se determina en el modelo de products para conectarse al modelo de subcategories de sus respectivas tablas en la db.
+        })
+        .then(products => {
+            
+            let countAlimentos = 0
+            let countJuguetes = 0
+            let countCamasEIndumentaria = 0
+            let countPaseosYViajes = 0
+
+            products = JSON.parse(JSON.stringify(products));  // transformo los datos de tipo Json en formato objeto, no Json, de forma tal de der realizar el map sobre el array de objetos.
+
+            let productos = products.map(p => {
+
+                countAlimentos = p.subcategories.name === 'Alimentos' ? countAlimentos = countAlimentos +1 : countAlimentos
+                countJuguetes = p.subcategories.name === 'Juguetes' ? countJuguetes = countJuguetes +1 : countJuguetes
+                countCamasEIndumentaria = p.subcategories.name === 'Camas e indumentaria' ? countCamasEIndumentaria= countCamasEIndumentaria +1 : countCamasEIndumentaria
+                countPaseosYViajes = p.subcategories.name === 'Paseos y viajes' ? countPaseosYViajes= countPaseosYViajes+1 : countPaseosYViajes
+                
+                return {
+                                            
+                    sku: p.sku,
+                    name: p.name,
+                    description: p.description,
+                    foods: p.foods,
+                    subcategories: p.subcategories,
+                    detail: `api/products/${p.sku}`,  //users es la ruta dentro de la carpeta api.
+                      
+                }
             })
+            
+            return res.status(200).json({
+
+                count: products.length,  // array de registros de users.
+                countByCategory: {
+                    'Alimentos': countAlimentos,
+                    'Juguetes': countJuguetes,
+                    'Camas e indumentaria': countCamasEIndumentaria,
+                    'Paseos y viajes': countPaseosYViajes 
+                },
+                products: productos,  // se trae unicamente lo que esta dentro del 'return'. Es un array de objetos, que a su vez tiene una clave 'foods' que su valor es un array.
+                status: 200
+
+            })
+         
+        })
+
     },
-    
-    'detail': (req, res) => {
+
+    detail: (req, res) => {
         db.Products.findByPk(req.params.id)
             .then(product => {
                 let respuesta = {
