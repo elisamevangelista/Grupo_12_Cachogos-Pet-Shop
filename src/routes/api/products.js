@@ -4,9 +4,9 @@ const productsAPIController = require('../../controllers/api/productsAPIControll
 
 
 //Listado de productos
-router.get('/', productsAPIController.list);
+router.get('/', productsAPIController.list);  //en POSTMAN ->   http://localhost:3000/api/products
 //Detalle de un producto
-router.get('/:sku', productsAPIController.show);
+router.get('/:sku', productsAPIController.show);  //en POSTMAN ->   http://localhost:3000/api/products/4
 
 // router.get('/recomended/:rating', productsAPIController.recomended);
 // //Agregar un producto

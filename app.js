@@ -3,6 +3,8 @@ const mainRoutes = require('./src/routes/main');
 const usersRoutes = require('./src/routes/users');
 const productRoutes = require('./src/routes/product');
 
+const cors = require('cors')  // INSTALADO PARA QUE FUNCIONE EL FETCH DE LA API, Y EN TERMINAL -> npm i cors
+
 const productsAPIRouter = require('./src/routes/api/products')
 const usersAPIRouter = require('./src/routes/api/users')
 
@@ -15,6 +17,7 @@ const cookieParser = require('cookie-parser')
 const cookieAuth = require('./src/middleware/cookieAuth')
 
 const app = express();
+app.use(cors())  //PARA QUE FUNCIONE EL FETCH DE LA API.
 
 app.use(session({
     secret: "Secreto",
@@ -25,15 +28,11 @@ app.use(express.static('public'));  //se puede prescidir de este termino __dirna
 app.use(methodOverride('_method'))
 
 
-app.listen(3000, ()=>{
-    console.log('Servidor levantado');          
-});
-
 app.use('/', mainRoutes);
 app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
 
-app.use('/api/products',productsAPIRouter);
+app.use('/api/products',productsAPIRouter);   //en POSTMAN ->   http://localhost:3000/api/products
 app.use('/api/users',usersAPIRouter);
 
 app.use(cookieParser())
@@ -45,5 +44,10 @@ app.set('view engine', 'ejs');
 
 app.get('/menu', (req,res)=>{
     res.sendFile(__dirname + '/views/menu.html');
+
+    
 })
 
+app.listen(4000, ()=>{
+    console.log('Servidor, 4000, levantado');          
+});

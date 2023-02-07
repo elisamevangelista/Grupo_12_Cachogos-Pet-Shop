@@ -14,15 +14,17 @@ const productsAPIController = {
             attributes: ['sku','name','description'],  // id','name','email' coinciden en nombre con las columnas de la base de datos.
             include: ['foods','subcategories']   // subcategories es el nombre de la asociacion que se determina en el modelo de products para conectarse al modelo de subcategories de sus respectivas tablas en la db.
         })
+
+       
         .then(products => {
-            
+           
             let countAlimentos = 0
             let countJuguetes = 0
             let countCamasEIndumentaria = 0
             let countPaseosYViajes = 0
 
             products = JSON.parse(JSON.stringify(products));  // transformo los datos de tipo Json en formato objeto, no Json, de forma tal de der realizar el map sobre el array de objetos.
-
+           
             let productos = products.map(p => {
 
                 countAlimentos = p.subcategories.name === 'Alimentos' ? countAlimentos = countAlimentos +1 : countAlimentos
@@ -38,13 +40,14 @@ const productsAPIController = {
                     foods: p.foods,
                     subcategories: p.subcategories,
                     detail: `api/products/${p.sku}`,  //users es la ruta dentro de la carpeta api.
-                      
+                    
                 }
             })
             
             return res.status(200).json({
 
                 count: products.length,  // array de registros de users.
+                // ????  categoriesCount: products.category_id.length, como hacer para agregar la cantidad de animales que tnemos?
                 countByCategory: {
                     'Alimentos': countAlimentos,
                     'Juguetes': countJuguetes,
