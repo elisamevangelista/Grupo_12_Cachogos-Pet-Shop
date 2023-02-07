@@ -48,12 +48,24 @@ const productsAPIController = {
 
                 count: products.length,  // array de registros de users.
                 // ????  categoriesCount: products.category_id.length, como hacer para agregar la cantidad de animales que tnemos?
-                countByCategory: {
-                    'Alimentos': countAlimentos,
-                    'Juguetes': countJuguetes,
-                    'Camas e indumentaria': countCamasEIndumentaria,
-                    'Paseos y viajes': countPaseosYViajes 
-                },
+                countByCategory: [
+                    {
+                        name: 'Alimentos',
+                        count: countAlimentos
+                    },
+                    {
+                        name: 'Juguetes',
+                        count: countJuguetes
+                    },
+                    {
+                        name: 'Camas e indumentaria',
+                        count: countCamasEIndumentaria
+                    },
+                    {
+                        name: 'Paseos y viajes',
+                        count: countPaseosYViajes
+                    }
+                ],
                 products: productos,  // se trae unicamente lo que esta dentro del 'return'. Es un array de objetos, que a su vez tiene una clave 'foods' que su valor es un array.
                 status: 200
 
