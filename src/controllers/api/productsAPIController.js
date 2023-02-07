@@ -9,7 +9,7 @@ const productsAPIController = {
 
     list: (req, res) => {
 
-        db.Products.findAll({
+        db.Products.findAll({  //me traigo todos los productos de la tabla prodcuts con las cols 'sku','name','description' + aquellos registros relacionados de las tablas 'foods','subcategories'.
 
             attributes: ['sku','name','description'],  // id','name','email' coinciden en nombre con las columnas de la base de datos.
             include: ['foods','subcategories']   // subcategories es el nombre de la asociacion que se determina en el modelo de products para conectarse al modelo de subcategories de sus respectivas tablas en la db.
