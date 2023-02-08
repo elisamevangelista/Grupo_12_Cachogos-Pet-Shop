@@ -25,7 +25,7 @@ const productControllers = require('../controllers/productControllers')
 /*** GET ALL PRODUCTS***/  
 
 router.get('/', productControllers.productlist )  // trae lista de productos.
-
+router.post('/', productControllers.buscar )
 /*** CREATE ONE PRODUCT***/  
 router.get('/creacionproducto',notProdCreation, productControllers.creacionproducto)  //notProdCreation es el M que no permite crear un producto al no estar logged como Admin. Redirige a la home.
 router.post('/creacionproducto', uploadFile.array('imagen'), validationProduct, productControllers.store); 
