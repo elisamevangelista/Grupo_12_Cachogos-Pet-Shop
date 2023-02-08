@@ -22,7 +22,9 @@
 
     
         <% if (locals.miUsuario) { %>    <!-- locals verifica si req.session existe, e importa la data guardadda si existe. -->
-            <p>Bienvenid@ <%= miUsuario.name %> !</p>    <!-- (.name, .email, .image) son nombres especificos de las columnas de la base de datos de la tabla users -->  
+            
+            <h2>Bienvenid@! <%= miUsuario.name %></h2> 
+            <!-- (.name, .email, .image) son nombres especificos de las columnas de la base de datos de la tabla users -->  
             <p>Su correo electrónico es: <%= miUsuario.email %> </p>
             <img class="imagenPerfil" src="/images/users/<%= miUsuario.image %> " alt="imagen"> 
                       
@@ -35,15 +37,7 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-                        
+          
    
 
     </main>

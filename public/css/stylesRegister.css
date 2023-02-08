@@ -2,14 +2,10 @@ header {
     text-align: center;
 }
 
-main {
-    text-align: center;
-    height: 80%;
-}
 
 main {
     text-align: center;
-    height: 400px;
+    height: 610px;
     background-image: url("../images/fondo2.jpg");
     background: contain;
 }
@@ -253,7 +249,7 @@ footer button:hover {
 
     main {
         margin-top: 150px;
-        height: 450px;
+        
     }
 
     main h2 {

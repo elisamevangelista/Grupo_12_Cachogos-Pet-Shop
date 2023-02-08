@@ -4,3 +4,8 @@
         width: 220px;
         height: 220px;
     }
+
+    main{
+        text-align: center;
+        background-image: url("../images/fondo2.jpg");
+    }

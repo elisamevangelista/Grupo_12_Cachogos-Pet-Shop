@@ -9,14 +9,18 @@ const productsAPIController = {
 
     list: (req, res) => {
 
-        db.Products.findAll({  //me traigo todos los productos de la tabla prodcuts con las cols 'sku','name','description' + aquellos registros relacionados de las tablas 'foods','subcategories'.
-
-            attributes: ['sku','name','description'],  // id','name','email' coinciden en nombre con las columnas de la base de datos.
-            include: ['foods','subcategories']   // subcategories es el nombre de la asociacion que se determina en el modelo de products para conectarse al modelo de subcategories de sus respectivas tablas en la db.
+        let category = db.Categories.findAll({
+            attributes: ['id', 'animalType']
         })
 
-       
-        .then(products => {
+        let product = db.Products.findAll({  //me traigo todos los productos de la tabla prodcuts con las cols 'sku','name','description' + aquellos registros relacionados de las tablas 'foods','subcategories'.
+
+            attributes: ['sku','name','description'],  // id','name','email' coinciden en nombre con las columnas de la base de datos.
+            include: ['foods','subcategories', 'products_images']   // subcategories es el nombre de la asociacion que se determina en el modelo de products para conectarse al modelo de subcategories de sus respectivas tablas en la db.
+        })
+
+        Promise.all([category, product])
+        .then(async ([allCategory, products]) => {
            
             let countAlimentos = 0
             let countJuguetes = 0
@@ -25,13 +29,21 @@ const productsAPIController = {
 
             products = JSON.parse(JSON.stringify(products));  // transformo los datos de tipo Json en formato objeto, no Json, de forma tal de der realizar el map sobre el array de objetos.
            
-            let productos = products.map(p => {
-
+            
+            let productos = await Promise.all(products.map(async (p) => {
+                
                 countAlimentos = p.subcategories.name === 'Alimentos' ? countAlimentos = countAlimentos +1 : countAlimentos
                 countJuguetes = p.subcategories.name === 'Juguetes' ? countJuguetes = countJuguetes +1 : countJuguetes
                 countCamasEIndumentaria = p.subcategories.name === 'Camas e indumentaria' ? countCamasEIndumentaria= countCamasEIndumentaria +1 : countCamasEIndumentaria
                 countPaseosYViajes = p.subcategories.name === 'Paseos y viajes' ? countPaseosYViajes= countPaseosYViajes+1 : countPaseosYViajes
+           
+                let url = await Promise.all(p.products_images.map((img) => {
+                    return `http://localhost:4000/images/${img.image}`
+                    
+                }))               
                 
+                
+        //product es unico segun el sku ingresado por navegador. product es un objeto. Recorro ese producto en la tabla 'products_images' y mapeo cada imagen guardada en la col 'image' para ese sku.
                 return {
                                             
                     sku: p.sku,
@@ -40,13 +52,14 @@ const productsAPIController = {
                     foods: p.foods,
                     subcategories: p.subcategories,
                     detail: `api/products/${p.sku}`,  //users es la ruta dentro de la carpeta api.
-                    
+                    imagesURL: url[0]
                 }
-            })
+            }))
             
             return res.status(200).json({
 
                 count: products.length,  // array de registros de users.
+                countAnimalCategory: allCategory.length,  //allCategory es un array de registros
                 // ????  categoriesCount: products.category_id.length, como hacer para agregar la cantidad de animales que tnemos?
                 countByCategory: [
                     {
