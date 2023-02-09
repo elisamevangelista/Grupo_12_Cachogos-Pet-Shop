@@ -91,6 +91,10 @@ const mainControllers = {
     formasDePago: (req, res) => {
         res.render('formasDePago', {miUsuario: req.session.usuarioALoguearse})    
 
+    },
+    terminos: (req, res) => {
+        res.render('terminosYCondiciones', {miUsuario: req.session.usuarioALoguearse})    
+
     }
 }
 module.exports = mainControllers
