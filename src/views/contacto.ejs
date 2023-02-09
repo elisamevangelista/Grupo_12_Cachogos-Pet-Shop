@@ -2,7 +2,7 @@
 
 <%- include('partials/head') %>
 
-<link rel="stylesheet" href="/css/perfil.css">   <!-- dejo esta linea en este archivo -->
+<link rel="stylesheet" href="/css/formasDePago.css">   <!-- dejo esta linea en este archivo -->
 </head>
 
 
@@ -10,19 +10,43 @@
 
     <%- include('partials/header') %>
 
-    <main>
+    <main class="mainFormasPago">
 
+        <div class="divFormasYFotoContacto">
 
-        <div class="enlaceEditarUsuario"> 
-                
-            <!-- href="/products/edit">  redireccion a la vista de edicionporsku, segun archivo rutas.-->
-        <h2 class ="titulCont">Contactos</h2>
-        
+            <div class="divPadreFormasYtitulo"> 
+                    
+                <!-- href="/products/edit">  redireccion a la vista de edicionporsku, segun archivo rutas.-->
+                <h2 class ="titulFormasPgo">Contacto:</h2>
+                <div class="divFormasdePago">
+                    <ul>
+                        <li>Teléfono: 0810-999-6288.
+                        <li>Whatsapp: +54 9 11 5984-5785.</li>
+                        <li>También podés enviarnos un mail a: </li>
+                        <li class="mail"><a class="mailContacto" href="mailto:ventas-cachogos@gmail.com">ventas@natural-life.com.ar</a></li>
+                            
+                       
+                    </ul>
 
-        </div> 
+                </div>
 
-   
+            </div> 
 
+          
+
+            <div class="divImagenSUCURSAL">
+                <h2 class ="titulFormasPgo">Dirección:</h2>
+                <ul class="listadoDireccion">
+                    <li><strong>SUCURSAL:</strong> Monroe 1655.
+                    <li>Abierta todos los días y feriados de 9:00 a 21:00 hs</li>
+                </ul>
+
+                <img class="ImagenMapa" src = "/images/Google-maps-y-Translate-se-unen-para-mejor-funcionalidad-933x525.jpg" alt="mapa">
+            </div>
+
+           
+
+        </div>
     </main>
     
     <%- include('partials/footer') %>

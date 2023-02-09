@@ -1,3 +1,58 @@
+
+.mainFormasPago{
+    text-align: center;
+    background-image: url("../images/fondo2.jpg");
+}
+
+  
+.divFormasYFoto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.divFormasdePago ul li{
+  
+    color: black;
+    text-align: left;
+    list-style: circle;
+    font-size: 18px;
+
+}
+
+.divPadreFormasYtitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+
+}
+
+
+.ImagenFormasDePago{
+    width: 50%;
+    background-color: white;
+ 
+}
+.divImagenC{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.titulFormasPgo{
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+
+@media screen and (min-width: 525px){
+  
+
 .mainFormasPago{
     text-align: center;
     background-image: url("../images/fondo2.jpg");
@@ -46,9 +101,57 @@ padding-left: 0px;
     text-align: center;
     margin-bottom: 10px;
     background-color: white;
+    text-decoration: underline;
 }
 
 .ImagenFormasDePago{
-    width: 70%;
+    width: 80%;
     background-color: white;
+}
+
+
+.divFormasdePago li a{
+    color: blue;
+    text-decoration: underline;
+ 
+}
+.divFormasdePago ul .mail{
+    
+    list-style: none
+    
+}
+
+.ImagenMapa{
+    width: 50%;
+    background-color: white;
+    
+}
+
+.listadoDireccion li{
+    color: black;
+}
+
+.divImagenSUCURSAL{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.divFormasYFotoContacto{
+    display:flex ;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+}
+
+.listadoDireccion{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
 }
