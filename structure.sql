@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: cachogos_db
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.27-MariaDB
+-- Server version	5.5.5-10.4.25-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -28,7 +28,7 @@ CREATE TABLE `brands` (
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `carts` (
   KEY `carts_FK_1` (`user_id`),
   CONSTRAINT `carts_FK` FOREIGN KEY (`product_sku`) REFERENCES `products` (`sku`),
   CONSTRAINT `carts_FK_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,7 +88,7 @@ CREATE TABLE `categories` (
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -121,7 +121,7 @@ CREATE TABLE `foods` (
   PRIMARY KEY (`id`),
   KEY `foods_FK` (`product_sku`),
   CONSTRAINT `foods_FK` FOREIGN KEY (`product_sku`) REFERENCES `products` (`sku`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -130,7 +130,7 @@ CREATE TABLE `foods` (
 
 LOCK TABLES `foods` WRITE;
 /*!40000 ALTER TABLE `foods` DISABLE KEYS */;
-INSERT INTO `foods` VALUES (7,3,3,700,2,'2022-12-30 20:09:53','2023-01-05 00:32:45',NULL,0),(8,3,7,1200,4,'2022-12-30 20:09:53','2023-01-05 00:33:05',NULL,0),(9,3,11,2000,5,'2022-12-30 20:09:53','2023-01-05 00:33:05',NULL,0),(10,4,3,100,1,'2023-02-03 00:08:41','2023-02-03 00:15:59',NULL,0),(11,4,8,500,5,'2023-02-03 00:08:41','2023-02-03 00:16:12',NULL,0),(12,4,15,1000,6,'2023-02-03 00:08:41','2023-02-03 00:16:12',NULL,0);
+INSERT INTO `foods` VALUES (7,3,0,0,0,'2022-12-30 20:09:53','2023-02-09 00:18:07',NULL,0),(8,3,0,0,0,'2022-12-30 20:09:53','2023-02-09 00:18:07',NULL,0),(9,3,0,0,0,'2022-12-30 20:09:53','2023-02-09 00:18:07',NULL,0),(10,4,3,100,1,'2023-02-03 00:08:41','2023-02-03 00:15:59',NULL,0),(11,4,8,500,5,'2023-02-03 00:08:41','2023-02-03 00:16:12',NULL,0),(12,4,15,1000,6,'2023-02-03 00:08:41','2023-02-03 00:16:12',NULL,0),(13,10,0,0,0,'2023-02-09 00:50:14','2023-02-09 00:50:14',NULL,0),(14,10,0,0,0,'2023-02-09 00:50:14','2023-02-09 00:50:14',NULL,0),(15,10,0,0,0,'2023-02-09 00:50:14','2023-02-09 00:50:14',NULL,0),(16,11,20,12000,3,'2023-02-09 00:53:45','2023-02-09 00:53:45',NULL,0),(17,11,2,1500,0,'2023-02-09 00:53:45','2023-02-09 00:53:45',NULL,0),(18,11,7,5000,0,'2023-02-09 00:53:45','2023-02-09 00:53:45',NULL,0),(19,13,10,14000,3,'2023-02-09 01:04:56','2023-02-09 01:04:56',NULL,0),(20,13,2,3000,0,'2023-02-09 01:04:56','2023-02-09 01:04:56',NULL,0),(21,13,7,10000,3,'2023-02-09 01:04:56','2023-02-09 01:04:56',NULL,0),(22,15,0,0,0,'2023-02-09 01:10:54','2023-02-09 01:10:54',NULL,0),(23,15,0,0,0,'2023-02-09 01:10:54','2023-02-09 01:10:54',NULL,0),(24,15,0,0,0,'2023-02-09 01:10:54','2023-02-09 01:10:54',NULL,0),(25,16,0,0,0,'2023-02-09 01:14:24','2023-02-09 01:14:24',NULL,0),(26,16,0,0,0,'2023-02-09 01:14:24','2023-02-09 01:14:24',NULL,0),(27,16,0,0,0,'2023-02-09 01:14:24','2023-02-09 01:14:24',NULL,0);
 /*!40000 ALTER TABLE `foods` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -156,7 +156,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`sku`),
   KEY `products_FK` (`subcategory_id`),
   CONSTRAINT `products_FK` FOREIGN KEY (`subcategory_id`) REFERENCES `subcategories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -165,7 +165,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (3,'pepito','comida de animal',0,45,'2023-01-05 00:31:55',NULL,0,0,'2022-12-30 20:09:53',2),(4,'alimento seco','erregdg sffewrewrwer',3,44,'2023-02-03 00:14:25',NULL,0,0,'2023-02-03 00:08:41',5),(5,'juguete','juguetes perro adulto',23,0,'2023-02-04 00:40:55',NULL,3242,10,'2023-02-04 00:40:55',5);
+INSERT INTO `products` VALUES (3,'Comida de pez','Comida de pez - Granulos tropicales',0,45,'2023-02-09 00:57:17',NULL,3000,0,'2022-12-30 20:09:53',3),(4,'Alimento seco','Comida de perro a base de carne y verduras',3,44,'2023-02-09 00:27:40',NULL,0,0,'2023-02-03 00:08:41',5),(5,'Juguete de perro','Hueso para para perro grande',0,3,'2023-02-09 01:18:10',NULL,3242,10,'2023-02-04 00:40:55',5),(6,'Piedras Sanitarias','Piedras Sanitarias - Piedras absorbentes y aglutinantes',0,0,'2023-02-09 00:45:57',NULL,3500,0,'2023-02-08 23:55:09',10),(7,'Rascador','Rascador hilo sisal para gatos',0,7,'2023-02-09 00:41:43',NULL,3500,0,'2023-02-08 23:56:33',6),(8,'Alimento para perro ','Alimento para perro adulto a base de cordero, arroz y vegetales',0,12,'2023-02-09 00:35:50',NULL,15000,0,'2023-02-08 23:57:31',1),(9,'Cucha ','Cucha para perro tamaño grande ',0,5,'2023-02-09 00:45:22',NULL,3500,0,'2023-02-08 23:59:45',9),(10,'Comida pouch ','Comida húmeda a base de atún',0,0,'2023-02-09 00:50:14',NULL,600,0,'2023-02-09 00:50:14',2),(11,'Alimento para perro mediano','Alimento seco a base de carne, arroz y vegetales - perros medianos',0,5,'2023-02-09 00:53:44',NULL,0,0,'2023-02-09 00:53:44',1),(12,'Cama para gatos','Cama para gatos con ventosas para colgar sobre vidrios',0,0,'2023-02-09 00:56:43',NULL,6000,0,'2023-02-09 00:56:43',10),(13,'Alimento para gato','Alimento Seco Fit para control de peso',0,4,'2023-02-09 01:04:56',NULL,0,0,'2023-02-09 01:04:56',2),(14,'Colchon para perro ','Colchon para perro grande',0,0,'2023-02-09 01:08:09',NULL,9500,0,'2023-02-09 01:08:09',9),(15,'Comida de pez','Comida de pez disolución lenta',3,0,'2023-02-09 01:10:54',NULL,7000,0,'2023-02-09 01:10:54',3),(16,'Comida de ave','Comida mix para loros contiene semillas de zapallo y mani con cáscara',0,0,'2023-02-09 01:14:24',NULL,1400,0,'2023-02-09 01:14:24',4);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -187,7 +187,7 @@ CREATE TABLE `products_brands` (
   KEY `products_brands_FK` (`product_sku`),
   KEY `products_brands_FK_1` (`brand_id`),
   CONSTRAINT `products_brands_FK_1` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -196,7 +196,7 @@ CREATE TABLE `products_brands` (
 
 LOCK TABLES `products_brands` WRITE;
 /*!40000 ALTER TABLE `products_brands` DISABLE KEYS */;
-INSERT INTO `products_brands` VALUES (3,7,3,'2022-12-30 20:09:53',NULL,'2023-01-05 00:32:28'),(4,16,4,'2023-02-03 00:08:41',NULL,'2023-02-03 00:15:09'),(5,14,5,'2023-02-04 00:40:55',NULL,'2023-02-04 00:40:55');
+INSERT INTO `products_brands` VALUES (3,12,3,'2022-12-30 20:09:53',NULL,'2023-02-09 00:18:07'),(4,16,4,'2023-02-03 00:08:41',NULL,'2023-02-03 00:15:09'),(5,11,5,'2023-02-04 00:40:55',NULL,'2023-02-09 01:18:10'),(6,19,6,'2023-02-08 23:55:10',NULL,'2023-02-08 23:55:10'),(7,9,7,'2023-02-08 23:56:33',NULL,'2023-02-09 00:41:43'),(8,5,8,'2023-02-08 23:57:31',NULL,'2023-02-09 00:35:26'),(9,9,9,'2023-02-08 23:59:45',NULL,'2023-02-09 00:45:22'),(10,1,10,'2023-02-09 00:50:14',NULL,'2023-02-09 00:50:14'),(11,3,11,'2023-02-09 00:53:45',NULL,'2023-02-09 00:53:45'),(12,15,12,'2023-02-09 00:56:43',NULL,'2023-02-09 00:56:43'),(13,8,13,'2023-02-09 01:04:56',NULL,'2023-02-09 01:04:56'),(14,9,14,'2023-02-09 01:08:09',NULL,'2023-02-09 01:08:09'),(15,14,15,'2023-02-09 01:10:54',NULL,'2023-02-09 01:10:54'),(16,15,16,'2023-02-09 01:14:24',NULL,'2023-02-09 01:14:24');
 /*!40000 ALTER TABLE `products_brands` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -217,7 +217,7 @@ CREATE TABLE `products_images` (
   PRIMARY KEY (`id`),
   KEY `products_images_FK` (`product_sku`),
   CONSTRAINT `products_images_FK` FOREIGN KEY (`product_sku`) REFERENCES `products` (`sku`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -226,7 +226,7 @@ CREATE TABLE `products_images` (
 
 LOCK TABLES `products_images` WRITE;
 /*!40000 ALTER TABLE `products_images` DISABLE KEYS */;
-INSERT INTO `products_images` VALUES (7,3,'imagen-1672430993035.jpg','2022-12-30 20:09:53','2023-01-05 00:33:50',NULL),(8,3,'imagen-1672430993035.webp','2022-12-30 20:09:53','2023-01-05 00:33:50',NULL),(9,3,'imagen-1672430993035.webp','2022-12-30 20:09:53','2023-01-05 00:33:50',NULL),(10,4,'imagen-1675383123377.jpg','2023-02-03 00:08:41','2023-02-03 00:14:43',NULL),(11,5,'imagen-1675471255741.jpg','2023-02-04 00:40:55','2023-02-04 00:40:55',NULL);
+INSERT INTO `products_images` VALUES (7,3,'imagen-1675901887303.jpg','2022-12-30 20:09:53','2023-02-09 00:18:07',NULL),(8,3,'imagen-1675901887303.jpg','2022-12-30 20:09:53','2023-02-09 00:18:07',NULL),(9,3,'imagen-1675901887303.jpg','2022-12-30 20:09:53','2023-02-09 00:18:07',NULL),(10,4,'imagen-1675383123377.jpg','2023-02-03 00:08:41','2023-02-03 00:14:43',NULL),(11,5,'imagen-1675905490490.jpg','2023-02-04 00:40:55','2023-02-09 01:18:10',NULL),(12,6,'imagen-1675900509761.jpg','2023-02-08 23:55:10','2023-02-08 23:55:10',NULL),(13,7,'imagen-1675903303589.jpg','2023-02-08 23:56:33','2023-02-09 00:41:43',NULL),(14,8,'imagen-1675902926824.jpg','2023-02-08 23:57:31','2023-02-09 00:35:26',NULL),(15,9,'imagen-1675903522614.jpg','2023-02-08 23:59:45','2023-02-09 00:45:22',NULL),(16,10,'imagen-1675903814740.jpg','2023-02-09 00:50:14','2023-02-09 00:50:14',NULL),(17,11,'imagen-1675904024808.jpg','2023-02-09 00:53:44','2023-02-09 00:53:44',NULL),(18,12,'imagen-1675904203219.jpg','2023-02-09 00:56:43','2023-02-09 00:56:43',NULL),(19,13,'imagen-1675904696458.jpg','2023-02-09 01:04:56','2023-02-09 01:04:56',NULL),(20,14,'imagen-1675904889164.jpg','2023-02-09 01:08:09','2023-02-09 01:08:09',NULL),(21,15,'imagen-1675905054073.jpg','2023-02-09 01:10:54','2023-02-09 01:10:54',NULL),(22,16,'imagen-1675905264403.jpg','2023-02-09 01:14:24','2023-02-09 01:14:24',NULL);
 /*!40000 ALTER TABLE `products_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -248,7 +248,7 @@ CREATE TABLE `subcategories` (
   PRIMARY KEY (`id`),
   KEY `subcategories_FK` (`category_id`),
   CONSTRAINT `subcategories_FK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -280,7 +280,7 @@ CREATE TABLE `users` (
   `deletedAt` timestamp NULL DEFAULT NULL,
   `userType` enum('user','admin') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -289,7 +289,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Jonathan','Gira','','image-1672434093751.jpg','$2a$10$9sc9mQrF9pOAC7rKfRxrLOHYBk/S944OzbJb4SznGtp9.qzXFKO02','2022-12-30 21:01:33','2022-12-30 21:01:33',NULL,'user'),(2,'Martin','Gira','martin1999@gmail.com','image-1672783967667.jpg','$2a$10$wf6oYtsMHLRjJAI.XwM5hOkqYyzkaHvu9gEjuBoOx6WCAc8K.w0BC','2023-01-03 22:12:47','2023-01-03 22:12:47',NULL,'user'),(3,'tomas','perez','alfaro77@gmail.com','image-1674003231109.jpg','$2a$10$jrofPWcj2Mh.GTkfm8HD2uGszZVKfbzzhyi6Nv.jbvGC7BhHfB9Z6','2023-01-03 22:25:52','2023-01-18 00:53:51',NULL,'user'),(4,'ana','gomez','anag@gmail.com','image-1675207709046.jpg','$2a$10$ZmixQo3ouKCcu1IZ7EpDoOQoByT83epXJuYid33d3iwYQXWrVNBqe','2023-01-31 23:28:29','2023-01-31 23:28:29',NULL,'user'),(5,'juan','pelotas','juanpelotas1@gmail.com','image-1675374814030.jpg','$2a$10$SH1C64Gi.GTgPEL3aN681.EN4NdcC9ufNlARUopUkYxs/Xm44eKUy','2023-02-02 21:53:34','2023-02-02 21:53:34',NULL,'user'),(6,'jorge','garcia','jorgegarcia@gmail.com','image-1675374914928.jpg','$2a$10$SWpV30pDknt5Q6iciOxLpunVEbRvtGxzmKFcfIKYQi89elI.Y0i7S','2023-02-02 21:55:15','2023-02-02 22:27:04',NULL,'admin');
+INSERT INTO `users` VALUES (1,'Jonathan','Gira','','image-1672434093751.jpg','$2a$10$9sc9mQrF9pOAC7rKfRxrLOHYBk/S944OzbJb4SznGtp9.qzXFKO02','2022-12-30 21:01:33','2022-12-30 21:01:33',NULL,'user'),(2,'Martin','Gira','martin1999@gmail.com','image-1672783967667.jpg','$2a$10$wf6oYtsMHLRjJAI.XwM5hOkqYyzkaHvu9gEjuBoOx6WCAc8K.w0BC','2023-01-03 22:12:47','2023-01-03 22:12:47',NULL,'user'),(3,'tomas','perez','alfaro77@gmail.com','image-1674003231109.jpg','$2a$10$jrofPWcj2Mh.GTkfm8HD2uGszZVKfbzzhyi6Nv.jbvGC7BhHfB9Z6','2023-01-03 22:25:52','2023-01-18 00:53:51',NULL,'user'),(4,'ana','gomez','anag@gmail.com','image-1675207709046.jpg','$2a$10$ZmixQo3ouKCcu1IZ7EpDoOQoByT83epXJuYid33d3iwYQXWrVNBqe','2023-01-31 23:28:29','2023-01-31 23:28:29',NULL,'user'),(5,'juan','pelotas','juanpelotas1@gmail.com','image-1675374814030.jpg','$2a$10$SH1C64Gi.GTgPEL3aN681.EN4NdcC9ufNlARUopUkYxs/Xm44eKUy','2023-02-02 21:53:34','2023-02-02 21:53:34',NULL,'user'),(6,'jorge','garcia','jorgegarcia@gmail.com','image-1675374914928.jpg','$2a$10$SWpV30pDknt5Q6iciOxLpunVEbRvtGxzmKFcfIKYQi89elI.Y0i7S','2023-02-02 21:55:15','2023-02-02 22:27:04',NULL,'admin'),(7,'sara','wu','sarawu@gmail.com','image-1675899761251.jpeg','$2a$10$BGodSobqm2qaKd86tvsya.XaTCBmdggDi2aB2VBkWnF3vyVm9MsEu','2023-02-08 23:42:42','2023-02-08 23:44:02',NULL,'admin');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -306,4 +306,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-02-07 20:11:27
+-- Dump completed on 2023-02-08 22:21:02
