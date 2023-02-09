@@ -2,14 +2,14 @@ header {
     text-align: center;
 }
 
-main {
+.mainLogin {
     text-align: center;
-    height: 480px;
+    /* height: 480px */
     background-image: url("../images/fondo2.jpg");
     background: contain;
 }
 
-main form button:hover {
+.mainLogin .formuLogin button:hover {
     color:white;
     background-color: rgb(4, 62, 255);
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -37,18 +37,24 @@ footer button:hover {
 
 @media (max-width: 525px) {
 
-    main section {
+    .mainLogin {
+        text-align: center;
+        height: 520px;
+        
+    }
+    .mainLogin section {
         display: flex;
         background-color: orange;
-        justify-content: space-around
+        justify-content: space-around;
+        height: 480px
     }
     
-    main section a {
+    .mainLogin section a {
         background-color: grey;
         justify-content: space-around
     }
     
-    main section div a {
+    .mainLogin section div a {
         background-color: grey;
         justify-content: space-around;
         margin: 10px;
@@ -61,13 +67,13 @@ footer button:hover {
         font-size: 18px;
     }
     
-    form {
+    .formuLogin {
         border-radius: 10px;
         margin-bottom: 5%;
         display: inline-block;
         background-color: rgb(223, 219, 219);
         border: 1px solid #3694F5;
-        height: 80%;
+        height: 65%;
         width: 70%;
     }
     
@@ -104,15 +110,15 @@ footer button:hover {
         display: none;
     }
 
-    main .separador-login {
+    .mainLogin .separador-login {
         display: inline;
     }
 
-    main .separador-login p {
+    .mainLogin .separador-login p {
         margin: 5px;
     }
 
-    form a {
+    .formuLogin a {
         margin-bottom: 3%;
         text-decoration: none;
         list-style: none;
@@ -134,7 +140,7 @@ footer button:hover {
         border-color: grey;
     }
     
-    .mainLabel {
+    ..mainLoginLabel {
         margin-bottom: 5px;
     }
     .mailInput-i {
@@ -186,14 +192,14 @@ footer button:hover {
         padding-right: 5px;
     }
 
-    form button {
+    .formuLogin button {
         height: 28px;
         width: 90%;
         transition: .7s;
         font-size: 18px;
     }
 
-    main h2{
+    .mainLogin h2{
 
         padding-top: 15px;
         margin-top: 0px;
@@ -224,22 +230,23 @@ footer button:hover {
 
 @media (min-width:525px) {
 
-    main {
+    .mainLogin {
         margin-top: 150px;
+        height: 480px;
     }
 
-    main section {
+    .mainLogin section {
         display: flex;
         background-color: orange;
         justify-content: space-around
     }
     
-    main section a {
+    .mainLogin section a {
         background-color: grey;
         justify-content: space-around
     }
     
-    main section div a {
+    .mainLogin section div a {
         background-color: grey;
         justify-content: space-around;
         margin: 10px;
@@ -264,19 +271,19 @@ footer button:hover {
         display: none;
     }
 
-    .error-formulario {
+    .error-.formuLoginulario {
         display: none;
     }
 
-    main .separador-login{
+    .mainLogin .separador-login{
         display: inline;
     }
 
-    main .separador-login p {
+    .mainLogin .separador-login p {
         margin: 5px;
     }
 
-    form {
+    .formuLogin {
         border-radius: 10px;
         display: flex;
         background-color: rgb(223, 219, 219);
@@ -289,7 +296,7 @@ footer button:hover {
         margin-inline: auto
     }
 
-    form a {
+    .formuLogin a {
         margin-bottom: 1%;
         text-decoration: none;
         list-style: none;
@@ -297,7 +304,7 @@ footer button:hover {
         font-style: italic;
     }
 
-    form button {
+    .formuLogin button {
         height: 28px;
         width: 200px;
         transition: .7s;
@@ -449,7 +456,7 @@ footer button:hover {
         padding-right: 5px;
     }
 
-    main h2{
+    .mainLogin h2{
 
         padding-top: 15px;
     }

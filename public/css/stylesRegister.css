@@ -3,22 +3,22 @@ header {
 }
 
 
-main {
+.mainRegister {
     text-align: center;
-    height: 610px;
+    /* height: 610px; */
     background-image: url("../images/fondo2.jpg");
     background: contain;
 }
 
 /* footer button, */
-form button {
+.formuRegister button {
     height: 28px;
     width: 200px;
     transition: .7s;
     font-size: 18px;
 }
 
-main form button:hover {
+.mainRegister .formuRegister button:hover {
     color:white;
     background-color: rgb(4, 62, 255);
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -36,7 +36,7 @@ footer button:hover {
 
 @media screen and (max-width: 525px) {
     
-    form {
+    .formuRegister {
         border-radius: 10px;
         border: 1px solid #3694F5;
         margin-bottom: 5%;
@@ -92,7 +92,7 @@ footer button:hover {
         justify-content: center;
     }
     
-    main form p {
+    .mainRegister .formuRegister p {
         display: none;
     }
     
@@ -247,27 +247,27 @@ footer button:hover {
 
 @media screen and (min-width:525px) {
 
-    main {
+    .mainRegister {
         margin-top: 150px;
         
     }
 
-    main h2 {
+    .mainRegister h2 {
         padding-top: 20px;
     }
 
-    main section {
+    .mainRegister section {
         display: flex;
         background-color: orange;
         justify-content: space-around
     }
     
-    main section a {
+    .mainRegister section a {
         background-color: grey;
         justify-content: space-around
     }
     
-    main section div a {
+    .mainRegister section div a {
         background-color: grey;
         justify-content: space-around;
         margin: 10px;
@@ -285,7 +285,7 @@ footer button:hover {
         padding-top: 1%;
     }
     
-    main form p {
+    .mainRegister .formuRegister p {
         display: none;
     }
     
@@ -299,7 +299,7 @@ footer button:hover {
         border-color: grey;
     }
 
-    form {
+    .formuRegister {
         border-radius: 10px;
         border: 1px solid #3694F5;
         margin-bottom: 5%;
