@@ -82,5 +82,10 @@ const mainControllers = {
         res.render('index', {miUsuario: req.session.usuarioALoguearse})     
     }
     },   
+
+    contacto: (req, res) => {
+        res.render('contacto', {miUsuario: req.session.usuarioALoguearse})    
+
+    }
 }
 module.exports = mainControllers
