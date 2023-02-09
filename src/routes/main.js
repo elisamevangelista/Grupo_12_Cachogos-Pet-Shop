@@ -6,5 +6,6 @@ const mainController = require('../controllers/mainControllers')
 router.get('/', mainController.index);
 router.post('/', mainController.buscar)
 router.get('/contacto', mainController.contacto);
+router.get('/formasdepago', mainController.formasDePago);
 
 module.exports = router

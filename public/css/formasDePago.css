@@ -1,0 +1,54 @@
+.mainFormasPago{
+    text-align: center;
+    background-image: url("../images/fondo2.jpg");
+}
+
+
+.divFormasYFoto{
+    display:flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.divPadreFormasYtitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+
+}
+
+.divFormasdePago{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.divFormasdePago ul li{
+  
+    color: black;
+    text-align: left;
+    list-style: circle;
+    font-size: 18px;
+
+}
+
+.divFormasdePago ul{
+  
+padding-left: 0px;
+}
+
+.titulFormasPgo{
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.ImagenFormasDePago{
+    width: 70%;
+    background-color: white;
+}

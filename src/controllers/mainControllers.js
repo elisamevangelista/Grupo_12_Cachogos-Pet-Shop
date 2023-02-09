@@ -86,6 +86,11 @@ const mainControllers = {
     contacto: (req, res) => {
         res.render('contacto', {miUsuario: req.session.usuarioALoguearse})    
 
+    },
+                                        // formasDePago -> es la vista.
+    formasDePago: (req, res) => {
+        res.render('formasDePago', {miUsuario: req.session.usuarioALoguearse})    
+
     }
 }
 module.exports = mainControllers

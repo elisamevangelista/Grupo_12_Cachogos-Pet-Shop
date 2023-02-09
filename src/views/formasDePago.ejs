@@ -1,0 +1,48 @@
+
+
+<%- include('partials/head') %>
+
+<link rel="stylesheet" href="/css/formasDePago.css">   <!-- dejo esta linea en este archivo -->
+</head>
+
+
+<body>
+
+    <%- include('partials/header') %>
+
+    <main class="mainFormasPago">
+
+        <div class="divFormasYFoto">
+
+            <div class="divPadreFormasYtitulo"> 
+                    
+                <!-- href="/products/edit">  redireccion a la vista de edicionporsku, segun archivo rutas.-->
+                <h2 class ="titulFormasPgo">Formas de pago disponibles:</h2>
+                <div class="divFormasdePago">
+                    <ul>
+                        <li>Efectivo.</li>
+                        <li>Cheques.</li>
+                        <li>Tarjetas de débito.</li>
+                        <li>Tarjetas de crédito.</li>
+                        <li>Pagos móviles.</li>
+                        <li>Mercado Pago.</li>
+                    </ul>
+
+                </div>
+
+            </div> 
+            <div>
+                <img class="ImagenFormasDePago" src = "/images/forma-pagamento-mgv-novo.webp" alt="Formas de Pago">
+            </div>
+
+        </div>
+    </main>
+    
+    <%- include('partials/footer') %>
+
+  
+
+
+</body>
+
+</html>
