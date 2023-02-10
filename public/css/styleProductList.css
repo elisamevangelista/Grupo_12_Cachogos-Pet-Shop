@@ -1,74 +1,320 @@
 * {
     box-sizing: border-box;
 }
+
 .mainProductList {
 
     width: 100%;
+    padding-top:0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 45px;
+    margin-top: 0px;
     display: flex;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 15px;
-    margin-top: 182px;
+    flex-direction: column;
+   align-items: center;
+    background-image: url("../images/fondo2.jpg");
 }
 
-.mainProductList aside {
-    width: 244px;
-    margin-right: 8px;
-    margin: 1%;
+.divsCateCelu{
     display: flex;
     flex-direction: column;
 }
 
-
-.filters {
-    border: 1px solid silver;
-    margin-bottom: 2px;
-    padding: 10px;
-    background: #EBF5FA;
-    border-radius: 4px;
-    border: none;
-    margin: 10px 0;
+.filtrosCateg{
+    display: none;
 
 }
 
-.filters h2 {
-    font-size: 17px;
-    text-align: inherit;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    font-weight: bold;
-}
 
-.filters__titles {
-    text-transform: uppercase;
-    font-weight: 600;
-}
 .cards {
-    margin: 1%;
-    width: 90%;
+    margin-top: 20px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     align-content: center;
     justify-content: center;
+    border: solid 1px;
+    border-radius: 5px;
 
 }
+
+.card {
+width: 100%;
+height: auto;
+margin: 8px;
+margin-top: 15px;
+border: 2px solid rgba(13, 66, 211, 0.15);
+padding: 14px 8px;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-basis: 29%;
+border-radius: 5px;
+justify-content: flex-start;
+min-width: 250px;
+
+}
+
+
+.imgProdList {
+display: flex;
+justify-content: center;
+}
+
+.card img {
+width: 80%;
+height: 250px;
+}
+
+.card p {
+text-align: center;
+text-transform: uppercase;
+}
+
+.card a {
+text-decoration: none;
+color: black;
+}
+.card .card__productCuota {
+
+text-align: center;
+font-size: 90%;
+
+
+
+}
+
+.card .card__productName {
+padding-top: 15px;
+padding-bottom: 10px;
+color: rgb(54, 110, 184);
+
+
+}
+
+.card .card__productPrice{
+font-weight: 800;
+}
+
+.card:hover{
+border: 1px solid blue;
+cursor: pointer;
+}
+
+.imgProdList{
+border: solid rgba(191, 181, 181, 0.888) 1px;
+border-radius: 5px;
+
+}
+.imagenCards{
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+
+
+@media (min-width: 525px){
+    
+
+.divsCateCelu{
+    display: none;
+}
+.mainProductList {
+
+    width: 100%;
+    padding-top:0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 45px;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    background-image: url("../images/fondo2.jpg");
+}
+
+.tipoDeFiltros{
+    display: flex;
+    flex-direction: column;
+}
+
+.tipoDeFiltros h3{
+    text-align: center;
+}
+
+.filtrosCateg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.filters{
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(204, 237, 247);
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.cards {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px;
+    border-radius: 5px;
+
+}
+
+.card {
+width: 100%;
+height: auto;
+margin: 8px;
+margin-top: 15px;
+border: 2px solid rgba(13, 66, 211, 0.15);
+padding: 14px 8px;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-basis: 29%;
+border-radius: 5px;
+justify-content: flex-start;
+min-width: 200px;
+
+}
+
+
+.imgProdList {
+display: flex;
+justify-content: center;
+}
+
+.card img {
+width: 80%;
+height: 250px;
+}
+
+.card p {
+text-align: center;
+text-transform: uppercase;
+}
+
+.card a {
+text-decoration: none;
+color: black;
+}
+.card .card__productCuota {
+
+text-align: center;
+font-size: 90%;
+
+
+
+}
+
+.card .card__productName {
+padding-top: 15px;
+padding-bottom: 10px;
+color: rgb(54, 110, 184);
+
+
+}
+
+.card .card__productPrice{
+font-weight: 800;
+}
+
+.card:hover{
+border: 1px solid blue;
+cursor: pointer;
+}
+
+.imgProdList{
+border: solid rgba(191, 181, 181, 0.888) 1px;
+border-radius: 5px;
+
+}
+.imagenCards{
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+
+}
+
+/* ------------------------------------------------------------------ */
+@media (min-width: 672px){
+
+    .mainProductList {
+
+        width: 100%;
+        margin: 0 auto;
+        padding-top:25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        background-image: url("../images/fondo2.jpg");
+    }
+    
+    .mainProductList aside {
+        width: 40%px;
+        margin-right: 8px;
+        margin: 1%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cards {
+        margin: 1%;
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        align-content: center;
+        justify-content: center;
+        border: solid 1px;
+        border-radius: 5px;
+    
+    }
+    
 
 .card {
     width: 100%;
     height: auto;
     margin: 8px;
-    border: 1px solid rgba(35,65,150,.15);
+    margin-top: 15px;
+    border: 2px solid rgba(13, 66, 211, 0.15);
     padding: 14px 8px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-basis: 29%;
-    border-radius: 3%;
+    border-radius: 5px;
     justify-content: flex-start;
+    min-width: 250px;
+
 }
+
+.filtrosCateg{
+    display: flex;
+    flex-direction: column;
+}
+
 
 .imgProdList {
     display: flex;
@@ -84,9 +330,30 @@
     text-align: center;
     text-transform: uppercase;
 }
-.card .card__productCuota {
-    text-transform: capitalize;
 
+.card a {
+    text-decoration: none;
+    color: black;
+}
+.card .card__productCuota {
+  
+    text-align: center;
+    font-size: 90%;
+    
+    
+
+}
+
+.card .card__productName {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: rgb(54, 110, 184);
+    
+
+}
+
+.card .card__productPrice{
+    font-weight: 800;
 }
 
 .card:hover{
@@ -94,55 +361,161 @@
     cursor: pointer;
 }
 
-.activeForm{
-    display: block;
+.imgProdList{
+    border: solid rgba(191, 181, 181, 0.888) 1px;
+    border-radius: 5px;
+
+}
+.imagenCards{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.activeFormMobile{
-    display: none;
+
+
+.precioTexto{
+    width: 100%;
+  
 }
+
+
+
+}
+
+
+/* --------------------------------------------------- */
+@media (min-width: 756px){
+
+.mainProductList {
+
+    width: 100%;
+    margin: 0 auto;
+    padding-top:25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("../images/fondo2.jpg");
+}
+
+/* .mainProductList aside {
+    width: 20%px;
+    margin-right: 8px;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+} */
+
+
+.mainProductList aside {
+    width: 30%px;
+    margin-right: 8px;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+}
+.cards {
+    margin: 1%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px;
+    border-radius: 5px;
+
+}
+
+
+
+
+
+.card {
+    width: 100%;
+    height: auto;
+    margin: 8px;
+    margin-top: 15px;
+    border: 2px solid rgba(13, 66, 211, 0.15);
+    padding: 14px 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 29%;
+    border-radius: 5px;
+    justify-content: flex-start;
+    min-width: 200px;
+}
+
+
+.imgProdList {
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: 80%;
+    height: 250px;
+}
+
+.card p {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+.card .card__productCuota {
+  
+    text-align: center;
+    font-size: 90%;
+    
+    
+
+}
+
+.card .card__productName {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: rgb(54, 110, 184);
+    
+
+}
+
+.card .card__productPrice{
+    font-weight: 800;
+}
+
+.card:hover{
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+.imgProdList{
+    border: solid rgba(191, 181, 181, 0.888) 1px;
+    border-radius: 5px;
+
+}
+.imagenCards{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
 
 .colorListadoEdit{
   color:black;
   list-style-type: circle   
 }
 
-@media (max-width: 640px){
-.mainProductList {
-        padding: 0;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .card {
-        flex-basis: 40%;
-        margin: 4px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .prodImgTitle {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .card img {
-        width: 90%;
-        height: 150px;
-    }
-
-    .activeFormMobile {
-       
-        display: block;
-    font-size: 14px;
-    width: 200px;
-    border: 1px solid silver;
-    padding: 10px;
-        
-    }
-    .activeForm {
-        display: none;
-    }
+.precioTexto{
+    width: 100%;
+  
+}
 }

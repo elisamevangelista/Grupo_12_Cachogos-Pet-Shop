@@ -39,27 +39,57 @@
     <%- include('partials/header') %>
 
     <main class="mainProductList">
+        
         <aside>
 
             <form class="activeForm">
-                <div class="filters">
-                    <h2>filtrado por: </h2>
-                    <label for="filtro"> Alimento </label>
-                    <input type="checkbox">
+                
+                <div class="tipoDeFiltros">
+                    <h3>Filtrar por:</h3>
+
+                <div class="divsCateCelu">
+                        <select name="categoriaAnimal" id="categoriaAnimal" >
+                            <option value="" disabled selected>- Categoría animal - </option>
+                            <% allCategory.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.animalType %></option>
+                            <% }); %>
+                        </select>
+                        <select name="subcategoriaProducto" id="subcategoriaProducto" >
+                                <option value="" disabled selected>- Categoría producto - </option>
+                                <% allSubcategory.forEach(subcategory => { %>
+                                <option value="<%= subcategory.name %>"><%= subcategory.name %></option>
+                                <% }); %>
+                        </select>
+
+
+                        <div class = "botones">
+                            <button type="submit" class="botonIngresar">Ingresar</button>
+                            <button type="reset" class="botonReset">Restablecer</button>
+                        </div>   
                 </div>
 
-                <div class="filters">
-                    <p><label for="departamento" class="filters__titles">Departamento</label></p>
-                    <p><label for="filtro" id="departamento" name="gato" value="gato"> Gato </label>
-                        <input type="checkbox">
-                    </p>
-                    <p> <label for="filtro" id="departamento" name="perro" value="perro"> Perro </label>
-                        <input type="checkbox">
-                    </p>
+                    <div class="filtrosCateg">
+                        <div class="filters">
+                                <h5>Tipo de producto: </h5>
+                                <p><input type="checkbox"><label for="filtro"> Alimentos</label></p>
+                                <p><input type="checkbox"><label for="filtro">Juguetes</label></p>
+                                <p> <input type="checkbox"><label for="filtro">Paseos y viajes</label</p>
+                                <p><input type="checkbox"><label for="filtro">Camas e indumentaria</label></p>
+                        </div>
+                    
+                   
+                        <div class="filters">
+                        
+                            <h5>Tipo de animal: </h5>  
+                            
+                            <p><input type="checkbox"><label for="filtro" id="departamento" name="gato" value="gato"> Gato </label> </p>         
+                            <p><input type="checkbox"><label for="filtro" id="departamento" name="perro" value="perro"> Perro </label></p>
+                            <p><input type="checkbox"><label for="filtro" id="departamento" name="perro" value="ave"> Ave </label></p>
+                            <p><input type="checkbox"><label for="filtro" id="departamento" name="perro" value="pez"> Pez </label></p>
+                        </div>
+                    </div>
 
-                </div>
-
-                <div class="filters">
+                <!-- <div class="filters">
                     <p><label for="departamento" class="filters__titles">Categoria</label></p>
                     <p><label for="filtro" id="departamento" name="gato" value="gato"> Categoria 1 </label>
                         <input type="checkbox">
@@ -103,18 +133,13 @@
 
                     <p><label for="filtro" id="departamento" name="gato" value="gato"> Adulto</label>
                         <input type="checkbox">
-                    </p>
+                    </p> -->
                 
-
-                </div>
+               <!-- </div> -->
 
 
             </form>
 
-            <div class="activeFormMobile">
-                <span> Filtrar por : </span>
-
-            </div>
         </aside>
             
         <section class="cards"> 
@@ -124,14 +149,16 @@
                 <div class="card">     <!--/products/detail/<=productLis.sku %> es un link que conduce a ruta param > '/detail/:sku', productControllers.productdet-->
                     <a class="prodImgTitle" href="/products/detail/<%= productLis.sku %>">
                     <div class="imgProdList">
-                        <img src="/images/<%= productLis.products_images[0].image %>" alt="imagen"> 
+                        <img class="imagenCards" src="/images/<%= productLis.products_images[0].image %>" alt="imagen"> 
                     </div>
                     <div>
-                        <p class=" card__productName"><%= productLis.name %></p>  
-                        <p class=" card__productPrice">$ <%= productLis.cost > 0 ? productLis.cost : productLis.foods[0].cost_x_bag %></p>
-                        <% if (productLis.quotesQuantity > 0 || (productLis.foods.length > 0 && productLis.foods[0].quotesQuantity > 0)) { %>
-                            <p class=" card__productCuota"> Hasta <%= productLis.quotesQuantity > 0 ? productLis.quotesQuantity : productLis.foods[0].quotesQuantity %> cuotas sin interes de $ <%= productLis.quotesQuantity > 0 ? parseInt((productLis.cost)/(productLis.quotesQuantity)) : parseInt((productLis.foods[0].cost_x_bag)/(productLis.foods[0].quotesQuantity)) %> con Bancos seleccionados</p>
-                        <% } %>
+                        <p class="card__productName">"<%= productLis.name %>"</p>  
+                        <p class="card__productPrice">$ <%= productLis.cost > 0 ? productLis.cost : productLis.foods[0].cost_x_bag %></p>
+                        <div class="precioTexto">
+                            <% if (productLis.quotesQuantity > 0 || (productLis.foods.length > 0 && productLis.foods[0].quotesQuantity > 0)) { %>
+                                <p class="card__productCuota"> Hasta <b><%= productLis.quotesQuantity > 0 ? productLis.quotesQuantity : productLis.foods[0].quotesQuantity %></b> cuotas sin interes de <b>$ <%= productLis.quotesQuantity > 0 ? parseInt((productLis.cost)/(productLis.quotesQuantity)) : parseInt((productLis.foods[0].cost_x_bag)/(productLis.foods[0].quotesQuantity)) %></b> con bancos seleccionados</p>
+                            <% } %>
+                        </div>  
                     </div>
                                      <!--parseInt TRANSFORMA A ENTERO EL NRO. -->
                                     <!-- productLis.costo ? ->  existe? , si existe devuelve-> productLis.costo , si no existe devuelve -> productLis.pesos[0].precio-->

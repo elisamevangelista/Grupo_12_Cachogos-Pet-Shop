@@ -15,14 +15,27 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productControllers = {
 
     productlist: (req, res) => {
-        db.Products.findAll({
+        
+        let category = db.Categories.findAll({
+            attributes: ['id', 'animalType']
+        });
+        let subcategory = db.Subcategories.findAll({
+            attributes: ['name'],
+            group: ['name']
+        })
+     
+        
+        let product = db.Products.findAll({
             include: ['products_images', 'foods']
         })
-        .then(products => {
+        Promise.all([category, subcategory, product])
+        .then(([allCategory, allSubcategory, products]) => {
             console.log('products:', products.foods)
             res.render('productlist', {
                 productlist: products,
-                miUsuario: req.session.usuarioALoguearse
+                miUsuario: req.session.usuarioALoguearse, 
+                allCategory,
+                allSubcategory
             })
         })
         // res.render('productlist', {
