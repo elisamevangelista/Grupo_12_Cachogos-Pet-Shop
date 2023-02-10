@@ -51,13 +51,8 @@ let validationRegister =
     
     body('image')
     .custom(function (value, {req}){
-        console.log('value: ', value)
-        console.log('req.file: ', req.file)
-        value = req.file
         if(req.file != undefined){
-            console.log('prueba:', )
             const ext = "" +path.extname(req.file.filename).toLowerCase() 
-            console.log('ext:', ext)
             if (
                 ext == ".jpg" ||
                 ext == ".jpeg" ||

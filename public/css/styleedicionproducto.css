@@ -74,8 +74,12 @@ fieldset{
 
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: left;  
 
+}
+
+.marca-producto {
+    width: 30%;
 }
 
 
@@ -97,7 +101,6 @@ fieldset{
     display: flex;
     justify-content:space-between;
     margin-bottom:0px;
-  
 }
 
 .edicionProductonro{
@@ -105,7 +108,7 @@ fieldset{
 
 }
 
-.botonBusc{
+.botonBuscar{
    
     border-radius: 8px;
     margin-right: 8px;
@@ -138,6 +141,40 @@ fieldset{
     font-size: 14px;
     font-weight: bold;
  
+}
+
+.imagenesDB {
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagen-producto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.inputIdImagen {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgId {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgId img {
+    height: 100px;
+    width: 100px;
+}
+
+.marca {
+    width: 80%;
+}
+
+.titulo-edit {
+    color: black;
 }
 
 .erroresEditProd {          

@@ -31,7 +31,7 @@
                 <div class="div-fotoppal-fotospeque">
                 <div class="fotoProducto-Mobile">
                     
-                    <img class="fotoProductoCarrouuselMobile" src = "/images/logos-marcas/log-purina.png" alt="Producto">
+                    <img class="fotoProductoCarrouuselMobile" src = "/images/<%= products.products_images[0].image %>" alt="Producto">
 
 
                 </div>
@@ -40,13 +40,13 @@
                 <div class="divfotosPeq">
 
                     <div class="contendoresFotosPeq">
-                        <img class="fotosPeq" src = "/Publicación/Producto2.webp" alt="Producto">
+                        <img class="fotosPeq" src = "/images/<%= products.products_images[0].image %>" alt="Producto">
                     </div>
                     <div class="contendoresFotosPeq">
-                        <img class="fotosPeq" src = "/Publicación/Producto4.webp" alt="Producto">
+                        <img class="fotosPeq" src = "/images/<%= products.products_images.length > 1 ? products.products_images[1].image : '' %>" alt="Producto">
                     </div>
                     <div class="contendoresFotosPeq">
-                        <img class="fotosPeq" src = "/Publicación/Producto5.webp" alt="Producto">
+                        <img class="fotosPeq" src = "/images/<%= products.products_images.length > 2 ? products.products_images[2].image : '' %>" alt="Producto">
                     </div>
 
                 </div>
@@ -62,7 +62,7 @@
                             <div class="itemCarruselFotos" id="itemCarruselFotos-1">
                                 <div class="imagenCarruselFotos" id="imagenCarruselFotos-1">
                                     <div class="fotoProducto-Mobile">
-                                        <img src="/images/logos-marcas/log-purina.png" />
+                                        <img src="/images/<%= products.products_images[0].image %>" alt="img producto"/>
                                     </div>
                                 </div>
                                 <div class="flechasCarruselFotos">
@@ -73,19 +73,19 @@
                                     <div class="contePuntosFotos">
                                         <div class="contendoresFotosPeq">
                                             <div class="Foto-1">
-                                                <a href="#itemCarruselFotos-1"><img class="fotosPeq" src="/Publicación/Producto2.webp"
+                                                <a href="#itemCarruselFotos-1"><img class="fotosPeq" src="/images/<%= products.products_images[0].image %>"
                                                         alt="Producto"></a>
                                             </div>
                                         </div>
                                         <div class="contendoresFotosPeq">
                                             <div class="Foto-2">
-                                                <a href="#itemCarruselFotos-2"><img class="fotosPeq" src="/Publicación/Producto4.webp"
+                                                <a href="#itemCarruselFotos-2"><img class="fotosPeq" src="/images/<%= products.products_images.length > 1 ? products.products_images[1].image : '' %>"
                                                         alt="Producto"></i></a>
                                             </div>
                                         </div>
                                         <div class="contendoresFotosPeq">
                                             <div class="Foto-3">
-                                                <a href="#itemCarruselFotos-3"><img class="fotosPeq" src="/Publicación/Producto5.webp"
+                                                <a href="#itemCarruselFotos-3"><img class="fotosPeq" src="/images/<%= products.products_images.length > 2 ? products.products_images[2].image : '' %>"
                                                         alt="Producto"></a>
                                             </div>
                                         </div>
@@ -95,7 +95,7 @@
                     
                             <div class="itemCarruselFotos" id="itemCarruselFotos-2">
                                 <div class="imagenCarruselFotos" id="imagenCarruselFotos-2">
-                                    <img src="/images/logos-marcas/log-purina.png" />
+                                    <img src="/images/<%= products.products_images.length > 1 ? products.products_images[1].image : '' %>" alt="img producto"/>
                                 </div>
                                 <div class="flechasCarruselFotos">
                                     <a href="#itemCarruselFotos-1"><i class="fa-solid fa-angle-left"></i></a>
@@ -105,19 +105,19 @@
                                     <div class="contePuntosFotos">
                                         <div class="contendoresFotosPeq">
                                             <div class="Foto-1">
-                                                <a href="#itemCarruselFotos-1"><img class="fotosPeq" src="/Publicación/Producto2.webp"
+                                                <a href="#itemCarruselFotos-1"><img class="fotosPeq" src="/images/<%= products.products_images[0].image %>"
                                                         alt="Producto"></a>
                                             </div>
                                         </div>
                                         <div class="contendoresFotosPeq">
                                             <div class="Foto-2">
-                                                <a href="#itemCarruselFotos-2"><img class="fotosPeq" src="/Publicación/Producto4.webp"
+                                                <a href="#itemCarruselFotos-2"><img class="fotosPeq" src="/images/<%= products.products_images.length > 1 ? products.products_images[1].image : '' %>"
                                                         alt="Producto"></i></a>
                                             </div>
                                         </div>
                                         <div class="contendoresFotosPeq">
                                             <div class="Foto-3">
-                                                <a href="#itemCarruselFotos-3"><img class="fotosPeq" src="/Publicación/Producto5.webp"
+                                                <a href="#itemCarruselFotos-3"><img class="fotosPeq" src="/images/<%= products.products_images.length > 2 ? products.products_images[2].image : '' %>"
                                                         alt="Producto"></a>
                                             </div>
                                         </div>
@@ -127,7 +127,7 @@
                     
                             <div class="itemCarruselFotos" id="itemCarruselFotos-3">
                                 <div class="imagenCarruselFotos" id="imagenCarruselFotos-3">
-                                    <img src="/images/logos-marcas/log-purina.png" />
+                                    <img src="/images/<%= products.products_images.length > 2 ? products.products_images[2].image : '' %>" alt="img producto"/>
                                 </div>
                                 <div class="flechasCarruselFotos">
                                     <a href="#itemCarruselFotos-2"><i class="fa-solid fa-angle-left"></i></a>
@@ -137,19 +137,19 @@
                                     <div class="contePuntosFotos">
                                         <div class="contendoresFotosPeq">
                                             <div class="Foto-1">
-                                                <a href="#itemCarruselFotos-1"><img class="fotosPeq" src="/Publicación/Producto2.webp"
+                                                <a href="#itemCarruselFotos-1"><img class="fotosPeq" src="/images/<%= products.products_images[0].image %>"
                                                         alt="Producto"></a>
                                             </div>
                                         </div>
                                         <div class="contendoresFotosPeq">
                                             <div class="Foto-2">
-                                                <a href="#itemCarruselFotos-2"><img class="fotosPeq" src="/Publicación/Producto4.webp"
+                                                <a href="#itemCarruselFotos-2"><img class="fotosPeq" src="/images/<%= products.products_images.length > 1 ? products.products_images[1].image : '' %>"
                                                         alt="Producto"></i></a>
                                             </div>
                                         </div>
                                         <div class="contendoresFotosPeq">
                                             <div class="Foto-3">
-                                                <a href="#itemCarruselFotos-3"><img class="fotosPeq" src="/Publicación/Producto5.webp"
+                                                <a href="#itemCarruselFotos-3"><img class="fotosPeq" src="/images/<%= products.products_images.length > 2 ? products.products_images[2].image : '' %>"
                                                         alt="Producto"></a>
                                             </div>
                                         </div>
@@ -200,6 +200,7 @@
                     <% } %>
                 </div>      
 
+                <% if (products.foods.length > 0) { %>
                 <hr class="separadorBarra">
             
                 <div class ="seleccionPeso-mobile">
@@ -210,7 +211,6 @@
                         
                                             <!----------------------------------------------ver si es boton solo o con enlace?!-------------------------------------------------->
                         
-                    
                         <%products.foods.map(peso => {%> 
                             <a href="/products/detail/<%= products.sku %>?kg=<%= peso.weight%>"><button class="botonPeso-Mobile" type="submit"><%= peso.weight%> Kg</button></a>
                         <%})%>
@@ -218,10 +218,15 @@
                     
                 </div>      
                 <hr class="separadorBarra">
-                <div class="divCantidadDisponible-mobile">
+                
+                    <div class="divCantidadDisponible-mobile">
+                        <p class="cantidadDisponible-mobile">Cantidad disponible: <%= products?.cost > 0 ? products.cost : productSelect ? productSelect.stock : products?.foods[0]?.stock %></p>
+                    </div>
+                <% } else { %>
+                    <div class="divCantidadDisponible-mobile">
                     <p class="cantidadDisponible-mobile">Cantidad disponible: <%= products.stock %></p>
                 </div>
-
+                <% } %>
 
                 <div class ="botonera-cantidad-carrito-comprar-mobile">
 

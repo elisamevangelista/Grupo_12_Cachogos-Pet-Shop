@@ -45,35 +45,39 @@
     font-weight: 600;
 }
 .cards {
-    order: 1;
     margin: 1%;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-content: center;
-    justify-content:flex-start;
+    justify-content: center;
 
 }
 
 .card {
-    width: 270px;
-    height: 430px;
+    width: 100%;
+    height: auto;
     margin: 8px;
     border: 1px solid rgba(35,65,150,.15);
     padding: 14px 8px;
     box-sizing: content-box;
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex-basis: 29%;
     border-radius: 3%;
-    
+    justify-content: flex-start;
+}
+
+.imgProdList {
+    display: flex;
+    justify-content: center;
 }
 
 .card img {
-    width: 268px;
-    height: 268px;
-
+    width: 80%;
+    height: 250px;
 }
 
 .card p {
@@ -98,13 +102,9 @@
     display: none;
 }
 
-
-
-
 .colorListadoEdit{
   color:black;
-  list-style-type: circle
-    
+  list-style-type: circle   
 }
 
 @media (max-width: 640px){
@@ -117,11 +117,20 @@
     .card {
         flex-basis: 40%;
         margin: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prodImgTitle {
+        display: flex;
+        flex-direction: column;
     }
 
     .card img {
-        width: 150px;
-        height: auto;
+        width: 90%;
+        height: 150px;
     }
 
     .activeFormMobile {

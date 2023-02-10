@@ -40,7 +40,7 @@
 
           
             <div class="titulo-edicion">
-                <p >Edición Producto</p>
+                <a class="titulo-edit" href="/products/edit"><p>Edición Producto</p></a>
             </div>
 
           
@@ -69,14 +69,7 @@
 
                 </div>
 
-
-                <!-- <div class = "marca-producto">
-                    <label for="marcaProducto">Marca:</label>
-                    <input class="marcaProd" type="text" name="marca" id="marcaProducto" placeholder="Marca del producto">
-    
-                </div> -->
-
-                <fieldset>
+                <fieldset class="fieldset-marca">
                     <legend>Marca: <%= products.brands[0].brand %></legend>
                     <div class="marca-producto">
                         <select name="marca" id="marca">
@@ -90,17 +83,32 @@
                     </div>
                 </fieldset>
     
-              
+                <% if (products?.products_images?.length > 0) { %>
+              <div class="imagenesDB">
+                    <% products.products_images.forEach(img => { %>
+                    <div class="imgId">
+                        <p>id imagen: <%= img.id %></p>
+                        <img src="/images/<%= img.image %>" alt="imagen">
+                    </div>
+                    <% }); %>    
+                </div>
+                <% } %>
                 <div class="archivos">
                     <div class = "imagen-producto">
-                        <label for="imagenProducto">Imagen</label>
-                        <div class="imgProd">
-                            <input type="file" name="imagen" id="imagenProducto" multiple>
+                        <div class="inputIdImagen">
+                            <label for="imagenProducto">ID de la Imagen</label>
+                            <div class="imgProd">
+                                <input type="number" name="idImg">
+                            </div>
+                        </div>
+                        <div class="inputIdImagen">
+                            <label for="imagenProducto">Imagen</label>
+                            <div class="imgProd">
+                                <input type="file" name="imagen" id="imagenProducto" multiple>
+                            </div>
                         </div>
                     </div>
 
-
-                  
                 </div>
             </fieldset>
 
@@ -117,25 +125,6 @@
                             <% }); %>
                         </select>
                     </div>
-                    <!-- <div>
-                        <label for="perro"><input class="categPerro" type="radio" name="categoriaAnimal" id="perro">Perro</label>
-                        
-                     </div>
-
-                    <div>
-                        <label for="gato"><input class="categGato" type="radio" name="categoriaAnimal" id="gato" >Gato</label>
-                        
-                    </div>
-
-                    <div>
-                        <label for="pez"><input class="categPez" type="radio" name="categoriaAnimal" id="pez" >Pez</label>
-       
-                    </div>
-
-                    <div>
-                        <label for="ave"><input class="categAve" type="radio" name="categoriaAnimal" id="ave" >Ave</label>
-                        
-                    </div> -->
 
 
                 </fieldset>
@@ -148,77 +137,64 @@
                 <fieldset class="categoria-fieldset-producto">
 
                     <legend>Categoría - Productos: <%= products.subcategories.name %></legend>
-
-                    <div>
-                        <select name="subcategoriaProducto" id="subcategoriaProducto" >
-                            <option value="" disabled selected>- Seleccione la subcategoria - </option>
-                            <% allSubcategory.forEach(subcategory => { %>
-                            <option value="<%= subcategory.name %>"><%= subcategory.name %></option>
-                            <% }); %>
-                        </select>
-                    </div>
-                    <!-- <div>
-                    
-                        <label for="alimento"><input class="alim" type="radio" name="subcategoriaProducto" id="alimento">Alimentos</label>
-                        
-
-                    </div>
-                    <div>
-                        <label for="juguete"><input class="jugue" type="radio" name="subcategoriaProducto" id="juguete" >Juguetes</label>
-                        
-
-                        <label for="camasEInd"><input class="camaeIN" type="radio" name="subcategoriaProducto" id="camasEInd" >Camas e indumentaria</label>
-                        
-                    </div>
-        
-                    <div>
-                        <label for="PaseosYViajes"><input class="paseo-viaje" type="radio"  id="PaseosYViajes" name="subcategoriaProducto" >Paseos y viajes</label>
-                        
-                    </div> -->
+                    <input class="kilosProd" type="text" name="subcategoriaProducto" id="subcategoriaProducto" value="<%= products.subcategories.name %>" >
 
                 </fieldset>
 
             </div>
 
-            <fieldset>
+            <% if (products.subcategories.name === 'Alimentos') { %>
+                <fieldset>
                 <legend>Alimentos - Kg</legend>
 
 
                 <div class = "kg-producto">
-                    <label for="kilosProducto1">Kg1:</label>
-                    <input class="kilosProd" type="number" name="kg" id="kilosProducto1" placeholder="Cantidad de kg - Opcion 1" >
-                    <label for="precioProducto1">precio1:</label>
-                    <input class="kilosProd" type="number" name="precio" id="precioProducto1" placeholder="Precio por kg - Opcion 1" >
-                    <label for="cuotaProducto1">cuotas:</label>
-                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto1" placeholder="cuotas por kg - Opcion 1" >
+                    <label for="id1">id(<%= products.foods.length > 0 ? products.foods[0]?.id :'not' %>)</label>
+                    <input class="kilosProd" type="number" name="idAlimento1" id="id1" placeholder="id del alimento" >
+                    <label for="kilosProducto1">Kg1: <%= products.foods.length > 0 ? products.foods[0]?.weight :'not' %></label>
+                    <input class="kilosProd" type="number" name="kg1" id="kilosProducto1" placeholder="Cantidad de kg - Opcion 1" >
+                    <label for="precioProducto1">precio1: <%= products.foods.length > 0 ? products.foods[0]?.cost_x_bag :'not' %></label>
+                    <input class="kilosProd" type="number" name="precio1" id="precioProducto1" placeholder="Precio por kg - Opcion 1" >
+                    <label for="cuotaProducto1">cuotas1:</label>
+                    <input class="kilosProd" type="number" name="cantCuotasSegunKg1" id="cuotasProducto1" placeholder="cuotas por kg - Opcion 1" >
+                    <label for="stockProducto">stock1: <%= products.foods.length > 0 ? products.foods[0]?.stock :'not' %></label>
+                    <input class="stoProd" type="number" name="stockAlimento1" id="stockAlimento1" placeholder="Stock inicial del producto">
                 </div>
 
                 <div class = "kg-producto">
-                    <label for="kilosProducto2">Kg2:</label>
-                    <input class="kilosProd" type="number" name="kg" id="kilosProducto2" placeholder="Cantidad de kg - Opcion 2" >
-                    <label for="precioProducto2">precio2:</label>
-                    <input class="kilosProd" type="number" name="precio" id="precioProducto2" placeholder="Precio por kg - Opcion 2" >
-                    <label for="cuotaProducto2">cuotas:</label>
-                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto2" placeholder="cuotas por kg - Opcion 2" >
+                    <label for="id2">id(<%= products.foods.length > 0 ? products.foods[1]?.id :'not' %>)</label>
+                    <input class="kilosProd" type="number" name="idAlimento2" id="id2" placeholder="id del alimento" >
+                    <label for="kilosProducto2">Kg2: <%= products.foods.length > 0 ? products.foods[1]?.weight :'not' %></label>
+                    <input class="kilosProd" type="number" name="kg2" id="kilosProducto2" placeholder="Cantidad de kg - Opcion 2" >
+                    <label for="precioProducto2">precio2: <%= products.foods.length > 0 ? products.foods[1]?.cost_x_bag :'not' %></label>
+                    <input class="kilosProd" type="number" name="precio2" id="precioProducto2" placeholder="Precio por kg - Opcion 2" >
+                    <label for="cuotaProducto2">cuotas2:</label>
+                    <input class="kilosProd" type="number" name="cantCuotasSegunKg2" id="cuotasProducto2" placeholder="cuotas por kg - Opcion 2" >
+                    <label for="stockProducto">stock2: <%= products.foods.length > 0 ? products.foods[1]?.stock :'not' %></label>
+                    <input class="stoProd" type="number" name="stockAlimento2" id="stockAlimento2" placeholder="Stock inicial del producto">
                 </div>
 
                 <div class = "kg-producto">
-                    <label for="kilosProducto3">Kg3:</label>
-                    <input class="kilosProd" type="number" name="kg" id="kilosProducto3" placeholder="Cantidad de kg - Opcion 3" >
-                    <label for="precioProducto3">precio3:</label>
-                    <input class="kilosProd" type="number" name="precio" id="precioProducto3" placeholder="Precio por kg - Opcion 3" >
-                    <label for="cuotaProducto3">cuotas:</label>
-                    <input class="kilosProd" type="number" name="cantCuotasSegunKg" id="cuotasProducto3" placeholder="cuotas por kg - Opcion 3" >
+                    <label for="id3">id(<%= products.foods.length > 0 ? products.foods[2]?.id :'not' %>)</label>
+                    <input class="kilosProd" type="number" name="idAlimento3" id="id3" placeholder="id del alimento" >
+                    <label for="kilosProducto3">Kg3: <%= products.foods.length > 0 ? products.foods[2]?.weight :'not' %></label>
+                    <input class="kilosProd" type="number" name="kg3" id="kilosProducto3" placeholder="Cantidad de kg - Opcion 3" >
+                    <label for="precioProducto3">precio3: <%= products.foods.length > 0 ? products.foods[2]?.cost_x_bag :'not' %></label>
+                    <input class="kilosProd" type="number" name="precio3" id="precioProducto3" placeholder="Precio por kg - Opcion 3" >
+                    <label for="cuotaProducto3">cuotas3:</label>
+                    <input class="kilosProd" type="number" name="cantCuotasSegunKg3" id="cuotasProducto3" placeholder="cuotas por kg - Opcion 3" >
+                    <label for="stockProducto">stock3: <%= products.foods.length > 0 ? products.foods[2]?.stock :'not' %></label>
+                    <input class="stoProd" type="number" name="stockAlimento3" id="stockAlimento3" placeholder="Stock inicial del producto">
                 </div>
         
             </fieldset>
-
-            <fieldset>
+           <% } else { %>
+                <fieldset>
                 <legend>Precio</legend>
 
 
                 <div class = "precio-producto">
-                    <label for="precioProducto">AR$: <%= products.cost %> </label>
+                    <label for="precioProducto">AR$: <%= products.cost %></label>
                     <input class="precioProd" type="number" name="precio" id="precioProducto" placeholder="Precio del producto">
 
                 </div>
@@ -240,21 +216,6 @@
 
             </fieldset>
 
-
-            <!-- <fieldset>
-                <legend>Deposito Entrante unidades.</legend>
-
-
-                <div class = "depositoEntrante-producto">
-                    <label for="depositoProducto">Unidades entrantes:</label>
-                    <input class="depoProd" type="number" name="depositoEntrante" id="depositoEntrante" placeholder="Deposito entrate del producto" >
-
-                </div>
-        
-
-            </fieldset> -->
-
-
             <fieldset>
                 <legend>Stock</legend>
 
@@ -265,17 +226,8 @@
                 </div>       
 
             </fieldset>
-
-            <!-- <fieldset>
-                <legend>Detalles</legend>
-                   
-                <div class = "palabras-claves">
-                   
-                    <textarea class="palabras" id="palabrasClaves" name="palabrasClaves" rows="5" cols="33">Palabras claves...</textarea>
-
-                </div>
-            </fieldset> -->
-
+          <%  } %>
+            
             <div class = "botonSobre">
                 <button type="submit" class="botonSobreescribir">Sobreescribir</button>
             </div>  
@@ -296,5 +248,3 @@
 
 
 </html>
-
-

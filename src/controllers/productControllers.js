@@ -51,7 +51,7 @@ const productControllers = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             
-        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
+        let { marca, nombre, descuento, descripcion, kg1, kg2, kg3, precio1, precio2, precio3, cantCuotasSegunKg1, cantCuotasSegunKg2, cantCuotasSegunKg3, stockAlimento1, stockAlimento2, stockAlimento3, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock } = req.body
         let subcategory = db.Subcategories.findOne({
             where: {
                 name: subcategoriaProducto,
@@ -94,14 +94,35 @@ const productControllers = {
                             product_sku: product.sku,
                             brand_id: allBrand.id
                         })
-                    if (allSubcategory.name == 'Alimentos') {
-                        for (let i = 0; i < kg.length; i++) {
+                    if (allSubcategory.name === 'Alimentos') {
+                        if (kg1 !== undefined) {
                             db.Foods
                                 .create({
                                     product_sku: product.sku,
-                                    weight: Number(kg[i]),
-                                    cost_x_bag: Number(precio[i]),
-                                    quotesQuantity: Number(cantCuotasSegunKg[i])
+                                    weight: Number(kg1),
+                                    cost_x_bag: Number(precio1),
+                                    quotesQuantity: cantCuotasSegunKg1 ? Number(cantCuotasSegunKg1) : 0,
+                                    stock: parseInt(stockAlimento1)
+                                })
+                        }
+                        if (kg2 !== undefined) {
+                            db.Foods
+                                .create({
+                                    product_sku: product.sku,
+                                    weight: Number(kg2),
+                                    cost_x_bag: Number(precio2),
+                                    quotesQuantity: cantCuotasSegunKg2 ? Number(cantCuotasSegunKg2) : 0,
+                                    stock: parseInt(stockAlimento2)
+                                })
+                        }
+                        if (kg3 !== undefined) {
+                            db.Foods
+                                .create({
+                                    product_sku: product.sku,
+                                    weight: Number(kg3),
+                                    cost_x_bag: Number(precio3),
+                                    quotesQuantity: cantCuotasSegunKg3 ? Number(cantCuotasSegunKg3) : 0,
+                                    stock: parseInt(stockAlimento3)
                                 })
                         }
                     }
@@ -139,7 +160,6 @@ const productControllers = {
             // let product = new Array(producto)
             let pesoSeleccionado = producto.foods.filter(p => p.weight == req.query.kg)
               
-            console.log('pesoSeleccionado:', pesoSeleccionado)
             res.render('productdet', {
                 products: producto,
                 productSelect: pesoSeleccionado[0],
@@ -258,7 +278,7 @@ const productControllers = {
         })
         Promise.all([category, subcategory, brand])
         .then(([allCategory, allSubcategory, allBrand]) => {
-            db.Products.findByPk(req.params.sku, {include: ['subcategories', 'foods', 'brands']})
+            db.Products.findByPk(req.params.sku, {include: ['subcategories', 'foods', 'brands', 'products_images']})
             .then(product => {
                 db.Categories.findOne({
                     where: {
@@ -266,6 +286,7 @@ const productControllers = {
                     }
                 })
                 .then(category => {
+                    product = JSON.parse(JSON.stringify(product))
                     res.render('edicionproducto', {products: product, category, allCategory, allSubcategory, allBrand, miUsuario: req.session.usuarioALoguearse} )
                 })
             })
@@ -278,7 +299,8 @@ const productControllers = {
         if (errors.isEmpty()) {
 
         let product_sku = req.params.sku
-        let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
+        let { idImg, idAlimento1, idAlimento2, idAlimento3, marca, nombre, descuento, descripcion, kg1, kg2, kg3, precio1, precio2, precio3, cantCuotasSegunKg1, cantCuotasSegunKg2, cantCuotasSegunKg3, stockAlimento1, stockAlimento2, stockAlimento3, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock } = req.body
+ 
         let subcategory = db.Subcategories.findOne({
             where: {
                 name: subcategoriaProducto,
@@ -299,10 +321,10 @@ const productControllers = {
                     {
                         name: nombre,
                         description: descripcion,
-                        quotesQuantity: cantidadCuotas,
-                        stock: stock,
-                        cost: costo,
-                        discount: descuento,
+                        quotesQuantity: cantidadCuotas ? cantidadCuotas : 0,
+                        stock: stock ? stock : 0,
+                        cost: costo ? costo : 0,
+                        discount: descuento ? descuento : 0,
                         subcategory_id: allSubcategory.id
                     },
                     {
@@ -311,20 +333,24 @@ const productControllers = {
                         }
                     }
                 )
-                // .then(product => {
-                    for (let img of req.files) {
-                        db.Products_images
-                            .update(
-                                {
-                                    image: img.filename
-                                },
-                                {
-                                    where: {
-                                        product_sku: product_sku
-                                    }
+                
+            if (idImg !== undefined && req.files.length > 0) {
+                for (let img of req.files) {
+                    db.Products_images
+                        .update(
+                            {
+                                image: img.filename
+                            },
+                            {
+                                where: {
+                                    id: idImg,
+                                    product_sku: product_sku
                                 }
-                            )
-                    }
+                            }
+                        )
+                }
+            }
+                    
                     db.Products_brands
                         .update(
                             {
@@ -337,21 +363,57 @@ const productControllers = {
                             }
                         )
                     if (allSubcategory.name === 'Alimentos') {
-                        for (let i = 0; i < kg.length; i++) {
+                        if (idAlimento1 !== undefined) {
                             db.Foods
                                 .update(
                                     {
-                                        weight: Number(kg[i]),
-                                        cost_x_bag: Number(precio[i]),
-                                        quotesQuantity: Number(cantCuotasSegunKg[i])
+                                        weight: Number(kg1),
+                                        cost_x_bag: Number(precio1),
+                                        quotesQuantity: cantCuotasSegunKg1 ? Number(cantCuotasSegunKg1) : 0,
+                                        stock: parseInt(stockAlimento1)
                                     },
                                     {
                                         where: {
+                                            id: parseInt(idAlimento1),
                                             product_sku: product_sku
                                         }
                                     }
-                                    )
-                                }
+                                )
+                        }
+                        if (idAlimento2 !== undefined) {
+                            db.Foods
+                                .update(
+                                    {
+                                        weight: Number(kg2),
+                                        cost_x_bag: Number(precio2),
+                                        quotesQuantity: cantCuotasSegunKg2 ? Number(cantCuotasSegunKg2) : 0,
+                                        stock: parseInt(stockAlimento2)
+                                    },
+                                    {
+                                        where: {
+                                            id: parseInt(idAlimento2),
+                                            product_sku: product_sku
+                                        }
+                                    }
+                                )
+                        }
+                        if (idAlimento3 !== undefined) {
+                            db.Foods
+                                .update(
+                                    {
+                                        weight: Number(kg3),
+                                        cost_x_bag: Number(precio3),
+                                        quotesQuantity: cantCuotasSegunKg3 ? Number(cantCuotasSegunKg3) : 0,
+                                        stock: parseInt(stockAlimento3)
+                                    },
+                                    {
+                                        where: {
+                                            id: parseInt(idAlimento3),
+                                            product_sku: product_sku
+                                        }
+                                    }
+                                )
+                        }
                     }
                 }).then(() => {
                     return res.redirect('/products')
@@ -371,7 +433,7 @@ const productControllers = {
                 })
                 Promise.all([category, subcategory, brand])
                 .then(([allCategory, allSubcategory, allBrand]) => {
-                    db.Products.findByPk(req.params.sku, {include: ['subcategories', 'foods', 'brands']})
+                    db.Products.findByPk(req.params.sku, {include: ['subcategories', 'foods', 'brands', 'products_images']})
                     .then(product => {
                         db.Categories.findOne({
                             where: {
@@ -445,14 +507,7 @@ const productControllers = {
 
     // res.redirect('/products')  // luego de poner 'guardar/sobreescribir' envia a pagina de productos.
     
-    
 },
-
-    // verproducto: (req, res) => {
-    //     res.render('verproducto')
-    // },
-
-    
    
 }
 

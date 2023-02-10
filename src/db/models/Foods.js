@@ -22,6 +22,10 @@ module.exports = (sequelize, dataTypes) => {
         quotesQuantity: {
             type: dataTypes.INTEGER(10).UNSIGNED
         },
+        stock: {
+            type: dataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
+        }
     };
     let config = {
         tableName: 'foods',
