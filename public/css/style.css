@@ -270,6 +270,68 @@ button:hover , button:focus{  /* TRANSFORMO POINTER DEL MOUSE EN LOS BOTONES-- *
 }
 
 
+.contenedorInfMobile{
+    background-color: #3694F5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 7px;
+
+
+}
+.input-searchIcon-mobile{
+
+    background-color: white;
+    border-radius: 8px;
+    border: solid 1px white;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+    margin-right: 20px
+}
+
+.buscadorHomeMobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.textoBuscarEnBarraMobile{
+    color: grey;
+    font-size: 11px;
+    padding-left: 8px;
+    height: 20px;
+    border-radius: 8px;
+    width: 70%;
+    border: solid 0px white;
+    outline: none
+
+}
+
+.botonSearch-Mobile{
+    background-color: white;
+    border: none;
+    position: relative;
+    right: 3px;
+}
+
+.productosMobile{
+
+    background-color: #456A99;
+    padding: 3px 5px 3px 5px;
+    border-radius: 8px;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.leftBottomHeaderMobile{
+
+    padding-left: 20px;
+
+}
 
 
 
@@ -277,7 +339,9 @@ button:hover , button:focus{  /* TRANSFORMO POINTER DEL MOUSE EN LOS BOTONES-- *
 
 @media (min-width:525px) {
                                     /* FIJACION DEL HEADER-- */
-    
+    .contenedorInfMobile{
+        display: none;
+    }
     .mainHeader{
         position: fixed;
         top: 0;   /* PARA QUE SE AJUSTE AL TOPDE VIEWPORT-- */
