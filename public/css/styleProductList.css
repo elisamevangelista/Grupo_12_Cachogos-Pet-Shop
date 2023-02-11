@@ -12,14 +12,49 @@
     margin-top: 0px;
     display: flex;
     flex-direction: column;
-   align-items: center;
+   align-items: flex-start;
     background-image: url("../images/fondo2.jpg");
 }
+
+
 
 .divsCateCelu{
     display: flex;
     flex-direction: column;
 }
+
+
+.selectCate{
+    margin-bottom: 7px;
+    margin-top: 3px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.botonesX2{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start
+}
+
+
+.botonIngresarMobile{
+    
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(206, 195, 195);
+  
+
+}
+.botonResetMobile{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 60px;
+
+}
+
+
 
 .filtrosCateg{
     display: none;
@@ -114,6 +149,9 @@ padding-top: 10px;
 padding-bottom: 10px;
 }
 
+.tipoDeFiltros h3{
+    text-decoration: underline;
+}
 
 
 @media (min-width: 525px){

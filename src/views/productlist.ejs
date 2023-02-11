@@ -46,25 +46,25 @@
                 
                 <div class="tipoDeFiltros">
                     <h3>Filtrar por:</h3>
-
+                </div>
                 <div class="divsCateCelu">
-                        <select name="categoriaAnimal" id="categoriaAnimal" >
+                        <select class="selectCate" name="categoriaAnimal" id="categoriaAnimal" >
                             <option value="" disabled selected>- Categoría animal - </option>
                             <% allCategory.forEach(category => { %>
                             <option value="<%= category.id %>"><%= category.animalType %></option>
                             <% }); %>
                         </select>
-                        <select name="subcategoriaProducto" id="subcategoriaProducto" >
-                                <option value="" disabled selected>- Categoría producto - </option>
+                        <select class="selectCate" name="subcategoriaProducto" id="subcategoriaProducto" >
+                                <option class="opciones" value="" disabled selected>- Categoría producto - </option>
                                 <% allSubcategory.forEach(subcategory => { %>
                                 <option value="<%= subcategory.name %>"><%= subcategory.name %></option>
                                 <% }); %>
                         </select>
 
 
-                        <div class = "botones">
-                            <button type="submit" class="botonIngresar">Ingresar</button>
-                            <button type="reset" class="botonReset">Restablecer</button>
+                        <div class="botonesX2">
+                            <button type="submit" class="botonIngresarMobile">Ingresar</button>
+                            <button type="reset" class="botonResetMobile">Restablecer</button>
                         </div>   
                 </div>
 
