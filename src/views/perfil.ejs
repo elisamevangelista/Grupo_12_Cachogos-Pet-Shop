@@ -36,6 +36,7 @@
             
             <br>
             <br>
+            <% if (locals.miUsuario && locals.miUsuario.userType == 'user') { %>
             <div class="card mb-5">
                 <div class="card-header">
                     Mis Pedidos
@@ -91,6 +92,7 @@
                     </table>
                 </div>
             </div>
+            <% } %>
         </div>
         
           
