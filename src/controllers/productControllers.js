@@ -16,12 +16,12 @@ const productControllers = {
 
     productlist: (req, res) => {
         
-        let carritoCount = db.Carts.count({
-            where:{
-                user_id: req.session.usuarioALoguearse.id,
-                sold: 0
-            }
-        });
+        // let carritoCount = db.Carts.count({
+        //     where:{
+        //         user_id: req.session.usuarioALoguearse.id,
+        //         sold: 0
+        //     }
+        // });
     
         let category = db.Categories.findAll({
             attributes: ['id', 'animalType']
@@ -34,11 +34,11 @@ const productControllers = {
         let product = db.Products.findAll({
             include: ['products_images', 'foods']
         })
-        Promise.all([category, subcategory, product, carritoCount])
-        .then(([allCategory, allSubcategory, products, count]) => {
+        Promise.all([category, subcategory, product])
+        .then(([allCategory, allSubcategory, products]) => {
             
             res.render('productlist', {
-                carritoCount: count,
+                // carritoCount: count,
                 productlist: products,
                 miUsuario: req.session.usuarioALoguearse, 
                 allCategory,

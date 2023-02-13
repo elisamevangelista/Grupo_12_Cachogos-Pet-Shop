@@ -34,6 +34,14 @@ footer button:hover {
     height: 25px;
 }
 
+.boton {
+    background-color: beige;
+}
+.terminosYc{
+    color:black;
+  
+}
+
 @media screen and (max-width: 525px) {
     
     .formuRegister {
