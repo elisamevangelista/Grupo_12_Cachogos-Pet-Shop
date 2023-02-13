@@ -340,6 +340,8 @@ button:hover , button:focus{  /* TRANSFORMO POINTER DEL MOUSE EN LOS BOTONES-- *
 .mobile h4{
     margin-top: 8px;
     color: white;
+    font-size: 20px;
+    margin-top: 12px;
 }
 
 
