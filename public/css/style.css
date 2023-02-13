@@ -275,8 +275,11 @@ button:hover , button:focus{  /* TRANSFORMO POINTER DEL MOUSE EN LOS BOTONES-- *
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items:center;
     padding-bottom: 7px;
+    border: solid 1px white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
 
 }
@@ -330,9 +333,14 @@ button:hover , button:focus{  /* TRANSFORMO POINTER DEL MOUSE EN LOS BOTONES-- *
 .leftBottomHeaderMobile{
 
     padding-left: 20px;
+    margin-bottom: 0px;
 
 }
 
+.mobile h4{
+    margin-top: 8px;
+    color: white;
+}
 
 
 /*--------------------------------------------------1ra qery 525px----------------------------------------------------*/
@@ -405,6 +413,16 @@ button:hover , button:focus{  /* TRANSFORMO POINTER DEL MOUSE EN LOS BOTONES-- *
 
     .iconoBuscarMargenDerecho {
         display: none
+    }
+
+    .leftBottomHeader{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .rigthBottomHeader{
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 }
 

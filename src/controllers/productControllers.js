@@ -24,13 +24,17 @@ const productControllers = {
             group: ['name']
         })
      
-        
+       
         let product = db.Products.findAll({
             include: ['products_images', 'foods']
         })
         Promise.all([category, subcategory, product])
         .then(([allCategory, allSubcategory, products]) => {
-            console.log('products:', products.foods)
+           allCategory = JSON.parse(JSON.stringify(allCategory))
+           allSubcategory = JSON.parse(JSON.stringify(allSubcategory))
+            console.log('allCategory:', allCategory)
+            console.log('allSubcategory:', allSubcategory)
+            
             res.render('productlist', {
                 productlist: products,
                 miUsuario: req.session.usuarioALoguearse, 
@@ -203,6 +207,19 @@ const productControllers = {
 
     buscar: async function (req, res) {
 
+        let category = await db.Categories.findAll({
+            attributes: ['id', 'animalType']
+        });
+        let subcategory = await db.Subcategories.findAll({
+            attributes: ['name'],
+            group: ['name']
+        })
+
+        category = JSON.parse(JSON.stringify(category))
+        subcategory = JSON.parse(JSON.stringify(subcategory))
+        console.log('category:', category)
+        console.log('subcategory:', subcategory)
+        
         let productoSearch =  req.body.buscar;
         let productos
      
@@ -270,8 +287,22 @@ const productControllers = {
                 }
             ]
             })
-        
-        return res.render("productlist", { productlist: productos, miUsuario: req.session.usuarioALoguearse})
+            Promise.all([category, subcategory])
+            .then(([allCategory, allSubcategory]) => {
+               allCategory = JSON.parse(JSON.stringify(allCategory))
+               allSubcategory = JSON.parse(JSON.stringify(allSubcategory))
+                console.log('allCategory:', allCategory)
+                console.log('allSubcategory:', allSubcategory)
+                
+
+                return res.render('productlist', {
+                    productlist: productos,
+                    miUsuario: req.session.usuarioALoguearse, 
+                    allCategory,
+                    allSubcategory
+                })
+            })
+        // return res.render("productlist", { productlist: productos, miUsuario: req.session.usuarioALoguearse, allCategory:category, allSubcategory:subcategory})
     } else {
         res.render('index', {miUsuario: req.session.usuarioALoguearse})     
     }

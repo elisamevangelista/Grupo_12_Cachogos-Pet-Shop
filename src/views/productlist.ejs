@@ -48,20 +48,42 @@
                     <h3>Filtrar por:</h3>
                 </div>
                 <div class="divsCateCelu">
-                        <select class="selectCate" name="categoriaAnimal" id="categoriaAnimal" >
-                            <option value="" disabled selected>- Categoría animal - </option>
-                            <% allCategory.forEach(category => { %>
-                            <option value="<%= category.id %>"><%= category.animalType %></option>
-                            <% }); %>
-                        </select>
-                        <select class="selectCate" name="subcategoriaProducto" id="subcategoriaProducto" >
-                                <option class="opciones" value="" disabled selected>- Categoría producto - </option>
-                                <% allSubcategory.forEach(subcategory => { %>
-                                <option value="<%= subcategory.name %>"><%= subcategory.name %></option>
+                        <% if (typeof(allCategory) != 'undefined') { %>
+
+                            <select class="selectCate" name="categoriaAnimal" id="categoriaAnimal" >
+                                <option value="" disabled selected>- Categoría animal - </option>
+                                <% allCategory.forEach(category => { %>
+                                <option value="<%= category.id %>"><%= category.animalType %></option>
                                 <% }); %>
-                        </select>
+                            </select>
+                            <select class="selectCate" name="subcategoriaProducto" id="subcategoriaProducto" >
+                                    <option class="opciones" value="" disabled selected>- Categoría producto - </option>
+                                    <% allSubcategory.forEach(subcategory => { %>
+                                    <option value="<%= subcategory.name %>"><%= subcategory.name %></option>
+                                    <% }); %>
+                            </select>
+                            
+                        <% } else { %>
+                                <select class="selectCate" name="categoriaAnimal" id="categoriaAnimal" >
+                                    required="">
+                                    <option value="" disabled selected>- Categoría animal -</option>
+                                    <option value="Gato">Gato</option>
+                                    <option value="Perro">Perro</option>
+                                    <option value="Ave">Ave</option>
+                                    <option value="Pez">Pez</option>
+                                </select>
+                                
+                                <select class="selectCate" name="subcategoriaProducto" id="subcategoriaProducto" >
+                                    required="">
+                                    <option value="" disabled selected>- Categoría producto - </option>
+                                    <option value="Alimentos">Alimentos</option>
+                                    <option value="Juguetes">Juguetes</option>
+                                    <option value="Paseos y Viajes">Paseos y Viajes</option>
+                                    <option value="Camas e indumentaria">Camas e indumentaria</option>
+                                </select>
+                        <% }  %>
 
-
+                        
                         <div class="botonesX2">
                             <button type="submit" class="botonIngresarMobile">Ingresar</button>
                             <button type="reset" class="botonResetMobile">Restablecer</button>
