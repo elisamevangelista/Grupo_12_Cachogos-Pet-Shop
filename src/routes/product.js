@@ -34,7 +34,7 @@ router.post('/creacionproducto', uploadFile.array('imagen'), validationProduct, 
 
 /*** DETAIL OF ONE PRODUCT***/  
 router.get('/detail/:sku', productControllers.productdet)
-
+router.post('/detail/:sku', productControllers.añadirCarrito)
 
 /*** EDIT ONE PRODUCT BY SKU***/  
 

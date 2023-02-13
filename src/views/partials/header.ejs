@@ -65,14 +65,17 @@
 
                <% if (locals.miUsuario && locals.miUsuario.userType == 'user') { %>    <!-- locals verifica si req.session existe, e importa lada data guardadda si existe. -->
                                                                 
-                <li class="IniciarSesion"><%= miUsuario.name %></li>
+                <li class="IniciarSesion"><a href="/users/perfil"><%= miUsuario.name %></a></li>
                 <li><a class="IniciarSesion" href="/users/logout">Cerrar Sesión</a></li>
 
            </ul>
                 
                 <ul class="iconoMisCompras">
-                    <li><a class="iconoCarritoMargenDerecho" href="/users/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a class="misCompras" href="/users/carrito">Mis Compras</a></li>
+                    <li><a class="iconoCarritoMargenDerecho" href="/cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge red z-depth-1 mr-1 cart-number"><%= typeof(carritoCount) != 'undefined' ? carritoCount : 0 %></span>
+                    </a></li>
+                    <li><a class="misCompras" href="/cart">Mis Compras</a></li>
                 </ul>
                 
         </ul>

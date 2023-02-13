@@ -88,22 +88,6 @@ const productsAPIController = {
 
     },
 
-    detail: (req, res) => {
-        db.Products.findByPk(req.params.id)
-            .then(product => {
-                let respuesta = {
-                    meta: {
-                        status: 200,
-                        total: product.length,
-                        url: '/api/product/:id'
-                    },
-                    data: product
-                }
-                res.json(respuesta);
-            })
-            .catch(error => console.log(error));
-    },
-
 
     show: (req, res) => {
 
@@ -164,7 +148,8 @@ const productsAPIController = {
          
         })
 
-    }
+    },
+  
     // create: (req, res) => {
     //     let { marca, nombre, descuento, descripcion, kg, precio, categoriaAnimal, subcategoriaProducto, costo, cantidadCuotas, stock, cantCuotasSegunKg } = req.body
     //     db.Subcategories.findOne({

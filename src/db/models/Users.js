@@ -49,6 +49,16 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: 'product_sku',
             timestamps: false
         });
+        
+        Users.hasMany(models.Carts, {
+            as: "carts",
+            foreignKey: "user_id",
+          });
+
+        Users.hasMany(models.Order, {
+            as: "orders",
+            foreignKey: "user_id",
+          });
     }
 
     return Users

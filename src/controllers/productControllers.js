@@ -16,36 +16,36 @@ const productControllers = {
 
     productlist: (req, res) => {
         
+        let carritoCount = db.Carts.count({
+            where:{
+                user_id: req.session.usuarioALoguearse.id,
+                sold: 0
+            }
+        });
+    
         let category = db.Categories.findAll({
             attributes: ['id', 'animalType']
         });
+
         let subcategory = db.Subcategories.findAll({
             attributes: ['name'],
             group: ['name']
         })
-     
-       
         let product = db.Products.findAll({
             include: ['products_images', 'foods']
         })
-        Promise.all([category, subcategory, product])
-        .then(([allCategory, allSubcategory, products]) => {
-           allCategory = JSON.parse(JSON.stringify(allCategory))
-           allSubcategory = JSON.parse(JSON.stringify(allSubcategory))
-            console.log('allCategory:', allCategory)
-            console.log('allSubcategory:', allSubcategory)
+        Promise.all([category, subcategory, product, carritoCount])
+        .then(([allCategory, allSubcategory, products, count]) => {
             
             res.render('productlist', {
+                carritoCount: count,
                 productlist: products,
                 miUsuario: req.session.usuarioALoguearse, 
                 allCategory,
                 allSubcategory
             })
         })
-        // res.render('productlist', {
-        //     productlist: products,
-        //     miUsuario: req.session.usuarioALoguearse
-        // })
+      
     },
     
     creacionproducto: (req, res) => {
@@ -203,6 +203,36 @@ const productControllers = {
             })
         })
 	
+    },
+
+    añadirCarrito: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let { quantityItems } = req.body
+
+            db.Carts.create({
+                product_sku: req.params.sku,
+                user_id: req.session.usuarioALoguearse.id,
+                quantityItems: quantityItems,
+                sold: 0
+            })
+        } else {
+            db.Products.findByPk(req.params.sku, { include: ['subcategories', 'foods', 'brands', 'products_images'] })
+                .then(producto => {
+                    // let product = new Array(producto)
+                    let pesoSeleccionado = producto.foods.filter(p => p.weight == req.query.kg)
+
+                    res.render('productdet', {
+                        errores: errors.errors,
+                        old: req.body,
+                        products: producto,
+                        productSelect: pesoSeleccionado[0],
+                        miUsuario: req.session.usuarioALoguearse
+                    })
+
+                })
+        }
+
     },
 
     buscar: async function (req, res) {

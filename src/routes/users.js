@@ -4,7 +4,6 @@ const { check, body } = require("express-validator")
 
 const validacionRegister = require('../middleware/userRegister')
 const validacionLogin = require('../middleware/userLogin')
-const notLogguedCart = require('../middleware/notLogguedCart')
 const multer = require('multer');
 
 const path = require('path');
@@ -38,23 +37,12 @@ router.post('/login', validacionLogin, usersController.processLogin) //posteo la
 
 
 /*** EDIT ONE USER***/ 
-router.get('/edituser', usersController.editUser)  //renderizar la vista del formulario con los datos actuales del perfil
+router.get('/edituser', authMiddleware, usersController.editUser)  //renderizar la vista del formulario con los datos actuales del perfil
 router.post('/edituser', uploadFile.single('image'), usersController.edit); //permite editar y guardar los datos modificados del formulario.
 // va por put, porque se usa para cuando ya tenemos datos cargados y queremos editarlos y guardarlos.
 
-router.get('/perfil', authMiddleware, usersController.perfil)
-router.get('/logout', usersController.logout)
-
-
-/*** CARRITO***/ 
-router.get('/carrito',notLogguedCart, usersController.carrito)
-
-
-
-// /*** EDIT USER***/
-// router.get('/perfil', usersControllers.edicionUsuario)
-// router.put('/:sku', uploadFile.array('imagen'), productControllers.update); 
-
+router.get('/perfil', authMiddleware, usersController.perfil);
+router.get('/logout', usersController.logout);
 
 
 module.exports = router

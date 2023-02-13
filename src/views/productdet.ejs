@@ -10,7 +10,8 @@
 
 <%- include('partials/head') %>
 
-   
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="/css/style_Product.css">
 </head>
 
@@ -227,29 +228,32 @@
                     <p class="cantidadDisponible-mobile">Cantidad disponible: <%= products.stock %></p>
                 </div>
                 <% } %>
-
-                <div class ="botonera-cantidad-carrito-comprar-mobile">
+               
+                    <div class ="botonera-cantidad-carrito-comprar-mobile">
 
                 
                     <div class="Div-botones-cantidad-agregarCarrito-mobile">
-                        
+                        <form action="/products/detail/<%= products.sku %>" method="post">
                                             <!----------------------------------------------ver si es boton solo o con enlace?!-------------------------------------------------->
                         <label for="selectorUnidades">Cantidad:</label>                 
-                        <input type="number" id="selectorUnidades" name="selectorUnidades" class="botonSeleccionCantidad-Mobile"
+                        <input type="number" id="selectorUnidades" name="quantityItems" class="botonSeleccionCantidad-Mobile"
                         min="1" max="50" placeholder="1">
                         
                         <!-- <button class="botonSeleccionCantidad-Mobile" type="submit">- / +</button> -->
-                        
-                        <a class = "enlaceACarrito" href="/users/carrito"><button class="botonAgregarAlCarrito-Mobile" type="submit"> AGREGAR AL CARRITO</button></a>
+                        <button type="submit" class="btn btn-primary btn-block agregar_carrito" data-sku="<%= products.sku %>">agregar al carrito</button>
+                        <!-- <a class = "enlaceACarrito" href="/users/carrito"><button class="botonAgregarAlCarrito-Mobile" type="submit"> AGREGAR AL CARRITO</button></a> -->
+                    </form>
                     </div>
 
                     <div class="Divbotones-comprarAhora-mobile">                  
                     
-                        <a class = "enlaceACarrito" href="/users/carrito"><button class="botoncomprarAhora-Mobile" type="submit">COMPRAR AHORA</button></a>
+                        <a class = "enlaceACarrito" href="/cart"><button class="botoncomprarAhora-Mobile" >COMPRAR AHORA</button></a>
 
                     </div>
                     
                 </div>
+               
+                
 
                 <div class="divCompartirRedes-mobile">
                     <p class="compartir-mobile">Compartir:</p>
@@ -489,7 +493,8 @@
     </main>     
 
     <%- include('partials/footer') %>
-
+    <script src="/js/scripts.js"></script>
+    <script src="/js/cart.js"></script>
 </body>
 
 

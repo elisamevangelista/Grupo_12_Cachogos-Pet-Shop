@@ -20,7 +20,8 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         sold: {
-            type: dataTypes.BOOLEAN(255),
+            type: dataTypes.TINYINT(1),
+            defaultValue: 0,
             allowNull: false
         },
     };

@@ -1,6 +1,6 @@
 <%- include('../partials/head') %>
 
-<link rel="stylesheet" href="/css/stylesRegister.css">   <!-- dejo esta linea en este archivo -->
+<link rel="stylesheet" href="/css/stylesRegister.css">
 <link rel="stylesheet" href="/css/editUser.css">
 </head>
 
@@ -25,12 +25,9 @@
                     <label for="nombre" class="nameLabel">Nombre</label>
                     <div class="nameInput-i">                                   <!-- miUsuario.name -> name es el nombre de la columna en la tabla de datos de users -->                
                         <input type="text" class="nameInput" name="nombre" id="nombre" placeholder="<%= miUsuario.name %>">
-                        <div class="nameIcon">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                        </div>
+                       
                     </div>
-                    <p class="error-name">El nombre tiene que ser de 2 a 16 carácteres, no debe incluir numeros ni
-                        simbolos.</p>
+                    
                 </div>
                 <!-- Grupo: Apellido -->
                 <div class="apellido" id="">
@@ -38,12 +35,9 @@
                     <div class="lastnameInput-i">
                         <input type="text" class="lastnameInput" name="apellido" id="apellido"
                             placeholder="<%= miUsuario.surname %>">
-                        <div class="lastnameIcon">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                        </div>
+                      
                     </div>
-                    <p class="error-lastname">El apellido tiene que ser de 2 a 16 carácteres, no debe incluir numeros ni
-                        simbolos.</p>
+                    
                 </div>
                 
                 <!-- Grupo: Imagen -->
@@ -56,11 +50,8 @@
 
                     <div class="imageInput-i">
                         <input type="file" class="imageInput" name="image" id="image">
-                        <div class="imageIcon">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                        </div>
                     </div>
-                    <p class="error-image">Solo puede cargar una imagen.</p>
+                   
                 </div>
 
                 <!-- Grupo: email -->
@@ -68,17 +59,10 @@
                     <label for="email" class="mailLabel">E-mail</label>
                     <div class="mailInput-i">
                         <input type="email" class="mailInput" name="email" id="email" value="<%= miUsuario.email %>">
-                        <div class="mailIcon">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                        </div>
                     </div>
-                    <p class="error-email">El email tiene que ser un formato de mail valido.</p>
+                   
                 </div>
                
-           
-            <div class="error-formulario" id="">
-                <p class=""><b>Error:</b> Por favor rellena el formulario correctamente.</p>
-            </div>
             <div class="boton-registro">
                 <button type="submit" class="boton">Guardar cambios</button>
             </div>

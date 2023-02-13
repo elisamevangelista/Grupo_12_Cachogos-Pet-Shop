@@ -159,20 +159,17 @@ const usersControllers = {
         }
        },
 
-       perfil: function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
-        return res.render("perfil", {miUsuario: req.session.usuarioALoguearse});  //se utilizara en el header, como identificacion del usuario logueado.    
+       perfil: async function(req, res){   // ESTE ES EL MIDDLEWARE DEL LOGIN.
+        let orders = await db.Order.findAll({
+            where: { user_id: req.session.usuarioALoguearse.id },
+          });
+        return res.render("perfil", {orders, miUsuario: req.session.usuarioALoguearse});  //se utilizara en el header, como identificacion del usuario logueado.    
        },
       
        logout: function(req, res){
         req.session.destroy();
         return res.redirect("/")
        },
-
-
-       carrito: (req, res) => {
-        res.render('carrito', {miUsuario: req.session.usuarioALoguearse})
-    }
  
-
 }
 module.exports = usersControllers
