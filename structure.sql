@@ -62,7 +62,7 @@ CREATE TABLE `carts` (
   KEY `carts_FK_1` (`user_id`),
   CONSTRAINT `carts_FK` FOREIGN KEY (`product_sku`) REFERENCES `products` (`sku`),
   CONSTRAINT `carts_FK_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,6 +71,7 @@ CREATE TABLE `carts` (
 
 LOCK TABLES `carts` WRITE;
 /*!40000 ALTER TABLE `carts` DISABLE KEYS */;
+INSERT INTO `carts` VALUES (2,6,3,3,1,'2023-02-12 21:41:02','2023-02-13 01:45:39',NULL),(9,5,3,2,1,'2023-02-12 21:45:35','2023-02-13 01:45:39',NULL),(10,7,3,4,1,'2023-02-13 01:09:37','2023-02-13 01:45:39',NULL),(11,9,3,1,1,'2023-02-13 01:11:17','2023-02-13 01:18:29',NULL);
 /*!40000 ALTER TABLE `carts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,6 +136,73 @@ INSERT INTO `foods` VALUES (7,3,1,500,0,'2022-12-30 20:09:53','2023-02-10 05:06:
 UNLOCK TABLES;
 
 --
+-- Table structure for table `orderitems`
+--
+
+DROP TABLE IF EXISTS `orderitems`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orderitems` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `quantity` int(10) unsigned NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `deletedAt` timestamp NULL DEFAULT NULL,
+  `product_sku` int(10) unsigned DEFAULT NULL,
+  `order_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `orderitems_FK` (`product_sku`),
+  KEY `orderitems_FK_1` (`order_id`),
+  CONSTRAINT `orderitems_FK` FOREIGN KEY (`product_sku`) REFERENCES `products` (`sku`),
+  CONSTRAINT `orderitems_FK_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orderitems`
+--
+
+LOCK TABLES `orderitems` WRITE;
+/*!40000 ALTER TABLE `orderitems` DISABLE KEYS */;
+INSERT INTO `orderitems` VALUES (11,'Piedras Sanitarias',3550.00,3,'2023-02-13 01:18:29','2023-02-13 01:18:29',NULL,6,6),(12,'Juguete de perro',3100.00,2,'2023-02-13 01:18:29','2023-02-13 01:18:29',NULL,5,6),(13,'Rascador',3500.00,4,'2023-02-13 01:18:29','2023-02-13 01:18:29',NULL,7,6),(14,'Cucha ',5300.00,1,'2023-02-13 01:18:29','2023-02-13 01:18:29',NULL,9,6);
+/*!40000 ALTER TABLE `orderitems` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `total` decimal(10,2) NOT NULL,
+  `paymentMethod` varchar(25) NOT NULL,
+  `shippingMethod` varchar(25) DEFAULT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `deletedAt` timestamp NULL DEFAULT NULL,
+  `user_id` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `orders_FK` (`user_id`),
+  CONSTRAINT `orders_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (6,36150.00,'Débito','OCA','2023-02-13 01:18:29','2023-02-13 01:18:29',NULL,3);
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `products`
 --
 
@@ -165,7 +233,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (3,'Comida de pez','Comida de pez - Granulos tropicales',0,0,'2023-02-10 05:06:10',NULL,0,0,'2022-12-30 20:09:53',3),(4,'Alimento seco','Comida de perro a base de carne y verduras',0,0,'2023-02-10 02:57:02',NULL,0,0,'2023-02-03 00:08:41',2),(5,'Juguete de perro','Hueso para para perro grande',0,3,'2023-02-09 01:18:10',NULL,3242,10,'2023-02-04 00:40:55',5),(6,'Piedras Sanitarias','Piedras Sanitarias - Piedras absorbentes y aglutinantes',0,0,'2023-02-09 00:45:57',NULL,3500,0,'2023-02-08 23:55:09',10),(7,'Rascador','Rascador hilo sisal para gatos',3,7,'2023-02-10 03:14:18',NULL,3500,0,'2023-02-08 23:56:33',6),(8,'Alimento para perro ','Alimento para perro adulto a base de cordero, arroz y vegetales',0,0,'2023-02-10 02:49:14',NULL,0,0,'2023-02-08 23:57:31',1),(9,'Cucha ','Cucha para perro tamaño grande ',0,5,'2023-02-09 00:45:22',NULL,3500,0,'2023-02-08 23:59:45',9),(10,'Comida pouch ','Comida húmeda a base de atún',0,0,'2023-02-10 02:47:18',NULL,0,0,'2023-02-09 00:50:14',2),(11,'Alimento para perro mediano','Alimento seco a base de carne, arroz y vegetales - perros medianos',0,0,'2023-02-10 02:49:05',NULL,0,0,'2023-02-09 00:53:44',1),(12,'Cama para gatos','Cama para gatos con ventosas para colgar sobre vidrios',0,0,'2023-02-09 00:56:43',NULL,6000,0,'2023-02-09 00:56:43',10),(13,'Alimento para gato','Alimento Seco Fit para control de peso',0,0,'2023-02-10 02:48:57',NULL,0,0,'2023-02-09 01:04:56',2),(14,'Colchon para perro ','Colchon para perro grande',0,0,'2023-02-09 01:08:09',NULL,9500,0,'2023-02-09 01:08:09',9),(15,'Comida de pez','Comida de pez disolución lenta',0,0,'2023-02-10 02:48:34',NULL,0,0,'2023-02-09 01:10:54',3),(16,'Comida de ave','Comida mix para loros contiene semillas de zapallo y mani con cáscara',0,0,'2023-02-10 02:47:51',NULL,0,0,'2023-02-09 01:14:24',4);
+INSERT INTO `products` VALUES (3,'Comida de pez','Comida de pez - Granulos tropicales',0,0,'2023-02-10 05:06:10',NULL,0,0,'2022-12-30 20:09:53',3),(4,'Alimento seco','Comida de perro a base de carne y verduras',0,0,'2023-02-10 02:57:02',NULL,0,0,'2023-02-03 00:08:41',2),(5,'Juguete de perro','Hueso para para perro grande',0,3,'2023-02-12 23:08:13',NULL,3100,10,'2023-02-04 00:40:55',5),(6,'Piedras Sanitarias','Piedras Sanitarias - Piedras absorbentes y aglutinantes',0,0,'2023-02-12 23:08:13',NULL,3550,0,'2023-02-08 23:55:09',10),(7,'Rascador','Rascador hilo sisal para gatos',3,7,'2023-02-10 03:14:18',NULL,3500,0,'2023-02-08 23:56:33',6),(8,'Alimento para perro ','Alimento para perro adulto a base de cordero, arroz y vegetales',0,0,'2023-02-10 02:49:14',NULL,0,0,'2023-02-08 23:57:31',1),(9,'Cucha ','Cucha para perro tamaño grande ',0,5,'2023-02-13 01:11:07',NULL,5300,0,'2023-02-08 23:59:45',9),(10,'Comida pouch ','Comida húmeda a base de atún',0,0,'2023-02-10 02:47:18',NULL,0,0,'2023-02-09 00:50:14',2),(11,'Alimento para perro mediano','Alimento seco a base de carne, arroz y vegetales - perros medianos',0,0,'2023-02-10 02:49:05',NULL,0,0,'2023-02-09 00:53:44',1),(12,'Cama para gatos','Cama para gatos con ventosas para colgar sobre vidrios',0,0,'2023-02-09 00:56:43',NULL,6000,0,'2023-02-09 00:56:43',10),(13,'Alimento para gato','Alimento Seco Fit para control de peso',0,0,'2023-02-10 02:48:57',NULL,0,0,'2023-02-09 01:04:56',2),(14,'Colchon para perro ','Colchon para perro grande',0,0,'2023-02-09 01:08:09',NULL,9500,0,'2023-02-09 01:08:09',9),(15,'Comida de pez','Comida de pez disolución lenta',0,0,'2023-02-10 02:48:34',NULL,0,0,'2023-02-09 01:10:54',3),(16,'Comida de ave','Comida mix para loros contiene semillas de zapallo y mani con cáscara',0,0,'2023-02-10 02:47:51',NULL,0,0,'2023-02-09 01:14:24',4);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -228,6 +296,30 @@ LOCK TABLES `products_images` WRITE;
 /*!40000 ALTER TABLE `products_images` DISABLE KEYS */;
 INSERT INTO `products_images` VALUES (7,3,'imagen-1675901887303.jpg','2022-12-30 20:09:53','2023-02-09 00:18:07',NULL),(8,3,'imagen-1676001532998.jpg','2022-12-30 20:09:53','2023-02-10 03:58:53',NULL),(9,3,'imagen-1676005570474.jpg','2022-12-30 20:09:53','2023-02-10 05:06:10',NULL),(10,4,'imagen-1675383123377.jpg','2023-02-03 00:08:41','2023-02-03 00:14:43',NULL),(11,5,'imagen-1675905490490.jpg','2023-02-04 00:40:55','2023-02-09 01:18:10',NULL),(12,6,'imagen-1675900509761.jpg','2023-02-08 23:55:10','2023-02-08 23:55:10',NULL),(13,7,'imagen-1675903303589.jpg','2023-02-08 23:56:33','2023-02-09 00:41:43',NULL),(14,8,'imagen-1675902926824.jpg','2023-02-08 23:57:31','2023-02-09 00:35:26',NULL),(15,9,'imagen-1675903522614.jpg','2023-02-08 23:59:45','2023-02-09 00:45:22',NULL),(16,10,'imagen-1675903814740.jpg','2023-02-09 00:50:14','2023-02-09 00:50:14',NULL),(17,11,'imagen-1675904024808.jpg','2023-02-09 00:53:44','2023-02-09 00:53:44',NULL),(18,12,'imagen-1675904203219.jpg','2023-02-09 00:56:43','2023-02-09 00:56:43',NULL),(19,13,'imagen-1675904696458.jpg','2023-02-09 01:04:56','2023-02-09 01:04:56',NULL),(20,14,'imagen-1675904889164.jpg','2023-02-09 01:08:09','2023-02-09 01:08:09',NULL),(21,15,'imagen-1675905054073.jpg','2023-02-09 01:10:54','2023-02-09 01:10:54',NULL),(22,16,'imagen-1675905264403.jpg','2023-02-09 01:14:24','2023-02-09 01:14:24',NULL);
 /*!40000 ALTER TABLE `products_images` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sequelizemeta`
+--
+
+DROP TABLE IF EXISTS `sequelizemeta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sequelizemeta` (
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`name`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sequelizemeta`
+--
+
+LOCK TABLES `sequelizemeta` WRITE;
+/*!40000 ALTER TABLE `sequelizemeta` DISABLE KEYS */;
+INSERT INTO `sequelizemeta` VALUES ('20230212173320-create-orders.js'),('20230212174205-create-orderitems.js');
+/*!40000 ALTER TABLE `sequelizemeta` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -306,4 +398,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-02-10  3:48:50
+-- Dump completed on 2023-02-12 23:27:59
