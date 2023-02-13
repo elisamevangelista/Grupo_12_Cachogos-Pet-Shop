@@ -40,7 +40,9 @@
                                     <td>$ <%= prod.products.cost %></td>
                                     <td class="text-center"><%= prod.quantityItems %></td>
                                     <td class="text-center">$<%= Number(prod.products.cost)*prod.quantityItems %></td>
-                                    <!-- <td><button class="btn btn-danger btn-sm" onclick=removeItem(${index})><i class="fas fa-trash"></i></button></td> -->
+                                    <form action="/cart/<%=prod.id %>?_method=DELETE" method="POST">
+                                        <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
+                                    </form>
                                 </tr>    
                             </tbody>
                             <% } %>

@@ -12,5 +12,6 @@ router.get('/terminosYCondiciones', mainController.terminos);
 router.get('/cart', notLogguedCart, mainController.cart);
 router.post('/cart', notLogguedCart, mainController.cartOrder);
 router.get('/order/:id', notLogguedCart, mainController.order);
+router.delete('/cart/:id', mainController.destroyCart);
 
 module.exports = router

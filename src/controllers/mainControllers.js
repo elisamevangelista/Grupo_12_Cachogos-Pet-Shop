@@ -118,6 +118,16 @@ const mainControllers = {
           console.log('cart:', cart)
         return res.render('cart', {miUsuario: req.session.usuarioALoguearse, cart, precioTotal});
     },
+    destroyCart : (req, res) => {
+
+        db.Carts
+        .destroy({where: {id: req.params.id}}) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/cart')})
+        .catch(error => res.send(error)) 
+
+    
+},
     cartOrder: async function (req, res) {
         let { shippingMethod, paymentMethod } = req.body
         let cart = await db.Carts.findAll({

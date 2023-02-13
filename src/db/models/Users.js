@@ -33,6 +33,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'users',
+        paranoid: true,
         timestamps: true,
         createdAt: 'createdAt',
         updatedAt: 'updatedAt',

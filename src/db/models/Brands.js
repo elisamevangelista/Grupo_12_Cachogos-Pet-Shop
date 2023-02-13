@@ -14,6 +14,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'brands',
+        paranoid: true,
         timestamps: true,
         createdAt: 'createdAt', //'createdAt' es el nombre de la columna
         updatedAt: false,

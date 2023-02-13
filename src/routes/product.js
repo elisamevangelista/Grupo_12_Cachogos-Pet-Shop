@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
 const uploadFile = multer({ storage });
 
 
-
+const notLogguedCart = require('../middleware/notLogguedCart')
 const productControllers = require('../controllers/productControllers')
 
 /*** GET ALL PRODUCTS***/  
@@ -34,7 +34,7 @@ router.post('/creacionproducto', uploadFile.array('imagen'), validationProduct, 
 
 /*** DETAIL OF ONE PRODUCT***/  
 router.get('/detail/:sku', productControllers.productdet)
-router.post('/detail/:sku', productControllers.añadirCarrito)
+router.post('/detail/:sku', notLogguedCart, productControllers.añadirCarrito)
 
 /*** EDIT ONE PRODUCT BY SKU***/  
 
